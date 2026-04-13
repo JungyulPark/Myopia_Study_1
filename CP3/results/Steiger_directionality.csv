@@ -1,0 +1,3 @@
+"id.exposure","id.outcome","exposure","outcome","snp_r2.exposure","snp_r2.outcome","correct_causal_direction","steiger_pval","Gene"
+"eqtl-a-ENSG00000105329","ukb-b-6353","ENSG00000105329 || id:eqtl-a-ENSG00000105329","Reason for glasses/contact lenses: For short-sightedness, i.e. only or mainly for distance viewing such as driving, cinema etc (called 'myopia') || id:ukb-b-6353",0.000879045561408769,1.89942485647982e-05,TRUE,1.65490851082664e-05,"TGFB1"
+"eqtl-a-ENSG00000150768","ukb-b-6353","ENSG00000150768 || id:eqtl-a-ENSG00000150768","Reason for glasses/contact lenses: For short-sightedness, i.e. only or mainly for distance viewing such as driving, cinema etc (called 'myopia') || id:ukb-b-6353",0.000978501742896134,9.1585984053519e-06,TRUE,1.28665410072097e-06,"LATS2"

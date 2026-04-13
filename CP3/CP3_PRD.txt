@@ -1,0 +1,265 @@
+
+M-LIGHT CP-3
+Mendelian Randomization Study
+Causal Pathway Validation for OPN5-Dopamine-Hippo-YAP-Sclera Cascade
+
+Product Requirements Document (PRD)
+
+Version 1.0  |  April 2026
+
+Park Jungyul, MD, PhD
+Department of Ophthalmology, Seoul St. Mary’s Hospital
+Catholic University of Korea
+
+
+Table of Contents
+
+1. Executive Summary
+CP-3는 M-LIGHT 중앙 가설의 인과관계(causality)를 유전역학적으로 검증하는 Mendelian Randomization(MR) 연구이다. 관찰연구로는 확립할 수 없는 인과적 방향성을 GWAS summary statistics 기반의 Two-Sample MR로 증명하여, NRF/KHIDI grant 신청의 핵심 preliminary data를 확보한다.
+1.1 핵심 검증 대상
+M-LIGHT cascade의 각 단계별 인과관계를 독립적으로 검증한다:
+빛/OPN5 → 도파민 경로: TH, DDC, DRD1, DRD2, COMT 유전변이 → 근시/안축장
+도파민 → Hippo-YAP 축: LATS1/2, YAP1, TEAD1, WWTR1 유전변이 → 근시
+Muscarinic receptor: CHRM1-5 유전변이 → 근시 (아트로핀 기전 규명)
+Adrenergic receptor: ADRA2A 유전변이 → 근시 (대안 타겟 검증)
+HIF-1α/TGFβ/공막: HIF1A, TGFB1, LOX 유전변이 → 근시
+1.2 예상 산출물
+SCI 논문 1편: Ophthalmology 또는 British Journal of Ophthalmology (IF 5-14)
+Grant preliminary data: M-LIGHT cascade 전체의 유전적 인과관계 증거
+CP-1/CP-2와의 삼각검증(triangulation) 데이터
+1.3 핵심 차별화
+기존 MR 연구들은 단일 노출(예: 도파민만, 또는 야외활동만)을 검증했다. CP-3는 M-LIGHT cascade의 모든 구성 요소(도파민, Hippo-YAP, muscarinic, adrenergic, HIF-1α/TGFβ)를 하나의 framework 안에서 체계적으로 검증하는 최초의 연구이다.
+
+2. Background & Scientific Rationale
+2.1 Mendelian Randomization 원리
+MR은 유전변이를 도구변수(instrumental variable, IV)로 활용하여 노출(exposure)과 결과(outcome) 간의 인과관계를 추론하는 역학적 방법이다. 유전변이는 수정 시 무작위로 배정되므로(Mendel’s second law), 환경적 교란변수(confounding)와 역인과(reverse causation)로부터 자유롭다.
+2.2 MR의 3가지 핵심 가정 (IV Assumptions)
+Relevance: 도구변수(SNP)가 노출과 유의하게 연관되어야 한다 (F-statistic > 10)
+Independence: 도구변수가 교란변수와 독립이어야 한다
+Exclusion restriction: 도구변수가 노출을 통해서만 결과에 영향을 미쳐야 한다 (no horizontal pleiotropy)
+2.3 Two-Sample MR
+노출 GWAS와 결과 GWAS가 서로 다른 코호트에서 수행된 경우, summary statistics만으로 MR 분석이 가능하다. 이를 Two-Sample MR이라 하며, 개인 수준 데이터 없이 공개된 GWAS 요약 통계만으로 실행할 수 있어 CP-3의 핵심 방법론이다.
+2.4 M-LIGHT Cascade와 MR 검증 로직
+M-LIGHT 중앙 가설의 각 단계를 개별 MR 분석으로 검증한다. 만약 특정 경로의 유전변이가 근시와 인과적으로 연관되면, 해당 경로가 근시 발생에 causal role을 한다는 유전적 증거가 된다. 모든 경로가 양성이면 전체 cascade의 인과적 타당성이 강력하게 지지된다.
+
+3. Data Sources
+3.1 Outcome GWAS (결과 변수)
+
+참고: 동아시아 데이터(BioBank Japan)를 포함함으로써 한국인 적용 가능성을 강화한다. 다민족 MR은 결과의 일반화 가능성(generalizability)을 높인다.
+3.2 Exposure GWAS (노출 변수)
+각 exposure에 대해 eQTL(expression quantitative trait loci) 또는 pQTL(protein QTL) 데이터를 도구변수로 활용한다.
+3.3 데이터 접근 경로
+OpenGWAS (IEU Bristol): https://gwas.mcp.bristol.ac.uk/ — TwoSampleMR R 패키지로 직접 API 접근
+GTEx v8 Portal: https://gtexportal.org/ — 조직별 eQTL summary statistics 다운로드
+FinnGen r10: https://r10.finngen.fi/ — 핀란드 인구 기반 GWAS
+GWAS Catalog: https://www.ebi.ac.uk/gwas/ — BioBank Japan 등 동아시아 데이터
+deCODE pQTL: https://www.decode.com/summarydata/ — 단백질 수준 도구변수
+UKBB-PPP (UK Biobank Pharma Proteomics Project): 혈중 단백질 pQTL
+
+4. Study Design
+4.1 Overall Architecture
+CP-3는 총 5개의 MR Analysis Module로 구성되며, 각 모듈은 M-LIGHT cascade의 한 단계를 검증한다. 각 모듈은 독립적으로 실행 가능하지만, 최종적으로 하나의 통합 논문으로 합산한다.
+4.2 MR Analysis Pipeline (공통)
+모든 모듈에 적용되는 표준 분석 파이프라인:
+4.2.1 Step 1: Instrument Selection
+eQTL에서 해당 유전자 발현과 genome-wide significant (P < 5×10⁻⁸) SNP 추출
+LD clumping: r² < 0.001, window 10,000 kb (유럽 참조 패널)
+F-statistic 계산: F = (beta/se)². 모든 SNP에서 F > 10 확인 (weak instrument bias 방지)
+Steiger filtering: 각 SNP이 outcome보다 exposure 분산을 더 많이 설명하는지 확인 (역인과 배제)
+eQTL SNP 수가 부족한 경우(<3): cis-pQTL 활용 또는 significance threshold 완화 (P < 5×10⁻⁶)
+4.2.2 Step 2: Harmonization
+Exposure SNP과 outcome GWAS의 allele 방향 정렬 (harmonise_data)
+Palindromic SNP 처리: MAF < 0.3인 경우만 포함, 나머지 제거
+Proxy SNP: LD r² > 0.8인 proxy로 대체 (LDlinkR 패키지)
+4.2.3 Step 3: Primary MR Analysis
+4.2.4 Step 4: Sensitivity Analysis
+Cochran’s Q test: SNP 간 이질성(heterogeneity) 검정. Q P < 0.05이면 pleiotropy 의심
+MR-Egger intercept test: Directional pleiotropy 검정. Intercept P < 0.05이면 존재
+Leave-one-out analysis: 개별 SNP 제거 시 결과 변화 확인 → influential outlier 식별
+Funnel plot: SNP별 효과 크기의 비대칭성 시각적 평가
+MR-PRESSO global test: Outlier SNP 식별 + distortion test
+Steiger directionality test: 인과 방향 확인 (exposure → outcome 방향 검증)
+Reverse MR: Outcome → Exposure 방향으로 MR 수행 → 역인과 배제
+Multivariable MR (MVMR): 동일 pathway 내 유전자들 동시 보정 → 독립 효과 추정
+
+5. Detailed Module Specifications
+5.1 MR-A: Dopamine Pathway → Myopia
+가설: 도파민 합성/신호전달의 유전적 증가가 근시 위험을 인과적으로 감소시킨다.
+5.1.1 Exposure Design
+5.1.2 Special Considerations
+DRD2는 autoreceptor로서 방향이 반대 (DRD2↑ → DA release↓). 이 반대 방향이 MR에서 확인되면 강력한 생물학적 일관성 증거가 된다.
+COMT Val158Met (rs4680) 다형성은 효소 활성에 큰 영향. 이 SNP을 별도로 분석.
+MVMR: TH + DDC + COMT를 동시 보정하여 각각의 독립적 인과 효과 추정.
+양성 대조(positive control): Parkinson’s disease GWAS를 outcome으로 사용 → 도파민 경로 IV 검증.
+5.2 MR-B: Hippo-YAP Pathway → Myopia
+가설: Hippo kinase cascade 활성화(YAP 인산화/억제)가 근시 위험을 인과적으로 감소시킨다.
+5.2.1 Exposure Design
+5.2.2 Special Considerations
+Hippo-YAP과 근시의 MR은 세계 최초이다. 이것이 CP-3의 가장 높은 참신성(novelty) 포인트.
+LATS1과 LATS2가 동일 방향(protective)이면 redundancy 확인 → 생물학적 일관성 강화.
+YAP1과 TEAD1이 risk 방향이면 YAP nuclear activity가 근시 촉진이라는 가설 지지.
+Cancer GWAS(YAP-driven cancers: liver, mesothelioma)를 양성 대조로 사용 가능.
+5.3 MR-C: Muscarinic Receptors → Myopia
+가설: 개별 muscarinic receptor subtype의 유전적 변이가 근시와 차등적으로 연관되며, 이를 통해 아트로핀의 primary target을 유전적으로 추론할 수 있다.
+5.3.1 Exposure Design
+5.3.2 Special Considerations
+MR에서 M2가 가장 강한 인과 연관을 보이면 Barathi 2013 M2 KO 마우스 결과와 일관 → M2가 primary target일 가능성 재부각.
+M4가 인과 연관이 없으면 “M4가 주요 타겟”이라는 기존 합의에 도전하는 결과.
+모든 CHRM이 양성이면 receptor non-specific 효과 가능 → Thomson 2021의 non-cholinergic 기전 지지.
+Colocalization analysis (coloc): 같은 locus에서 eQTL과 myopia GWAS의 causal variant가 동일한지 검증.
+5.4 MR-D: Adrenergic / Non-Cholinergic → Myopia
+가설: α2A-adrenoceptor 발현이 근시와 인과적으로 연관되며, 이는 아트로핀의 anti-myopia 효과가 muscarinic receptor가 아닌 α2A를 통해 매개될 수 있음을 시사한다 (Carr et al. 2018).
+5.4.1 Key Analysis
+ADRA2A eQTL → Myopia/Refractive error/Axial length MR
+양성 결과: 아트로핀이 α2A antagonism을 통해 효과를 발휘한다는 유전적 증거
+음성 결과: Cholinergic pathway가 더 중요 (MR-C와 결합 해석)
+MVMR: ADRA2A + CHRM4를 동시 모델에 넣어 독립 효과 비교
+5.5 MR-E: HIF-1α / TGFβ / Scleral ECM → Myopia
+가설: 공막 리모델링 경로(HIF1A → TGFβ → LOX↓/MMP↑)의 유전적 활성화가 근시를 인과적으로 촉진한다.
+5.5.1 Exposure Design
+5.5.2 Special Considerations
+LOX MR: LOX↑ → Myopia↓이면 scleral cross-linking 치료의 유전적 근거 제공.
+HIF1A MR: 양성이면 anti-HIF 약물(CP-6 drug repurposing)의 인과적 근거.
+TGFB1: 방향이 불확실 — context-dependent switching 때문. Bidirectional MR + MR-B(YAP) 결과와 결합 해석 필요.
+
+6. Statistical Analysis Plan
+6.1 Power Calculation
+MR 분석의 검정력은 (1) IV의 노출 분산 설명력(R²), (2) 결과 GWAS의 표본 크기, (3) 진정한 인과 효과 크기에 의해 결정된다.
+UK Biobank + CREAM의 대규모 sample size(N=540K)와 GTEx v8의 정밀한 eQTL 덕분에 작은 효과 크기도 검출 가능하다.
+6.2 Multiple Testing Correction
+총 5개 모듈 × 평균 3개 노출 유전자 × 3개 결과(myopia, SER, AL) = ~45개 개별 MR 분석.
+1차 보정: Bonferroni correction (α = 0.05/45 = 0.0011)
+2차 보정: FDR (Benjamini-Hochberg) q < 0.05
+보고: 모든 nominal P < 0.05 결과를 보고하되, Bonferroni/FDR 통과 여부 명시
+6.3 Triangulation Framework
+CP-3 MR 결과를 CP-1(network pharmacology), CP-2(scRNA-seq)와 삼각검증하여 증거 수렴(evidence convergence)을 평가한다:
+CP-1에서 hub node인 유전자가 CP-3 MR에서도 유의 → 강한 수렴
+CP-2에서 차발현 유전자가 CP-3 MR에서도 인과 → 전사체-유전체 수렴
+3가지 독립적 방법(network, transcriptome, genetics)이 같은 결론 → 최고 수준 증거
+
+7. Technical Implementation
+7.1 Computing Environment
+7.2 Required R Packages
+7.3 Core Analysis Code Structure
+프로젝트 디렉토리 구조:
+CP3_MR/
+├── 00_data/                    # GWAS summary statistics
+│   ├── exposure/              # eQTL/pQTL data by gene
+│   └── outcome/               # Myopia/SER/AL GWAS
+├── 01_scripts/                 # Analysis scripts
+│   ├── 01_extract_instruments.R
+│   ├── 02_harmonize.R
+│   ├── 03_primary_mr.R
+│   ├── 04_sensitivity.R
+│   ├── 05_mvmr.R
+│   ├── 06_colocalization.R
+│   └── 07_visualization.R
+├── 02_results/                 # Output tables and figures
+├── 03_figures/                 # Publication-ready figures
+└── 04_manuscript/              # Draft manuscript
+7.4 Key R Code Skeleton
+아래는 MR-A (Dopamine → Myopia) 모듈의 핵심 분석 코드 골격이다:
+# ── CP-3 MR-A: Dopamine Pathway → Myopia ──
+library(TwoSampleMR); library(MRPRESSO); library(ieugwasr)
+ 
+# 1. Extract instruments from GTEx v8 eQTL
+exposure_dat <- extract_instruments(
+  outcomes = "eqtl-a-ENSG00000180176",  # TH gene eQTL
+  p1 = 5e-08, clump = TRUE, r2 = 0.001, kb = 10000
+)
+ 
+# 2. Extract outcome data
+outcome_dat <- extract_outcome_data(
+  snps = exposure_dat$SNP,
+  outcomes = "ieu-a-1116"  # CREAM myopia GWAS
+)
+ 
+# 3. Harmonize
+dat <- harmonise_data(exposure_dat, outcome_dat)
+ 
+# 4. F-statistic check
+dat$F <- (dat$beta.exposure / dat$se.exposure)^2
+cat('Min F-statistic:', min(dat$F), '\n')  # Must be > 10
+ 
+# 5. Primary MR
+res <- mr(dat, method_list = c(
+  "mr_ivw", "mr_egger_regression",
+  "mr_weighted_median", "mr_weighted_mode"))
+ 
+# 6. Sensitivity
+het <- mr_heterogeneity(dat)        # Cochran's Q
+plt <- mr_pleiotropy_test(dat)      # Egger intercept
+loo <- mr_leaveoneout(dat)          # Leave-one-out
+presso <- mr_presso(BetaOutcome=...) # MR-PRESSO
+ 
+# 7. Steiger directionality
+steiger <- directionality_test(dat)
+ 
+# 8. Visualization
+mr_scatter_plot(res, dat)           # Scatter plot
+mr_forest_plot(mr_singlesnp(dat))  # Forest plot
+mr_funnel_plot(mr_singlesnp(dat))  # Funnel plot
+
+8. Timeline & Milestones
+8.1 Critical Path
+Week 1-2가 가장 중요: 데이터 접근 + 파이프라인 검증이 전체 일정의 기반
+MR-B(Hippo-YAP)가 핵심 novelty → 가장 정밀한 분석 필요 → 별도 1주 배정
+Week 9-10 통합 시 CP-1/CP-2 결과가 필요 → 병렬 진행 필수
+8.2 Risk Mitigation
+
+9. Output Specifications
+9.1 Main Figures (논문용)
+Figure 1: Study design schematic — M-LIGHT cascade + MR 검증 로직 다이어그램
+Figure 2: Forest plot — 모든 exposure-outcome 쌍의 IVW 효과 크기 (central figure)
+Figure 3: Scatter plots — Module별 대표 scatter plot (MR-A~E 각 1개, 5-panel)
+Figure 4: Triangulation heatmap — CP-1/CP-2/CP-3 결과 수렴 매트릭스
+9.2 Main Tables
+Table 1: Instrument characteristics — 모든 SNP, F-statistic, R², gene, tissue
+Table 2: Primary MR results — IVW, Egger, WM, PRESSO per exposure-outcome pair
+Table 3: Sensitivity analysis summary — Q-test, Egger intercept, Steiger, PRESSO global
+Table 4: MVMR results — 독립 효과 추정 (DA pathway, receptor comparison)
+9.3 Supplementary Materials
+Supplementary Table S1-S5: 각 모듈별 개별 SNP-level 결과
+Supplementary Figure S1-S5: Leave-one-out + Funnel plot per module
+Supplementary Table S6: Colocalization results (posterior probability)
+Supplementary Table S7: PhenoScanner results (pleiotropy screening)
+Supplementary Code: GitHub repository link (reproducibility)
+9.4 Target Journal Strategy
+
+10. Quality Assurance & Reporting Standards
+10.1 STROBE-MR Checklist
+CP-3는 STROBE-MR(Strengthening the Reporting of Observational Studies in Epidemiology for Mendelian Randomization) 가이드라인을 준수한다. 논문 투고 시 STROBE-MR checklist를 supplementary로 첨부한다.
+10.2 Reproducibility
+모든 분석 코드를 GitHub repository에 공개 (논문 acceptance 후)
+GWAS summary statistics 접근 경로를 Methods에 명시
+R sessionInfo() 및 패키지 버전 기록
+Seed 설정 (set.seed(2026)) for reproducible LD clumping
+Docker container 또는 renv lockfile로 환경 재현 가능하게 보존
+10.3 Pre-registration (Optional but Recommended)
+OSF(Open Science Framework)에 분석 계획 사전 등록을 고려한다. 사전 등록은 (1) HARKing(Hypothesizing After Results are Known) 방지, (2) 투명성 향상, (3) reviewers에게 긍정적 인상을 제공한다. 특히 null results가 나오더라도 사전 등록이 있으면 publication 가능성이 높아진다.
+10.4 Internal Review Checkpoints
+
+11. Expected Impact & Strategic Value
+11.1 Scientific Impact
+세계 최초 Hippo-YAP → Myopia MR: 근시 연구의 새로운 기전 축 제시
+아트로핀 타겟 논쟁 해결: M1 vs M2 vs M4 vs α2A의 유전적 증거 제공
+M-LIGHT cascade 전체의 인과적 타당성 검증: 5개 경로 체계적 MR
+Triangulation: Network + Transcriptome + Genetics 3중 수렴 증거
+11.2 Grant Application Value
+NRF 신진연구자: CP-3 결과가 “유전적 인과관계 확인된 pathway를 wet lab에서 검증”하는 SP-1/SP-2의 근거
+KHIDI: “Atropine 기전 규명 → next-generation 약물 개발” 서사의 핵심 데이터
+교내 과제: Computational 성과 + 논문 = 연구 역량 증명
+11.3 IP & Translational Value
+MR에서 유의한 새로운 타겟 발견 시 → CP-4(AI drug design)에 즉시 연결
+LOX MR 양성 → Scleral cross-linking 치료의 유전적 근거 → clinical trial justification
+HIF1A MR 양성 → Anti-HIF 약물 repurposing (CP-6)의 인과적 근거
+
+12. Appendices
+Appendix A: Complete Gene List with Identifiers
+Appendix B: Key References for MR Methods
+1. Davey Smith G, Hemani G. Mendelian randomization: genetic anchors for causal inference. Hum Mol Genet 2014;23(R1):R89-98.
+2. Burgess S et al. Guidelines for performing Mendelian randomization investigations. Wellcome Open Res 2020;4:186.
+3. Skrivankova VW et al. Strengthening the reporting of observational studies in epidemiology using Mendelian randomization (STROBE-MR). JAMA 2021;326:1614-21.
+4. Hemani G et al. The MR-Base platform supports systematic causal inference across the human phenome. eLife 2018;7:e34408.
+5. Verbanck M et al. Detection of widespread horizontal pleiotropy in causal relationships inferred from MR. Nat Genet 2018;50:693-8.
+Appendix C: Outcome GWAS IDs (OpenGWAS)

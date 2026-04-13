@@ -1,0 +1,26 @@
+
+============================================================
+Diagnostic Vulnerability Score (DVS) Summary
+============================================================
+- 분석 대상: 2177 건
+- 타겟 위음성(Miss) 발생률: 33.0%
+
+- 로지스틱 회귀 모델 AUC: 0.777
+
+[주요 변수별 Odds Ratios]
+                         Coefficient     OR
+Feature                                    
+is_MRI                         0.115  1.122
+is_CT_NCE                     -0.170  0.844
+Dx_Lymphoma                    0.560  1.751
+Dx_Pseudotumor                 2.290  9.870
+Dx_Cavernous hemangioma        0.534  1.706
+Dx_Pleomorphic adenoma         1.430  4.177
+is_multi_dx                    0.374  1.453
+has_mass_mention              -1.010  0.364
+is_entirely_normal             2.180  8.846
+report_length_per100          -0.849  0.428
+
+* 해석: OR > 1 일수록 오진(Miss)될 위험이 기하급수적으로 높아짐.
+============================================================
+    

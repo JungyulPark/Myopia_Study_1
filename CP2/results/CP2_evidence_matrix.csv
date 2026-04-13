@@ -1,0 +1,34 @@
+,"Liu 2025
+(Sclera)","Wnt5a 2025
+(Sclera)","Huang 2025
+(Atropine)","Yao 2023
+(Retina)",CP1_Status
+AKT1,,,up,,CP1 Hub Gene
+CASP3,,,,up,CP1 Hub Gene
+COL1A1,down,down,down,,CP1 Hub Gene
+COL1A2,down,down,,,CP1 Hub Gene
+CTGF,down,,,,CP1 Hub Gene
+CTNNB1,,down,,,CP1 Hub Gene
+DRD1,,,,down,M-LIGHT Receptor
+DRD2,,,,down,M-LIGHT Receptor
+DVL2,,ns,,,CP1 Hub Gene
+EGR1,,,,down,CP1 Hub Gene
+FN1,down,down,down,,CP1 Hub Gene
+FOS,,,,up,CP1 Hub Gene
+HIF1A,,,up,,CP1 Hub Gene
+JUN,,,,up,CP1 Hub Gene
+LATS1,ns,,,,Hippo-YAP Extension
+LATS2,up,,,,Hippo-YAP Extension
+LOX,,down,,,CP1 Hub Gene
+MAPK1,,,up,,CP1 Hub Gene
+MAPK3,,,up,,CP1 Hub Gene
+MMP2,,up,,,CP1 Hub Gene
+MMP9,,up,,,CP1 Hub Gene
+OPN5,,,,ns,M-LIGHT Receptor
+SPARC,,down,,,CP1 Hub Gene
+TEAD1,down,,,,Hippo-YAP Extension
+TGFB1,,down,up,,CP1 Hub Gene
+TGFB2,,up,,,CP1 Hub Gene
+TP53,,,,up,CP1 Hub Gene
+VEGFA,,,up,,CP1 Hub Gene
+YAP1,down,,,,Hippo-YAP Extension

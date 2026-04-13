@@ -1,0 +1,2 @@
+"id.exposure","id.outcome","outcome","exposure","method","nsnp","b","se","pval","Gene","Module"
+"eqtl-a-ENSG00000133019","ukb-b-6353","Reason for glasses/contact lenses: For short-sightedness, i.e. only or mainly for distance viewing such as driving, cinema etc (called 'myopia') || id:ukb-b-6353","ENSG00000133019 || id:eqtl-a-ENSG00000133019","Wald ratio",1,-0.00875820164575896,0.0104683652057549,0.402797716292991,"CHRM3","MR_C"

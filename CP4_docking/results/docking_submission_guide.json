@@ -1,0 +1,34 @@
+[
+  {
+    "target": "TGFB1_receptor",
+    "pdb_id": "3KFD",
+    "pdb_file": "c:\\Projectbulid\\CP4_docking\\structures\\3KFD.pdb",
+    "ligand_file": "c:\\Projectbulid\\CP4_docking\\structures\\atropine.sdf",
+    "description": "TGF-beta1 bound to type II receptor",
+    "rationale": "Test if atropine can modulate TGF\u03b21-receptor interaction"
+  },
+  {
+    "target": "LATS2",
+    "pdb_id": "5BRK",
+    "pdb_file": "c:\\Projectbulid\\CP4_docking\\structures\\5BRK.pdb",
+    "ligand_file": "c:\\Projectbulid\\CP4_docking\\structures\\atropine.sdf",
+    "description": "LATS2 Hippo kinase",
+    "rationale": "Test if atropine can inhibit LATS2 kinase activity"
+  },
+  {
+    "target": "CHRM1",
+    "pdb_id": "5CXV",
+    "pdb_file": "c:\\Projectbulid\\CP4_docking\\structures\\5CXV.pdb",
+    "ligand_file": "c:\\Projectbulid\\CP4_docking\\structures\\atropine.sdf",
+    "description": "Muscarinic M1 receptor (positive control)",
+    "rationale": "Validate docking protocol against known target"
+  },
+  {
+    "target": "YAP1_TEAD1",
+    "pdb_id": "3KYS",
+    "pdb_file": "c:\\Projectbulid\\CP4_docking\\structures\\3KYS.pdb",
+    "ligand_file": "c:\\Projectbulid\\CP4_docking\\structures\\atropine.sdf",
+    "description": "YAP-TEAD transcription factor complex",
+    "rationale": "Test if atropine can modulate YAP-TEAD interaction"
+  }
+]

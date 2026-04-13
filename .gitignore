@@ -1,0 +1,36 @@
+# 1. Very Large Data Files (Must be ignored for GitHub 100MB limit)
+*.vcf
+*.vcf.gz
+*.vcf.tbi
+*.txt.gz
+*.gz
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# 2. Specific Data Directories to exclude completely
+CP3/data/*
+CP1/gene/CTD*.csv
+CP2/data/*
+!CP2/data/*.md
+!CP3/data/*.md
+
+# 3. Environment and OS files
+.RData
+.Rhistory
+.Rproj.user
+__pycache__/
+*.pyc
+.env
+.venv/
+env/
+venv/
+.DS_Store
+Thumbs.db
+
+# 4. Large intermediate results (Exclude CSVs larger than 50MB)
+# We will manually add any huge output files if needed
+CP1/results/*.csv
+CP1/gene/*.csv

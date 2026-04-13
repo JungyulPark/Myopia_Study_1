@@ -1,0 +1,25 @@
+Variable,Value,Category
+Total imaging studies,2177,
+Total patients,1421,
+Hospital S,2177 (100.0%),Setting
+Study period,2012-2024,Setting
+  CT_CE,1148 (52.7%),Imaging modality
+  MRI_CE,720 (33.1%),Imaging modality
+  CT_NCE,307 (14.1%),Imaging modality
+  Facial_CT,2 (0.1%),Imaging modality
+  TED,948 (43.5%),Diagnosis
+  Lymphoma,312 (14.3%),Diagnosis
+  Benign tumor,269 (12.4%),Diagnosis
+  Other orbital disease,237 (10.9%),Diagnosis
+  Pseudotumor,212 (9.7%),Diagnosis
+  Cavernous hemangioma,71 (3.3%),Diagnosis
+  Pleomorphic adenoma,40 (1.8%),Diagnosis
+  Meningioma,24 (1.1%),Diagnosis
+  Malignant tumor,31 (1.4%),Diagnosis
+  IgG4-RD,20 (0.9%),Diagnosis
+  Lymphangioma,13 (0.6%),Diagnosis
+"Report length, median (IQR)",309 (184-467),Report characteristics
+  Entirely normal report,218 (10.0%),Report characteristics
+  Mass/lesion mentioned,1117 (51.3%),Report characteristics
+Biopsy performed,1070 (49.2%),Biopsy
+Diagnostic miss (overall),707/2177 (32.5%),Outcome

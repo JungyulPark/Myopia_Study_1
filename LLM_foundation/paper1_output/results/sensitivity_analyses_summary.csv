@@ -1,0 +1,4 @@
+Analysis,N,Miss_rate,C_statistic
+Primary (narrow keywords),2177,32.5%,0.761
+Patient-level (first study only),1421,31.5%,0.767
+Broad pseudotumor keywords,2177,31.1%,0.766

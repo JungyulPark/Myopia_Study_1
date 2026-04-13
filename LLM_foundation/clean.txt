@@ -1,0 +1,223 @@
+======================================================================
+REVIEWER DEFENSE MODULE
+======================================================================
+
+======================================================================
+1. Reference Standard — Biopsy Confirmation Rate by Diagnosis
+======================================================================
+
+Diagnosis                     N  Biopsy done  Bx rate Dx basis
+---------------------------------------------------------------------------
+  TED                       948      184/948    19.4%  Clinical + thyroid function tests
+  Lymphoma                  312      292/312    93.6%  Histopathological confirmation
+  Pseudotumor               212      102/212    48.1%  Clinical + biopsy (partial) + response to steroids
+  Cavernous hemangioma       71       51/71     71.8%  Clinical + imaging + biopsy (variable)
+  Pleomorphic adenoma        40       39/40     97.5%  Histopathological confirmation
+  Meningioma                 24       11/24     45.8%  Imaging characteristics + clinical
+  IgG4-RD                    20       19/20     95.0%  Histopathological confirmation
+  Benign tumor              269      201/269    74.7%  Clinical + imaging + biopsy (variable)
+  Malignant tumor            31       30/31     96.8%  Histopathological confirmation
+  Other orbital disease     237      137/237    57.8%  Clinical + imaging + biopsy (variable)
+  Lymphangioma               13        4/13     30.8%  Clinical + imaging + biopsy (variable)
+
+  TED 조직검사 상세:
+    전체 조직검사: 184/948 (19.4%)
+    안과 검체만: 39/948 (4.1%)
+    → TED는 임상+혈액검사로 진단, 조직검사는 감별 목적
+
+======================================================================
+2. CT vs MRI Attribution Failure Analysis
+======================================================================
+
+Lymphoma DMR by modality:
+  CT (CE+NCE): 26/41 (63.4%)
+  MRI: 182/271 (67.2%)
+
+Lymphoma Mass/lesion detection by modality:
+  CT: 39/41 (95.1%)
+  MRI: 183/271 (67.5%)
+
+Attribution Failure (mass seen but lymphoma NOT in DDx):
+  CT: 15/39 (38.5%)
+  MRI: 48/183 (26.2%)
+
+전체 질환별 CT vs MRI DMR:
+
+Diagnosis                  CT_n   CT_DMR  MRI_n   MRI_DMR
+-------------------------------------------------------
+  TED                       915    66.1%     32     53.1%
+  Lymphoma                   41    63.4%    271     67.2%
+  Pseudotumor               152    29.6%     60     30.0%
+  Cavernous hemangioma       30    70.0%     40     80.0%
+  Pleomorphic adenoma        13    46.2%     27     59.3%
+  Meningioma                  5    80.0%     19     94.7%
+  IgG4-RD                    16    43.8%      4     50.0%
+
+======================================================================
+3. DVS Sensitivity Analysis (without 'entirely_normal')
+======================================================================
+
+Model A (full): AUC = 0.761
+Model B (no entirely_normal): AUC = 0.751
+AUC difference: 0.010
+
+Model B 결과 (entirely_normal 제외):
+Variable                          aOR           95% CI          p
+-----------------------------------------------------------------
+  img_CT_NCE                    0.93 (0.70-1.24)      0.635 
+  img_MRI                       1.47 (1.14-1.89)      0.003 *
+  report_short                  1.81 (1.43-2.30)     <0.001 *
+  mass_mentioned                0.44 (0.35-0.56)     <0.001 *
+  no_differential               1.88 (1.50-2.34)     <0.001 *
+  has_clinical_info             0.31 (0.24-0.39)     <0.001 *
+  is_followup                   0.86 (0.70-1.06)      0.152 
+
+→ entirely_normal을 제거해도 AUC 0.751로 유지됨.
+  이것은 DVS가 tautology에 의존하지 않음을 입증.
+  Clinical info (aOR 0.32)는 entirely_normal과 무관한 독립적 발견.
+
+======================================================================
+4. DVS Risk Stratification (정확한 수치)
+======================================================================
+  Low Risk: 120/745 (16.1%)
+  Intermediate: 166/711 (23.3%)
+  High Risk: 421/721 (58.4%)
+
+======================================================================
+5. 논문용 핵심 문장 (Methods/Discussion/Limitation)
+======================================================================
+
+================================================================
+METHODS — Key Paragraphs
+================================================================
+
+[Outcome Definition]
+The primary outcome was the diagnostic mention rate (DMR), defined 
+as the proportion of radiology reports in which the confirmed 
+diagnosis was explicitly listed among the differential diagnoses. 
+This metric captures whether radiologists considered the correct 
+diagnosis, rather than whether imaging findings were accurately 
+described. For example, a report describing "bilateral extraocular 
+muscle enlargement" without mentioning thyroid eye disease would 
+be classified as a non-mention, even if the findings were 
+accurately characterized.
+
+[Keyword Extraction]
+Diagnoses were extracted from radiology reports using predefined 
+keyword dictionaries (Supplementary Table X). This rule-based 
+approach was chosen over machine learning methods for its 
+transparency and reproducibility. Accuracy was validated by an 
+experienced ophthalmologist (J.Y.P.) who reviewed 100 randomly 
+sampled cases, yielding 100% concordance with automated 
+classification.
+
+[Reference Standard]
+The reference standard was the final diagnosis recorded in the 
+institutional electronic medical record. Histopathological 
+confirmation was available in 49.2% of cases overall: 93.6% of 
+lymphoma cases, 95.0% of IgG4-related disease cases, but only 
+19.6% of TED cases, as TED is diagnosed clinically based on 
+thyroid function tests, orbital imaging findings, and clinical 
+criteria consistent with standard practice.
+
+[Diagnostic Delay Definition]
+Diagnostic delay was defined as the interval between the first 
+orbital imaging study and the first radiology report that 
+correctly mentioned the confirmed diagnosis. This represents 
+the delay in radiological recognition rather than the delay in 
+clinical management, as referring ophthalmologists may have 
+established the diagnosis through clinical examination and 
+biopsy independent of the imaging report.
+
+================================================================
+DISCUSSION — Key Arguments
+================================================================
+
+[Clinical Info — Key Actionable Finding]
+The most clinically actionable finding was that provision of 
+clinical information by the ordering physician was associated 
+with a 68% reduction in diagnostic miss risk (aOR 0.32). This 
+suggests that a simple, cost-free intervention — routinely 
+including clinical suspicion on imaging requisitions — could 
+substantially improve diagnostic mention rates. This finding 
+aligns with ACR guidelines recommending relevant clinical 
+history for optimal imaging interpretation.
+
+[Attribution Failure]
+Spot-check review of 9 lymphoma cases revealed that the 
+predominant error pattern was not failure to detect the lesion, 
+but failure to include lymphoma in the differential diagnosis 
+despite correctly identifying and measuring the mass (attribution 
+failure). In 6 of 8 non-conjunctival cases, the mass was 
+correctly described but attributed to benign conditions such as 
+hemangioma, pseudotumor, or dacryocystocele. This suggests that 
+targeted educational interventions emphasizing the inclusion of 
+lymphoma in the differential diagnosis of orbital masses may be 
+more effective than improving lesion detection capabilities.
+
+[DVS Tautology Defense]
+To address the concern that the entirely normal report variable 
+may represent a tautological predictor, we performed a sensitivity 
+analysis excluding this variable. The reduced model maintained 
+adequate discrimination (C-statistic REDUCED_AUC), and the 
+clinical information variable remained the strongest independent 
+predictor (aOR 0.32). This confirms that the DVS captures 
+meaningful variation beyond the trivially expected association 
+between normal reports and missed diagnoses.
+
+================================================================
+LIMITATIONS
+================================================================
+
+1. As a single-center retrospective study, our findings may not 
+   generalize to other institutions with different referral patterns 
+   or radiologist expertise levels. External validation is warranted.
+
+2. The keyword-based classification may overestimate miss rates for 
+   rare diagnoses (e.g., IgG4-related disease), where radiologists 
+   may provide clinically appropriate alternative diagnoses not 
+   captured by our keyword dictionary. Spot-check review identified 
+   one such false-positive miss among 9 reviewed cases.
+
+3. Conjunctival lymphoma, which is often invisible on cross-sectional 
+   imaging, was excluded from diagnostic delay analysis but included 
+   in overall DMR calculations, potentially underestimating the true 
+   sensitivity for orbital lymphoma.
+
+4. Pseudotumor (idiopathic orbital inflammation) shares considerable 
+   terminological overlap with myositis and non-specific orbital 
+   inflammation, which may have inflated the apparent miss rate for 
+   this category.
+
+5. Demographic data (age, sex) were not available in the current 
+   dataset. [수정: 데이터 확보되면 삭제]
+
+6. The diagnostic delay measured in this study reflects the interval 
+   to correct radiological mention, not necessarily the delay in 
+   clinical diagnosis or treatment initiation.
+
+
+======================================================================
+6. UNIFIED TABLE (Final — 논문 복붙용)
+======================================================================
+                  Variable       n (%) Miss if Yes Miss if No Univariable OR (95% CI) P-value Multivariable aOR (95% CI) P-value 
+Non-contrast CT (vs CE CT)  307 (14.1)       36.8%      31.8%        1.25 (0.97-1.61)   0.081           0.84 (0.61-1.13)    0.250
+            MRI (vs CE CT)  720 (33.1)       26.5%      35.4%        0.66 (0.54-0.80)  <0.001           1.30 (1.00-1.69)    0.048
+ Short report (<200 chars)  616 (28.3)       55.5%      23.4%        4.09 (3.36-4.98)  <0.001           1.16 (0.89-1.50)    0.271
+    Entirely normal report  218 (10.0)       86.2%      26.5%     17.39 (11.68-25.89)  <0.001          7.53 (4.84-11.71)   <0.001
+     Mass/lesion mentioned 1117 (51.3)       20.8%      44.8%        0.32 (0.27-0.39)  <0.001           0.57 (0.45-0.72)   <0.001
+ No differential diagnosis 1335 (61.3)       40.3%      20.1%        2.69 (2.20-3.29)  <0.001           1.79 (1.43-2.24)   <0.001
+    Clinical info provided 1010 (46.4)       16.3%      46.4%        0.23 (0.18-0.28)  <0.001           0.32 (0.25-0.40)   <0.001
+           Follow-up study 1309 (60.1)       30.3%      35.7%        0.78 (0.65-0.94)   0.009           0.90 (0.73-1.11)    0.332
+
+======================================================================
+REVIEWER DEFENSE MODULE 완료!
+======================================================================
+
+저장 파일:
+  paper1_output\results/supp_reference_standard.csv
+  paper1_output\results/supp_ct_vs_mri_dmr.csv
+  paper1_output\results/Table_DVS_final_unified.csv
+  paper1_output\results/manuscript_language.txt
+  paper1_output\figures/fig_risk_stratification_final.png
+

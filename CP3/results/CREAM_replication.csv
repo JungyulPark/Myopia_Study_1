@@ -1,0 +1,6 @@
+"id.exposure","id.outcome","outcome","exposure","method","nsnp","b","se","pval","Replication"
+"eqtl-a-ENSG00000105329","ukb-b-19994","Spherical power (right) || id:ukb-b-19994","ENSG00000105329 || id:eqtl-a-ENSG00000105329","Wald ratio",1,0.252882854178667,0.0714692001148904,0.000402640028109381,"ukb-b-19994"
+"eqtl-a-ENSG00000105329","ukb-b-622","Index of best refractometry result (right) || id:ukb-b-622","ENSG00000105329 || id:eqtl-a-ENSG00000105329","Wald ratio",1,0.0931020248646663,0.060135859457033,0.121575403163662,"ukb-b-622"
+"eqtl-a-ENSG00000105329","ukb-b-7500","Spherical power (left) || id:ukb-b-7500","ENSG00000105329 || id:eqtl-a-ENSG00000105329","Wald ratio",1,0.264277720838323,0.0716421635179061,0.000225263476509195,"ukb-b-7500"
+"eqtl-a-ENSG00000105329","ukb-a-458","Vitamin and mineral supplements: Vitamin A || id:ukb-a-458","ENSG00000105329 || id:eqtl-a-ENSG00000105329","Wald ratio",1,-0.000526389475286794,0.005324824329139,0.921252807211844,"ukb-a-458"
+"eqtl-a-ENSG00000105329","ebi-a-GCST006085","Prostate cancer || id:ebi-a-GCST006085","ENSG00000105329 || id:eqtl-a-ENSG00000105329","Wald ratio",1,0.423776032797126,0.133410973287984,0.00149078905401298,"ebi-a-GCST006085"

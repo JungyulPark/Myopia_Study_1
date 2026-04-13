@@ -1,0 +1,5 @@
+Diagnosis,CT_n,CT_detected,CT_sensitivity,MRI_n,MRI_detected,MRI_sensitivity
+TED,915,605,66.12021857923497,32,17,53.125
+Lymphoma,41,26,63.41463414634146,271,182,67.15867158671587
+Pseudotumor,152,45,29.605263157894733,60,18,30.0
+Cavernous hemangioma,30,21,70.0,40,32,80.0

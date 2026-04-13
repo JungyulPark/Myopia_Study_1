@@ -1,0 +1,57 @@
+
+================================================================
+REVISION RESULTS — 원고에 반영할 수정 사항
+================================================================
+
+[FIX 1: Patient-level sensitivity analysis]
+→ Methods에 추가:
+  "A patient-level sensitivity analysis was performed using 
+   only the first imaging study per patient (n=1421) 
+   to assess the robustness of DVS to within-patient correlation."
+→ Results에 추가:
+  "In the patient-level sensitivity analysis using only the 
+   first imaging study per patient (n=1421), the DVS 
+   achieved a C-statistic of 0.767, consistent 
+   with the study-level analysis (C-statistic, 0.761)."
+
+[FIX 2: Pseudotumor broad keyword]
+→ Discussion Limitation에 추가:
+  "When a broader keyword dictionary including 'myositis,' 
+   'inflammation,' and 'dacryoadenitis' was applied, the 
+   pseudotumor DMR increased from 29.7% to 
+   43.9%, and the overall miss rate decreased from 
+   32.5% to 31.1%. The DVS C-statistic 
+   remained stable at 0.766. This suggests that the 
+   primary analysis using narrow keywords may overestimate the 
+   true miss rate for pseudotumor, as radiologists may use 
+   clinically equivalent terminology."
+
+[FIX 3: Bootstrap CI corrected]
+→ 원고 전체에서 CI 수정:
+  이전: "0.757 (95% CI: 0.757–0.762)"
+  수정: "0.758 (95% CI: 0.736–0.780)"
+
+[FIX 4: Calibration]
+→ Methods에 추가:
+  "Model calibration was assessed using a calibration plot 
+   comparing predicted and observed miss probabilities across 
+   probability deciles, with calibration slope and intercept 
+   reported."
+→ Results에 추가:
+  "The calibration plot demonstrated reasonable agreement 
+   between predicted and observed miss rates 
+   (calibration slope, 1.00; intercept, 
+   -0.00; Supplementary Fig. X)."
+
+[BONUS: Validation CI]
+→ Methods 수정:
+  이전: "100% concordance"
+  수정: "100% concordance (95% CI: 96.4–100.0% 
+   by Clopper-Pearson exact method)"
+
+================================================================
+저장된 파일:
+  paper1_output\results/sensitivity_patient_level.csv
+  paper1_output\results/sensitivity_analyses_summary.csv
+  paper1_output\figures/fig_calibration_plot.png
+================================================================

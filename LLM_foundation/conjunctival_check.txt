@@ -1,0 +1,546 @@
+Total Missed Lymphoma Cases checked: 109
+CASE: R10014
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10017
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10025
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10044
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10060
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10064
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10082
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10090
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10092
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10093
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10106
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10115
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10117
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10135
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10140
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10152
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10163
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10182
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10187
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10191
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10195
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10203
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10213
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10215
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10227
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10275
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10276
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10296
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10312
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10324
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10325
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10346
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10351
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10353
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10367
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10377
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10387
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10388
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10393
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10410
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10414
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10436
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10446
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10470
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10472
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10473
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10475
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10493
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10496
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10500
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10507
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10521
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10534
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10536
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10545
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10549
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10551
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10569
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10571
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10574
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10584
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10589
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10591
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10602
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10603
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10621
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10633
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10635
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10643
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10649
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10651
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10669
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10678
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10682
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10685
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10687
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10700
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10702
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10708
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10723
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10739
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10751
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10769
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10785
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10793
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10794
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10797
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10800
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10804
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10812
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10816
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10828
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10831
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10838
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10839
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10841
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10842
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10849
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10850
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10852
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10862
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10880
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10884
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10886
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10887
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10900
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10902
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10909
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------
+CASE: R10921
+Keywords Found: conjunctival=False, mass=False, lesion=False
+RAW REPORT:
+
+--------------------------------------------------------------------------------

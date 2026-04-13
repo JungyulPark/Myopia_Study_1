@@ -1,0 +1,24 @@
+
+======================================================================
+Module 6 최종 요약
+======================================================================
+
+■ Diagnostic Delay Analysis:
+  - Follow-up 환자: 460명
+  - 첫 영상 miss: 105/460 (22.8%)
+  - Miss 후 결국 잡힘: 47명
+  - 끝까지 못 잡힘: 58명
+
+■ 저장된 파일:
+  - paper1_output\results/table1_baseline_all.csv
+  - paper1_output\results/table6_diagnostic_delay.csv
+  - paper1_output\results/table_dvs_combined_uni_multi.csv
+  - paper1_output\figures/fig10_diagnostic_delay.png
+  - paper1_output\figures/fig_central_illustration.png
+
+■ 논문 구조 완성:
+  Part 1: Disease spectrum (Table 1, Fig 1)
+  Part 2: Diagnostic accuracy (Table 2, Fig 2) 
+  Part 3: DVS model (Table DVS, Fig forest/ROC)
+  Part 4: Diagnostic delay (Table 6, Fig 10)
+  → Central Illustration: 3-panel 종합 figure

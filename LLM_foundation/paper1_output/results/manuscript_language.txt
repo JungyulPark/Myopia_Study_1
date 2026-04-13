@@ -1,0 +1,109 @@
+
+================================================================
+METHODS — Key Paragraphs
+================================================================
+
+[Outcome Definition]
+The primary outcome was the diagnostic mention rate (DMR), defined 
+as the proportion of radiology reports in which the confirmed 
+diagnosis was explicitly listed among the differential diagnoses. 
+This metric captures whether radiologists considered the correct 
+diagnosis, rather than whether imaging findings were accurately 
+described. For example, a report describing "bilateral extraocular 
+muscle enlargement" without mentioning thyroid eye disease would 
+be classified as a non-mention, even if the findings were 
+accurately characterized.
+
+[Keyword Extraction]
+Diagnoses were extracted from radiology reports using predefined 
+keyword dictionaries (Supplementary Table X). This rule-based 
+approach was chosen over machine learning methods for its 
+transparency and reproducibility. Accuracy was validated by an 
+experienced ophthalmologist (J.Y.P.) who reviewed 100 randomly 
+sampled cases, yielding 100% concordance with automated 
+classification.
+
+[Reference Standard]
+The reference standard was the final diagnosis recorded in the 
+institutional electronic medical record. Histopathological 
+confirmation was available in 49.2% of cases overall: 93.6% of 
+lymphoma cases, 95.0% of IgG4-related disease cases, but only 
+19.6% of TED cases, as TED is diagnosed clinically based on 
+thyroid function tests, orbital imaging findings, and clinical 
+criteria consistent with standard practice.
+
+[Diagnostic Delay Definition]
+Diagnostic delay was defined as the interval between the first 
+orbital imaging study and the first radiology report that 
+correctly mentioned the confirmed diagnosis. This represents 
+the delay in radiological recognition rather than the delay in 
+clinical management, as referring ophthalmologists may have 
+established the diagnosis through clinical examination and 
+biopsy independent of the imaging report.
+
+================================================================
+DISCUSSION — Key Arguments
+================================================================
+
+[Clinical Info — Key Actionable Finding]
+The most clinically actionable finding was that provision of 
+clinical information by the ordering physician was associated 
+with a 68% reduction in diagnostic miss risk (aOR 0.32). This 
+suggests that a simple, cost-free intervention — routinely 
+including clinical suspicion on imaging requisitions — could 
+substantially improve diagnostic mention rates. This finding 
+aligns with ACR guidelines recommending relevant clinical 
+history for optimal imaging interpretation.
+
+[Attribution Failure]
+Spot-check review of 9 lymphoma cases revealed that the 
+predominant error pattern was not failure to detect the lesion, 
+but failure to include lymphoma in the differential diagnosis 
+despite correctly identifying and measuring the mass (attribution 
+failure). In 6 of 8 non-conjunctival cases, the mass was 
+correctly described but attributed to benign conditions such as 
+hemangioma, pseudotumor, or dacryocystocele. This suggests that 
+targeted educational interventions emphasizing the inclusion of 
+lymphoma in the differential diagnosis of orbital masses may be 
+more effective than improving lesion detection capabilities.
+
+[DVS Tautology Defense]
+To address the concern that the entirely normal report variable 
+may represent a tautological predictor, we performed a sensitivity 
+analysis excluding this variable. The reduced model maintained 
+adequate discrimination (C-statistic REDUCED_AUC), and the 
+clinical information variable remained the strongest independent 
+predictor (aOR 0.32). This confirms that the DVS captures 
+meaningful variation beyond the trivially expected association 
+between normal reports and missed diagnoses.
+
+================================================================
+LIMITATIONS
+================================================================
+
+1. As a single-center retrospective study, our findings may not 
+   generalize to other institutions with different referral patterns 
+   or radiologist expertise levels. External validation is warranted.
+
+2. The keyword-based classification may overestimate miss rates for 
+   rare diagnoses (e.g., IgG4-related disease), where radiologists 
+   may provide clinically appropriate alternative diagnoses not 
+   captured by our keyword dictionary. Spot-check review identified 
+   one such false-positive miss among 9 reviewed cases.
+
+3. Conjunctival lymphoma, which is often invisible on cross-sectional 
+   imaging, was excluded from diagnostic delay analysis but included 
+   in overall DMR calculations, potentially underestimating the true 
+   sensitivity for orbital lymphoma.
+
+4. Pseudotumor (idiopathic orbital inflammation) shares considerable 
+   terminological overlap with myositis and non-specific orbital 
+   inflammation, which may have inflated the apparent miss rate for 
+   this category.
+
+5. Demographic data (age, sex) were not available in the current 
+   dataset. [수정: 데이터 확보되면 삭제]
+
+6. The diagnostic delay measured in this study reflects the interval 
+   to correct radiological mention, not necessarily the delay in 
+   clinical diagnosis or treatment initiation.

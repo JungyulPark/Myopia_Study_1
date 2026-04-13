@@ -1,0 +1,12 @@
+Diagnosis,N_followup_patients,First_miss_n,First_miss_pct,Median_delay_days,Never_caught_n,Never_caught_of_miss
+Cavernous hemangioma,18,2,11.1,54.5,0,0
+Benign tumor,52,0,0.0,,0,0
+Pseudotumor,41,20,48.8,90.0,14,14
+TED,202,54,26.7,479.5,28,28
+Lymphoma,40,10,25.0,64.0,2,2
+Other orbital disease,44,3,6.8,2742.0,2,2
+Meningioma,5,1,20.0,143.0,0,0
+Pleomorphic adenoma,9,3,33.3,5.0,2,2
+Lymphangioma,3,0,0.0,,0,0
+Malignant tumor,7,0,0.0,,0,0
+IgG4-RD,7,5,71.4,203.0,4,4

@@ -1,0 +1,1462 @@
+﻿ID,최종진단,진단카테고리,영상건수,첫검사일,마지막검사일,진단변경,조직검사시행,시트,병원
+R10001,가성종양,Pseudotumor,1,20190627,20190627,False,False,일회성,S
+R10002,갑상선 눈병증,TED,1,20231128,20231128,False,False,일회성,S
+R10003,갑상선 눈병증,TED,1,20120402,20120402,False,False,일회성,S
+R10004,갑상선 눈병증,TED,1,20161219,20161219,False,False,일회성,S
+R10005,갑상선 눈병증,TED,1,20151019,20151019,False,False,일회성,S
+R10007,갑상선 눈병증,TED,1,20190905,20190905,False,False,일회성,S
+R10008,양성종양,Benign tumor,1,20180319,20180319,False,False,일회성,S
+R10009,갑상선 눈병증,TED,1,20130926,20130926,False,False,일회성,S
+R10010,해면혈관종,Cavernous hemangioma,1,20240502,20240502,True,False,일회성,S
+R10011,갑상선 눈병증,TED,1,20180629,20180629,False,False,일회성,S
+R10012,안와질환,Other orbital disease,1,20210621,20210621,False,False,일회성,S
+R10013,안와질환,Other orbital disease,1,20160112,20160112,False,False,일회성,S
+R10014,안와림프종,Lymphoma,1,20150317,20150317,False,True,일회성,S
+R10015,갑상선 눈병증,TED,1,20230119,20230119,False,False,일회성,S
+R10016,해면혈관종,Cavernous hemangioma,1,20200923,20200923,False,True,일회성,S
+R10017,안와림프종,Lymphoma,1,20210915,20210915,False,True,일회성,S
+R10018,안와질환,Other orbital disease,1,20170707,20170707,False,False,일회성,S
+R10019,갑상선 눈병증,TED,1,20180214,20180214,False,False,일회성,S
+R10020,안와질환,Other orbital disease,1,20240115,20240115,False,True,일회성,S
+R10021,갑상선 눈병증,TED,1,20170504,20170504,True,False,일회성,S
+R10022,양성종양,Benign tumor,1,20200506,20200506,False,False,일회성,S
+R10023,갑상선 눈병증,TED,1,20190516,20190516,False,False,일회성,S
+R10024,안와질환,Other orbital disease,0,20140305,20140305,False,True,일회성,S
+R10025,안와림프종,Lymphoma,1,20210423,20210423,False,True,일회성,S
+R10026,가성종양,Pseudotumor,1,20240510,20240510,True,False,일회성,S
+R10027,갑상선 눈병증,TED,1,20131114,20131114,False,True,일회성,S
+R10028,갑상선 눈병증,TED,1,20190515,20190515,False,False,일회성,S
+R10029,양성종양,Benign tumor,1,20180129,20180129,False,False,일회성,S
+R10030,갑상선 눈병증,TED,1,20240417,20240417,False,False,일회성,S
+R10031,안와질환,Other orbital disease,1,20150324,20150324,False,False,일회성,S
+R10032,안와질환,Other orbital disease,1,20230327,20230327,True,False,일회성,S
+R10033,갑상선 눈병증,TED,1,20210604,20210604,False,False,일회성,S
+R10034,양성종양,Benign tumor,0,20120725,20120725,False,True,일회성,S
+R10035,갑상선 눈병증,TED,1,20200729,20200729,False,False,일회성,S
+R10036,안와질환,Other orbital disease,1,20210825,20210825,False,False,일회성,S
+R10037,안와질환,Other orbital disease,1,20210702,20210702,False,True,일회성,S
+R10038,갑상선 눈병증,TED,1,20170125,20170125,False,False,일회성,S
+R10039,안와질환,Other orbital disease,1,20230330,20230330,False,True,일회성,S
+R10040,갑상선 눈병증,TED,1,20180404,20180404,False,False,일회성,S
+R10041,갑상선 눈병증,TED,1,20240627,20240627,False,False,일회성,S
+R10042,안와림프종,Lymphoma,1,20190704,20190704,True,True,일회성,S
+R10043,안와질환,Other orbital disease,1,20150302,20150302,False,False,일회성,S
+R10044,안와림프종,Lymphoma,1,20161104,20161104,False,True,일회성,S
+R10045,가성종양,Pseudotumor,1,20190823,20190823,False,False,일회성,S
+R10046,갑상선 눈병증,TED,0,20130530,20130530,False,True,일회성,S
+R10047,갑상선 눈병증,TED,1,20210701,20210701,False,True,일회성,S
+R10048,갑상선 눈병증,TED,1,20191224,20191224,True,True,일회성,S
+R10049,양성종양,Benign tumor,1,20181219,20181219,False,True,일회성,S
+R10050,가성종양,Pseudotumor,1,20150409,20150409,False,True,일회성,S
+R10051,안와 악성종양,Malignant tumor,1,20211203,20211203,False,True,일회성,S
+R10052,갑상선 눈병증,TED,1,20200929,20200929,False,True,일회성,S
+R10053,갑상선 눈병증,TED,1,20230712,20230712,False,False,일회성,S
+R10054,갑상선 눈병증,TED,1,20200305,20200305,False,False,일회성,S
+R10055,갑상선 눈병증,TED,1,20171026,20171026,False,False,일회성,S
+R10056,양성종양,Benign tumor,1,20180328,20180328,False,False,일회성,S
+R10057,해면혈관종,Cavernous hemangioma,1,20230426,20230426,True,True,일회성,S
+R10058,양성종양,Benign tumor,1,20170825,20170825,False,True,일회성,S
+R10059,갑상선 눈병증,TED,1,20200210,20200210,False,False,일회성,S
+R10060,안와림프종,Lymphoma,1,20140930,20140930,False,True,일회성,S
+R10061,안와질환,Other orbital disease,1,20150717,20150717,False,False,일회성,S
+R10063,가성종양,Pseudotumor,1,20120629,20120629,False,False,일회성,S
+R10064,안와림프종,Lymphoma,1,20240628,20240628,False,False,일회성,S
+R10065,가성종양,Pseudotumor,1,20160309,20160309,False,True,일회성,S
+R10066,가성종양,Pseudotumor,1,20181231,20181231,False,False,일회성,S
+R10067,가성종양,Pseudotumor,1,20220902,20220902,False,True,일회성,S
+R10068,양성종양,Benign tumor,1,20190326,20190326,False,True,일회성,S
+R10069,가성종양,Pseudotumor,1,20240702,20240702,True,False,일회성,S
+R10070,양성종양,Benign tumor,1,20151021,20151021,False,True,일회성,S
+R10071,가성종양,Pseudotumor,1,20210312,20210312,False,True,일회성,S
+R10072,안와질환,Other orbital disease,1,20240601,20240601,False,False,일회성,S
+R10073,갑상선 눈병증,TED,1,20200326,20200326,False,False,일회성,S
+R10074,안와질환,Other orbital disease,1,20150920,20150920,False,False,일회성,S
+R10075,가성종양,Pseudotumor,1,20170329,20170329,False,False,일회성,S
+R10076,갑상선 눈병증,TED,1,20190529,20190529,False,False,일회성,S
+R10077,갑상선 눈병증,TED,1,20210218,20210218,False,False,일회성,S
+R10078,갑상선 눈병증,TED,1,20200402,20200402,False,False,일회성,S
+R10079,가성종양,Pseudotumor,1,20240620,20240620,False,True,일회성,S
+R10080,갑상선 눈병증,TED,1,20240509,20240509,False,False,일회성,S
+R10081,가성종양,Pseudotumor,1,20160125,20160125,False,False,일회성,S
+R10082,안와림프종,Lymphoma,1,20160420,20160420,False,True,일회성,S
+R10083,가성종양,Pseudotumor,1,20180322,20180322,False,True,일회성,S
+R10084,안와림프종,Lymphoma,1,20160608,20160608,False,True,일회성,S
+R10085,양성종양,Benign tumor,1,20191223,20191223,False,False,일회성,S
+R10086,갑상선 눈병증,TED,1,20151123,20151123,False,False,일회성,S
+R10087,갑상선 눈병증,TED,1,20170413,20170413,False,False,일회성,S
+R10088,갑상선 눈병증,TED,1,20160222,20160222,False,False,일회성,S
+R10089,갑상선 눈병증,TED,1,20141222,20141222,False,False,일회성,S
+R10090,안와림프종,Lymphoma,1,20181221,20181221,False,True,일회성,S
+R10091,양성종양,Benign tumor,1,20121212,20121212,False,True,일회성,S
+R10092,안와림프종,Lymphoma,1,20240814,20240814,False,True,일회성,S
+R10093,안와림프종,Lymphoma,1,20211104,20211104,False,True,일회성,S
+R10094,안와질환,Other orbital disease,1,20120711,20120711,False,True,일회성,S
+R10095,안와질환,Other orbital disease,1,20170830,20170830,False,False,일회성,S
+R10096,해면혈관종,Cavernous hemangioma,1,20230329,20230329,True,True,일회성,S
+R10097,갑상선 눈병증,TED,1,20130118,20130118,False,False,일회성,S
+R10098,갑상선 눈병증,TED,1,20210715,20210715,False,False,일회성,S
+R10099,양성종양,Benign tumor,1,20180214,20180214,False,True,일회성,S
+R10100,갑상선 눈병증,TED,1,20170428,20170428,False,False,일회성,S
+R10101,갑상선 눈병증,TED,1,20240921,20240921,False,False,일회성,S
+R10103,갑상선 눈병증,TED,1,20160928,20160928,False,False,일회성,S
+R10104,갑상선 눈병증,TED,1,20220209,20220209,False,False,일회성,S
+R10106,안와림프종,Lymphoma,1,20170203,20170203,False,True,일회성,S
+R10107,갑상선 눈병증,TED,1,20130806,20130806,False,False,일회성,S
+R10108,갑상선 눈병증,TED,1,20191127,20191127,False,False,일회성,S
+R10109,가성종양,Pseudotumor,1,20140430,20140430,True,False,일회성,S
+R10110,갑상선 눈병증,TED,1,20230621,20230621,False,False,일회성,S
+R10111,안와질환,Other orbital disease,1,20130802,20130802,False,True,일회성,S
+R10112,가성종양,Pseudotumor,1,20160826,20160826,False,False,일회성,S
+R10113,갑상선 눈병증,TED,1,20201118,20201118,False,False,일회성,S
+R10114,갑상선 눈병증,TED,1,20190819,20190819,False,False,일회성,S
+R10115,안와림프종,Lymphoma,1,20130531,20130531,False,True,일회성,S
+R10117,안와림프종,Lymphoma,1,20220415,20220415,False,True,일회성,S
+R10118,갑상선 눈병증,TED,1,20180108,20180108,False,False,일회성,S
+R10119,갑상선 눈병증,TED,1,20200915,20200915,False,False,일회성,S
+R10120,갑상선 눈병증,TED,1,20170417,20170417,False,False,일회성,S
+R10121,갑상선 눈병증,TED,1,20171222,20171222,False,False,일회성,S
+R10122,갑상선 눈병증,TED,1,20210127,20210127,False,False,일회성,S
+R10123,갑상선 눈병증,TED,1,20170407,20170407,False,True,일회성,S
+R10124,갑상선 눈병증,TED,1,20180922,20180922,False,True,일회성,S
+R10125,양성종양,Benign tumor,1,20131209,20131209,False,True,일회성,S
+R10126,갑상선 눈병증,TED,1,20240522,20240522,False,False,일회성,S
+R10127,안와질환,Other orbital disease,1,20220917,20220917,False,True,일회성,S
+R10128,갑상선 눈병증,TED,1,20231108,20231108,False,True,일회성,S
+R10129,안와질환,Other orbital disease,1,20240626,20240626,False,False,일회성,S
+R10130,가성종양,Pseudotumor,1,20160407,20160407,False,False,일회성,S
+R10131,양성종양,Benign tumor,1,20170830,20170830,False,True,일회성,S
+R10132,해면혈관종,Cavernous hemangioma,1,20160808,20160808,False,True,일회성,S
+R10133,해면혈관종,Cavernous hemangioma,1,20220215,20220215,True,True,일회성,S
+R10134,갑상선 눈병증,TED,1,20150520,20150520,False,False,일회성,S
+R10135,안와림프종,Lymphoma,1,20150601,20150601,False,True,일회성,S
+R10136,양성종양,Benign tumor,1,20220407,20220407,False,True,일회성,S
+R10137,안와질환,Other orbital disease,1,20201224,20201224,False,False,일회성,S
+R10138,메닌지오마,Meningioma,1,20190828,20190828,False,True,일회성,S
+R10139,갑상선 눈병증,TED,1,20240626,20240626,False,False,일회성,S
+R10140,안와림프종,Lymphoma,1,20150910,20150910,False,True,일회성,S
+R10141,안와질환,Other orbital disease,1,20240826,20240826,False,False,일회성,S
+R10142,메닌지오마,Meningioma,1,20170531,20170531,False,False,일회성,S
+R10143,갑상선 눈병증,TED,1,20161013,20161013,False,False,일회성,S
+R10144,갑상선 눈병증,TED,1,20190514,20190514,False,False,일회성,S
+R10145,양성종양,Benign tumor,1,20120628,20120628,False,True,일회성,S
+R10147,갑상선 눈병증,TED,1,20220526,20220526,False,False,일회성,S
+R10148,갑상선 눈병증,TED,1,20240627,20240627,False,False,일회성,S
+R10149,메닌지오마,Meningioma,1,20191031,20191031,False,False,일회성,S
+R10150,갑상선 눈병증,TED,1,20210125,20210125,False,False,일회성,S
+R10151,가성종양,Pseudotumor,1,20231227,20231227,False,True,일회성,S
+R10152,안와림프종,Lymphoma,1,20190918,20190918,False,True,일회성,S
+R10153,가성종양,Pseudotumor,1,20140530,20140530,False,False,일회성,S
+R10154,갑상선 눈병증,TED,1,20240318,20240318,False,False,일회성,S
+R10155,갑상선 눈병증,TED,1,20161222,20161222,False,False,일회성,S
+R10156,양성종양,Benign tumor,1,20150722,20150722,False,False,일회성,S
+R10157,양성종양,Benign tumor,1,20170605,20170605,False,False,일회성,S
+R10158,안와질환,Other orbital disease,1,20220923,20220923,False,True,일회성,S
+R10159,양성종양,Benign tumor,1,20121029,20121029,False,True,일회성,S
+R10160,메닌지오마,Meningioma,1,20171218,20171218,True,False,일회성,S
+R10161,갑상선 눈병증,TED,1,20220504,20220504,False,False,일회성,S
+R10162,안와질환,Other orbital disease,1,20201228,20201228,False,False,일회성,S
+R10163,안와질환,Other orbital disease,1,20210430,20210430,True,True,일회성,S
+R10164,안와질환,Other orbital disease,1,20210531,20210531,False,False,일회성,S
+R10165,메닌지오마,Meningioma,1,20120618,20120618,False,True,일회성,S
+R10166,갑상선 눈병증,TED,1,20200110,20200110,False,False,일회성,S
+R10167,갑상선 눈병증,TED,1,20231023,20231023,False,False,일회성,S
+R10168,가성종양,Pseudotumor,0,20131211,20131211,False,True,일회성,S
+R10169,갑상선 눈병증,TED,1,20150317,20150317,False,False,일회성,S
+R10170,양성종양,Benign tumor,1,20180611,20180611,False,True,일회성,S
+R10171,갑상선 눈병증,TED,1,20240801,20240801,False,True,일회성,S
+R10173,갑상선 눈병증,TED,1,20180906,20180906,False,False,일회성,S
+R10174,갑상선 눈병증,TED,1,20240828,20240828,False,True,일회성,S
+R10175,갑상선 눈병증,TED,1,20240711,20240711,False,False,일회성,S
+R10176,양성종양,Benign tumor,1,20191120,20191120,False,True,일회성,S
+R10177,갑상선 눈병증,TED,1,20121010,20121010,False,False,일회성,S
+R10178,양성종양,Benign tumor,1,20180601,20180601,False,True,일회성,S
+R10179,안와질환,Other orbital disease,1,20220221,20220221,False,True,일회성,S
+R10180,갑상선 눈병증,TED,1,20180426,20180426,False,False,일회성,S
+R10181,갑상선 눈병증,TED,1,20230823,20230823,False,False,일회성,S
+R10182,안와림프종,Lymphoma,1,20210428,20210428,False,True,일회성,S
+R10183,갑상선 눈병증,TED,1,20221116,20221116,False,False,일회성,S
+R10184,갑상선 눈병증,TED,1,20220223,20220223,False,True,일회성,S
+R10185,안와질환,Other orbital disease,1,20211105,20211105,False,True,일회성,S
+R10186,해면혈관종,Cavernous hemangioma,1,20190731,20190731,False,False,일회성,S
+R10187,안와림프종,Lymphoma,1,20210426,20210426,False,True,일회성,S
+R10188,해면혈관종,Cavernous hemangioma,1,20160205,20160205,False,False,일회성,S
+R10189,갑상선 눈병증,TED,1,20120808,20120808,False,False,일회성,S
+R10190,갑상선 눈병증,TED,1,20131123,20131123,False,False,일회성,S
+R10191,안와림프종,Lymphoma,1,20180814,20180814,False,True,일회성,S
+R10192,갑상선 눈병증,TED,1,20151028,20151028,False,False,일회성,S
+R10193,갑상선 눈병증,TED,1,20200319,20200319,False,False,일회성,S
+R10194,갑상선 눈병증,TED,1,20241017,20241017,False,False,일회성,S
+R10195,안와림프종,Lymphoma,1,20141027,20141027,False,True,일회성,S
+R10196,안와질환,Other orbital disease,1,20220329,20220329,False,False,일회성,S
+R10197,IgG4 관련질환,IgG4-RD,1,20210119,20210119,True,True,일회성,S
+R10198,다형샘종,Pleomorphic adenoma,1,20200909,20200909,False,True,일회성,S
+R10199,갑상선 눈병증,TED,1,20230809,20230809,False,False,일회성,S
+R10200,갑상선 눈병증,TED,1,20181218,20181218,False,False,일회성,S
+R10201,갑상선 눈병증,TED,1,20150511,20150511,False,True,일회성,S
+R10202,갑상선 눈병증,TED,1,20240320,20240320,False,False,일회성,S
+R10203,안와림프종,Lymphoma,1,20220314,20220314,False,True,일회성,S
+R10204,안와질환,Other orbital disease,1,20160923,20160923,False,True,일회성,S
+R10205,갑상선 눈병증,TED,1,20240124,20240124,False,False,일회성,S
+R10206,다형샘종,Pleomorphic adenoma,0,20120712,20120712,False,True,일회성,S
+R10207,양성종양,Benign tumor,1,20121205,20121205,False,True,일회성,S
+R10208,갑상선 눈병증,TED,1,20150603,20150603,False,False,일회성,S
+R10209,갑상선 눈병증,TED,1,20190715,20190715,False,False,일회성,S
+R10210,갑상선 눈병증,TED,1,20180903,20180903,False,False,일회성,S
+R10211,갑상선 눈병증,TED,1,20170531,20170531,False,False,일회성,S
+R10213,안와림프종,Lymphoma,1,20190123,20190123,False,False,일회성,S
+R10214,갑상선 눈병증,TED,1,20180822,20180822,False,False,일회성,S
+R10215,안와림프종,Lymphoma,1,20201008,20201008,False,True,일회성,S
+R10216,갑상선 눈병증,TED,1,20151230,20151230,False,False,일회성,S
+R10217,메닌지오마,Meningioma,1,20130513,20130513,False,True,일회성,S
+R10218,안와질환,Other orbital disease,1,20160607,20160607,False,True,일회성,S
+R10219,다형샘종,Pleomorphic adenoma,1,20130607,20130607,False,True,일회성,S
+R10220,양성종양,Benign tumor,1,20120323,20120323,False,False,일회성,S
+R10221,안와질환,Other orbital disease,1,20141217,20141217,False,False,일회성,S
+R10222,갑상선 눈병증,TED,1,20200226,20200226,False,False,일회성,S
+R10223,가성종양,Pseudotumor,1,20121124,20121124,False,False,일회성,S
+R10224,갑상선 눈병증,TED,1,20220322,20220322,False,True,일회성,S
+R10225,갑상선 눈병증,TED,1,20160128,20160128,False,False,일회성,S
+R10226,갑상선 눈병증,TED,1,20150318,20150318,False,False,일회성,S
+R10227,안와림프종,Lymphoma,1,20231031,20231031,False,True,일회성,S
+R10228,안와질환,Other orbital disease,1,20241023,20241023,False,False,일회성,S
+R10229,갑상선 눈병증,TED,1,20140319,20140319,False,False,일회성,S
+R10230,가성종양,Pseudotumor,1,20180331,20180331,False,True,일회성,S
+R10231,안와질환,Other orbital disease,1,20240405,20240405,False,False,일회성,S
+R10232,갑상선 눈병증,TED,1,20120305,20120305,False,False,일회성,S
+R10233,갑상선 눈병증,TED,0,20140904,20140904,False,False,일회성,S
+R10234,양성종양,Benign tumor,1,20170802,20170802,False,True,일회성,S
+R10235,가성종양,Pseudotumor,1,20130129,20130129,False,True,일회성,S
+R10236,갑상선 눈병증,TED,1,20160831,20160831,False,False,일회성,S
+R10237,갑상선 눈병증,TED,1,20210526,20210526,False,False,일회성,S
+R10238,갑상선 눈병증,TED,1,20240722,20240722,False,True,일회성,S
+R10239,양성종양,Benign tumor,1,20121031,20121031,False,True,일회성,S
+R10240,안와질환,Other orbital disease,1,20240325,20240325,False,False,일회성,S
+R10241,양성종양,Benign tumor,1,20211001,20211001,True,True,일회성,S
+R10242,갑상선 눈병증,TED,1,20190829,20190829,False,False,일회성,S
+R10243,갑상선 눈병증,TED,1,20190521,20190521,False,False,일회성,S
+R10244,가성종양,Pseudotumor,1,20200731,20200731,False,False,일회성,S
+R10245,갑상선 눈병증,TED,1,20130527,20130527,True,False,일회성,S
+R10246,갑상선 눈병증,TED,1,20170214,20170214,False,False,일회성,S
+R10247,안와질환,Other orbital disease,0,20120718,20120718,False,False,일회성,S
+R10248,갑상선 눈병증,TED,1,20231108,20231108,False,False,일회성,S
+R10249,갑상선 눈병증,TED,1,20230822,20230822,False,False,일회성,S
+R10250,안와질환,Other orbital disease,1,20130329,20130329,False,True,일회성,S
+R10251,양성종양,Benign tumor,1,20220418,20220418,True,False,일회성,S
+R10252,가성종양,Pseudotumor,1,20130423,20130423,False,False,일회성,S
+R10253,갑상선 눈병증,TED,1,20120321,20120321,False,True,일회성,S
+R10254,가성종양,Pseudotumor,1,20171116,20171116,False,False,일회성,S
+R10256,갑상선 눈병증,TED,1,20160314,20160314,False,False,일회성,S
+R10257,양성종양,Benign tumor,1,20171016,20171016,False,False,일회성,S
+R10258,양성종양,Benign tumor,1,20161006,20161006,False,True,일회성,S
+R10259,갑상선 눈병증,TED,0,20120502,20120502,False,False,일회성,S
+R10260,갑상선 눈병증,TED,1,20200729,20200729,False,False,일회성,S
+R10261,안와질환,Other orbital disease,1,20240822,20240822,False,True,일회성,S
+R10262,양성종양,Benign tumor,1,20180221,20180221,False,True,일회성,S
+R10263,양성종양,Benign tumor,1,20180426,20180426,True,False,일회성,S
+R10264,가성종양,Pseudotumor,1,20120425,20120425,False,False,일회성,S
+R10265,가성종양,Pseudotumor,1,20160729,20160729,False,False,일회성,S
+R10266,갑상선 눈병증,TED,1,20191218,20191218,False,False,일회성,S
+R10267,가성종양,Pseudotumor,1,20230401,20230401,False,False,일회성,S
+R10268,IgG4 관련질환,IgG4-RD,1,20240423,20240423,True,True,일회성,S
+R10269,갑상선 눈병증,TED,1,20230309,20230309,False,False,일회성,S
+R10270,갑상선 눈병증,TED,1,20190808,20190808,False,False,일회성,S
+R10271,갑상선 눈병증,TED,1,20240613,20240613,False,False,일회성,S
+R10272,갑상선 눈병증,TED,1,20150112,20150112,False,False,일회성,S
+R10273,양성종양,Benign tumor,1,20161230,20161230,False,True,일회성,S
+R10274,가성종양,Pseudotumor,1,20240325,20240325,True,False,일회성,S
+R10275,안와림프종,Lymphoma,1,20130911,20130911,False,True,일회성,S
+R10276,안와림프종,Lymphoma,1,20150915,20150915,False,False,일회성,S
+R10277,해면혈관종,Cavernous hemangioma,1,20180328,20180328,False,False,일회성,S
+R10278,양성종양,Benign tumor,1,20201007,20201007,True,True,일회성,S
+R10279,갑상선 눈병증,TED,1,20240127,20240127,False,False,일회성,S
+R10280,양성종양,Benign tumor,1,20191214,20191214,False,True,일회성,S
+R10281,갑상선 눈병증,TED,1,20240725,20240725,False,False,일회성,S
+R10282,양성종양,Benign tumor,1,20170830,20170830,False,False,일회성,S
+R10283,갑상선 눈병증,TED,1,20240801,20240801,False,False,일회성,S
+R10284,가성종양,Pseudotumor,1,20130227,20130227,True,False,일회성,S
+R10285,가성종양,Pseudotumor,2,20240808,20240808,False,True,일회성,S
+R10286,다형샘종,Pleomorphic adenoma,1,20230210,20230210,False,True,일회성,S
+R10287,양성종양,Benign tumor,1,20171018,20171018,False,True,일회성,S
+R10288,갑상선 눈병증,TED,1,20160704,20160704,False,False,일회성,S
+R10289,갑상선 눈병증,TED,1,20210616,20210616,False,False,일회성,S
+R10290,가성종양,Pseudotumor,1,20240712,20240712,True,False,일회성,S
+R10291,안와질환,Other orbital disease,1,20230802,20230802,False,False,일회성,S
+R10292,양성종양,Benign tumor,1,20130318,20130318,False,True,일회성,S
+R10293,갑상선 눈병증,TED,1,20220330,20220330,False,False,일회성,S
+R10294,갑상선 눈병증,TED,1,20231004,20231004,False,False,일회성,S
+R10295,안와질환,Other orbital disease,1,20220907,20220907,False,False,일회성,S
+R10296,안와림프종,Lymphoma,1,20210427,20210427,False,True,일회성,S
+R10297,갑상선 눈병증,TED,1,20130612,20130612,False,False,일회성,S
+R10298,갑상선 눈병증,TED,1,20150428,20150428,False,False,일회성,S
+R10299,갑상선 눈병증,TED,1,20201022,20201022,False,False,일회성,S
+R10300,안와질환,Other orbital disease,1,20230311,20230311,False,False,일회성,S
+R10301,갑상선 눈병증,TED,1,20230215,20230215,False,False,일회성,S
+R10302,갑상선 눈병증,TED,1,20211203,20211203,False,False,일회성,S
+R10303,안와질환,Other orbital disease,1,20140705,20140705,False,False,일회성,S
+R10305,가성종양,Pseudotumor,1,20180117,20180117,False,True,일회성,S
+R10306,안와질환,Other orbital disease,1,20141124,20141124,False,False,일회성,S
+R10307,갑상선 눈병증,TED,1,20200213,20200213,False,True,일회성,S
+R10308,안와질환,Other orbital disease,1,20130320,20130320,False,False,일회성,S
+R10309,갑상선 눈병증,TED,1,20160630,20160630,False,False,일회성,S
+R10310,갑상선 눈병증,TED,1,20191021,20191021,False,False,일회성,S
+R10311,양성종양,Benign tumor,1,20191022,20191022,False,True,일회성,S
+R10312,안와림프종,Lymphoma,1,20140715,20140715,False,False,일회성,S
+R10313,안와림프종,Lymphoma,1,20240524,20240524,True,True,일회성,S
+R10314,갑상선 눈병증,TED,1,20140825,20140825,False,False,일회성,S
+R10316,갑상선 눈병증,TED,0,20141112,20141112,False,False,일회성,S
+R10317,갑상선 눈병증,TED,1,20130604,20130604,False,True,일회성,S
+R10318,갑상선 눈병증,TED,0,20120607,20120607,False,False,일회성,S
+R10319,갑상선 눈병증,TED,1,20210908,20210908,False,False,일회성,S
+R10320,갑상선 눈병증,TED,1,20160317,20160317,False,False,일회성,S
+R10321,양성종양,Benign tumor,1,20210526,20210526,False,True,일회성,S
+R10322,갑상선 눈병증,TED,1,20231116,20231116,False,False,일회성,S
+R10323,가성종양,Pseudotumor,1,20231116,20231116,False,False,일회성,S
+R10324,안와림프종,Lymphoma,1,20140207,20140207,False,True,일회성,S
+R10325,안와림프종,Lymphoma,1,20220118,20220118,False,True,일회성,S
+R10326,갑상선 눈병증,TED,1,20170525,20170525,False,False,일회성,S
+R10327,갑상선 눈병증,TED,1,20200601,20200601,True,False,일회성,S
+R10328,갑상선 눈병증,TED,1,20230209,20230209,False,False,일회성,S
+R10329,양성종양,Benign tumor,1,20200121,20200121,False,True,일회성,S
+R10330,가성종양,Pseudotumor,1,20231022,20231022,False,False,일회성,S
+R10331,갑상선 눈병증,TED,1,20210429,20210429,True,False,일회성,S
+R10332,갑상선 눈병증,TED,1,20230419,20230419,False,False,일회성,S
+R10333,갑상선 눈병증,TED,1,20190710,20190710,False,True,일회성,S
+R10334,갑상선 눈병증,TED,1,20200219,20200219,False,False,일회성,S
+R10335,가성종양,Pseudotumor,1,20140610,20140610,False,False,일회성,S
+R10336,갑상선 눈병증,TED,1,20120604,20120604,False,False,일회성,S
+R10337,갑상선 눈병증,TED,1,20210624,20210624,False,False,일회성,S
+R10338,가성종양,Pseudotumor,0,20120926,20120926,False,True,일회성,S
+R10339,안와림프종,Lymphoma,1,20170329,20170329,False,True,일회성,S
+R10340,양성종양,Benign tumor,1,20120309,20120309,False,True,일회성,S
+R10341,갑상선 눈병증,TED,1,20171211,20171211,False,False,일회성,S
+R10342,가성종양,Pseudotumor,1,20240808,20240808,False,True,일회성,S
+R10343,안와질환,Other orbital disease,1,20220822,20220822,False,True,일회성,S
+R10344,갑상선 눈병증,TED,1,20191002,20191002,False,False,일회성,S
+R10345,갑상선 눈병증,TED,1,20191016,20191016,False,False,일회성,S
+R10346,안와림프종,Lymphoma,1,20240912,20240912,False,True,일회성,S
+R10347,갑상선 눈병증,TED,1,20220401,20220401,False,False,일회성,S
+R10348,가성종양,Pseudotumor,1,20241011,20241011,False,False,일회성,S
+R10349,갑상선 눈병증,TED,1,20180801,20180801,False,False,일회성,S
+R10350,가성종양,Pseudotumor,1,20150303,20150303,False,False,일회성,S
+R10351,안와림프종,Lymphoma,1,20170411,20170411,False,True,일회성,S
+R10352,갑상선 눈병증,TED,1,20190124,20190124,False,True,일회성,S
+R10353,안와림프종,Lymphoma,1,20200618,20200618,False,True,일회성,S
+R10354,안와질환,Other orbital disease,1,20240206,20240206,False,True,일회성,S
+R10355,갑상선 눈병증,TED,1,20120802,20120802,False,False,일회성,S
+R10356,갑상선 눈병증,TED,1,20240425,20240425,False,True,일회성,S
+R10357,안와질환,Other orbital disease,1,20221124,20221124,True,True,일회성,S
+R10358,갑상선 눈병증,TED,1,20221027,20221027,False,False,일회성,S
+R10359,양성종양,Benign tumor,1,20190102,20190102,False,True,일회성,S
+R10360,갑상선 눈병증,TED,1,20200130,20200130,False,False,일회성,S
+R10361,안와질환,Other orbital disease,1,20161028,20161028,False,False,일회성,S
+R10362,양성종양,Benign tumor,1,20191107,20191107,False,False,일회성,S
+R10363,갑상선 눈병증,TED,1,20201123,20201123,False,False,일회성,S
+R10364,양성종양,Benign tumor,1,20160901,20160901,False,True,일회성,S
+R10365,갑상선 눈병증,TED,1,20211124,20211124,False,False,일회성,S
+R10366,갑상선 눈병증,TED,1,20180702,20180702,False,False,일회성,S
+R10367,안와림프종,Lymphoma,1,20141231,20141231,False,True,일회성,S
+R10368,안와질환,Other orbital disease,1,20161206,20161206,False,False,일회성,S
+R10369,갑상선 눈병증,TED,1,20201021,20201021,False,True,일회성,S
+R10370,안와질환,Other orbital disease,1,20161209,20161209,False,False,일회성,S
+R10371,안와질환,Other orbital disease,1,20240530,20240530,False,True,일회성,S
+R10372,갑상선 눈병증,TED,1,20200827,20200827,False,False,일회성,S
+R10373,갑상선 눈병증,TED,1,20180917,20180917,False,False,일회성,S
+R10374,갑상선 눈병증,TED,0,20120828,20120828,False,False,일회성,S
+R10375,양성종양,Benign tumor,1,20180320,20180320,False,True,일회성,S
+R10376,안와질환,Other orbital disease,1,20200907,20200907,False,True,일회성,S
+R10377,안와림프종,Lymphoma,1,20240801,20240801,False,True,일회성,S
+R10378,갑상선 눈병증,TED,1,20190812,20190812,False,True,일회성,S
+R10379,갑상선 눈병증,TED,1,20151123,20151123,False,False,일회성,S
+R10380,갑상선 눈병증,TED,1,20191118,20191118,False,False,일회성,S
+R10381,안와질환,Other orbital disease,1,20240124,20240124,False,True,일회성,S
+R10382,메닌지오마,Meningioma,1,20131115,20131115,False,True,일회성,S
+R10383,갑상선 눈병증,TED,1,20180329,20180329,False,False,일회성,S
+R10384,양성종양,Benign tumor,1,20241016,20241016,True,True,일회성,S
+R10385,안와질환,Other orbital disease,1,20240604,20240604,False,False,일회성,S
+R10386,해면혈관종,Cavernous hemangioma,1,20200805,20200805,False,False,일회성,S
+R10387,안와림프종,Lymphoma,1,20201214,20201214,False,False,일회성,S
+R10388,안와림프종,Lymphoma,1,20150611,20150611,False,True,일회성,S
+R10389,갑상선 눈병증,TED,0,20121214,20121214,False,False,일회성,S
+R10390,갑상선 눈병증,TED,1,20190530,20190530,False,False,일회성,S
+R10391,양성종양,Benign tumor,0,20140618,20140618,False,True,일회성,S
+R10392,가성종양,Pseudotumor,1,20130426,20130426,False,True,일회성,S
+R10393,안와림프종,Lymphoma,1,20210331,20210331,False,True,일회성,S
+R10394,갑상선 눈병증,TED,1,20240905,20240905,False,True,일회성,S
+R10395,안와질환,Other orbital disease,1,20151123,20151123,False,False,일회성,S
+R10396,갑상선 눈병증,TED,1,20230726,20230726,False,False,일회성,S
+R10397,갑상선 눈병증,TED,1,20121212,20121212,False,False,일회성,S
+R10398,가성종양,Pseudotumor,1,20151118,20151118,False,False,일회성,S
+R10399,가성종양,Pseudotumor,1,20240207,20240207,False,True,일회성,S
+R10400,양성종양,Benign tumor,1,20180425,20180425,False,True,일회성,S
+R10401,안와질환,Other orbital disease,1,20220427,20220427,False,True,일회성,S
+R10402,갑상선 눈병증,TED,1,20201124,20201124,False,False,일회성,S
+R10405,갑상선 눈병증,TED,1,20221216,20221216,False,False,일회성,S
+R10406,갑상선 눈병증,TED,1,20140821,20140821,False,True,일회성,S
+R10407,양성종양,Benign tumor,1,20190412,20190412,False,True,일회성,S
+R10408,갑상선 눈병증,TED,1,20160116,20160116,False,False,일회성,S
+R10409,갑상선 눈병증,TED,1,20121018,20121018,False,False,일회성,S
+R10410,안와림프종,Lymphoma,1,20200513,20200513,False,True,일회성,S
+R10411,안와질환,Other orbital disease,1,20220428,20220428,False,True,일회성,S
+R10412,갑상선 눈병증,TED,1,20140312,20140312,False,False,일회성,S
+R10413,안와질환,Other orbital disease,1,20220530,20220530,True,True,일회성,S
+R10414,안와림프종,Lymphoma,1,20140220,20140220,False,False,일회성,S
+R10415,안와질환,Other orbital disease,1,20150202,20150202,False,False,일회성,S
+R10416,가성종양,Pseudotumor,1,20120305,20120305,False,True,일회성,S
+R10417,안와질환,Other orbital disease,1,20140728,20140728,False,True,일회성,S
+R10418,갑상선 눈병증,TED,1,20240613,20240613,False,False,일회성,S
+R10419,갑상선 눈병증,TED,1,20190910,20190910,False,True,일회성,S
+R10420,가성종양,Pseudotumor,1,20121008,20121008,False,True,일회성,S
+R10421,갑상선 눈병증,TED,0,20120329,20120329,False,True,일회성,S
+R10422,갑상선 눈병증,TED,1,20180117,20180117,False,False,일회성,S
+R10423,갑상선 눈병증,TED,1,20170523,20170523,False,False,일회성,S
+R10424,가성종양,Pseudotumor,1,20160516,20160516,False,False,일회성,S
+R10425,양성종양,Benign tumor,1,20190612,20190612,False,False,일회성,S
+R10426,양성종양,Benign tumor,1,20190826,20190826,False,False,일회성,S
+R10427,갑상선 눈병증,TED,1,20191028,20191028,False,True,일회성,S
+R10428,갑상선 눈병증,TED,1,20140324,20140324,False,False,일회성,S
+R10429,갑상선 눈병증,TED,1,20211129,20211129,False,False,일회성,S
+R10430,갑상선 눈병증,TED,1,20211103,20211103,False,False,일회성,S
+R10431,갑상선 눈병증,TED,1,20150128,20150128,False,False,일회성,S
+R10432,갑상선 눈병증,TED,1,20170705,20170705,False,False,일회성,S
+R10433,갑상선 눈병증,TED,1,20231106,20231106,False,False,일회성,S
+R10434,안와질환,Other orbital disease,1,20240628,20240628,False,True,일회성,S
+R10435,갑상선 눈병증,TED,1,20170911,20170911,False,False,일회성,S
+R10436,안와림프종,Lymphoma,1,20191025,20191025,False,True,일회성,S
+R10437,가성종양,Pseudotumor,1,20121231,20121231,False,False,일회성,S
+R10438,갑상선 눈병증,TED,1,20240725,20240725,False,True,일회성,S
+R10439,갑상선 눈병증,TED,1,20171023,20171023,False,False,일회성,S
+R10440,갑상선 눈병증,TED,1,20240926,20240926,False,False,일회성,S
+R10441,갑상선 눈병증,TED,1,20210428,20210428,False,False,일회성,S
+R10442,안와림프종,Lymphoma,1,20151231,20151231,False,True,일회성,S
+R10443,갑상선 눈병증,TED,1,20210611,20210611,False,False,일회성,S
+R10444,갑상선 눈병증,TED,0,20140717,20140717,False,False,일회성,S
+R10445,갑상선 눈병증,TED,1,20220518,20220518,False,False,일회성,S
+R10446,안와림프종,Lymphoma,1,20200713,20200713,False,True,일회성,S
+R10447,갑상선 눈병증,TED,1,20150112,20150112,False,False,일회성,S
+R10448,메닌지오마,Meningioma,1,20160831,20160831,False,False,일회성,S
+R10449,갑상선 눈병증,TED,0,20131226,20131226,True,True,일회성,S
+R10450,안와 악성종양,Malignant tumor,1,20120705,20120705,False,True,일회성,S
+R10451,갑상선 눈병증,TED,1,20120319,20120319,False,False,일회성,S
+R10453,갑상선 눈병증,TED,1,20191007,20191007,False,False,일회성,S
+R10454,양성종양,Benign tumor,1,20211215,20211215,False,True,일회성,S
+R10455,안와질환,Other orbital disease,1,20240320,20240320,False,True,일회성,S
+R10456,갑상선 눈병증,TED,1,20180219,20180219,False,False,일회성,S
+R10457,양성종양,Benign tumor,1,20170728,20170728,False,True,일회성,S
+R10459,갑상선 눈병증,TED,1,20130208,20130208,False,False,일회성,S
+R10460,갑상선 눈병증,TED,1,20230725,20230725,False,False,일회성,S
+R10461,안와질환,Other orbital disease,1,20200806,20200806,False,True,일회성,S
+R10462,안와림프종,Lymphoma,1,20200217,20200217,True,True,일회성,S
+R10463,가성종양,Pseudotumor,1,20120321,20120321,False,False,일회성,S
+R10464,갑상선 눈병증,TED,1,20180419,20180419,False,False,일회성,S
+R10465,양성종양,Benign tumor,1,20141224,20141224,True,True,일회성,S
+R10466,해면혈관종,Cavernous hemangioma,1,20130131,20130131,False,True,일회성,S
+R10467,가성종양,Pseudotumor,1,20170908,20170908,False,False,일회성,S
+R10468,갑상선 눈병증,TED,1,20200825,20200825,False,False,일회성,S
+R10469,양성종양,Benign tumor,1,20180730,20180730,False,True,일회성,S
+R10470,안와림프종,Lymphoma,1,20161025,20161025,False,True,일회성,S
+R10471,갑상선 눈병증,TED,1,20240816,20240816,False,False,일회성,S
+R10472,안와림프종,Lymphoma,1,20140624,20140624,False,False,일회성,S
+R10473,안와림프종,Lymphoma,1,20240314,20240314,False,True,일회성,S
+R10474,갑상선 눈병증,TED,1,20130425,20130425,False,False,일회성,S
+R10475,안와림프종,Lymphoma,1,20231020,20231020,False,True,일회성,S
+R10476,갑상선 눈병증,TED,1,20240605,20240605,False,False,일회성,S
+R10477,다형샘종,Pleomorphic adenoma,1,20170403,20170403,False,True,일회성,S
+R10478,안와질환,Other orbital disease,1,20210906,20210906,False,False,일회성,S
+R10479,안와질환,Other orbital disease,1,20150311,20150311,False,True,일회성,S
+R10480,갑상선 눈병증,TED,1,20200707,20200707,False,True,일회성,S
+R10481,가성종양,Pseudotumor,1,20231026,20231026,False,True,일회성,S
+R10482,양성종양,Benign tumor,1,20190115,20190115,False,True,일회성,S
+R10483,갑상선 눈병증,TED,0,20130729,20130729,False,True,일회성,S
+R10484,갑상선 눈병증,TED,1,20160418,20160418,False,False,일회성,S
+R10485,안와질환,Other orbital disease,1,20140422,20140422,False,False,일회성,S
+R10486,안와질환,Other orbital disease,1,20210401,20210401,False,False,일회성,S
+R10487,갑상선 눈병증,TED,1,20200604,20200604,False,False,일회성,S
+R10488,가성종양,Pseudotumor,1,20180122,20180122,False,False,일회성,S
+R10489,가성종양,Pseudotumor,1,20141126,20141126,False,False,일회성,S
+R10490,가성종양,Pseudotumor,1,20150211,20150211,False,False,일회성,S
+R10491,갑상선 눈병증,TED,1,20150713,20150713,False,False,일회성,S
+R10492,양성종양,Benign tumor,1,20120307,20120307,False,True,일회성,S
+R10493,안와림프종,Lymphoma,1,20131112,20131112,False,True,일회성,S
+R10494,갑상선 눈병증,TED,1,20210812,20210812,False,False,일회성,S
+R10495,갑상선 눈병증,TED,1,20190529,20190529,False,False,일회성,S
+R10496,안와림프종,Lymphoma,1,20201030,20201030,False,True,일회성,S
+R10497,갑상선 눈병증,TED,1,20150128,20150128,False,False,일회성,S
+R10498,갑상선 눈병증,TED,1,20240228,20240228,False,False,일회성,S
+R10499,가성종양,Pseudotumor,1,20240809,20240809,False,False,일회성,S
+R10500,안와림프종,Lymphoma,1,20220928,20220928,False,True,일회성,S
+R10501,안와림프종,Lymphoma,1,20120820,20120820,False,True,일회성,S
+R10503,가성종양,Pseudotumor,1,20150226,20150226,False,False,일회성,S
+R10504,갑상선 눈병증,TED,1,20240921,20240921,False,False,일회성,S
+R10505,갑상선 눈병증,TED,1,20220825,20220825,False,False,일회성,S
+R10506,갑상선 눈병증,TED,1,20210324,20210324,False,False,일회성,S
+R10507,안와림프종,Lymphoma,1,20220125,20220125,False,True,일회성,S
+R10508,안와질환,Other orbital disease,1,20211117,20211117,False,True,일회성,S
+R10509,갑상선 눈병증,TED,1,20210825,20210825,False,False,일회성,S
+R10510,해면혈관종,Cavernous hemangioma,1,20190521,20190521,False,False,일회성,S
+R10511,가성종양,Pseudotumor,1,20240802,20240802,False,True,일회성,S
+R10512,갑상선 눈병증,TED,1,20190131,20190131,False,True,일회성,S
+R10513,갑상선 눈병증,TED,1,20150112,20150112,False,True,일회성,S
+R10514,갑상선 눈병증,TED,1,20151026,20151026,False,False,일회성,S
+R10515,갑상선 눈병증,TED,1,20240809,20240809,False,False,일회성,S
+R10516,가성종양,Pseudotumor,1,20230523,20230523,False,True,일회성,S
+R10517,갑상선 눈병증,TED,1,20230629,20230629,False,False,일회성,S
+R10518,갑상선 눈병증,TED,1,20240725,20240725,False,False,일회성,S
+R10519,갑상선 눈병증,TED,1,20220919,20220919,False,False,일회성,S
+R10520,안와림프종,Lymphoma,1,20191206,20191206,True,True,일회성,S
+R10521,안와림프종,Lymphoma,1,20160905,20160905,False,True,일회성,S
+R10522,갑상선 눈병증,TED,0,20120906,20120906,False,False,일회성,S
+R10523,갑상선 눈병증,TED,1,20180418,20180418,False,False,일회성,S
+R10524,양성종양,Benign tumor,1,20240822,20240822,False,True,일회성,S
+R10525,안와질환,Other orbital disease,1,20141203,20141203,False,False,일회성,S
+R10526,안와질환,Other orbital disease,1,20211125,20211125,False,False,일회성,S
+R10527,갑상선 눈병증,TED,1,20240725,20240725,False,True,일회성,S
+R10528,안와질환,Other orbital disease,1,20240312,20240312,False,False,일회성,S
+R10529,갑상선 눈병증,TED,0,20120305,20120305,False,False,일회성,S
+R10530,갑상선 눈병증,TED,1,20191016,20191016,False,False,일회성,S
+R10531,가성종양,Pseudotumor,1,20151214,20151214,False,False,일회성,S
+R10532,안와질환,Other orbital disease,1,20210324,20210324,False,False,일회성,S
+R10533,갑상선 눈병증,TED,1,20190412,20190412,False,False,일회성,S
+R10534,안와림프종,Lymphoma,1,20200729,20200729,False,True,일회성,S
+R10535,안와질환,Other orbital disease,1,20230227,20230227,False,True,일회성,S
+R10536,안와림프종,Lymphoma,1,20140311,20140311,False,True,일회성,S
+R10537,갑상선 눈병증,TED,1,20150330,20150330,False,False,일회성,S
+R10538,안와질환,Other orbital disease,1,20130620,20130620,False,False,일회성,S
+R10539,해면혈관종,Cavernous hemangioma,1,20240830,20240830,True,False,일회성,S
+R10540,갑상선 눈병증,TED,1,20120810,20120810,False,False,일회성,S
+R10541,해면혈관종,Cavernous hemangioma,1,20240502,20240502,True,False,일회성,S
+R10542,가성종양,Pseudotumor,1,20241023,20241023,False,True,일회성,S
+R10543,갑상선 눈병증,TED,0,20140804,20140804,False,False,일회성,S
+R10544,갑상선 눈병증,TED,1,20240919,20240919,False,False,일회성,S
+R10545,안와림프종,Lymphoma,1,20210507,20210507,False,True,일회성,S
+R10546,갑상선 눈병증,TED,1,20170531,20170531,False,False,일회성,S
+R10547,갑상선 눈병증,TED,1,20150912,20150912,False,False,일회성,S
+R10548,메닌지오마,Meningioma,1,20170809,20170809,False,True,일회성,S
+R10549,안와림프종,Lymphoma,1,20161228,20161228,False,True,일회성,S
+R10550,갑상선 눈병증,TED,1,20150422,20150422,False,True,일회성,S
+R10551,안와림프종,Lymphoma,1,20181122,20181122,False,True,일회성,S
+R10552,갑상선 눈병증,TED,1,20191016,20191016,False,False,일회성,S
+R10553,안와질환,Other orbital disease,1,20161014,20161014,False,False,일회성,S
+R10554,갑상선 눈병증,TED,1,20131014,20131014,False,False,일회성,S
+R10555,갑상선 눈병증,TED,1,20240223,20240223,False,False,일회성,S
+R10556,갑상선 눈병증,TED,1,20240219,20240219,False,False,일회성,S
+R10557,안와질환,Other orbital disease,1,20241001,20241001,False,True,일회성,S
+R10558,양성종양,Benign tumor,1,20180830,20180830,False,True,일회성,S
+R10559,갑상선 눈병증,TED,0,20131007,20131007,False,True,일회성,S
+R10560,안와질환,Other orbital disease,1,20240509,20240509,False,True,일회성,S
+R10561,안와질환,Other orbital disease,1,20240725,20240725,False,True,일회성,S
+R10562,갑상선 눈병증,TED,1,20161221,20161221,False,True,일회성,S
+R10563,갑상선 눈병증,TED,1,20201218,20201218,False,False,일회성,S
+R10564,갑상선 눈병증,TED,1,20211125,20211125,False,True,일회성,S
+R10565,갑상선 눈병증,TED,1,20240909,20240909,False,False,일회성,S
+R10566,가성종양,Pseudotumor,1,20240806,20240806,False,True,일회성,S
+R10567,갑상선 눈병증,TED,1,20120516,20120516,False,True,일회성,S
+R10568,안와질환,Other orbital disease,1,20230214,20230214,True,True,일회성,S
+R10569,안와림프종,Lymphoma,1,20240508,20240508,False,True,일회성,S
+R10570,가성종양,Pseudotumor,1,20150116,20150116,False,False,일회성,S
+R10571,안와림프종,Lymphoma,1,20180714,20180714,False,True,일회성,S
+R10572,갑상선 눈병증,TED,1,20121022,20121022,False,False,일회성,S
+R10573,가성종양,Pseudotumor,1,20240726,20240726,False,True,일회성,S
+R10574,안와림프종,Lymphoma,1,20120823,20120823,False,True,일회성,S
+R10575,갑상선 눈병증,TED,1,20240731,20240731,False,False,일회성,S
+R10576,안와질환,Other orbital disease,1,20241021,20241021,False,False,일회성,S
+R10577,갑상선 눈병증,TED,1,20230426,20230426,False,False,일회성,S
+R10578,양성종양,Benign tumor,0,20140917,20140917,False,False,일회성,S
+R10579,가성종양,Pseudotumor,1,20150810,20150810,False,False,일회성,S
+R10580,갑상선 눈병증,TED,1,20240916,20240916,False,True,일회성,S
+R10581,갑상선 눈병증,TED,1,20210723,20210723,False,False,일회성,S
+R10582,갑상선 눈병증,TED,1,20220622,20220622,False,False,일회성,S
+R10583,양성종양,Benign tumor,1,20230411,20230411,False,True,일회성,S
+R10584,안와림프종,Lymphoma,1,20210721,20210721,False,True,일회성,S
+R10585,갑상선 눈병증,TED,1,20140313,20140313,False,False,일회성,S
+R10586,갑상선 눈병증,TED,1,20200212,20200212,False,False,일회성,S
+R10587,갑상선 눈병증,TED,1,20240708,20240708,False,False,일회성,S
+R10588,갑상선 눈병증,TED,1,20150827,20150827,False,False,일회성,S
+R10589,안와림프종,Lymphoma,1,20220208,20220208,False,True,일회성,S
+R10590,가성종양,Pseudotumor,1,20220525,20220525,False,True,일회성,S
+R10591,안와림프종,Lymphoma,1,20220708,20220708,False,True,일회성,S
+R10592,양성종양,Benign tumor,1,20170215,20170215,False,False,일회성,S
+R10593,갑상선 눈병증,TED,1,20230525,20230525,False,False,일회성,S
+R10594,가성종양,Pseudotumor,1,20210310,20210310,False,True,일회성,S
+R10595,가성종양,Pseudotumor,1,20120911,20120911,False,False,일회성,S
+R10596,가성종양,Pseudotumor,1,20150604,20150604,False,False,일회성,S
+R10597,갑상선 눈병증,TED,0,20120430,20120430,False,False,일회성,S
+R10598,안와질환,Other orbital disease,1,20151211,20151211,False,True,일회성,S
+R10599,갑상선 눈병증,TED,1,20210107,20210107,False,False,일회성,S
+R10600,갑상선 눈병증,TED,1,20220530,20220530,False,False,일회성,S
+R10602,안와림프종,Lymphoma,1,20240816,20240816,False,True,일회성,S
+R10603,안와림프종,Lymphoma,1,20150209,20150209,False,True,일회성,S
+R10604,안와질환,Other orbital disease,1,20210422,20210422,False,True,일회성,S
+R10605,갑상선 눈병증,TED,1,20160215,20160215,False,False,일회성,S
+R10606,해면혈관종,Cavernous hemangioma,0,20130828,20130828,True,True,일회성,S
+R10607,갑상선 눈병증,TED,1,20191129,20191129,False,False,일회성,S
+R10608,메닌지오마,Meningioma,1,20160329,20160329,False,False,일회성,S
+R10609,가성종양,Pseudotumor,1,20120906,20120906,False,False,일회성,S
+R10610,안와질환,Other orbital disease,1,20200827,20200827,False,False,일회성,S
+R10611,양성종양,Benign tumor,1,20150608,20150608,False,False,일회성,S
+R10612,갑상선 눈병증,TED,1,20120322,20120322,False,True,일회성,S
+R10613,양성종양,Benign tumor,1,20171101,20171101,False,False,일회성,S
+R10614,해면혈관종,Cavernous hemangioma,1,20180214,20180214,False,True,일회성,S
+R10615,갑상선 눈병증,TED,1,20190627,20190627,False,False,일회성,S
+R10616,양성종양,Benign tumor,0,20130626,20130626,False,True,일회성,S
+R10617,안와질환,Other orbital disease,1,20221228,20221228,False,False,일회성,S
+R10618,갑상선 눈병증,TED,1,20121220,20121220,False,True,일회성,S
+R10619,갑상선 눈병증,TED,1,20200402,20200402,False,False,일회성,S
+R10621,안와림프종,Lymphoma,1,20181105,20181105,False,True,일회성,S
+R10622,갑상선 눈병증,TED,1,20200116,20200116,False,False,일회성,S
+R10623,안와질환,Other orbital disease,1,20170601,20170601,False,True,일회성,S
+R10624,가성종양,Pseudotumor,1,20190821,20190821,False,False,일회성,S
+R10625,갑상선 눈병증,TED,1,20151026,20151026,False,True,일회성,S
+R10626,갑상선 눈병증,TED,1,20211125,20211125,False,False,일회성,S
+R10627,갑상선 눈병증,TED,1,20141103,20141103,False,False,일회성,S
+R10628,갑상선 눈병증,TED,0,20130130,20130130,False,False,일회성,S
+R10629,갑상선 눈병증,TED,1,20131218,20131218,False,False,일회성,S
+R10630,갑상선 눈병증,TED,1,20230816,20230816,False,True,일회성,S
+R10631,안와질환,Other orbital disease,1,20220105,20220105,False,True,일회성,S
+R10632,갑상선 눈병증,TED,1,20220922,20220922,False,False,일회성,S
+R10633,안와림프종,Lymphoma,1,20161006,20161006,False,True,일회성,S
+R10634,갑상선 눈병증,TED,1,20191218,20191218,False,False,일회성,S
+R10635,안와림프종,Lymphoma,1,20241025,20241025,False,True,일회성,S
+R10636,갑상선 눈병증,TED,1,20130701,20130701,False,False,일회성,S
+R10637,안와질환,Other orbital disease,1,20211124,20211124,False,False,일회성,S
+R10638,양성종양,Benign tumor,1,20190819,20190819,False,True,일회성,S
+R10639,갑상선 눈병증,TED,1,20180601,20180601,False,False,일회성,S
+R10640,안와질환,Other orbital disease,1,20201209,20201209,False,True,일회성,S
+R10641,갑상선 눈병증,TED,1,20210916,20210916,False,False,일회성,S
+R10642,양성종양,Benign tumor,1,20211117,20211117,False,True,일회성,S
+R10643,안와림프종,Lymphoma,1,20240924,20240924,False,True,일회성,S
+R10644,갑상선 눈병증,TED,1,20210208,20210208,False,False,일회성,S
+R10645,안와질환,Other orbital disease,1,20160722,20160722,False,True,일회성,S
+R10646,IgG4 관련질환,IgG4-RD,1,20231123,20231123,False,False,일회성,S
+R10647,갑상선 눈병증,TED,1,20170227,20170227,False,False,일회성,S
+R10648,가성종양,Pseudotumor,1,20170427,20170427,False,False,일회성,S
+R10649,안와림프종,Lymphoma,1,20180625,20180625,False,True,일회성,S
+R10650,안와질환,Other orbital disease,1,20161219,20161219,False,False,일회성,S
+R10651,안와림프종,Lymphoma,1,20211021,20211021,False,True,일회성,S
+R10652,갑상선 눈병증,TED,1,20150921,20150921,False,False,일회성,S
+R10654,가성종양,Pseudotumor,1,20150406,20150406,False,False,일회성,S
+R10655,양성종양,Benign tumor,1,20190416,20190416,False,False,일회성,S
+R10657,가성종양,Pseudotumor,1,20230913,20230913,False,True,일회성,S
+R10659,안와질환,Other orbital disease,1,20220914,20220914,False,True,일회성,S
+R10660,갑상선 눈병증,TED,1,20191216,20191216,False,False,일회성,S
+R10661,안와질환,Other orbital disease,1,20120416,20120416,False,True,일회성,S
+R10662,양성종양,Benign tumor,1,20120307,20120307,False,False,일회성,S
+R10663,갑상선 눈병증,TED,0,20140721,20140721,False,False,일회성,S
+R10664,양성종양,Benign tumor,1,20190130,20190130,False,True,일회성,S
+R10665,갑상선 눈병증,TED,1,20171206,20171206,False,True,일회성,S
+R10666,갑상선 눈병증,TED,1,20151123,20151123,False,True,일회성,S
+R10667,안와질환,Other orbital disease,1,20210217,20210217,False,True,일회성,S
+R10668,갑상선 눈병증,TED,1,20170928,20170928,False,False,일회성,S
+R10669,안와림프종,Lymphoma,1,20240820,20240820,False,True,일회성,S
+R10670,안와질환,Other orbital disease,1,20220502,20220502,False,True,일회성,S
+R10671,갑상선 눈병증,TED,1,20230803,20230803,False,False,일회성,S
+R10672,가성종양,Pseudotumor,0,20130624,20130624,False,False,일회성,S
+R10673,가성종양,Pseudotumor,1,20210118,20210118,False,False,일회성,S
+R10674,갑상선 눈병증,TED,1,20160801,20160801,False,False,일회성,S
+R10675,갑상선 눈병증,TED,1,20160919,20160919,False,False,일회성,S
+R10676,갑상선 눈병증,TED,0,20121008,20121008,False,True,일회성,S
+R10677,갑상선 눈병증,TED,1,20240411,20240411,False,True,일회성,S
+R10678,안와림프종,Lymphoma,1,20130730,20130730,False,True,일회성,S
+R10679,갑상선 눈병증,TED,1,20240203,20240203,True,False,일회성,S
+R10680,가성종양,Pseudotumor,1,20150716,20150716,False,False,일회성,S
+R10681,양성종양,Benign tumor,1,20170510,20170510,False,True,일회성,S
+R10682,안와림프종,Lymphoma,1,20210326,20210326,False,True,일회성,S
+R10683,양성종양,Benign tumor,1,20200130,20200130,False,False,일회성,S
+R10684,갑상선 눈병증,TED,1,20140820,20140820,False,True,일회성,S
+R10685,안와림프종,Lymphoma,1,20170706,20170706,False,True,일회성,S
+R10686,가성종양,Pseudotumor,1,20140331,20140331,False,True,일회성,S
+R10687,안와림프종,Lymphoma,1,20120709,20120709,False,True,일회성,S
+R10688,갑상선 눈병증,TED,1,20240104,20240104,False,True,일회성,S
+R10689,안와질환,Other orbital disease,1,20130423,20130423,False,False,일회성,S
+R10690,갑상선 눈병증,TED,1,20220924,20220924,False,False,일회성,S
+R10691,안와질환,Other orbital disease,1,20220427,20220427,False,False,일회성,S
+R10692,양성종양,Benign tumor,1,20170123,20170123,False,False,일회성,S
+R10693,갑상선 눈병증,TED,1,20240108,20240108,False,False,일회성,S
+R10694,메닌지오마,Meningioma,1,20170925,20170925,False,True,일회성,S
+R10695,갑상선 눈병증,TED,1,20150515,20150515,False,True,일회성,S
+R10696,안와 악성종양,Malignant tumor,1,20150519,20150519,False,False,일회성,S
+R10697,안와질환,Other orbital disease,1,20221129,20221129,False,False,일회성,S
+R10698,갑상선 눈병증,TED,1,20230904,20230904,False,False,일회성,S
+R10699,갑상선 눈병증,TED,1,20211125,20211125,False,False,일회성,S
+R10700,안와림프종,Lymphoma,1,20240313,20240313,False,True,일회성,S
+R10701,갑상선 눈병증,TED,1,20211020,20211020,False,False,일회성,S
+R10702,안와림프종,Lymphoma,1,20220225,20220225,False,True,일회성,S
+R10703,가성종양,Pseudotumor,1,20240125,20240125,False,True,일회성,S
+R10704,갑상선 눈병증,TED,1,20161107,20161107,False,False,일회성,S
+R10705,IgG4 관련질환,IgG4-RD,1,20221104,20221104,False,True,일회성,S
+R10706,갑상선 눈병증,TED,1,20220915,20220915,False,False,일회성,S
+R10707,안와질환,Other orbital disease,1,20240811,20240811,False,True,일회성,S
+R10708,안와림프종,Lymphoma,1,20140409,20140409,False,True,일회성,S
+R10709,갑상선 눈병증,TED,1,20180314,20180314,False,False,일회성,S
+R10710,안와림프종,Lymphoma,1,20191204,20191204,True,True,일회성,S
+R10711,갑상선 눈병증,TED,1,20230531,20230531,False,False,일회성,S
+R10712,가성종양,Pseudotumor,1,20160324,20160324,False,True,일회성,S
+R10713,갑상선 눈병증,TED,1,20131014,20131014,False,False,일회성,S
+R10714,갑상선 눈병증,TED,1,20220418,20220418,False,False,일회성,S
+R10715,안와질환,Other orbital disease,1,20210719,20210719,False,True,일회성,S
+R10716,갑상선 눈병증,TED,0,20120601,20120601,False,False,일회성,S
+R10717,안와질환,Other orbital disease,1,20180407,20180407,False,False,일회성,S
+R10718,갑상선 눈병증,TED,1,20190717,20190717,False,False,일회성,S
+R10719,갑상선 눈병증,TED,1,20171106,20171106,False,False,일회성,S
+R10720,갑상선 눈병증,TED,1,20180329,20180329,False,False,일회성,S
+R10721,해면혈관종,Cavernous hemangioma,1,20210528,20210528,False,True,일회성,S
+R10722,가성종양,Pseudotumor,1,20180831,20180831,True,False,일회성,S
+R10723,안와림프종,Lymphoma,1,20210908,20210908,False,True,일회성,S
+R10724,안와질환,Other orbital disease,1,20200730,20200730,False,True,일회성,S
+R10725,갑상선 눈병증,TED,1,20240718,20240718,False,True,일회성,S
+R10726,갑상선 눈병증,TED,1,20220221,20220221,False,False,일회성,S
+R10727,갑상선 눈병증,TED,1,20170608,20170608,False,False,일회성,S
+R10728,양성종양,Benign tumor,0,20120305,20120305,False,False,일회성,S
+R10729,가성종양,Pseudotumor,1,20130703,20130703,False,False,일회성,S
+R10730,가성종양,Pseudotumor,1,20131224,20131224,False,False,일회성,S
+R10731,갑상선 눈병증,TED,1,20130826,20130826,False,False,일회성,S
+R10732,갑상선 눈병증,TED,1,20131115,20131115,False,False,일회성,S
+R10734,양성종양,Benign tumor,1,20120524,20120524,False,True,일회성,S
+R10735,갑상선 눈병증,TED,1,20170112,20170112,True,False,일회성,S
+R10736,양성종양,Benign tumor,1,20170116,20170116,False,True,일회성,S
+R10737,안와질환,Other orbital disease,1,20240909,20240909,False,True,일회성,S
+R10738,갑상선 눈병증,TED,1,20220525,20220525,False,False,일회성,S
+R10739,안와림프종,Lymphoma,1,20140421,20140421,False,False,일회성,S
+R10740,양성종양,Benign tumor,1,20190611,20190611,True,False,일회성,S
+R10741,갑상선 눈병증,TED,1,20150303,20150303,False,False,일회성,S
+R10742,양성종양,Benign tumor,1,20171127,20171127,False,True,일회성,S
+R10743,안와질환,Other orbital disease,1,20241004,20241004,False,False,일회성,S
+R10744,갑상선 눈병증,TED,1,20150514,20150514,False,False,일회성,S
+R10745,가성종양,Pseudotumor,1,20170620,20170620,False,True,일회성,S
+R10746,가성종양,Pseudotumor,1,20160109,20160109,True,True,일회성,S
+R10747,갑상선 눈병증,TED,1,20240617,20240617,False,False,일회성,S
+R10748,양성종양,Benign tumor,1,20160211,20160211,False,False,일회성,S
+R10749,갑상선 눈병증,TED,1,20170406,20170406,False,True,일회성,S
+R10750,갑상선 눈병증,TED,1,20240521,20240521,False,True,일회성,S
+R10751,안와림프종,Lymphoma,1,20210204,20210204,False,True,일회성,S
+R10752,갑상선 눈병증,TED,1,20170629,20170629,False,True,일회성,S
+R10753,갑상선 눈병증,TED,1,20130611,20130611,False,False,일회성,S
+R10754,해면혈관종,Cavernous hemangioma,1,20220208,20220208,False,True,일회성,S
+R10755,갑상선 눈병증,TED,1,20170120,20170120,False,True,일회성,S
+R10756,안와질환,Other orbital disease,1,20240920,20240920,False,True,일회성,S
+R10757,갑상선 눈병증,TED,1,20160921,20160921,False,False,일회성,S
+R10758,갑상선 눈병증,TED,1,20200428,20200428,False,False,일회성,S
+R10759,갑상선 눈병증,TED,1,20160613,20160613,False,False,일회성,S
+R10760,가성종양,Pseudotumor,1,20120730,20120730,False,False,일회성,S
+R10761,안와질환,Other orbital disease,1,20210308,20210308,False,True,일회성,S
+R10762,안와질환,Other orbital disease,1,20210823,20210823,False,True,일회성,S
+R10763,안와질환,Other orbital disease,1,20171116,20171116,False,False,일회성,S
+R10764,양성종양,Benign tumor,1,20120611,20120611,False,True,일회성,S
+R10765,가성종양,Pseudotumor,1,20121213,20121213,False,False,일회성,S
+R10766,갑상선 눈병증,TED,1,20180108,20180108,False,False,일회성,S
+R10767,갑상선 눈병증,TED,1,20130701,20130701,False,False,일회성,S
+R10768,갑상선 눈병증,TED,1,20220209,20220209,False,False,일회성,S
+R10769,안와림프종,Lymphoma,1,20180330,20180330,False,True,일회성,S
+R10770,해면혈관종,Cavernous hemangioma,0,20120809,20120809,False,True,일회성,S
+R10771,양성종양,Benign tumor,1,20180806,20180806,False,False,일회성,S
+R10772,림프관종,Lymphangioma,1,20160624,20160624,False,False,일회성,S
+R10773,안와질환,Other orbital disease,1,20230327,20230327,True,True,일회성,S
+R10774,갑상선 눈병증,TED,1,20230320,20230320,False,False,일회성,S
+R10775,다형샘종,Pleomorphic adenoma,1,20150211,20150211,False,False,일회성,S
+R10776,갑상선 눈병증,TED,1,20230927,20230927,True,True,일회성,S
+R10777,가성종양,Pseudotumor,1,20170307,20170307,True,True,일회성,S
+R10778,다형샘종,Pleomorphic adenoma,1,20240821,20240821,True,True,일회성,S
+R10780,안와질환,Other orbital disease,1,20200824,20200824,False,False,일회성,S
+R10781,갑상선 눈병증,TED,1,20240715,20240715,False,False,일회성,S
+R10782,갑상선 눈병증,TED,1,20240117,20240117,False,False,일회성,S
+R10783,림프관종,Lymphangioma,1,20140702,20140702,False,False,일회성,S
+R10784,갑상선 눈병증,TED,1,20180704,20180704,False,False,일회성,S
+R10785,안와림프종,Lymphoma,1,20220112,20220112,False,False,일회성,S
+R10786,갑상선 눈병증,TED,1,20170227,20170227,False,False,일회성,S
+R10787,갑상선 눈병증,TED,1,20200129,20200129,True,False,일회성,S
+R10788,갑상선 눈병증,TED,1,20230315,20230315,False,False,일회성,S
+R10789,갑상선 눈병증,TED,1,20170109,20170109,False,False,일회성,S
+R10790,해면혈관종,Cavernous hemangioma,1,20190928,20190928,False,False,일회성,S
+R10791,가성종양,Pseudotumor,1,20150309,20150309,False,True,일회성,S
+R10792,가성종양,Pseudotumor,1,20180207,20180207,False,False,일회성,S
+R10793,안와림프종,Lymphoma,1,20240503,20240503,False,False,일회성,S
+R10794,안와림프종,Lymphoma,1,20160812,20160812,False,True,일회성,S
+R10795,갑상선 눈병증,TED,1,20221031,20221031,False,False,일회성,S
+R10796,양성종양,Benign tumor,1,20200805,20200805,False,True,일회성,S
+R10797,안와림프종,Lymphoma,1,20231229,20231229,False,True,일회성,S
+R10799,갑상선 눈병증,TED,1,20170406,20170406,False,False,일회성,S
+R10800,안와림프종,Lymphoma,1,20210927,20210927,False,True,일회성,S
+R10801,갑상선 눈병증,TED,1,20170315,20170315,False,False,일회성,S
+R10802,갑상선 눈병증,TED,1,20220716,20220716,False,False,일회성,S
+R10803,갑상선 눈병증,TED,1,20240926,20240926,False,True,일회성,S
+R10804,안와림프종,Lymphoma,1,20170323,20170323,False,True,일회성,S
+R10805,가성종양,Pseudotumor,1,20230127,20230127,False,True,일회성,S
+R10806,갑상선 눈병증,TED,1,20190321,20190321,False,False,일회성,S
+R10807,안와질환,Other orbital disease,1,20150821,20150821,False,False,일회성,S
+R10808,안와질환,Other orbital disease,1,20170918,20170918,False,False,일회성,S
+R10809,갑상선 눈병증,TED,1,20240905,20240905,False,False,일회성,S
+R10810,갑상선 눈병증,TED,1,20140625,20140625,False,True,일회성,S
+R10812,안와림프종,Lymphoma,1,20180629,20180629,False,True,일회성,S
+R10813,갑상선 눈병증,TED,1,20231227,20231227,False,False,일회성,S
+R10814,갑상선 눈병증,TED,1,20211118,20211118,False,False,일회성,S
+R10815,갑상선 눈병증,TED,1,20190924,20190924,False,False,일회성,S
+R10816,안와림프종,Lymphoma,1,20150514,20150514,False,True,일회성,S
+R10817,가성종양,Pseudotumor,1,20120919,20120919,False,True,일회성,S
+R10818,갑상선 눈병증,TED,1,20210304,20210304,False,False,일회성,S
+R10819,갑상선 눈병증,TED,1,20190529,20190529,False,False,일회성,S
+R10820,갑상선 눈병증,TED,1,20210407,20210407,False,False,일회성,S
+R10821,양성종양,Benign tumor,1,20180827,20180827,False,True,일회성,S
+R10822,양성종양,Benign tumor,1,20190227,20190227,True,False,일회성,S
+R10823,가성종양,Pseudotumor,1,20200923,20200923,False,False,일회성,S
+R10824,갑상선 눈병증,TED,1,20130826,20130826,False,False,일회성,S
+R10825,갑상선 눈병증,TED,1,20230516,20230516,False,False,일회성,S
+R10826,갑상선 눈병증,TED,1,20210617,20210617,False,False,일회성,S
+R10827,가성종양,Pseudotumor,1,20180108,20180108,False,False,일회성,S
+R10828,안와림프종,Lymphoma,1,20230317,20230317,False,True,일회성,S
+R10829,갑상선 눈병증,TED,1,20210714,20210714,False,False,일회성,S
+R10830,갑상선 눈병증,TED,1,20141224,20141224,False,False,일회성,S
+R10831,안와림프종,Lymphoma,1,20141031,20141031,False,True,일회성,S
+R10832,양성종양,Benign tumor,1,20151231,20151231,True,False,일회성,S
+R10833,양성종양,Benign tumor,1,20160407,20160407,False,True,일회성,S
+R10834,안와질환,Other orbital disease,1,20150803,20150803,False,False,일회성,S
+R10835,갑상선 눈병증,TED,0,20121029,20121029,False,False,일회성,S
+R10836,갑상선 눈병증,TED,1,20120425,20120425,False,False,일회성,S
+R10837,안와질환,Other orbital disease,1,20200716,20200716,False,True,일회성,S
+R10838,안와림프종,Lymphoma,1,20210927,20210927,False,True,일회성,S
+R10839,안와림프종,Lymphoma,1,20150730,20150730,False,True,일회성,S
+R10840,안와림프종,Lymphoma,1,20190617,20190617,True,True,일회성,S
+R10841,안와림프종,Lymphoma,1,20181015,20181015,False,True,일회성,S
+R10842,안와림프종,Lymphoma,1,20240618,20240618,False,True,일회성,S
+R10843,해면혈관종,Cavernous hemangioma,1,20200923,20200923,False,False,일회성,S
+R10844,가성종양,Pseudotumor,1,20200623,20200623,False,False,일회성,S
+R10845,갑상선 눈병증,TED,1,20240115,20240115,False,False,일회성,S
+R10846,양성종양,Benign tumor,1,20190520,20190520,False,False,일회성,S
+R10847,갑상선 눈병증,TED,1,20240725,20240725,False,False,일회성,S
+R10848,양성종양,Benign tumor,1,20160818,20160818,False,False,일회성,S
+R10849,안와림프종,Lymphoma,1,20210217,20210217,False,True,일회성,S
+R10850,안와림프종,Lymphoma,1,20121101,20121101,False,False,일회성,S
+R10851,해면혈관종,Cavernous hemangioma,1,20190404,20190404,False,True,일회성,S
+R10852,안와림프종,Lymphoma,1,20180723,20180723,False,True,일회성,S
+R10853,갑상선 눈병증,TED,1,20150805,20150805,False,True,일회성,S
+R10854,갑상선 눈병증,TED,1,20240926,20240926,False,False,일회성,S
+R10855,갑상선 눈병증,TED,1,20200207,20200207,False,False,일회성,S
+R10856,안와질환,Other orbital disease,1,20210316,20210316,False,True,일회성,S
+R10857,갑상선 눈병증,TED,1,20230821,20230821,False,False,일회성,S
+R10858,갑상선 눈병증,TED,1,20190910,20190910,False,True,일회성,S
+R10859,안와질환,Other orbital disease,1,20240606,20240606,False,False,일회성,S
+R10860,양성종양,Benign tumor,1,20171024,20171024,False,False,일회성,S
+R10861,갑상선 눈병증,TED,1,20191026,20191026,False,False,일회성,S
+R10862,안와림프종,Lymphoma,1,20240806,20240806,False,True,일회성,S
+R10863,갑상선 눈병증,TED,1,20230323,20230323,False,False,일회성,S
+R10864,갑상선 눈병증,TED,1,20190925,20190925,False,False,일회성,S
+R10865,갑상선 눈병증,TED,1,20190208,20190208,False,True,일회성,S
+R10866,양성종양,Benign tumor,1,20230904,20230904,False,False,일회성,S
+R10867,갑상선 눈병증,TED,1,20161215,20161215,False,False,일회성,S
+R10868,양성종양,Benign tumor,1,20130515,20130515,False,True,일회성,S
+R10869,갑상선 눈병증,TED,1,20180504,20180504,False,True,일회성,S
+R10870,갑상선 눈병증,TED,1,20241002,20241002,False,False,일회성,S
+R10871,가성종양,Pseudotumor,1,20160622,20160622,False,False,일회성,S
+R10872,갑상선 눈병증,TED,1,20151010,20151010,False,False,일회성,S
+R10873,갑상선 눈병증,TED,1,20121018,20121018,False,True,일회성,S
+R10874,갑상선 눈병증,TED,1,20240110,20240110,False,False,일회성,S
+R10875,갑상선 눈병증,TED,0,20120402,20120402,False,False,일회성,S
+R10876,가성종양,Pseudotumor,1,20231108,20231108,False,True,일회성,S
+R10877,갑상선 눈병증,TED,1,20121116,20121116,False,False,일회성,S
+R10878,갑상선 눈병증,TED,1,20221109,20221109,False,False,일회성,S
+R10879,양성종양,Benign tumor,1,20181205,20181205,False,False,일회성,S
+R10880,안와림프종,Lymphoma,1,20240805,20240805,False,True,일회성,S
+R10881,갑상선 눈병증,TED,1,20200226,20200226,False,False,일회성,S
+R10882,갑상선 눈병증,TED,1,20150923,20150923,False,False,일회성,S
+R10883,갑상선 눈병증,TED,1,20230525,20230525,False,True,일회성,S
+R10884,안와림프종,Lymphoma,1,20191202,20191202,False,True,일회성,S
+R10885,안와림프종,Lymphoma,1,20140513,20140513,True,True,일회성,S
+R10886,안와림프종,Lymphoma,1,20180508,20180508,False,True,일회성,S
+R10887,안와림프종,Lymphoma,1,20210716,20210716,False,True,일회성,S
+R10888,갑상선 눈병증,TED,1,20180725,20180725,False,True,일회성,S
+R10889,갑상선 눈병증,TED,0,20131010,20131010,False,False,일회성,S
+R10890,갑상선 눈병증,TED,1,20150205,20150205,False,True,일회성,S
+R10891,가성종양,Pseudotumor,1,20151203,20151203,False,True,일회성,S
+R10892,가성종양,Pseudotumor,1,20241005,20241005,False,True,일회성,S
+R10893,가성종양,Pseudotumor,1,20201104,20201104,False,True,일회성,S
+R10894,갑상선 눈병증,TED,1,20231002,20231002,True,False,일회성,S
+R10895,갑상선 눈병증,TED,1,20150916,20150916,False,False,일회성,S
+R10896,갑상선 눈병증,TED,1,20130612,20130612,False,False,일회성,S
+R10897,갑상선 눈병증,TED,1,20151216,20151216,False,False,일회성,S
+R10898,갑상선 눈병증,TED,0,20120618,20120618,False,False,일회성,S
+R10899,가성종양,Pseudotumor,1,20240327,20240327,False,False,일회성,S
+R10900,안와림프종,Lymphoma,1,20241011,20241011,False,True,일회성,S
+R10901,갑상선 눈병증,TED,1,20200827,20200827,False,False,일회성,S
+R10902,안와림프종,Lymphoma,1,20231127,20231127,False,True,일회성,S
+R10903,가성종양,Pseudotumor,1,20211129,20211129,False,False,일회성,S
+R10904,갑상선 눈병증,TED,1,20180504,20180504,False,False,일회성,S
+R10905,안와질환,Other orbital disease,1,20220921,20220921,True,True,일회성,S
+R10906,갑상선 눈병증,TED,1,20230711,20230711,False,False,일회성,S
+R10907,갑상선 눈병증,TED,1,20170920,20170920,False,False,일회성,S
+R10908,갑상선 눈병증,TED,1,20200205,20200205,False,False,일회성,S
+R10909,양성종양,Benign tumor,2,20200429,20200429,True,True,일회성,S
+R10910,가성종양,Pseudotumor,1,20160128,20160128,False,False,일회성,S
+R10911,갑상선 눈병증,TED,1,20200928,20200928,False,False,일회성,S
+R10912,양성종양,Benign tumor,1,20211028,20211028,False,False,일회성,S
+R10913,가성종양,Pseudotumor,1,20120503,20120503,False,False,일회성,S
+R10914,안와질환,Other orbital disease,1,20240815,20240815,False,True,일회성,S
+R10915,가성종양,Pseudotumor,1,20160618,20160618,False,False,일회성,S
+R10916,가성종양,Pseudotumor,1,20140516,20140516,False,False,일회성,S
+R10917,양성종양,Benign tumor,1,20240611,20240611,False,True,일회성,S
+R10918,안와질환,Other orbital disease,1,20210607,20210607,False,False,일회성,S
+R10919,갑상선 눈병증,TED,1,20190807,20190807,False,False,일회성,S
+R10920,갑상선 눈병증,TED,1,20190424,20190424,False,False,일회성,S
+R10921,안와림프종,Lymphoma,1,20220609,20220609,False,True,일회성,S
+R10922,갑상선 눈병증,TED,1,20190426,20190426,False,False,일회성,S
+R10923,IgG4 관련질환,IgG4-RD,1,20231218,20231218,False,True,일회성,S
+R10924,안와질환,Other orbital disease,1,20230714,20230714,False,False,일회성,S
+R10925,가성종양,Pseudotumor,1,20161228,20161228,False,False,일회성,S
+R10926,해면혈관종,Cavernous hemangioma,1,20150821,20150821,False,False,일회성,S
+R10927,메닌지오마,Meningioma,1,20210621,20210621,False,True,일회성,S
+R10928,갑상선 눈병증,TED,1,20140310,20140310,False,True,일회성,S
+R20001,해면혈관종,Cavernous hemangioma,4,20150416,20170508,False,True,다수,S
+R20002,양성종양,Benign tumor,2,20180503,20180806,False,True,다수,S
+R20003,양성종양,Benign tumor,3,20160922,20181029,False,True,다수,S
+R20004,가성종양,Pseudotumor,2,20120818,20120908,False,False,다수,S
+R20005,안와림프종,Lymphoma,1,20161101,20161101,False,True,다수,S
+R20006,갑상선 눈병증,TED,2,20130325,20180622,False,False,다수,S
+R20007,갑상선 눈병증,TED,3,20141107,20161007,False,True,다수,S
+R20008,갑상선 눈병증,TED,4,20191224,20210531,False,True,다수,S
+R20009,양성종양,Benign tumor,5,20120416,20160113,False,True,다수,S
+R20010,갑상선 눈병증,TED,4,20130530,20141120,False,False,다수,S
+R20011,갑상선 눈병증,TED,2,20220112,20230222,False,False,다수,S
+R20012,안와림프종,Lymphoma,1,20160608,20160608,False,True,다수,S
+R20013,갑상선 눈병증,TED,2,20230629,20230802,False,False,다수,S
+R20014,갑상선 눈병증,TED,2,20180712,20190826,False,False,다수,S
+R20015,갑상선 눈병증,TED,3,20200512,20210317,False,False,다수,S
+R20016,갑상선 눈병증,TED,3,20170816,20180412,False,False,다수,S
+R20017,갑상선 눈병증,TED,2,20221107,20240711,False,False,다수,S
+R20018,가성종양,Pseudotumor,2,20140618,20140623,False,False,다수,S
+R20019,안와림프종,Lymphoma,1,20150430,20150430,False,True,다수,S
+R20020,안와림프종,Lymphoma,2,20240809,20240815,True,True,다수,S
+R20021,안와림프종,Lymphoma,3,20220209,20240710,True,True,다수,S
+R20022,안와림프종,Lymphoma,1,20220425,20220425,False,True,다수,S
+R20023,안와질환,Other orbital disease,2,20200729,20220729,False,False,다수,S
+R20024,메닌지오마,Meningioma,2,20130704,20131124,False,False,다수,S
+R20025,안와림프종,Lymphoma,1,20200106,20200106,False,False,다수,S
+R20026,가성종양,Pseudotumor,2,20150428,20171111,False,False,다수,S
+R20027,안와림프종,Lymphoma,1,20171102,20171102,False,True,다수,S
+R20028,가성종양,Pseudotumor,5,20130619,20190227,True,True,다수,S
+R20029,양성종양,Benign tumor,2,20170510,20170520,False,False,다수,S
+R20030,안와림프종,Lymphoma,2,20220314,20220613,True,True,다수,S
+R20031,갑상선 눈병증,TED,3,20210630,20240807,False,False,다수,S
+R20032,해면혈관종,Cavernous hemangioma,2,20140407,20140514,False,True,다수,S
+R20033,안와질환,Other orbital disease,1,20240723,20240723,False,True,다수,S
+R20034,안와림프종,Lymphoma,1,20170529,20170529,False,True,다수,S
+R20035,해면혈관종,Cavernous hemangioma,1,20130304,20130613,False,True,다수,S
+R20036,다형샘종,Pleomorphic adenoma,2,20121004,20130314,False,True,다수,S
+R20037,안와질환,Other orbital disease,2,20220110,20220314,False,True,다수,S
+R20038,갑상선 눈병증,TED,2,20230619,20240226,False,False,다수,S
+R20039,안와림프종,Lymphoma,1,20200221,20200221,True,True,다수,S
+R20040,양성종양,Benign tumor,1,20120319,20170215,False,True,다수,S
+R20041,다형샘종,Pleomorphic adenoma,4,20210203,20210512,True,True,다수,S
+R20042,갑상선 눈병증,TED,6,20180604,20211020,False,False,다수,S
+R20043,갑상선 눈병증,TED,3,20210304,20240522,False,True,다수,S
+R20044,안와림프종,Lymphoma,1,20190731,20190731,False,True,다수,S
+R20045,갑상선 눈병증,TED,2,20141106,20170118,False,True,다수,S
+R20046,안와림프종,Lymphoma,1,20140731,20140731,False,True,다수,S
+R20047,갑상선 눈병증,TED,2,20151209,20160407,False,True,다수,S
+R20048,가성종양,Pseudotumor,2,20120824,20120826,False,True,다수,S
+R20049,가성종양,Pseudotumor,3,20180719,20200608,False,False,다수,S
+R20050,가성종양,Pseudotumor,1,20131002,20151214,False,False,다수,S
+R20051,안와림프종,Lymphoma,2,20191029,20191102,False,True,다수,S
+R20052,갑상선 눈병증,TED,2,20130307,20150205,False,False,다수,S
+R20053,갑상선 눈병증,TED,4,20190610,20200311,False,False,다수,S
+R20054,안와림프종,Lymphoma,3,20200527,20220818,True,True,다수,S
+R20055,가성종양,Pseudotumor,2,20160829,20161229,False,False,다수,S
+R20056,가성종양,Pseudotumor,1,20140828,20150720,False,False,다수,S
+R20057,안와림프종,Lymphoma,1,20200720,20200720,False,True,다수,S
+R20058,안와림프종,Lymphoma,3,20220329,20230215,True,True,다수,S
+R20059,갑상선 눈병증,TED,2,20230321,20240312,False,True,다수,S
+R20060,갑상선 눈병증,TED,1,20140430,20141011,False,False,다수,S
+R20061,안와질환,Other orbital disease,3,20220928,20231115,False,False,다수,S
+R20062,양성종양,Benign tumor,2,20171018,20171108,False,True,다수,S
+R20063,가성종양,Pseudotumor,2,20230621,20240109,False,False,다수,S
+R20064,안와림프종,Lymphoma,1,20180809,20180809,False,True,다수,S
+R20065,해면혈관종,Cavernous hemangioma,1,20140305,20140522,True,True,다수,S
+R20066,갑상선 눈병증,TED,3,20210317,20230902,False,False,다수,S
+R20067,갑상선 눈병증,TED,2,20181219,20231025,False,False,다수,S
+R20068,양성종양,Benign tumor,2,20170102,20170703,False,False,다수,S
+R20069,양성종양,Benign tumor,2,20170119,20170429,False,True,다수,S
+R20070,안와질환,Other orbital disease,2,20220427,20221103,False,True,다수,S
+R20071,갑상선 눈병증,TED,2,20160905,20181023,False,False,다수,S
+R20072,림프관종,Lymphangioma,4,20140411,20220112,False,True,다수,S
+R20073,양성종양,Benign tumor,6,20151120,20210221,False,True,다수,S
+R20074,갑상선 눈병증,TED,1,20120319,20121019,False,True,다수,S
+R20075,갑상선 눈병증,TED,2,20201218,20210512,False,False,다수,S
+R20076,갑상선 눈병증,TED,2,20230323,20240327,False,False,다수,S
+R20077,안와림프종,Lymphoma,1,20200121,20200121,False,True,다수,S
+R20078,다형샘종,Pleomorphic adenoma,1,20140623,20140731,False,True,다수,S
+R20079,안와림프종,Lymphoma,1,20180308,20180308,False,True,다수,S
+R20080,갑상선 눈병증,TED,2,20220803,20230116,False,False,다수,S
+R20081,양성종양,Benign tumor,2,20180604,20180607,False,True,다수,S
+R20082,갑상선 눈병증,TED,2,20200527,20211215,False,False,다수,S
+R20083,갑상선 눈병증,TED,5,20190916,20230824,False,False,다수,S
+R20084,갑상선 눈병증,TED,1,20120531,20121115,False,False,다수,S
+R20085,갑상선 눈병증,TED,4,20181212,20200506,False,False,다수,S
+R20086,안와질환,Other orbital disease,1,20130313,20130313,False,True,다수,S
+R20087,양성종양,Benign tumor,3,20170918,20180329,False,True,다수,S
+R20088,안와림프종,Lymphoma,1,20200712,20200712,False,True,다수,S
+R20089,갑상선 눈병증,TED,2,20160504,20201102,False,True,다수,S
+R20090,메닌지오마,Meningioma,2,20191227,20200106,False,True,다수,S
+R20091,다형샘종,Pleomorphic adenoma,1,20120730,20120903,False,True,다수,S
+R20092,갑상선 눈병증,TED,2,20191113,20200113,False,False,다수,S
+R20093,갑상선 눈병증,TED,6,20150730,20210624,False,False,다수,S
+R20094,갑상선 눈병증,TED,2,20211110,20220223,False,False,다수,S
+R20095,갑상선 눈병증,TED,2,20200721,20201126,False,True,다수,S
+R20096,안와림프종,Lymphoma,1,20220811,20220811,False,True,다수,S
+R20097,갑상선 눈병증,TED,1,20121101,20150907,False,False,다수,S
+R20098,안와 악성종양,Malignant tumor,2,20190128,20200914,True,True,다수,S
+R20099,갑상선 눈병증,TED,3,20190828,20200109,False,False,다수,S
+R20100,악성종양,Malignant tumor,4,20130401,20130802,True,True,다수,S
+R20101,갑상선 눈병증,TED,2,20150316,20160104,False,False,다수,S
+R20102,안와림프종,Lymphoma,1,20191228,20191228,False,True,다수,S
+R20103,안와림프종,Lymphoma,1,20221124,20221124,False,True,다수,S
+R20104,안와림프종,Lymphoma,3,20180905,20240905,True,True,다수,S
+R20105,갑상선 눈병증,TED,2,20171227,20191017,False,False,다수,S
+R20106,안와질환,Other orbital disease,2,20240715,20240717,False,True,다수,S
+R20107,갑상선 눈병증,TED,2,20181030,20191014,False,True,다수,S
+R20108,안와질환,Other orbital disease,3,20170327,20170427,False,True,다수,S
+R20109,갑상선 눈병증,TED,5,20160609,20210616,True,False,다수,S
+R20110,갑상선 눈병증,TED,2,20200406,20231006,False,True,다수,S
+R20111,갑상선 눈병증,TED,2,20190724,20201124,False,False,다수,S
+R20112,안와림프종,Lymphoma,1,20150120,20150120,False,True,다수,S
+R20113,갑상선 눈병증,TED,3,20160509,20161111,False,True,다수,S
+R20114,갑상선 눈병증,TED,3,20190209,20201111,False,False,다수,S
+R20115,안와림프종,Lymphoma,2,20190910,20191031,False,True,다수,S
+R20116,안와질환,Other orbital disease,3,20130213,20130327,False,True,다수,S
+R20117,가성종양,Pseudotumor,2,20130722,20131111,True,True,다수,S
+R20118,갑상선 눈병증,TED,3,20170426,20210819,False,False,다수,S
+R20119,갑상선 눈병증,TED,2,20180308,20181015,False,False,다수,S
+R20120,갑상선 눈병증,TED,2,20210908,20220802,False,False,다수,S
+R20121,갑상선 눈병증,TED,2,20190701,20200324,False,False,다수,S
+R20122,안와질환,Other orbital disease,2,20230904,20231016,False,True,다수,S
+R20123,안와림프종,Lymphoma,1,20200615,20200615,False,True,다수,S
+R20124,양성종양,Benign tumor,2,20210114,20210118,False,True,다수,S
+R20125,안와림프종,Lymphoma,1,20201104,20201104,False,True,다수,S
+R20126,갑상선 눈병증,TED,3,20211216,20230925,False,False,다수,S
+R20127,양성종양,Benign tumor,2,20200513,20240411,False,True,다수,S
+R20128,갑상선 눈병증,TED,3,20150901,20210503,False,True,다수,S
+R20129,안와림프종,Lymphoma,1,20230424,20230424,False,True,다수,S
+R20130,갑상선 눈병증,TED,3,20140625,20170605,False,False,다수,S
+R20131,갑상선 눈병증,TED,5,20200401,20240412,False,False,다수,S
+R20132,양성종양,Benign tumor,2,20141008,20161026,False,True,다수,S
+R20133,안와림프종,Lymphoma,2,20151217,20210117,True,True,다수,S
+R20134,갑상선 눈병증,TED,3,20230624,20240814,False,False,다수,S
+R20135,안와질환,Other orbital disease,3,20240314,20241014,True,True,다수,S
+R20136,양성종양,Benign tumor,0,20120416,20140416,False,False,다수,S
+R20137,양성종양,Benign tumor,2,20170215,20170314,False,True,다수,S
+R20138,갑상선 눈병증,TED,2,20230117,20231011,False,False,다수,S
+R20139,갑상선 눈병증,TED,4,20180531,20200924,False,False,다수,S
+R20140,양성종양,Benign tumor,2,20200302,20200312,False,True,다수,S
+R20141,갑상선 눈병증,TED,3,20160512,20191226,False,False,다수,S
+R20142,양성종양,Benign tumor,2,20240530,20240531,True,True,다수,S
+R20143,갑상선 눈병증,TED,2,20221129,20240729,False,True,다수,S
+R20144,가성종양,Pseudotumor,2,20130116,20130224,False,True,다수,S
+R20145,악성종양,Malignant tumor,2,20121106,20121123,False,True,다수,S
+R20146,갑상선 눈병증,TED,3,20220523,20240619,False,False,다수,S
+R20147,안와림프종,Lymphoma,1,20180930,20180930,False,True,다수,S
+R20148,갑상선 눈병증,TED,0,20120516,20120709,False,False,다수,S
+R20149,양성종양,Benign tumor,8,20120613,20190115,False,True,다수,S
+R20150,안와질환,Other orbital disease,2,20150326,20150507,False,True,다수,S
+R20151,갑상선 눈병증,TED,3,20141105,20160105,False,False,다수,S
+R20152,안와질환,Other orbital disease,2,20180119,20240605,False,False,다수,S
+R20153,갑상선 눈병증,TED,5,20130118,20140528,False,True,다수,S
+R20154,안와림프종,Lymphoma,1,20141119,20141119,False,True,다수,S
+R20155,갑상선 눈병증,TED,5,20180702,20221209,False,False,다수,S
+R20156,안와림프종,Lymphoma,1,20131109,20131109,False,True,다수,S
+R20157,안와림프종,Lymphoma,3,20181226,20220720,True,True,다수,S
+R20158,갑상선 눈병증,TED,4,20220928,20230508,False,False,다수,S
+R20159,양성종양,Benign tumor,2,20170706,20171108,False,True,다수,S
+R20160,안와림프종,Lymphoma,1,20210303,20210303,True,True,다수,S
+R20161,안와림프종,Lymphoma,1,20170414,20170414,False,False,다수,S
+R20162,다형샘종,Pleomorphic adenoma,3,20210218,20210407,True,True,다수,S
+R20163,안와림프종,Lymphoma,1,20231115,20231115,False,True,다수,S
+R20164,양성종양,Benign tumor,3,20170424,20170607,False,True,다수,S
+R20165,갑상선 눈병증,TED,1,20130410,20161026,False,False,다수,S
+R20166,가성종양,Pseudotumor,3,20210929,20220125,False,True,다수,S
+R20167,갑상선 눈병증,TED,3,20150223,20150601,False,False,다수,S
+R20168,갑상선 눈병증,TED,2,20160225,20160428,False,True,다수,S
+R20169,양성종양,Benign tumor,8,20120405,20190829,True,True,다수,S
+R20170,갑상선 눈병증,TED,2,20210825,20230615,False,False,다수,S
+R20171,갑상선 눈병증,TED,6,20180402,20230207,False,False,다수,S
+R20172,가성종양,Pseudotumor,2,20180209,20180919,False,False,다수,S
+R20173,안와질환,Other orbital disease,3,20130408,20200611,False,True,다수,S
+R20174,다형샘종,Pleomorphic adenoma,2,20140220,20140402,False,True,다수,S
+R20175,갑상선 눈병증,TED,2,20211021,20220714,False,False,다수,S
+R20176,해면혈관종,Cavernous hemangioma,3,20150228,20150827,True,True,다수,S
+R20177,갑상선 눈병증,TED,3,20160616,20181102,False,False,다수,S
+R20178,가성종양,Pseudotumor,2,20161123,20170928,False,True,다수,S
+R20179,갑상선 눈병증,TED,4,20200511,20240124,False,False,다수,S
+R20180,갑상선 눈병증,TED,2,20180220,20240117,False,True,다수,S
+R20181,가성종양,Pseudotumor,4,20130131,20140219,False,False,다수,S
+R20182,안와림프종,Lymphoma,1,20220825,20220825,False,True,다수,S
+R20183,갑상선 눈병증,TED,3,20140424,20160701,False,True,다수,S
+R20184,안와림프종,Lymphoma,1,20230307,20230307,False,True,다수,S
+R20185,안와림프종,Lymphoma,1,20231020,20231020,True,True,다수,S
+R20186,갑상선 눈병증,TED,2,20231115,20240620,False,False,다수,S
+R20187,양성종양,Benign tumor,2,20240428,20240610,True,True,다수,S
+R20188,갑상선 눈병증,TED,2,20180823,20210402,False,False,다수,S
+R20189,IgG4 관련질환,IgG4-RD,2,20220331,20221020,True,True,다수,S
+R20190,안와림프종,Lymphoma,2,20160620,20210703,False,True,다수,S
+R20191,안와림프종,Lymphoma,2,20160701,20200312,False,True,다수,S
+R20192,악성종양,Malignant tumor,8,20150720,20240417,False,True,다수,S
+R20193,갑상선 눈병증,TED,4,20200521,20200929,False,False,다수,S
+R20194,갑상선 눈병증,TED,2,20230223,20231106,False,False,다수,S
+R20195,양성종양,Benign tumor,5,20140123,20171204,False,True,다수,S
+R20196,안와림프종,Lymphoma,1,20200116,20200116,False,True,다수,S
+R20197,갑상선 눈병증,TED,2,20191029,20200911,False,False,다수,S
+R20198,안와질환,Other orbital disease,2,20220818,20230817,False,False,다수,S
+R20199,가성종양,Pseudotumor,2,20180314,20180411,False,False,다수,S
+R20200,가성종양,Pseudotumor,2,20150107,20150202,False,True,다수,S
+R20201,안와림프종,Lymphoma,2,20230415,20230629,True,True,다수,S
+R20202,갑상선 눈병증,TED,2,20170116,20170529,False,False,다수,S
+R20203,양성종양,Benign tumor,1,20170607,20170607,True,True,다수,S
+R20204,안와림프종,Lymphoma,1,20231011,20231011,False,True,다수,S
+R20205,림프관종,Lymphangioma,2,20120628,20230912,False,False,다수,S
+R20206,갑상선 눈병증,TED,2,20221209,20231111,False,True,다수,S
+R20207,갑상선 눈병증,TED,2,20150514,20151017,False,False,다수,S
+R20208,갑상선 눈병증,TED,3,20201211,20210303,False,True,다수,S
+R20209,안와림프종,Lymphoma,1,20210303,20210303,False,True,다수,S
+R20210,양성종양,Benign tumor,8,20130612,20230116,True,True,다수,S
+R20211,안와질환,Other orbital disease,2,20230912,20240129,False,True,다수,S
+R20212,갑상선 눈병증,TED,2,20161027,20170211,False,True,다수,S
+R20213,갑상선 눈병증,TED,3,20141218,20150121,False,False,다수,S
+R20214,안와림프종,Lymphoma,3,20240831,20241030,False,True,다수,S
+R20215,안와림프종,Lymphoma,1,20200507,20200507,False,True,다수,S
+R20216,갑상선 눈병증,TED,3,20190823,20210108,False,False,다수,S
+R20217,안와림프종,Lymphoma,3,20170922,20240909,False,True,다수,S
+R20218,안와 악성종양,Malignant tumor,2,20240314,20240412,True,True,다수,S
+R20219,메닌지오마,Meningioma,2,20130930,20131004,False,False,다수,S
+R20220,안와림프종,Lymphoma,1,20190621,20190621,False,True,다수,S
+R20221,안와질환,Other orbital disease,2,20201013,20201116,False,False,다수,S
+R20222,갑상선 눈병증,TED,2,20190620,20190703,False,False,다수,S
+R20223,안와림프종,Lymphoma,1,20180503,20180503,False,True,다수,S
+R20224,가성종양,Pseudotumor,2,20191127,20221123,False,True,다수,S
+R20225,해면혈관종,Cavernous hemangioma,3,20181212,20240812,True,False,다수,S
+R20226,양성종양,Benign tumor,2,20131113,20131120,False,False,다수,S
+R20227,안와림프종,Lymphoma,3,20180621,20210104,False,True,다수,S
+R20228,양성종양,Benign tumor,1,20120907,20121205,True,True,다수,S
+R20229,갑상선 눈병증,TED,3,20150602,20231123,False,False,다수,S
+R20230,갑상선 눈병증,TED,2,20160905,20161027,False,False,다수,S
+R20231,양성종양,Benign tumor,2,20210810,20240805,False,False,다수,S
+R20232,안와림프종,Lymphoma,2,20180702,20180807,True,True,다수,S
+R20233,해면혈관종,Cavernous hemangioma,2,20170608,20240605,False,False,다수,S
+R20234,갑상선 눈병증,TED,2,20240605,20240620,False,False,다수,S
+R20235,안와질환,Other orbital disease,2,20140514,20140515,False,True,다수,S
+R20236,갑상선 눈병증,TED,2,20230224,20240522,False,False,다수,S
+R20237,해면혈관종,Cavernous hemangioma,2,20170529,20170531,False,True,다수,S
+R20238,안와림프종,Lymphoma,1,20170411,20170411,False,True,다수,S
+R20239,안와림프종,Lymphoma,2,20201201,20240522,False,True,다수,S
+R20240,안와림프종,Lymphoma,2,20231116,20231218,True,True,다수,S
+R20241,갑상선 눈병증,TED,2,20180509,20190827,False,False,다수,S
+R20242,갑상선 눈병증,TED,2,20200408,20210726,False,False,다수,S
+R20243,안와질환,Other orbital disease,2,20130724,20140806,False,False,다수,S
+R20244,안와림프종,Lymphoma,2,20180103,20180321,False,True,다수,S
+R20245,갑상선 눈병증,TED,2,20210903,20230721,False,True,다수,S
+R20246,양성종양,Benign tumor,2,20180919,20181128,False,True,다수,S
+R20247,갑상선 눈병증,TED,2,20180129,20180305,False,False,다수,S
+R20248,메닌지오마,Meningioma,4,20180110,20210825,True,False,다수,S
+R20249,안와림프종,Lymphoma,1,20241016,20241016,False,True,다수,S
+R20250,안와림프종,Lymphoma,1,20170512,20170512,False,True,다수,S
+R20251,양성종양,Benign tumor,3,20150504,20150709,False,True,다수,S
+R20252,양성종양,Benign tumor,1,20120322,20130221,False,False,다수,S
+R20253,안와림프종,Lymphoma,2,20160804,20160830,False,True,다수,S
+R20254,안와림프종,Lymphoma,2,20200622,20200731,False,True,다수,S
+R20255,갑상선 눈병증,TED,4,20180905,20191204,False,False,다수,S
+R20256,가성종양,Pseudotumor,3,20171205,20240826,True,True,다수,S
+R20257,갑상선 눈병증,TED,3,20200717,20230127,False,True,다수,S
+R20258,갑상선 눈병증,TED,2,20181214,20190522,False,False,다수,S
+R20259,안와림프종,Lymphoma,2,20161020,20161119,False,False,다수,S
+R20260,가성종양,Pseudotumor,2,20201123,20210120,False,True,다수,S
+R20261,안와림프종,Lymphoma,2,20140811,20140903,False,True,다수,S
+R20262,갑상선 눈병증,TED,1,20120924,20121105,False,False,다수,S
+R20263,갑상선 눈병증,TED,2,20200908,20231117,False,False,다수,S
+R20264,안와림프종,Lymphoma,2,20190529,20190906,True,True,다수,S
+R20265,안와림프종,Lymphoma,1,20191016,20191016,True,True,다수,S
+R20266,양성종양,Benign tumor,9,20120314,20240522,False,True,다수,S
+R20267,악성종양,Malignant tumor,1,20200402,20200402,True,True,다수,S
+R20268,안와림프종,Lymphoma,3,20190513,20240403,False,True,다수,S
+R20269,안와질환,Other orbital disease,4,20140310,20190715,True,False,다수,S
+R20270,안와림프종,Lymphoma,1,20130523,20130523,False,True,다수,S
+R20271,안와질환,Other orbital disease,2,20231021,20240103,False,True,다수,S
+R20272,갑상선 눈병증,TED,2,20230220,20230320,False,False,다수,S
+R20273,해면혈관종,Cavernous hemangioma,6,20190325,20240508,True,True,다수,S
+R20274,갑상선 눈병증,TED,2,20160219,20160429,False,True,다수,S
+R20275,해면혈관종,Cavernous hemangioma,3,20191203,20200527,False,True,다수,S
+R20276,안와질환,Other orbital disease,3,20221012,20240417,False,False,다수,S
+R20277,갑상선 눈병증,TED,2,20240611,20240912,False,False,다수,S
+R20278,양성종양,Benign tumor,2,20170731,20170830,False,True,다수,S
+R20279,안와질환,Other orbital disease,2,20170109,20170213,False,True,다수,S
+R20280,안와림프종,Lymphoma,1,20201026,20201026,False,True,다수,S
+R20281,가성종양,Pseudotumor,2,20120405,20120507,False,False,다수,S
+R20282,안와림프종,Lymphoma,1,20230403,20230403,False,True,다수,S
+R20283,가성종양,Pseudotumor,2,20161107,20170531,False,False,다수,S
+R20284,양성종양,Benign tumor,2,20201008,20201125,False,True,다수,S
+R20285,갑상선 눈병증,TED,2,20190410,20190702,False,False,다수,S
+R20286,악성종양,Malignant tumor,5,20140612,20180820,False,True,다수,S
+R20287,갑상선 눈병증,TED,3,20180220,20240906,False,True,다수,S
+R20288,안와질환,Other orbital disease,3,20220323,20240710,False,True,다수,S
+R20289,갑상선 눈병증,TED,2,20160613,20180913,False,True,다수,S
+R20290,안와질환,Other orbital disease,2,20210503,20210520,False,True,다수,S
+R20291,갑상선 눈병증,TED,2,20171123,20180511,False,True,다수,S
+R20292,양성종양,Benign tumor,4,20190605,20200507,False,True,다수,S
+R20293,안와질환,Other orbital disease,5,20130809,20200727,False,False,다수,S
+R20294,해면혈관종,Cavernous hemangioma,3,20170803,20171106,False,True,다수,S
+R20295,안와림프종,Lymphoma,1,20180430,20180430,False,True,다수,S
+R20296,갑상선 눈병증,TED,2,20220624,20240110,False,False,다수,S
+R20297,갑상선 눈병증,TED,3,20190605,20240729,False,False,다수,S
+R20298,가성종양,Pseudotumor,2,20230622,20231019,False,True,다수,S
+R20299,가성종양,Pseudotumor,2,20140217,20140224,False,False,다수,S
+R20300,갑상선 눈병증,TED,2,20150512,20150531,True,False,다수,S
+R20301,갑상선 눈병증,TED,3,20240124,20240530,False,False,다수,S
+R20302,가성종양,Pseudotumor,3,20210728,20230921,True,True,다수,S
+R20303,악성종양,Malignant tumor,1,20201029,20201029,False,True,다수,S
+R20304,갑상선 눈병증,TED,2,20211123,20230202,False,False,다수,S
+R20305,갑상선 눈병증,TED,1,20130925,20190802,False,False,다수,S
+R20306,안와림프종,Lymphoma,1,20161221,20161221,False,True,다수,S
+R20307,갑상선 눈병증,TED,2,20150618,20181011,True,False,다수,S
+R20308,갑상선 눈병증,TED,2,20130926,20150625,False,False,다수,S
+R20309,안와림프종,Lymphoma,1,20180726,20180726,False,True,다수,S
+R20310,안와질환,Other orbital disease,2,20230403,20230428,False,True,다수,S
+R20311,양성종양,Benign tumor,2,20150424,20170131,False,True,다수,S
+R20312,양성종양,Benign tumor,3,20180917,20181219,False,True,다수,S
+R20313,갑상선 눈병증,TED,2,20220907,20240715,False,True,다수,S
+R20314,갑상선 눈병증,TED,3,20180528,20191128,False,False,다수,S
+R20315,안와림프종,Lymphoma,2,20151231,20160225,False,True,다수,S
+R20316,양성종양,Benign tumor,2,20180111,20200519,False,True,다수,S
+R20317,해면혈관종,Cavernous hemangioma,2,20171002,20180103,False,True,다수,S
+R20318,갑상선 눈병증,TED,2,20120510,20120613,False,True,다수,S
+R20319,갑상선 눈병증,TED,5,20150908,20170805,False,True,다수,S
+R20320,갑상선 눈병증,TED,3,20230126,20240524,False,False,다수,S
+R20321,안와림프종,Lymphoma,2,20160630,20160804,False,True,다수,S
+R20322,갑상선 눈병증,TED,2,20190605,20190919,False,False,다수,S
+R20323,안와림프종,Lymphoma,1,20230224,20230224,False,True,다수,S
+R20324,안와질환,Other orbital disease,2,20130729,20131023,False,True,다수,S
+R20325,양성종양,Benign tumor,4,20211229,20230302,True,True,다수,S
+R20326,갑상선 눈병증,TED,4,20200923,20210917,False,True,다수,S
+R20327,갑상선 눈병증,TED,2,20160317,20190116,False,False,다수,S
+R20328,가성종양,Pseudotumor,2,20151223,20160216,False,False,다수,S
+R20329,갑상선 눈병증,TED,2,20190716,20200409,False,False,다수,S
+R20330,가성종양,Pseudotumor,3,20170921,20171102,True,True,다수,S
+R20331,갑상선 눈병증,TED,2,20150107,20180115,False,False,다수,S
+R20332,해면혈관종,Cavernous hemangioma,2,20190813,20190918,False,True,다수,S
+R20333,갑상선 눈병증,TED,1,20140203,20140521,False,False,다수,S
+R20334,IgG4 관련질환,IgG4-RD,2,20230608,20230728,True,True,다수,S
+R20335,안와질환,Other orbital disease,3,20120502,20201221,False,True,다수,S
+R20336,양성종양,Benign tumor,3,20200408,20230830,False,False,다수,S
+R20337,갑상선 눈병증,TED,2,20170712,20171220,False,False,다수,S
+R20338,안와질환,Other orbital disease,2,20240603,20240606,False,False,다수,S
+R20339,갑상선 눈병증,TED,2,20180823,20200630,False,True,다수,S
+R20340,양성종양,Benign tumor,2,20170703,20170705,False,True,다수,S
+R20341,양성종양,Benign tumor,4,20160105,20190110,False,False,다수,S
+R20342,가성종양,Pseudotumor,4,20150209,20160111,True,True,다수,S
+R20343,갑상선 눈병증,TED,2,20200108,20200506,False,False,다수,S
+R20344,안와질환,Other orbital disease,2,20221215,20230102,False,False,다수,S
+R20345,양성종양,Benign tumor,2,20220811,20221114,True,True,다수,S
+R20346,안와림프종,Lymphoma,1,20190411,20190411,False,True,다수,S
+R20347,갑상선 눈병증,TED,4,20220502,20240111,False,False,다수,S
+R20348,갑상선 눈병증,TED,3,20140917,20141210,False,False,다수,S
+R20349,해면혈관종,Cavernous hemangioma,2,20160907,20161103,False,True,다수,S
+R20350,IgG4 관련질환,IgG4-RD,2,20180129,20190322,False,True,다수,S
+R20351,안와림프종,Lymphoma,2,20141212,20150120,True,True,다수,S
+R20352,안와림프종,Lymphoma,1,20230622,20230622,False,True,다수,S
+R20353,안와질환,Other orbital disease,2,20230109,20231120,False,False,다수,S
+R20354,다형샘종,Pleomorphic adenoma,12,20160511,20230322,False,True,다수,S
+R20355,갑상선 눈병증,TED,2,20220519,20241002,False,False,다수,S
+R20356,안와질환,Other orbital disease,3,20180406,20230310,False,True,다수,S
+R20357,안와림프종,Lymphoma,1,20240712,20240712,True,True,다수,S
+R20358,가성종양,Pseudotumor,2,20120720,20190928,False,True,다수,S
+R20359,갑상선 눈병증,TED,4,20220905,20240927,False,False,다수,S
+R20360,안와림프종,Lymphoma,1,20211114,20211114,False,True,다수,S
+R20361,안와림프종,Lymphoma,2,20190530,20190627,True,True,다수,S
+R20362,갑상선 눈병증,TED,4,20220214,20230419,False,False,다수,S
+R20363,안와림프종,Lymphoma,2,20180126,20180313,True,True,다수,S
+R20364,안와질환,Other orbital disease,3,20211022,20230104,False,True,다수,S
+R20365,갑상선 눈병증,TED,8,20160509,20190731,False,False,다수,S
+R20366,가성종양,Pseudotumor,2,20220425,20220730,False,True,다수,S
+R20367,양성종양,Benign tumor,8,20170914,20240627,False,False,다수,S
+R20368,안와림프종,Lymphoma,1,20180530,20180530,False,True,다수,S
+R20369,안와림프종,Lymphoma,2,20210727,20210908,False,True,다수,S
+R20370,안와질환,Other orbital disease,4,20230227,20240307,False,True,다수,S
+R20371,안와질환,Other orbital disease,4,20210915,20211129,True,True,다수,S
+R20372,갑상선 눈병증,TED,2,20150514,20160203,False,False,다수,S
+R20373,양성종양,Benign tumor,2,20130809,20181124,False,True,다수,S
+R20374,안와림프종,Lymphoma,3,20220809,20230421,True,True,다수,S
+R20375,갑상선 눈병증,TED,3,20180625,20190227,False,False,다수,S
+R20376,양성종양,Benign tumor,2,20170214,20180221,False,False,다수,S
+R20377,갑상선 눈병증,TED,3,20210326,20220121,False,False,다수,S
+R20378,갑상선 눈병증,TED,3,20220718,20221123,False,False,다수,S
+R20379,갑상선 눈병증,TED,2,20220121,20230804,False,False,다수,S
+R20380,해면혈관종,Cavernous hemangioma,2,20161006,20161109,False,True,다수,S
+R20381,안와림프종,Lymphoma,1,20210802,20210802,False,True,다수,S
+R20382,해면혈관종,Cavernous hemangioma,3,20150610,20150701,False,True,다수,S
+R20383,안와림프종,Lymphoma,2,20170912,20170913,True,True,다수,S
+R20384,갑상선 눈병증,TED,2,20200812,20220707,False,False,다수,S
+R20385,안와림프종,Lymphoma,1,20180628,20180628,False,True,다수,S
+R20386,갑상선 눈병증,TED,7,20180524,20231118,False,False,다수,S
+R20387,가성종양,Pseudotumor,2,20170331,20170608,False,False,다수,S
+R20388,갑상선 눈병증,TED,2,20230515,20230623,False,False,다수,S
+R20389,갑상선 눈병증,TED,2,20120305,20140522,False,False,다수,S
+R20390,가성종양,Pseudotumor,2,20170830,20170928,True,True,다수,S
+R20391,안와질환,Other orbital disease,2,20150129,20150824,False,True,다수,S
+R20392,IgG4 관련질환,IgG4-RD,2,20200323,20220214,True,True,다수,S
+R20393,갑상선 눈병증,TED,3,20220921,20230727,False,False,다수,S
+R20394,갑상선 눈병증,TED,2,20190711,20200120,False,True,다수,S
+R20395,갑상선 눈병증,TED,2,20240514,20240516,False,False,다수,S
+R20396,갑상선 눈병증,TED,3,20131223,20240201,False,False,다수,S
+R20397,갑상선 눈병증,TED,3,20170522,20171102,False,True,다수,S
+R20398,해면혈관종,Cavernous hemangioma,2,20200116,20211229,False,True,다수,S
+R20399,다형샘종,Pleomorphic adenoma,2,20210127,20210421,False,True,다수,S
+R20400,가성종양,Pseudotumor,3,20140312,20191113,False,False,다수,S
+R20401,양성종양,Benign tumor,2,20230109,20230321,True,True,다수,S
+R20402,갑상선 눈병증,TED,2,20220518,20230726,False,False,다수,S
+R20403,안와림프종,Lymphoma,1,20121226,20121226,False,True,다수,S
+R20404,안와질환,Other orbital disease,2,20230117,20240108,False,True,다수,S
+R20405,해면혈관종,Cavernous hemangioma,2,20141208,20161026,False,False,다수,S
+R20406,가성종양,Pseudotumor,2,20181215,20190624,False,False,다수,S
+R20407,안와림프종,Lymphoma,2,20240627,20240920,True,True,다수,S
+R20408,안와림프종,Lymphoma,2,20180119,20200513,False,True,다수,S
+R20409,갑상선 눈병증,TED,2,20231213,20241016,False,False,다수,S
+R20410,갑상선 눈병증,TED,4,20150420,20161229,False,False,다수,S
+R20411,갑상선 눈병증,TED,3,20220126,20220622,False,True,다수,S
+R20412,갑상선 눈병증,TED,2,20230207,20240327,False,True,다수,S
+R20413,갑상선 눈병증,TED,2,20231222,20240711,False,False,다수,S
+R20414,갑상선 눈병증,TED,1,20130923,20140109,False,False,다수,S
+R20415,갑상선 눈병증,TED,2,20220618,20221128,False,False,다수,S
+R20416,갑상선 눈병증,TED,2,20200108,20210120,False,False,다수,S
+R20417,안와질환,Other orbital disease,1,20141120,20150225,False,True,다수,S
+R20418,안와질환,Other orbital disease,3,20171202,20200413,False,False,다수,S
+R20419,안와질환,Other orbital disease,1,20130801,20141008,False,False,다수,S
+R20420,갑상선 눈병증,TED,2,20130110,20150521,False,False,다수,S
+R20421,안와 악성종양,Malignant tumor,2,20240313,20240314,True,True,다수,S
+R20422,갑상선 눈병증,TED,2,20160328,20240822,False,False,다수,S
+R20423,안와림프종,Lymphoma,1,20221107,20221107,False,True,다수,S
+R20424,안와림프종,Lymphoma,1,20171126,20171126,False,True,다수,S
+R20425,갑상선 눈병증,TED,2,20190925,20210624,False,False,다수,S
+R20426,갑상선 눈병증,TED,4,20220525,20230901,False,False,다수,S
+R20427,갑상선 눈병증,TED,0,20130904,20131114,False,True,다수,S
+R20428,갑상선 눈병증,TED,4,20170907,20190211,False,True,다수,S
+R20429,갑상선 눈병증,TED,2,20210728,20211213,False,False,다수,S
+R20430,갑상선 눈병증,TED,5,20190415,20200109,False,False,다수,S
+R20431,갑상선 눈병증,TED,2,20240411,20240924,False,False,다수,S
+R20432,양성종양,Benign tumor,1,20130820,20130925,False,True,다수,S
+R20433,갑상선 눈병증,TED,7,20190404,20230220,False,False,다수,S
+R20434,안와질환,Other orbital disease,2,20191226,20200108,False,True,다수,S
+R20435,갑상선 눈병증,TED,2,20230623,20240406,False,False,다수,S
+R20436,양성종양,Benign tumor,1,20180324,20180324,False,True,다수,S
+R20437,안와림프종,Lymphoma,1,20190923,20190923,False,False,다수,S
+R20438,갑상선 눈병증,TED,1,20141215,20160330,False,False,다수,S
+R20439,안와림프종,Lymphoma,1,20161130,20161130,True,True,다수,S
+R20440,갑상선 눈병증,TED,2,20160608,20161114,False,True,다수,S
+R20441,안와림프종,Lymphoma,1,20240220,20240220,False,False,다수,S
+R20442,메닌지오마,Meningioma,2,20190320,20190322,True,True,다수,S
+R20443,갑상선 눈병증,TED,2,20171115,20181024,False,False,다수,S
+R20444,양성종양,Benign tumor,2,20161230,20170215,False,True,다수,S
+R20445,갑상선 눈병증,TED,2,20200406,20210315,False,False,다수,S
+R20446,안와림프종,Lymphoma,1,20190508,20190508,False,True,다수,S
+R20447,안와림프종,Lymphoma,2,20220406,20220502,True,True,다수,S
+R20448,가성종양,Pseudotumor,10,20120719,20170403,True,True,다수,S
+R20449,안와림프종,Lymphoma,1,20240408,20240408,False,True,다수,S
+R20450,갑상선 눈병증,TED,2,20151203,20161215,False,False,다수,S
+R20451,갑상선 눈병증,TED,3,20170331,20200821,False,False,다수,S
+R20452,양성종양,Benign tumor,3,20170316,20170531,False,True,다수,S
+R20453,양성종양,Benign tumor,3,20130129,20130207,False,False,다수,S
+R20454,안와림프종,Lymphoma,1,20170603,20170603,False,True,다수,S
+R20455,갑상선 눈병증,TED,3,20130116,20180601,False,False,다수,S
+R20457,안와림프종,Lymphoma,1,20130418,20130418,False,True,다수,S
+R20458,양성종양,Benign tumor,3,20230818,20240710,True,True,다수,S
+R20459,안와림프종,Lymphoma,1,20220927,20220927,False,True,다수,S
+R20460,안와림프종,Lymphoma,2,20121128,20170109,True,True,다수,S
+R20461,안와림프종,Lymphoma,2,20160930,20161019,False,True,다수,S
+R20462,갑상선 눈병증,TED,4,20150202,20180127,False,False,다수,S
+R20463,안와림프종,Lymphoma,1,20181114,20181114,False,True,다수,S
+R20464,안와림프종,Lymphoma,2,20120903,20130107,False,True,다수,S
+R20465,안와림프종,Lymphoma,2,20201028,20240516,False,True,다수,S
+R20466,IgG4 관련질환,IgG4-RD,2,20160211,20200630,False,True,다수,S
+R20467,갑상선 눈병증,TED,2,20190916,20200428,False,False,다수,S
+R20468,갑상선 눈병증,TED,4,20201111,20220727,False,False,다수,S
+R20469,갑상선 눈병증,TED,2,20170630,20171122,False,False,다수,S
+R20470,갑상선 눈병증,TED,2,20221116,20230706,False,False,다수,S
+R20471,안와림프종,Lymphoma,2,20181017,20220426,False,True,다수,S
+R20472,안와림프종,Lymphoma,1,20150512,20150512,False,True,다수,S
+R20473,다형샘종,Pleomorphic adenoma,2,20190708,20190923,False,True,다수,S
+R20474,해면혈관종,Cavernous hemangioma,1,20130109,20130523,False,True,다수,S
+R20475,안와질환,Other orbital disease,2,20220808,20231030,False,False,다수,S
+R20476,갑상선 눈병증,TED,2,20200219,20210726,False,False,다수,S
+R20477,양성종양,Benign tumor,2,20190422,20190525,False,False,다수,S
+R20478,안와질환,Other orbital disease,5,20190812,20240201,True,True,다수,S
+R20479,갑상선 눈병증,TED,3,20170102,20180725,False,False,다수,S
+R20480,안와림프종,Lymphoma,1,20201007,20201007,False,True,다수,S
+R20481,갑상선 눈병증,TED,2,20121105,20130822,False,True,다수,S
+R20482,안와림프종,Lymphoma,1,20221125,20221125,False,True,다수,S
+R20483,안와림프종,Lymphoma,2,20220216,20240306,False,True,다수,S
+R20484,갑상선 눈병증,TED,3,20190102,20201026,False,False,다수,S
+R20485,갑상선 눈병증,TED,3,20190813,20210720,False,False,다수,S
+R20486,갑상선 눈병증,TED,3,20180604,20200130,False,False,다수,S
+R20487,안와림프종,Lymphoma,1,20200327,20200327,False,True,다수,S
+R20488,갑상선 눈병증,TED,2,20171225,20171228,False,False,다수,S
+R20489,안와림프종,Lymphoma,3,20150528,20160512,False,True,다수,S
+R20490,다형샘종,Pleomorphic adenoma,2,20190805,20200817,False,True,다수,S
+R20491,안와림프종,Lymphoma,1,20180620,20180620,True,True,다수,S
+R20492,갑상선 눈병증,TED,2,20181112,20240313,False,True,다수,S
+R20493,가성종양,Pseudotumor,2,20120618,20120621,False,True,다수,S
+R20494,갑상선 눈병증,TED,3,20190102,20190520,False,True,다수,S
+R20495,갑상선 눈병증,TED,3,20130729,20180411,False,False,다수,S
+R20496,갑상선 눈병증,TED,3,20201021,20221028,False,False,다수,S
+R20497,안와림프종,Lymphoma,1,20170220,20170220,False,True,다수,S
+R20498,갑상선 눈병증,TED,5,20170116,20201125,False,True,다수,S
+R20499,갑상선 눈병증,TED,2,20201209,20220520,False,False,다수,S
+R20500,갑상선 눈병증,TED,2,20171218,20230120,False,False,다수,S
+R20501,림프관종,Lymphangioma,5,20200229,20241019,False,False,다수,S
+R20502,안와림프종,Lymphoma,1,20180826,20180826,False,True,다수,S
+R20503,안와림프종,Lymphoma,2,20160112,20201117,False,True,다수,S
+R20504,갑상선 눈병증,TED,2,20210916,20221128,False,True,다수,S
+R20505,가성종양,Pseudotumor,3,20131114,20151221,False,True,다수,S
+R20506,안와질환,Other orbital disease,2,20220512,20230308,False,True,다수,S
+R20507,갑상선 눈병증,TED,2,20230223,20231004,False,False,다수,S
+R20508,안와림프종,Lymphoma,1,20210917,20210917,False,True,다수,S
+R20509,안와림프종,Lymphoma,1,20200123,20200123,False,True,다수,S
+R20510,안와림프종,Lymphoma,1,20211003,20211003,False,True,다수,S
+R20511,양성종양,Benign tumor,9,20120906,20240321,False,True,다수,S
+R20512,IgG4 관련질환,IgG4-RD,2,20120511,20121128,True,True,다수,S
+R20513,양성종양,Benign tumor,2,20190624,20190822,False,True,다수,S
+R20514,안와질환,Other orbital disease,3,20220330,20240318,False,False,다수,S
+R20515,안와림프종,Lymphoma,1,20210909,20210909,True,True,다수,S
+R20516,안와림프종,Lymphoma,3,20240328,20240415,True,True,다수,S
+R20517,IgG4 관련질환,IgG4-RD,3,20190424,20230614,False,True,다수,S
+R20518,안와림프종,Lymphoma,1,20170818,20170818,False,True,다수,S
+R20519,안와림프종,Lymphoma,1,20220216,20220216,False,True,다수,S
+R20520,안와림프종,Lymphoma,1,20141111,20141111,False,True,다수,S
+R20521,안와림프종,Lymphoma,1,20180918,20180918,False,True,다수,S
+R20522,해면혈관종,Cavernous hemangioma,2,20180103,20180116,False,True,다수,S
+R20523,갑상선 눈병증,TED,5,20140224,20181015,False,False,다수,S
+R20524,안와림프종,Lymphoma,1,20240725,20240725,False,True,다수,S
+R20525,갑상선 눈병증,TED,2,20181024,20201217,False,False,다수,S
+R20526,가성종양,Pseudotumor,2,20150227,20190527,False,False,다수,S
+R20527,가성종양,Pseudotumor,2,20130130,20141103,True,True,다수,S
+R20528,가성종양,Pseudotumor,3,20240421,20240912,False,True,다수,S
+R20529,가성종양,Pseudotumor,3,20120612,20120810,False,False,다수,S
+R20530,갑상선 눈병증,TED,2,20171115,20190227,False,False,다수,S
+R20531,안와림프종,Lymphoma,2,20170814,20170905,False,False,다수,S
+R20532,갑상선 눈병증,TED,1,20140402,20150916,False,False,다수,S
+R20533,안와림프종,Lymphoma,1,20190613,20190613,False,True,다수,S
+R20534,다형샘종,Pleomorphic adenoma,3,20190624,20211013,True,True,다수,S
+R20535,안와림프종,Lymphoma,1,20200311,20200311,True,True,다수,S
+R20536,가성종양,Pseudotumor,2,20170517,20170724,False,False,다수,S
+R20537,양성종양,Benign tumor,4,20201019,20210614,True,True,다수,S
+R20538,안와 악성종양,Malignant tumor,1,20130212,20130212,True,True,다수,S
+R20539,갑상선 눈병증,TED,2,20181217,20190128,False,False,다수,S
+R20540,갑상선 눈병증,TED,2,20210830,20220314,False,False,다수,S
+R20541,갑상선 눈병증,TED,3,20120702,20121220,False,False,다수,S
+R20542,갑상선 눈병증,TED,2,20220708,20220908,False,True,다수,S
+R20543,해면혈관종,Cavernous hemangioma,2,20161115,20161201,False,False,다수,S
+R20544,갑상선 눈병증,TED,2,20241008,20241010,False,False,다수,S
+R20545,안와림프종,Lymphoma,1,20140116,20140116,False,True,다수,S
+R20546,안와질환,Other orbital disease,4,20140923,20180110,False,True,다수,S
+R20547,갑상선 눈병증,TED,2,20150824,20240627,False,False,다수,S
+R20548,갑상선 눈병증,TED,2,20220608,20240731,False,False,다수,S
+R20549,안와질환,Other orbital disease,1,20130124,20150126,False,True,다수,S
+R20550,안와림프종,Lymphoma,1,20230914,20230914,False,False,다수,S
+R20551,안와림프종,Lymphoma,1,20181217,20181217,False,True,다수,S
+R20552,갑상선 눈병증,TED,6,20130323,20150422,True,True,다수,S
+R20553,안와질환,Other orbital disease,4,20200721,20231113,False,True,다수,S
+R20554,양성종양,Benign tumor,4,20160713,20171116,False,False,다수,S
+R20555,갑상선 눈병증,TED,2,20190902,20201222,False,False,다수,S
+R20556,갑상선 눈병증,TED,2,20180716,20180813,False,False,다수,S
+R20557,갑상선 눈병증,TED,2,20160810,20190613,False,False,다수,S
+R20558,갑상선 눈병증,TED,2,20150717,20160112,False,False,다수,S
+R20559,갑상선 눈병증,TED,3,20171228,20180913,False,True,다수,S

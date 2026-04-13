@@ -1,0 +1,4 @@
+"id.exposure","exposure","id.outcome","outcome","nsnp","b","se","pval"
+"eqtl-a-ENSG00000100644","ENSG00000100644 || id:eqtl-a-ENSG00000100644","ukb-b-6353","Reason for glasses/contact lenses: For short-sightedness, i.e. only or mainly for distance viewing such as driving, cinema etc (called 'myopia') || id:ukb-b-6353",1,0.0325747976619373,NA,NA
+"eqtl-a-ENSG00000105329","ENSG00000105329 || id:eqtl-a-ENSG00000105329","ukb-b-6353","Reason for glasses/contact lenses: For short-sightedness, i.e. only or mainly for distance viewing such as driving, cinema etc (called 'myopia') || id:ukb-b-6353",0,0.753002245274187,NA,NA
+"eqtl-a-ENSG00000112715","ENSG00000112715 || id:eqtl-a-ENSG00000112715","ukb-b-6353","Reason for glasses/contact lenses: For short-sightedness, i.e. only or mainly for distance viewing such as driving, cinema etc (called 'myopia') || id:ukb-b-6353",0,0.0537117684629059,NA,NA

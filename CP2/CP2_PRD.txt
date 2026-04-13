@@ -1,0 +1,393 @@
+
+
+
+
+
+
+M-LIGHT
+Computational Research Program
+
+ 
+
+CP-2: Single-Cell Transcriptomic Re-analysis
+Product Requirements Document (PRD)
+Step-by-Step Execution Guide
+
+
+
+Park Jungyul, MD, PhD
+Department of Ophthalmology, Seoul St. Mary’s Hospital
+Catholic University of Korea
+
+Version 1.0  |  April 2026
+
+1. Project Overview
+Project: CP-2 — Single-Cell Transcriptomic Re-analysis of Myopic Retina and Sclera
+Goal: Publicly available scRNA-seq datasets를 통합 재분석하여, OPN5-Dopamine-Hippo-YAP-Sclera cascade를 cell-type resolution으로 검증
+Duration: 2–3개월 (8–12주)
+Environment: Local Python (로컬 머신/워크스테이션 GPU 권장)
+Impact: 중앙 가설의 세포 수준 근거 — IOVS 또는 MedComm 타겟
+Cost: $0 (all data and tools are free/open-source)
+
+2. Environment Setup (Local Python)
+2.1 System Requirements
+2.2 Conda 환경 구축
+아래 명령을 터미널에서 순서대로 실행합니다:
+# 1. conda 환경 생성
+conda create -n cp2 python=3.11 -y
+conda activate cp2
+
+# 2. 핵심 패키지 설치
+pip install scanpy==1.10.4 anndata==0.11.1 leidenalg
+pip install cellrank scvi-tools
+pip install matplotlib seaborn plotly
+
+# 3. CellChat용 R 환경 (conda 내 R)
+conda install -c conda-forge r-base=4.3 r-devtools r-seurat -y
+# R에서:
+# devtools::install_github("jinworks/CellChat")
+
+# 4. NicheNet (R)
+# devtools::install_github("saeyslab/nichenetr")
+
+# 5. 추가 유틸리티
+pip install gget  # GEO 데이터 다운로드 편의
+pip install harmonypy  # batch correction
+pip install decoupler  # TF activity inference
+⚠ rpy2를 설치하면 Python에서 R 코드를 직접 호출할 수 있지만, CellChat은 R script로 따로 돌리는 것이 안정적입니다.
+2.3 프로젝트 디렉토리 구조
+mkdir -p ~/mlight/cp2/{data/raw,data/processed,results,scripts,figures,r_scripts}
+cd ~/mlight/cp2
+
+# 구조:
+# cp2/
+#   data/
+#     raw/          <- GEO에서 다운로드한 원본
+#     processed/    <- QC/정규화 후 .h5ad
+#   results/        <- DE, enrichment, CellChat 결과
+#   scripts/        <- Python 분석 스크립트
+#   r_scripts/      <- CellChat/NicheNet R 스크립트
+#   figures/        <- 출판용 그림
+
+3. Step 1: 데이터셋 확보 (Data Acquisition)
+각 데이터셋의 GEO accession을 논문에서 확인한 후 다운로드합니다. 아래는 각 데이터셋의 정보와 다운로드 절차입니다.
+3.1 Dataset 요약
+3.2 GEO Accession 확인 방법
+각 논문의 Data Availability 섹션에 GEO accession number가 명시되어 있습니다. 확인 절차:
+PubMed에서 논문 검색: 예) "Yao myopia single-cell MedComm 2023"
+논문 내 “Data Availability” 또는 “Data Accession” 섹션에서 GSE_______ 확인
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE_______ 로 접속하여 supplementary files 확인
+10x Genomics 형식이면 barcodes.tsv.gz, features.tsv.gz, matrix.mtx.gz 세 파일이 있음
+3.3 다운로드 절차
+# 방법 A: 직접 다운로드 (wget)
+cd ~/mlight/cp2/data/raw
+
+# 예시 (accession 확인 후 수정):
+wget -r -np -nd https://ftp.ncbi.nlm.nih.gov/geo/series/GSEnnn/GSExxxxxx/suppl/
+
+# 방법 B: gget (Python API)
+import gget
+gget.setup('cellxgene')  # 최초 1회만
+# CellxGene에 있는 데이터셋의 경우:
+adata = gget.cellxgene(species='mus_musculus', tissue='retina')
+
+# 방법 C: GEO 웹사이트에서 수동 다운로드
+# → 가장 확실한 방법
+⚠ 데이터셋 1번(Yao)과 2번(Wu)을 먼저 확보합니다. 망막(retina) + 공막(sclera) 양쪽을 커버해야 OPN5→DA→Sclera cascade를 연결할 수 있습니다.
+3.4 데이터 형식 확인
+다운로드 후 파일 형식을 확인하고, Scanpy로 로드 가능한 형태로 정리합니다:
+
+4. Step 2: Quality Control & Preprocessing
+4.1 QC 메트릭 계산
+import scanpy as sc
+import numpy as np
+import matplotlib.pyplot as plt
+
+sc.settings.verbosity = 3
+sc.settings.set_figure_params(dpi=120, facesize=(5,4))
+
+# 데이터 로드 (accession 확인 후 수정)
+adata = sc.read_10x_h5('data/raw/yao2023/filtered_feature_bc_matrix.h5')
+adata.var_names_make_unique()
+
+# Mitochondrial gene 표시 (mouse = 'mt-', human = 'MT-')
+adata.var['mt'] = adata.var_names.str.startswith('mt-')
+# Ribosomal gene
+adata.var['ribo'] = adata.var_names.str.startswith(('Rps', 'Rpl'))
+
+sc.pp.calculate_qc_metrics(
+    adata, qc_vars=['mt', 'ribo'],
+    percent_top=None, log1p=False, inplace=True
+)
+4.2 QC 기준 설정
+아래 그래프를 먼저 그려 데이터 분포를 확인한 후 기준을 조정합니다:
+# QC violin plot — 분포 확인
+sc.pl.violin(adata, ['n_genes_by_counts', 'total_counts', 'pct_counts_mt'],
+             jitter=0.4, multi_panel=True)
+plt.savefig('figures/qc_violin.png', dpi=150, bbox_inches='tight')
+
+# Scatter plot — outlier 확인
+sc.pl.scatter(adata, x='total_counts', y='pct_counts_mt')
+sc.pl.scatter(adata, x='total_counts', y='n_genes_by_counts')
+일반적 망막 scRNA-seq QC 기준 (데이터 분포 확인 후 조정):
+# 필터링 적용
+print(f'Before filtering: {adata.n_obs} cells')
+
+adata = adata[adata.obs.n_genes_by_counts > 200, :]
+adata = adata[adata.obs.n_genes_by_counts < 6000, :]
+adata = adata[adata.obs.pct_counts_mt < 15, :]
+adata = adata[adata.obs.total_counts > 500, :]
+
+print(f'After filtering: {adata.n_obs} cells')
+⚠ Doublet detection을 추가로 수행하면 데이터 품질이 향상됩니다: pip install scrublet 후 sc.external.pp.scrublet(adata)
+4.3 Normalization & HVG Selection
+# Raw counts 보존 (나중에 DE 분석용)
+adata.layers['counts'] = adata.X.copy()
+
+# Normalization
+sc.pp.normalize_total(adata, target_sum=1e4)
+sc.pp.log1p(adata)
+
+# Highly Variable Genes
+sc.pp.highly_variable_genes(adata, n_top_genes=3000, flavor='seurat_v3',
+                            layer='counts')  # seurat_v3는 raw counts 필요
+
+# HVG plot 확인
+sc.pl.highly_variable_genes(adata)
+plt.savefig('figures/hvg.png', dpi=150, bbox_inches='tight')
+4.4 Dimensionality Reduction & Clustering
+# Scale (HVG만)
+sc.pp.scale(adata, max_value=10)
+
+# PCA
+sc.tl.pca(adata, svd_solver='arpack', n_comps=50)
+sc.pl.pca_variance_ratio(adata, n_pcs=50)  # elbow plot → n_pcs 결정
+
+# Neighbors + UMAP
+sc.pp.neighbors(adata, n_pcs=30)  # elbow plot 기준으로 조정
+sc.tl.umap(adata)
+
+# Leiden clustering
+sc.tl.leiden(adata, resolution=0.8)  # 세포 유형 수에 따라 0.5–1.5 조정
+
+# UMAP 시각화
+sc.pl.umap(adata, color=['leiden'], legend_loc='on data')
+plt.savefig('figures/umap_clusters.png', dpi=150, bbox_inches='tight')
+
+5. Step 3: Cell Type Annotation
+5.1 망막(Retina) 마커 유전자
+M-LIGHT cascade의 핵심 세포 유형을 식별하기 위한 마커 유전자입니다:
+5.2 공막(Sclera) 마커 유전자
+5.3 Annotation 코드
+# Dotplot으로 클러스터별 마커 발현 확인
+retina_markers = {
+    'RGC': ['Rbpms', 'Slc17a6', 'Opn5'],
+    'DAC': ['Th', 'Ddc', 'Slc6a3'],
+    'ipRGC': ['Opn4', 'Rbpms'],
+    'Amacrine': ['Gad1', 'Slc6a9', 'Chat'],
+    'Cone': ['Opn1sw', 'Opn1mw', 'Arr3'],
+    'Rod': ['Rho', 'Nr2e3'],
+    'ON_Bipolar': ['Grm6', 'Vsx2'],
+    'Muller': ['Glul', 'Rlbp1'],
+}
+
+# Flatten for dotplot
+marker_genes = [g for genes in retina_markers.values() for g in genes]
+sc.pl.dotplot(adata, marker_genes, groupby='leiden', dendrogram=True)
+plt.savefig('figures/dotplot_markers.png', dpi=150, bbox_inches='tight')
+
+# 수동 annotation (마커 패턴 보고 클러스터에 라벨 부여)
+cluster_to_celltype = {
+    '0': 'Rod',
+    '1': 'Rod',
+    '2': 'Cone',
+    '3': 'RGC',
+    # ... 마커 dotplot 보고 수정
+}
+adata.obs['cell_type'] = adata.obs['leiden'].map(cluster_to_celltype)
+
+# UMAP에 cell type 표시
+sc.pl.umap(adata, color=['cell_type'], palette='Set2')
+plt.savefig('figures/umap_celltype.png', dpi=150, bbox_inches='tight')
+⚠ 원저자가 이미 annotation을 제공한 경우 adata.obs에 포함되어 있을 수 있습니다. metadata를 먼저 확인하세요.
+
+6. Step 4: Core Analysis — M-LIGHT Cascade 검증
+6.1 핵심 유전자 세포유형별 발현 매핑
+M-LIGHT cascade의 각 단계에 관련된 유전자를 세포 유형별로 매핑합니다:
+# 핵심 유전자 리스트
+mlight_genes = {
+    'OPN5_pathway': ['Opn5', 'Opn4'],
+    'Dopamine': ['Th', 'Ddc', 'Slc6a3', 'Drd1', 'Drd2', 'Comt'],
+    'Hippo_YAP': ['Lats1', 'Lats2', 'Yap1', 'Tead1', 'Tead2', 'Wwtr1'],
+    'TGFb': ['Tgfb1', 'Smad2', 'Smad3', 'Smad7'],
+    'ECM_remodeling': ['Mmp2', 'Mmp9', 'Mmp13', 'Lox', 'Timp1', 'Timp2'],
+    'Collagen': ['Col1a1', 'Col3a1', 'Col5a1'],
+    'HIF1a': ['Hif1a', 'Vegfa', 'Ldha'],
+    'Muscarinic': ['Chrm1', 'Chrm2', 'Chrm4', 'Adra2a'],
+    'Cell_cycle': ['Cdkn1a', 'Tp53', 'Cdk2', 'Cdk4'],
+}
+
+# Dotplot: cell type × gene expression
+all_genes = [g for genes in mlight_genes.values() for g in genes]
+# 데이터에 있는 유전자만 필터
+existing = [g for g in all_genes if g in adata.var_names]
+sc.pl.dotplot(adata, existing, groupby='cell_type',
+             categories_order=['RGC','ipRGC','DAC','Amacrine','Cone','Rod',
+                               'ON_Bipolar','Muller'],
+             standard_scale='var')
+plt.savefig('figures/mlight_cascade_dotplot.png', dpi=200, bbox_inches='tight')
+
+# Heatmap (더 상세한 발현 패턴)
+sc.pl.matrixplot(adata, existing, groupby='cell_type',
+                standard_scale='var', cmap='RdBu_r')
+6.2 Differential Expression: Myopic vs Normal
+근시 vs 정상 조건이 있는 데이터셋(Yao 2023)에서 세포 유형별 차발현 분석:
+# 조건별 세포 유형별 DE (예: RGC에서 myopic vs normal)
+rgc = adata[adata.obs['cell_type'] == 'RGC'].copy()
+
+# Wilcoxon rank-sum test (Scanpy default)
+sc.tl.rank_genes_groups(rgc, groupby='condition',
+                        groups=['myopic'], reference='normal',
+                        method='wilcoxon', layer='counts')
+
+# 결과 확인
+sc.pl.rank_genes_groups(rgc, n_genes=25, sharey=False)
+
+# DataFrame 추출
+de_results = sc.get.rank_genes_groups_df(rgc, group='myopic')
+de_results.to_csv('results/DE_RGC_myopic_vs_normal.csv', index=False)
+
+# M-LIGHT 유전자 필터
+mlight_de = de_results[de_results['names'].isin(existing)]
+print(mlight_de.sort_values('pvals_adj'))
+⚠ 모든 세포 유형에 대해 반복 수행: RGC, DAC, Amacrine, Cone, Rod, Bipolar, Müller. 공막 데이터(Wu et al.)에서는 Fibroblast, Myofibroblast에 집중.
+6.3 Pathway Enrichment Analysis
+# decoupler로 TF activity inference
+import decoupler as dc
+
+# PROGENy pathway activity
+progeny = dc.get_progeny(organism='mouse', top=500)
+dc.run_mlm(adata, net=progeny, source='source', target='target',
+           weight='weight', verbose=True, use_raw=False)
+
+# 세포 유형별 pathway activity 시각화
+# TGFb, Hypoxia, WNT, MAPK 등 확인
+dc.plot_acts(adata, 'mlm_estimate', groupby='cell_type')
+
+# DoRothEA TF activity
+dorothea = dc.get_dorothea(organism='mouse')
+dc.run_mlm(adata, net=dorothea, source='source', target='target',
+           weight='mor', verbose=True, use_raw=False)
+
+7. Step 5: Cell-Cell Communication (CellChat / NicheNet)
+7.1 CellChat (R 스크립트)
+CellChat은 R에서 실행합니다. Scanpy에서 .h5ad를 저장 후 R에서 로드:
+# Python에서: CellChat용 데이터 저장
+adata.write('data/processed/retina_annotated.h5ad')
+
+# 또는 Seurat 호환 형식으로:
+adata.obs[['cell_type']].to_csv('data/processed/metadata.csv')
+# count matrix는 .mtx로 내보내기
+from scipy.io import mmwrite
+mmwrite('data/processed/counts.mtx', adata.layers['counts'])
+adata.obs_names.to_frame().to_csv('data/processed/barcodes.csv')
+adata.var_names.to_frame().to_csv('data/processed/genes.csv')
+R 스크립트 (r_scripts/cellchat_analysis.R):
+library(CellChat)
+library(Matrix)
+
+# 데이터 로드
+counts <- readMM('data/processed/counts.mtx')
+meta <- read.csv('data/processed/metadata.csv', row.names=1)
+genes <- read.csv('data/processed/genes.csv')$X
+barcodes <- read.csv('data/processed/barcodes.csv')$X
+rownames(counts) <- genes; colnames(counts) <- barcodes
+
+# CellChat 객체 생성
+cellchat <- createCellChat(object=counts, meta=meta,
+                           group.by='cell_type')
+
+# DB 설정 (mouse)
+CellChatDB <- CellChatDB.mouse
+cellchat@DB <- CellChatDB
+
+# 분석 실행
+cellchat <- subsetData(cellchat)
+cellchat <- identifyOverExpressedGenes(cellchat)
+cellchat <- identifyOverExpressedInteractions(cellchat)
+cellchat <- computeCommunProb(cellchat, type='triMean')
+cellchat <- filterCommunication(cellchat, min.cells=10)
+cellchat <- computeCommunProbPathway(cellchat)
+cellchat <- aggregateNet(cellchat)
+
+# ★ 핵심: RGC → Amacrine/DAC 신호 확인
+netVisual_chord_cell(cellchat, sources='RGC', targets=c('DAC','Amacrine'))
+
+# TGFb pathway 특이적 확인
+netVisual_aggregate(cellchat, signaling='TGFb')
+
+# 결과 저장
+saveRDS(cellchat, 'results/cellchat_retina.rds')
+7.2 핵심 확인 포인트
+CellChat/NicheNet 결과에서 다음을 확인합니다:
+
+8. Step 6: Pseudotime 분석 (공막 Fibroblast Trajectory)
+근시 공막에서 fibroblast가 myofibroblast로 전환되는 과정을 pseudotime으로 추적하고, Hippo-YAP 상태를 오버레이합니다:
+# 공막 데이터셋 (Wu et al.)에서 fibroblast subset
+sclera = adata_sclera[adata_sclera.obs['cell_type'].isin(
+    ['Fibroblast', 'Myofibroblast'])].copy()
+
+# Diffusion map
+sc.pp.neighbors(sclera, n_pcs=20)
+sc.tl.diffmap(sclera)
+
+# PAGA (partition-based graph abstraction)
+sc.tl.paga(sclera, groups='cell_type')
+sc.pl.paga(sclera)
+
+# DPT (diffusion pseudotime)
+sclera.uns['iroot'] = np.flatnonzero(
+    sclera.obs['cell_type'] == 'Fibroblast')[0]
+sc.tl.dpt(sclera)
+
+# Pseudotime 위에 Hippo-YAP 유전자 overlay
+sc.pl.scatter(sclera, basis='diffmap', color=['dpt_pseudotime',
+    'Yap1', 'Lats1', 'Tgfb1', 'Col1a1', 'Col3a1', 'Lox', 'Mmp2'],
+    ncols=4)
+plt.savefig('figures/pseudotime_hippo_yap.png', dpi=200, bbox_inches='tight')
+
+# Pseudotime에 따른 유전자 발현 추이 (smoothed)
+sc.pl.paga_path(sclera, nodes=['Fibroblast', 'Myofibroblast'],
+    keys=['Yap1','Lats1','Tgfb1','Col1a1','Col3a1','Lox','Hif1a'])
+⚠ Pseudotime에서 YAP1이 nuclear (활성)상태로 전환되는 시점과 TGFβ1/MMP 상승 시점이 일치하면, TGFβ switching 가설의 강력한 근거입니다.
+9. Step 7: Multi-Dataset Integration
+다수 데이터셋을 통합할 때 batch effect를 보정합니다:
+import harmonypy as hm
+
+# 데이터셋 병합
+adata_combined = adata_yao.concatenate(adata_mrca,
+    batch_categories=['Yao2023', 'MRCA2024'])
+
+# 전처리
+sc.pp.normalize_total(adata_combined, target_sum=1e4)
+sc.pp.log1p(adata_combined)
+sc.pp.highly_variable_genes(adata_combined, n_top_genes=3000,
+                            batch_key='batch')
+sc.pp.scale(adata_combined, max_value=10)
+sc.tl.pca(adata_combined, n_comps=50)
+
+# Harmony batch correction
+ho = hm.run_harmony(adata_combined.obsm['X_pca'],
+                    adata_combined.obs, 'batch')
+adata_combined.obsm['X_pca_harmony'] = ho.Z_corr.T
+
+# Harmony PC로 UMAP
+sc.pp.neighbors(adata_combined, use_rep='X_pca_harmony')
+sc.tl.umap(adata_combined)
+sc.pl.umap(adata_combined, color=['batch', 'cell_type'])
+
+10. 예상 산출물 (Figures for Manuscript)
+11. 실행 타임라인 (12주)
+12. Milestone Checklist
+
+M-LIGHT CP-2 PRD  |  Version 1.0  |  April 2026  |  Park Jungyul

@@ -1,0 +1,271 @@
+
+CP-1: Expanded Network Pharmacology of Atropine in Myopia
+Project Requirements Document (PRD)
+아트로핀-근시 확장 Network Pharmacology 실행 가이드
+M-LIGHT Project  |  Park Jungyul, MD, PhD
+Version 1.0  |  April 2026
+
+1. 프로젝트 개요
+1.1 목적
+아트로핀의 근시 억제 기전을 포괄적으로 규명하기 위해, muscarinic receptor(M1-M5)뿐 아니라 α2A-adrenoceptor, nicotinic receptor, GABA receptor까지 포함한 세계 최초의 포괄적 다수용체 네트워크를 구축한다. 특히 Hippo-YAP(LATS1/2, YAP1, TEAD1-4)가 다양한 upstream receptor에서 오는 신호의 convergence node인지 검증한다.
+1.2 배경 및 차별화
+2025년 Frontiers in Pharmacology 논문(Li et al.)에서 CHRM1-5의 기초적 PPI network이 발표되었으나, 다음을 포함하지 않았다:
+• α2A-adrenoceptor (ADRA2A) — Carr et al. 2018에서 아트로핀의 근시 억제가 M4가 아닌 α2A potency와 상관한다는 결과
+• Nicotinic receptor (CHRNA/CHRNB) — Thomson et al. 2021에서 nicotinic agonist도 FDM을 억제한다는 발견
+• Hippo-YAP pathway (LATS1/2, YAP1, TEAD) — 우리의 중앙 가설의 핵심
+• Non-cholinergic pathway — muscarinic agonist도 근시를 억제하며, 도파민 변화 없이도 효과
+1.3 핵심 지표
+
+2. 단계별 실행 가이드
+Step 1: 아트로핀 결합 타겟 전체 추출 (Day 1–2)
+3개 데이터베이스에서 각각 추출한 후 합칩다.
+1-A. CTD (Comparative Toxicogenomics Database)
+URL: https://ctdbase.org
+절차:
+1. 상단 검색창에 "atropine" 입력 → Chemical 선택
+2. 결과 페이지에서 "Gene Interactions" 탭 클릭
+3. 우측 상단 Download → CSV 클릭
+4. 다운로드된 CSV를 Excel로 열기
+5. "Interaction" 컬럼에서 direct interaction만 필터링:
+   • 포함: "increases expression", "decreases expression", "increases activity", "decreases activity", "affects binding"
+   • 제외: "affects response to substance" 등 간접 상호작용
+6. Gene Symbol 컬럼만 추출 → 별도 시트에 정리
+
+예상 결과: 30–80개 유전자
+주의: Organism 필터를 Homo sapiens로 설정하면 더 정확
+1-B. DrugBank
+URL: https://go.drugbank.com
+절차:
+1. 검색창에 "Atropine" 입력 → DB00572 페이지로 이동
+2. 페이지 스크롤하여 다음 섹션 확인:
+   • Targets 섹션: 주요 결합 타겟 (CHRM1-5 등)
+   • Enzymes 섹션: 대사 관련 효소
+   • Transporters 섹션: 수송체
+3. 각 타겟의 Gene Name 및 UniProt ID 기록
+4. Action 컬럼 확인: agonist/antagonist/inhibitor 구분 기록
+
+예상 결과: 10–25개 타겟 (가장 정확한 DB)
+핵심 확인: CHRM1, CHRM2, CHRM3, CHRM4, CHRM5가 모두 있는지, ADRA2A가 포함되는지
+1-C. SwissTargetPrediction
+URL: http://swisstargetprediction.ch
+절차:
+1. 접속 후 중앙 입력창에 Atropine의 SMILES 붙여넣기:
+   O=C(OC1CC2CCC1N2C)C(CO)c1ccccc1
+2. Species: Homo sapiens 선택
+3. "Predict" 버튼 클릭
+4. 결과 테이블에서 "Download CSV" 클릭
+5. Probability > 0 인 타겟 전체 필터링
+6. 특비 주목할 non-muscarinic 타겟:
+   • ADRA2A, ADRA2B, ADRA2C (α2-adrenergic receptors)
+   • CHRNA2, CHRNA3, CHRNA4, CHRNA7, CHRNB2 (nicotinic)
+   • GABRA1, GABRB2 (GABA)
+   • HTR2A, HTR3A (serotonin)
+
+예상 결과: 50–100개 예측 타겟
+의의: DrugBank에 없는 예측적 타겟을 발견할 수 있음
+1-D. 통합 및 정리
+절차:
+1. Excel에 시트 3개 생성: CTD, DrugBank, SwissTarget
+2. 새 시트에 3개 DB의 Gene Symbol을 모두 합침
+3. 중복 제거 (Excel UNIQUE 함수 또는 Remove Duplicates)
+4. 각 유전자에 출처 DB 표시 (CTD/DrugBank/SwissTarget)
+5. Receptor Type 컬럼 추가: Muscarinic / Adrenergic / Nicotinic / GABA / Other
+
+최종 산출물: "Atropine_Target_Gene_List.xlsx" (50–150개 유전자)
+파일명 규칙: CP1_Step1_Atropine_Targets_YYYYMMDD.xlsx
+
+✅ Step 1 체크포인트
+
+Step 2: 근시 관련 유전자 추출 (Day 2–3)
+2-A. DisGeNET
+URL: https://www.disgenet.org
+절차:
+1. 상단 Search에 "myopia" 입력 → Disease 탭에서 선택
+2. Gene-Disease Associations (GDAs) 탭 클릭
+3. Score ≥ 0.1 필터 적용 (noise 제거)
+4. Download 버튼으로 TSV 다운로드
+5. Gene Symbol 컬럼 추출
+
+참고: "high myopia", "degenerative myopia"로도 각각 검색하여 합치면 더 포괄적
+예상 결과: 200–500개 유전자
+2-B. GeneCards
+URL: https://www.genecards.org
+절차:
+1. 검색: "myopia"
+2. Relevance Score 기준 정렬 (높은 순)
+3. 상위 200–300개 유전자 확인
+4. 무료 계정으로는 일부만 다운로드 가능 → 필요시 수동 기록
+
+팁: DisGeNET 결과가 충분하면 GeneCards는 교차 검증용으로 사용
+2-C. OMIM
+URL: https://omim.org
+절차:
+1. 검색: "myopia"
+2. Gene Map 확인 → 근시 causative/susceptibility 유전자 추출
+3. 확정 유전자: PAX6, ZNF644, RASGRF1, GJD2, LEPREL1, SCO2 등
+
+의의: GWAS loci보다 causal evidence가 강한 유전자 확보
+2-D. 가설 기반 핵심 유전자 수동 추가 (필수)
+GWAS/DisGeNET에서 누락될 수 있는 M-LIGHT 가설 핵심 유전자를 반드시 포함:
+2-E. 통합 및 정리
+1. DisGeNET + GeneCards + OMIM + 수동 추가 → 하나의 시트에 합침
+2. 중복 제거
+3. 각 유전자에 출처 표시
+4. 최종 산출물: "Myopia_Gene_List.xlsx" (300–800개)
+
+✅ Step 2 체크포인트
+
+Step 3: 교차 네트워크 구축 (Day 3–5)
+3-A. Venn Diagram으로 교집합 확인
+도구: Venny (https://bioinfogp.cnb.csic.es/tools/venny/) — 웹 기반, 설치 불필요
+절차:
+1. List 1에 Atropine Target Gene List 붙여넣기
+2. List 2에 Myopia Gene List 붙여넣기
+3. 교집합 영역 클릭 → 교집합 유전자 리스트 추출
+4. 스크린샷 저장 → Figure 소재
+
+예상 교집합: 20–60개 유전자 = "Atropine-Myopia Intersection Genes"
+이것이 논문의 핵심 분석 대상
+3-B. STRING PPI Network 구축
+URL: https://string-db.org
+절차:
+1. 접속 → 좌측 메뉴에서 "Multiple Proteins" 선택
+2. 텍스트 입력창에 교집합 유전자 전체 붙여넣기 (한 줄에 하나씩)
+3. Organism: Homo sapiens 선택
+4. "SEARCH" 클릭
+5. 모든 유전자가 정확히 매칭되었는지 확인 → "CONTINUE" 클릭
+6. Network 화면에서:
+   • Settings 클릭 → minimum required interaction score → 0.700 (high confidence) 설정
+   • Network Type: full STRING network (물리적 + 기능적 연결 모두)
+   • "UPDATE" 클릭
+7. 결과 네트워크 다운로드:
+   • Exports → TSV (Cytoscape용)
+   • Exports → PNG/SVG (예비 시각화용)
+3-C. 확장 네트워크 (M-LIGHT 가설 검증용)
+교집합 유전자에 가설 핵심 유전자를 추가하여 두 번째 네트워크를 구축한다:
+1. 교집합 유전자 + Step 2-D의 가설 유전자 전체를 STRING에 입력
+2. 동일하게 confidence 0.7로 설정
+3. 이 네트워크에서 기존에 알려진 연결 vs 우리가 제안하는 새로운 연결을 구분 표시
+
+의의: 논문의 Figure 1 및 핵심 발견의 기초
+
+✅ Step 3 체크포인트
+
+Step 4: Pathway Enrichment 분석 (Day 5–7)
+4-A. KEGG Pathway Enrichment
+STRING 내 분석 (가장 간단):
+1. STRING 네트워크 화면에서 하단 "Analysis" 탭 클릭
+2. KEGG Pathways 섹션 확인
+3. FDR < 0.05 기준으로 유의한 경로 정리
+
+핵심 확인 항목 (우선순위별):
+4-B. GO Enrichment
+STRING Analysis 탭에서 함께 확인 가능:
+• Biological Process: "regulation of cell cycle", "ECM organization", "response to hypoxia"
+• Molecular Function: "G protein-coupled receptor activity", "kinase activity"
+• Cellular Component: "extracellular matrix", "cell junction"
+4-C. 대안/보완 도구
+• Metascape (https://metascape.org): 시각화 우수, 무료, 교집합 유전자 붙여넣기만 하면 자동 enrichment
+• DAVID (https://david.ncifcrf.gov): 더 세밀한 분석 가능
+• Enrichr (https://maayanlab.cloud/Enrichr): 빠른 웹 기반 enrichment
+
+추천: STRING + Metascape 병행으로 결과 교차 검증
+
+✅ Step 4 체크포인트
+
+Step 5: Cytoscape 시각화 및 Hub Gene 분석 (Day 7–10)
+5-A. Cytoscape 설치 및 데이터 로딩
+다운로드: https://cytoscape.org (무료, Windows/Mac/Linux)
+절차:
+1. Cytoscape 설치 및 실행
+2. File → Import → Network from File → STRING에서 다운로드한 TSV 파일 선택
+3. Column 매핑: Source Node, Target Node, Combined Score 확인 → OK
+4. 네트워크가 화면에 표시됨
+5-B. CytoHubba 플러그인으로 Hub Gene 도출
+설치: Apps → App Manager → 검색 "cytoHubba" → Install
+실행:
+1. 상단 메뉴 Apps → cytoHubba → Hub Analysis
+2. 알고리즘 선택: Degree, Betweenness Centrality, Closeness Centrality 각각 실행
+3. 각 알고리즘별 상위 10개 Hub Gene 기록
+4. 3개 알고리즘에서 공통으로 나오는 유전자 = Core Hub Genes
+
+핵심 확인: LATS1/2, YAP1, HIF1A, TGFB1, AKT1 등이 hub에 포함되는지?
+5-C. 네트워크 시각화 (논문 Figure 용)
+Node 색상 코딩 (경로별 구분):
+
+Node 크기: Degree에 비례 (hub일수록 크게)
+Layout: Organic / Force-directed 적용
+내보내기: File → Export as Image → PNG 300dpi 및 SVG
+5-D. Convergence 분석 (논문의 핵심 발견)
+서로 다른 upstream receptor에서 출발하는 경로가 어느 node에서 합류하는지 시각화:
+1. Cytoscape에서 M1/M2/M4 → downstream 경로 추적
+2. ADRA2A → downstream 경로 추적
+3. 두 경로가 만나는 지점 = Convergence Node
+4. Hippo-YAP 또는 HIF1α가 convergence point이면 → 논문의 핵심 발견
+
+이것이 2025 Frontiers 논문과의 결정적 차별화 포인트
+
+✅ Step 5 체크포인트
+
+Step 6: CMap 분석 (Day 10–14)
+6-A. Connectivity Map 쿼리
+URL: https://clue.io/cmap
+절차:
+1. https://clue.io 접속 → 무료 계정 생성
+2. Query → Gene Expression Signature 선택
+3. 교집합 유전자 중:
+   • Up genes: 근시에서 upregulated된 유전자 (DisGeNET에서 확인)
+   • Down genes: 근시에서 downregulated된 유전자
+4. Species: Human → Submit Query
+5. 결과에서 negative connectivity score = 근시 gene signature를 역전시키는 약물
+
+기대 결과: 아트로핀과 유사한 signature를 가진 FDA 승인 약물 후보 도출
+6-B. Drug Repurposing 후보 정리
+CMap 결과에서:
+1. Connectivity score 상위 20개 약물 리스트업
+2. 각 약물의 기존 적응증, 안과 사용 여부, 근시 관련 보고 확인
+3. CP-6 (Drug Repurposing)과 연결
+Step 7: Molecular Docking 검증 (Day 14–21)
+7-A. 도킹 대상 선정
+Hub gene 중 druggable target에 대해 atropine docking:
+7-B. 도구 및 절차
+웹 기반 (설치 불필요):
+• CB-Dock2 (https://cadd.labshare.cn/cb-dock2/): PDB ID + ligand SMILES만 입력하면 자동 docking
+• SwissDock (http://www.swissdock.ch): 웹 기반 docking 서버
+
+로컬 (더 정밀):
+• AutoDock Vina: 무료, 명령줄 기반, Google Colab에서도 실행 가능
+• PyRx: AutoDock Vina의 GUI wrapper
+
+절차 (CB-Dock2 기준):
+1. https://cadd.labshare.cn/cb-dock2/ 접속
+2. Target: PDB ID 입력 (e.g., 7TRP)
+3. Ligand: Atropine SMILES 입력
+4. Submit → 결과에서 binding energy (kcal/mol), binding site, interactions 확인
+5. 각 수용체별로 반복 → binding affinity 비교 테이블 작성
+
+✅ Step 6-7 체크포인트
+
+Step 8: 논문 작성 (Day 21–28)
+8-A. 논문 구조
+8-B. Figure 목록
+8-C. 타겟 저널
+1순위: Experimental Eye Research (IF ~3.0) — network pharmacology + 근시 영역
+2순위: International Journal of Molecular Sciences (IF ~5.6) — 빠른 심사, open access
+3순위: Biomolecules (IF ~4.8) — network pharmacology 논문 많이 게재
+
+3. 필요 도구 총정리
+
+총 비용: $0 — 모든 도구가 무료
+4. 리스크 및 대응
+5. 파일 명명 규칙
+CP1_Step{N}_{Description}_{YYYYMMDD}.{ext}
+
+예시:
+• CP1_Step1_Atropine_Targets_20260410.xlsx
+• CP1_Step2_Myopia_Genes_20260411.xlsx
+• CP1_Step3_Venn_Intersection_20260412.xlsx
+• CP1_Step3_STRING_Network_20260413.tsv
+• CP1_Step5_Cytoscape_Network_Figure1_20260417.png
+• CP1_Step7_Docking_Results_20260421.xlsx
+• CP1_Manuscript_Draft_v1_20260425.docx
