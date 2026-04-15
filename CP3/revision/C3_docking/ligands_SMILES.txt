@@ -1,0 +1,38 @@
+========================================
+C3 DOCKING NEGATIVE CONTROL - SMILES
+CB-Dock2 (https://cadd.labshare.cn/cb-dock2/)
+========================================
+
+[LIGAND 1] Scopolamine (PubChem CID: 3000322, MW: 303.4)
+선정 이유: 무스카린 길항제, Atropine과 tropane 골격 공유, 근시 억제 효과 없음
+SMILES (아래 줄 복사):
+O=C(O[C@@H]1C[C@H]2C[C@@H]1O2)[C@@H](CO)c1ccccc1
+
+----------------------------------------
+
+[LIGAND 2] Tropicamide (PubChem CID: 5593, MW: 284.4)
+선정 이유: 무스카린 길항제 (산동제), 근시 효과 없음, tropane 아님
+SMILES (아래 줄 복사):
+O=C(N(CC)Cc1ccccc1)C(CO)c1ccncc1
+
+----------------------------------------
+
+[LIGAND 3] Caffeine (PubChem CID: 2519, MW: 194.2)
+선정 이유: 완전히 다른 골격 (xanthine), 음성 대조군
+SMILES (아래 줄 복사):
+Cn1c(=O)c2c(ncn2C)n(C)c1=O
+
+----------------------------------------
+
+[REFERENCE] Atropine (양성 대조군 기준값)
+PubChem CID: 174174, MW: 289.4
+SMILES:
+O=C(OC1CC2CCC1N2C)C(CO)c1ccccc1
+
+========================================
+TARGET PDB IDs (CB-Dock2에 직접 입력)
+========================================
+5CXV  -> CHRM1 (양성 대조, Atropine score: -8.8)
+3KYS  -> YAP-TEAD (Atropine score: -7.9)
+5BRK  -> MOB1-LATS1 (Atropine score: -7.6)
+3KFD  -> TGFb1R (Atropine score: -7.5)

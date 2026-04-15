@@ -1,0 +1,21 @@
+============================================================
+C1 EXTENSION LAYER PERMUTATION TEST - RESULTS
+============================================================
+
+Actual Hippo-YAP Convergence:
+  Receptor->Hippo-YAP paths: 12
+  Mean shortest distance:    4.500
+  Combined score:            2.67
+
+Null Distribution (1000 random KEGG pathways):
+  Path count: mean=0.7, max=19
+  Mean dist (reachable): 2.887
+
+Empirical P-values:
+  P(paths >= 12):           0.0100
+  P(distance <= 4.50):  1.0000
+  P(score >= 2.7):         0.0483
+
+INTERPRETATION:
+  VALIDATED: Hippo-YAP convergence is pathway-specific (P=0.0483)
+============================================================

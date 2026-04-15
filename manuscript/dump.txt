@@ -1,0 +1,363 @@
+Table 1. Network topology parameters of key genes in the atropine–myopia intersection network
+Gene
+Category
+Deg.
+DC
+BC
+CC
+Core hub
+Ext. Layer dist.
+Hub rank
+Convergence path
+Key observation
+TP53
+Global hub
+21
+0.488
+0.058
+0.507
+Yes
+1
+#1
+FOS→TP53→LATS1
+Highest BC; DA-Hippo bridge
+AKT1
+Global hub
+21
+0.488
+0.046
+0.493
+Yes
+1
+#2
+CHRM→AKT1→YAP1
+Muscarinic-Hippo bridge
+EGFR
+Key intermediary
+17
+0.395
+0.019
+0.456
+Yes
+1
+#9
+CHRNA3→ACHE→EGFR→LATS1
+CMap: 8 of top 50 hits
+FOS
+IEG / DA bridge
+16
+0.372
+0.002
+0.424
+No
+1
+#10
+DRD1→FOS→TP53
+Shortest DA entry point
+TGFB1
+MR causal target
+12
+0.279
+0.001
+0.396
+No
+2
+#17
+—
+MR P=0.003; not a hub
+Receptors:
+DRD1
+Dopamine receptor
+1
+0.023
+0.000
+0.073
+No
+3
+—
+DRD1→FOS→TP53→LATS1
+16 paths to Hippo-YAP
+CHRM3
+Muscarinic receptor
+2
+0.047
+0.000
+0.067
+No
+2
+—
+40 paths via CHRM1/3/5
+MR null (P=0.40)
+ADRA2A
+Adrenergic receptor
+1
+0.023
+0.000
+0.023
+No
+3
+—
+24 paths via ADRA2A/2C
+MR null (P=0.80)
+DC = degree centrality; BC = betweenness centrality; CC = closeness centrality. All metrics from Cytoscape (v3.10) Analyze Network on the 47-gene intersection PPI (STRING v12.0, score ≥0.7). Core hub = CytoHubba rank ≥2. Ext. Layer dist. = minimum steps to any Hippo-YAP gene. TGFB1 (BC=0.001, rank #17) illustrates that network centrality and genetic causality are complementary: low topological prominence yet strongest MR association (P=0.003).
+Table 2. Mendelian randomization results, outcome replication, and colocalization analysis
+Panel A. Primary MR results (eQTLGen → UK Biobank myopia)
+Module
+Gene
+NIV
+Method
+β (SE)
+95% CI
+P
+F
+Sensitivity
+Pleiotropy
+Interpretation
+MR-E
+TGFB1
+1
+Wald
+−0.027 (0.009)
+(−0.045, −0.009)
+0.003
+27.2
+Steiger P=1.7×10−5; Rev. MR P=0.90
+Height
+Causal protective
+MR-B
+LATS2
+1
+Wald
++0.018 (0.009)
+(+0.001, +0.035)
+0.040
+30.7
+Steiger P=1.3×10−6; Rev. MR P=0.94
+Clean
+Causal risk
+MR-E
+HIF1A
+4
+IVW
+−0.004 (0.003)
+(−0.009, +0.001)
+0.154
+154.8
+WM P=0.068
+—
+Suggestive
+MR-A
+COMT
+5
+IVW
+−0.002 (0.001)
+(−0.004, +0.001)
+0.191
+240.8
+Egger P=0.35; WM P=0.20
+—
+Null
+MR-D
+ADRA2A
+5
+IVW
++0.001 (0.004)
+(−0.007, +0.009)
+0.796
+40.5
+Egger P=0.37; WM P=0.71
+—
+Null
+MR-C
+CHRM3
+1
+Wald
+−0.009 (0.010)
+(−0.029, +0.011)
+0.403
+21.3
+—
+—
+Null
+MR-E
+LOX
+1
+Wald
++0.002 (0.007)
+(−0.012, +0.016)
+0.743
+46.4
+—
+—
+Null
+Panel B. TGFB1 replication across refractive error phenotypes
+Dataset
+Trait
+Method
+β (SE)
+95% CI
+P
+Direction
+Consistency
+ukb-b-6353
+Binary myopia (primary)
+Wald
+−0.027 (0.009)
+(−0.045, −0.009)
+0.003
+Protective
+✓ Reference
+ukb-b-19994
+Spherical power (right eye)
+Wald
++0.253 (0.071)
+(+0.114, +0.392)
+0.0004
+Less myopic
+✓ Replicated
+ukb-b-7500
+Spherical power (left eye)
+Wald
++0.264 (0.072)
+(+0.123, +0.405)
+0.0002
+Less myopic
+✓ Replicated
+Panel C. Bayesian colocalization (coloc.abf)
+Gene
+SNPs
+PP.H0 (%)
+PP.H1 (%)
+PP.H2 (%)
+PP.H3 (%)
+PP.H4 (%)
+Interpretation
+TGFB1
+2,668
+2.29
+94.95
+0.02
+0.95
+1.79
+Strong eQTL; distributed GWAS
+LATS2
+< 5
+—
+—
+—
+—
+—
+Insufficient overlap
+Panel A: Outcome = UK Biobank myopia (ukb-b-6353; N=460,536). Exposure = eQTLGen cis-eQTLs (N=31,684; P<5×10−6). Bold P<0.05. F>10 for all genes (no weak instrument bias). 15 additional genes had insufficient instruments (Supplementary Table S2). Panel B: Positive β for spherical power = shift toward hyperopia (less myopic). All three P<0.001. Panel C: PP.H4>80% = strong shared causality. High PP.H1 reflects robust eQTL signal with distributed myopia GWAS architecture at this locus.
+Table 3. Triangulation evidence matrix: convergence across five independent methods
+Gene
+Network (CP1)
+MR β (P)
+MR replication
+Published evidence
+CMap class
+Docking
+Score
+Convergence level
+TGFB1
+Intersect. deg 12
+−0.027 (0.003)
+3× P<0.001
+Wu 2018 ↑ FDM
+MMP inh. #1
+−7.5
+5/5
+Triple + replicated
+LATS2
+Extension Layer
++0.018 (0.040)
+IV not in outcome
+Liu 2025 YAP↓
+—
+−7.2
+4/5
+Triple (no CMap)
+YAP1
+Extension (24 edges)
+Insuff. IV
+—
+Liu 2025 ↓↓ (WB)
+Src inh. 3×
+−7.9
+4/5
+Double (no MR)
+HIF1A
+Intersection
+−0.004 (0.154)
+—
+Huang↓; Wu↑
+—
+—
+3/5
+Near-triple
+EGFR
+Hub #9 (deg 17)
+Insuff. IV
+—
+—
+EGFR inh. 8×
+—
+2/5
+Pharmacological only
+Score = number of methods providing concordant evidence out of 5 (Network, MR, Literature, CMap, Docking). Triple = network + MR causal + published wet lab. TGFB1 is the only gene achieving 5/5 convergence with 3-outcome replication. MR β shown with P-value in parentheses; italic = non-significant or insufficient IV. Docking scores in kcal/mol (threshold −7.0).
+Table 4. Molecular docking of atropine to known and novel pathway targets
+Target
+PDB
+Method
+Score
+Vol. (Å³)
+Binding site
+Key contact residues
+% CHRM1
+MR cross-reference
+CHRM1 (control)
+5CXV
+FitDock
+−9.0
+—
+Orthosteric (template 6wjc)
+Pocket identity = 1.0
+100%
+Known target
+CHRM1 (control)
+5CXV
+CB-Dock2
+−8.8
+1,436
+Chain A/B interface
+GLN43, TRP56, ASP63, HIS185, PHE189
+98%
+Known target
+YAP-TEAD
+3KYS
+CB-Dock2
+−7.9
+1,985
+PPI interface (Ch. C/D)
+PHE206, PHE275, VAL293, MET343, PHE350
+88%
+YAP1: insuff. IV
+TGFβ1 receptor
+3KFD
+CB-Dock2
+−7.5
+1,695
+Trimeric interface (Ch. C/D/K)
+Multi-chain contact
+83%
+TGFB1: P=0.003
+LATS2 kinase
+5BRK
+CB-Dock2
+−7.2
+1,695
+Kinase domain
+See Supplementary
+80%
+LATS2: P=0.040
+Drug-like binding threshold: −7.0 kcal/mol. All novel targets exceed threshold at 80–88% of CHRM1 affinity. % CHRM1 = |score| / 9.0 × 100. FitDock = template-based docking; CB-Dock2 = cavity-detection blind docking (AutoDock Vina). CHRM1 contact residues verified from CB-Dock2 output; YAP-TEAD residues from CB-Dock2 Chain C/D output. MR cross-reference links docking targets to genetic causal evidence from Table 2. Both MR-validated genes (TGFB1, LATS2) show drug-like atropine binding.

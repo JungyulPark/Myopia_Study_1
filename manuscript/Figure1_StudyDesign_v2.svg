@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" style="background:#ffffff; font-family:Arial, Helvetica, sans-serif;">
+  <!-- Definitions for arrows and shadows -->
+  <defs>
+    <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto-start-reverse">
+      <polygon points="0 0, 10 5, 0 10" fill="#7f8c8d" />
+    </marker>
+    <filter id="boxShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Title section -->
+  <text x="600" y="40" font-size="24" font-weight="bold" fill="#2c3e50" text-anchor="middle">Figure 1. Study Design: Integrative 5-Step Triangulation (M-LIGHT Model)</text>
+
+  <!-- COLUMN 1: Network Identification -->
+  <g transform="translate(50, 100)">
+    <rect x="0" y="0" width="200" height="450" rx="10" fill="#f0f3f4" stroke="#d5dbdb" stroke-width="2"/>
+    <rect x="0" y="0" width="200" height="40" rx="10" fill="#34495e"/>
+    <text x="100" y="25" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1. Network Mapping</text>
+    
+    <!-- Nodes -->
+    <rect x="25" y="70" width="150" height="60" rx="5" fill="#ffffff" stroke="#e74c3c" stroke-width="2" filter="url(#boxShadow)"/>
+    <text x="100" y="95" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Atropine Targets</text>
+    <text x="100" y="115" font-size="12" fill="#333" text-anchor="middle">ChEMBL/Simons (N=128)</text>
+
+    <text x="100" y="150" font-size="20" fill="#7f8c8d" text-anchor="middle">+</text>
+
+    <rect x="25" y="170" width="150" height="60" rx="5" fill="#ffffff" stroke="#2980b9" stroke-width="2" filter="url(#boxShadow)"/>
+    <text x="100" y="195" font-size="14" font-weight="bold" fill="#2980b9" text-anchor="middle">Myopia GWAS</text>
+    <text x="100" y="215" font-size="12" fill="#333" text-anchor="middle">DisGeNET (N=239)</text>
+
+    <!-- Down arrow -->
+    <line x1="100" y1="240" x2="100" y2="280" stroke="#7f8c8d" stroke-width="3" marker-end="url(#arrowHead)"/>
+
+    <!-- Intersection -->
+    <rect x="25" y="290" width="150" height="90" rx="5" fill="#ffffff" stroke="#27ae60" stroke-width="3" filter="url(#boxShadow)"/>
+    <text x="100" y="320" font-size="14" font-weight="bold" fill="#27ae60" text-anchor="middle">Intersection Core</text>
+    <text x="100" y="340" font-size="20" font-weight="bold" fill="#333" text-anchor="middle">N = 47</text>
+    <text x="100" y="360" font-size="11" fill="#7f8c8d" text-anchor="middle">Centrality &amp; Hub Analysis</text>
+  </g>
+
+  <!-- Arrow 1 to 2 -->
+  <line x1="260" y1="435" x2="285" y2="435" stroke="#7f8c8d" stroke-width="4" marker-end="url(#arrowHead)"/>
+
+  <!-- COLUMN 2: MR Causality -->
+  <g transform="translate(300, 100)">
+    <rect x="0" y="0" width="200" height="450" rx="10" fill="#f0f3f4" stroke="#d5dbdb" stroke-width="2"/>
+    <rect x="0" y="0" width="200" height="40" rx="10" fill="#34495e"/>
+    <text x="100" y="25" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2. Genetic Causality</text>
+    
+    <rect x="25" y="70" width="150" height="60" rx="5" fill="#ffffff" stroke="#8e44ad" stroke-width="2" filter="url(#boxShadow)"/>
+    <text x="100" y="95" font-size="14" font-weight="bold" fill="#8e44ad" text-anchor="middle">eQTL Exposure</text>
+    <text x="100" y="115" font-size="12" fill="#333" text-anchor="middle">eQTLGen (N=31,684)</text>
+
+    <!-- Down arrow -->
+    <line x1="100" y1="140" x2="100" y2="160" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrowHead)"/>
+    
+    <rect x="25" y="170" width="150" height="45" rx="5" fill="#fdf2e9" stroke="#d35400" stroke-width="1"/>
+    <text x="100" y="190" font-size="12" font-weight="bold" fill="#d35400" text-anchor="middle">2-Sample MR (2SLS)</text>
+    <text x="100" y="205" font-size="10" fill="#333" text-anchor="middle">Wald Ratio / IVW</text>
+
+    <!-- Down arrow -->
+    <line x1="100" y1="225" x2="100" y2="245" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrowHead)"/>
+
+    <rect x="25" y="255" width="150" height="60" rx="5" fill="#ffffff" stroke="#2980b9" stroke-width="2" filter="url(#boxShadow)"/>
+    <text x="100" y="280" font-size="14" font-weight="bold" fill="#2980b9" text-anchor="middle">Myopia Outcome</text>
+    <text x="100" y="300" font-size="12" fill="#333" text-anchor="middle">UK Biobank (N=460k)</text>
+
+    <line x1="100" y1="325" x2="100" y2="355" stroke="#7f8c8d" stroke-width="3" marker-end="url(#arrowHead)"/>
+
+    <rect x="25" y="365" width="150" height="60" rx="5" fill="#ffffff" stroke="#e67e22" stroke-width="3" filter="url(#boxShadow)"/>
+    <text x="100" y="390" font-size="13" font-weight="bold" fill="#d35400" text-anchor="middle">Causal Candidates</text>
+    <text x="100" y="410" font-size="18" font-weight="bold" fill="#333" text-anchor="middle">N = 7</text>
+  </g>
+
+  <line x1="510" y1="400" x2="535" y2="400" stroke="#7f8c8d" stroke-width="4" marker-end="url(#arrowHead)"/>
+
+  <!-- COLUMN 3: Verification -->
+  <g transform="translate(550, 100)">
+    <rect x="0" y="0" width="200" height="210" rx="10" fill="#f0f3f4" stroke="#d5dbdb" stroke-width="2"/>
+    <rect x="0" y="0" width="200" height="40" rx="10" fill="#34495e"/>
+    <text x="100" y="25" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3. Gen. Verification</text>
+
+    <rect x="15" y="60" width="170" height="60" rx="5" fill="#ffffff" stroke="#16a085" stroke-width="2" filter="url(#boxShadow)"/>
+    <text x="100" y="80" font-size="13" font-weight="bold" fill="#16a085" text-anchor="middle">CREAM Replication</text>
+    <text x="100" y="100" font-size="11" fill="#333" text-anchor="middle">Spherical Power Traits</text>
+    <text x="100" y="112" font-size="11" font-weight="bold" fill="#333" text-anchor="middle">3x Replicated P &lt; 0.001</text>
+
+    <rect x="15" y="135" width="170" height="60" rx="5" fill="#ffffff" stroke="#f1c40f" stroke-width="2" filter="url(#boxShadow)"/>
+    <text x="100" y="155" font-size="13" font-weight="bold" fill="#f39c12" text-anchor="middle">Colocalization</text>
+    <text x="100" y="170" font-size="11" fill="#333" text-anchor="middle">PP.H1 vs PP.H4 (coloc.abf)</text>
+    <text x="100" y="185" font-size="11" fill="#333" text-anchor="middle">eQTL Signal Mapping</text>
+  </g>
+
+  <!-- COLUMN 4: Structural biology -->
+  <g transform="translate(550, 330)">
+    <rect x="0" y="0" width="200" height="220" rx="10" fill="#f0f3f4" stroke="#d5dbdb" stroke-width="2"/>
+    <rect x="0" y="0" width="200" height="40" rx="10" fill="#34495e"/>
+    <text x="100" y="25" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">4. Docking Analysis</text>
+
+    <rect x="15" y="60" width="170" height="140" rx="5" fill="#ffffff" stroke="#3498db" stroke-width="2" filter="url(#boxShadow)"/>
+    <text x="100" y="80" font-size="12" font-weight="bold" fill="#2980b9" text-anchor="middle">CB-Dock2 Blind Pocket</text>
+    
+    <text x="100" y="105" font-size="11" font-weight="bold" fill="#c0392b" text-anchor="middle">TGFβ1 Receptor (3KFD)</text>
+    <text x="100" y="120" font-size="11" fill="#333" text-anchor="middle">Vol 4,786 Å³ | Score -7.5</text>
+    
+    <line x1="30" y1="135" x2="170" y2="135" stroke="#bdc3c7" stroke-width="1"/>
+
+    <text x="100" y="155" font-size="11" font-weight="bold" fill="#c0392b" text-anchor="middle">MOB1-LATS1 PPI (5BRK)</text>
+    <text x="100" y="170" font-size="11" fill="#333" text-anchor="middle">Vol 1,695 Å³ | Score -7.6</text>
+    <text x="100" y="185" font-size="10" fill="#7f8c8d" text-anchor="middle">(Novel Target Binding)</text>
+  </g>
+
+  <!-- Arrow to step 5 -->
+  <line x1="760" y1="325" x2="785" y2="325" stroke="#7f8c8d" stroke-width="4" marker-end="url(#arrowHead)"/>
+
+  <!-- COLUMN 5: M-LIGHT Synthesis -->
+  <g transform="translate(800, 100)">
+    <rect x="0" y="0" width="200" height="450" rx="10" fill="#f0f3f4" stroke="#d5dbdb" stroke-width="2"/>
+    <rect x="0" y="0" width="200" height="40" rx="10" fill="#e74c3c"/>
+    <text x="100" y="25" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">5. Synthesis</text>
+
+    <!-- Polygon to represent convergence -->
+    <polygon points="100,60 180,140 100,220 20,140" fill="#ffffff" stroke="#e67e22" stroke-width="3" filter="url(#boxShadow)"/>
+    <text x="100" y="135" font-size="14" font-weight="bold" fill="#d35400" text-anchor="middle">Evidential</text>
+    <text x="100" y="155" font-size="14" font-weight="bold" fill="#d35400" text-anchor="middle">Convergence</text>
+    
+    <text x="100" y="255" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Triangulated Targets:</text>
+    <text x="100" y="275" font-size="12" fill="#2c3e50" text-anchor="middle">• TGFB1 (Causal/Docking)</text>
+    <text x="100" y="295" font-size="12" fill="#2c3e50" text-anchor="middle">• LATS1/2 (Causal/Docking)</text>
+
+    <line x1="100" y1="315" x2="100" y2="345" stroke="#c0392b" stroke-width="3" marker-end="url(#arrowHead)"/>
+
+    <rect x="15" y="355" width="170" height="70" rx="5" fill="#e74c3c" filter="url(#boxShadow)"/>
+    <text x="100" y="380" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">M-LIGHT Model</text>
+    <text x="100" y="400" font-size="11" fill="#fdf2e9" text-anchor="middle">Pleiotropic Mechanism of</text>
+    <text x="100" y="415" font-size="11" fill="#fdf2e9" text-anchor="middle">Atropine in Myopia</text>
+  </g>
+
+</svg>

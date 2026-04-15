@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" style="background:#ffffff; font-family:Arial, Helvetica, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <radialGradient id="gradRed" cx="30%" cy="30%" r="70%" fx="30%" fy="30%">
+      <stop offset="0%" stop-color="#ff7675" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#c0392b" stop-opacity="0.95"/>
+    </radialGradient>
+    <radialGradient id="gradBlue" cx="70%" cy="30%" r="70%" fx="70%" fy="30%">
+      <stop offset="0%" stop-color="#74b9ff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#2980b9" stop-opacity="0.95"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Titles -->
+  <text x="600" y="45" font-size="28" font-weight="bold" fill="#2c3e50" text-anchor="middle">Figure 2. Target Convergence and Topological Architecture</text>
+  
+  <text x="50" y="100" font-size="24" font-weight="bold" fill="#34495e">A. Functional Intersection</text>
+  <text x="550" y="100" font-size="24" font-weight="bold" fill="#34495e">B. Core Hub Hierarchy</text>
+
+  <!-- PANEL A: Venn Diagram -->
+  <g transform="translate(60, 160)">
+    <!-- Red Circle -->
+    <circle cx="160" cy="200" r="160" fill="url(#gradRed)" style="mix-blend-mode: multiply;"/>
+    <!-- Blue Circle -->
+    <circle cx="320" cy="200" r="160" fill="url(#gradBlue)" style="mix-blend-mode: multiply;"/>
+    
+    <text x="80" y="190" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Atropine</text>
+    <text x="80" y="215" font-size="18" fill="#ffffff" text-anchor="middle">Targets</text>
+    <text x="80" y="240" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">(N=128)</text>
+
+    <text x="400" y="190" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Myopia</text>
+    <text x="400" y="215" font-size="18" fill="#ffffff" text-anchor="middle">Genes</text>
+    <text x="400" y="240" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">(N=195)</text>
+
+    <text x="240" y="190" font-size="24" font-weight="900" fill="#ffffff" text-anchor="middle">Intersection</text>
+    <text x="240" y="230" font-size="34" font-weight="900" fill="#f1c40f" text-anchor="middle">N=47</text>
+    
+    <text x="160" y="420" font-size="15" fill="#7f8c8d" text-anchor="middle">CTD / DrugBank / SwissTargetPrediction</text>
+    <text x="320" y="445" font-size="15" fill="#7f8c8d" text-anchor="middle">CTD / DisGeNET Direct</text>
+  </g>
+
+  <!-- PANEL B: Hierarchical Network -->
+  <g transform="translate(620, 140)">
+    
+    <!-- BACKGROUND EDGES -->
+    <!-- Row 1 to Receptors -->
+    <path d="M 40 40 L 40 240 M 150 40 L 150 240 M 260 40 L 260 240 M 370 40 L 370 240 M 480 40 L 480 240" stroke="#ecf0f1" stroke-width="3"/>
+    <!-- Row 2 to Receptors -->
+    <path d="M 40 130 L 150 240 M 150 130 L 260 240 M 260 130 L 370 240" stroke="#ecf0f1" stroke-width="3"/>
+    
+    <!-- Bold bridges from EGFR/FOS -> Extension -->
+    <path d="M 370 130 L 260 380" stroke="#bdc3c7" stroke-width="4" opacity="0.8"/> <!-- EGFR -> LATS -->
+    <path d="M 480 130 L 120 380" stroke="#bdc3c7" stroke-width="4" opacity="0.8"/> <!-- FOS -> TGFB1 -->
+
+    <!-- Receptors to Extension -->
+    <path d="M 40 240 L 120 380 M 150 240 L 260 380 M 260 240 L 260 380 M 370 240 L 260 380 M 480 240 L 400 380" stroke="#ecf0f1" stroke-width="3"/>
+
+    <!-- Extension to YAP1 -->
+    <path d="M 120 380 L 260 550 M 260 380 L 260 550 M 400 380 L 260 550" stroke="#e67e22" stroke-width="6"/>
+
+
+    <!-- LAYER 1: Global Hubs (Top 10) -->
+    <!-- Row 1 -->
+    <circle cx="40" cy="40" r="28" fill="#34495e" filter="url(#shadow)"/><text x="40" y="45" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">TP53</text>
+    <circle cx="150" cy="40" r="28" fill="#34495e" filter="url(#shadow)"/><text x="150" y="45" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">AKT1</text>
+    <circle cx="260" cy="40" r="28" fill="#34495e" filter="url(#shadow)"/><text x="260" y="45" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">IL6</text>
+    <circle cx="370" cy="40" r="28" fill="#34495e" filter="url(#shadow)"/><text x="370" y="45" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">CTNNB1</text>
+    <circle cx="480" cy="40" r="28" fill="#34495e" filter="url(#shadow)"/><text x="480" y="45" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">TNF</text>
+    
+    <!-- Row 2 -->
+    <circle cx="40" cy="130" r="28" fill="#34495e" filter="url(#shadow)"/><text x="40" y="135" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">JUN</text>
+    <circle cx="150" cy="130" r="28" fill="#34495e" filter="url(#shadow)"/><text x="150" y="135" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">IL1B</text>
+    <circle cx="260" cy="130" r="28" fill="#34495e" filter="url(#shadow)"/><text x="260" y="135" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">CASP3</text>
+    <circle cx="370" cy="130" r="30" fill="#8e44ad" stroke="#fff" stroke-width="2" filter="url(#shadow)"/><text x="370" y="135" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">EGFR</text>
+    <circle cx="480" cy="130" r="30" fill="#d35400" stroke="#fff" stroke-width="2" filter="url(#shadow)"/><text x="480" y="135" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">FOS</text>
+
+    <!-- Global Hubs Label -->
+    <path d="M 0 -5 L 530 -5 L 530 170 L 0 170 Z" fill="none" stroke="#bdc3c7" stroke-dasharray="6,6" stroke-width="1.5" rx="5"/>
+    <text x="-15" y="60" font-size="16" font-weight="bold" fill="#7f8c8d" text-anchor="end">Global</text>
+    <text x="-15" y="78" font-size="16" font-weight="bold" fill="#7f8c8d" text-anchor="end">Hubs</text>
+    <text x="-15" y="96" font-size="14" fill="#95a5a6" text-anchor="end">(Top 10)</text>
+
+
+    <!-- LAYER 2: Receptors (Color-blind safe) -->
+    <!-- DRD: #e67e22 (Orange), ADRA2A: #3498db (Sky Blue), CHRM: #e74c3c (Red) -->
+    <circle cx="40" cy="240" r="28" fill="#e74c3c" filter="url(#shadow)"/><text x="40" y="245" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">CHRM1</text>
+    <circle cx="150" cy="240" r="28" fill="#e74c3c" filter="url(#shadow)"/><text x="150" y="245" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">CHRM3</text>
+    <circle cx="260" cy="240" r="28" fill="#e67e22" filter="url(#shadow)"/><text x="260" y="245" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">DRD1</text>
+    <circle cx="370" cy="240" r="28" fill="#e67e22" filter="url(#shadow)"/><text x="370" y="245" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">DRD2</text>
+    <circle cx="480" cy="240" r="28" fill="#3498db" filter="url(#shadow)"/><text x="480" y="245" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">ADRA2A</text>
+
+    <!-- LAYER 2 Label -->
+    <path d="M 0 200 L 530 200 L 530 280 L 0 280 Z" fill="none" stroke="#bdc3c7" stroke-dasharray="6,6" stroke-width="1.5" rx="5"/>
+    <text x="-15" y="245" font-size="16" font-weight="bold" fill="#7f8c8d" text-anchor="end">Receptors</text>
+
+
+    <!-- LAYER 3: Extension Layer -->
+    <circle cx="120" cy="380" r="36" fill="#e74c3c" filter="url(#shadow)"/>
+    <text x="120" y="386" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">TGFB1*</text>
+    
+    <circle cx="260" cy="380" r="36" fill="#3498db" filter="url(#shadow)"/>
+    <text x="260" y="386" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">LATS1/2*</text>
+    
+    <circle cx="400" cy="380" r="36" fill="#3498db" filter="url(#shadow)"/>
+    <text x="400" y="386" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">TEAD1-4</text>
+
+    <!-- LAYER 3 Label -->
+    <path d="M 70 330 L 450 330 L 450 430 L 70 430 Z" fill="none" stroke="#e74c3c" stroke-dasharray="6,6" stroke-width="2" rx="5"/>
+    <text x="-15" y="375" font-size="16" font-weight="bold" fill="#7f8c8d" text-anchor="end">Extension</text>
+    <text x="-15" y="395" font-size="16" font-weight="bold" fill="#7f8c8d" text-anchor="end">Layer</text>
+    
+    <!-- FIX: Moved MR causal out of the way to the far right -->
+    <text x="530" y="345" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="end">(* MR causal: TGFB1 P=0.003, LATS2 P=0.040)</text>
+
+
+    <!-- LAYER 4: Terminal Convergence -->
+    <circle cx="260" cy="550" r="55" fill="#2cc71e" stroke="#27ae60" stroke-width="4" filter="url(#shadow)"/>
+    <text x="260" y="560" font-size="28" font-weight="900" fill="#fff" text-anchor="middle">YAP1</text>
+    
+    <text x="260" y="635" font-size="18" font-weight="bold" fill="#2c3e50" text-anchor="middle">(24 edges, 14 bridges)</text>
+
+    <text x="-15" y="555" font-size="16" font-weight="bold" fill="#7f8c8d" text-anchor="end">Terminal</text>
+    <text x="-15" y="575" font-size="16" font-weight="bold" fill="#7f8c8d" text-anchor="end">Target</text>
+
+  </g>
+</svg>

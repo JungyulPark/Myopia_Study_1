@@ -1,0 +1,17 @@
+Compound,PubChem_CID,MW,Target_PDB,Target_Name,Cavity,Vina_Score_kcal_mol,Cavity_Volume_A3,FitDock_Score,Key_Residues,Notes
+Atropine,174174,289.4,5CXV,CHRM1,C2,-8.8,1436,-9.0,"GLN43,TRP56,ASP63",REFERENCE
+Atropine,174174,289.4,3KYS,YAP-TEAD,C1,-7.9,1985,N/A,"PHE206,PHE275",REFERENCE
+Atropine,174174,289.4,5BRK,MOB1-LATS1,C1,-7.6,1695,N/A,"TRP56,HIS646",REFERENCE
+Atropine,174174,289.4,3KFD,TGFb1R,C1,-7.5,4786,N/A,"TRP30,TYR50",REFERENCE
+Scopolamine,3000322,303.4,5CXV,CHRM1,,,,,,
+Scopolamine,3000322,303.4,3KYS,YAP-TEAD,,,,,,
+Scopolamine,3000322,303.4,5BRK,MOB1-LATS1,,,,,,
+Scopolamine,3000322,303.4,3KFD,TGFb1R,,,,,,
+Tropicamide,5593,284.4,5CXV,CHRM1,,,,,,
+Tropicamide,5593,284.4,3KYS,YAP-TEAD,,,,,,
+Tropicamide,5593,284.4,5BRK,MOB1-LATS1,,,,,,
+Tropicamide,5593,284.4,3KFD,TGFb1R,,,,,,
+Caffeine,2519,194.2,5CXV,CHRM1,,,,,,
+Caffeine,2519,194.2,3KYS,YAP-TEAD,,,,,,
+Caffeine,2519,194.2,5BRK,MOB1-LATS1,,,,,,
+Caffeine,2519,194.2,3KFD,TGFb1R,,,,,,
