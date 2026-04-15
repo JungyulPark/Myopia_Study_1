@@ -1,8 +1,0 @@
-Diagnosis,N,Tier1_strict_n,Tier1_strict_DMR,Tier2_finding_n,Tier2_finding_DMR,Either_n,Either_DMR,True_miss_n,True_miss_rate,Naming_gap_n,Naming_gap_pct
-TED,948,621,65.5,506,53.4,744,78.5,204,21.5,123,13.0
-Lymphoma,312,208,66.7,225,72.1,271,86.9,41,13.1,63,20.2
-Pseudotumor,212,63,29.7,90,42.5,106,50.0,106,50.0,43,20.3
-Cavernous hemangioma,71,54,76.1,66,93.0,69,97.2,2,2.8,15,21.1
-Pleomorphic adenoma,40,22,55.0,39,97.5,39,97.5,1,2.5,17,42.5
-Meningioma,24,22,91.7,23,95.8,24,100.0,0,0.0,2,8.3
-IgG4-RD,20,9,45.0,10,50.0,16,80.0,4,20.0,7,35.0

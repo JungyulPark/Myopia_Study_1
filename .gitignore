@@ -34,3 +34,14 @@ Thumbs.db
 # We will manually add any huge output files if needed
 CP1/results/*.csv
 CP1/gene/*.csv
+
+# 5. Non-CP projects
+FaceRank/
+LLM_foundation/
+
+# 6. Manuscript and submission documents (NOT to be tracked)
+manuscript/
+Submit_Manuscript/
+*.docx
+*.pptx
+*.doc
