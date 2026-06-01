@@ -11,6 +11,21 @@
 
 > Scope note: a separate protein-binder project (LAP / TGF-β force-state, branch `claude/stoic-dirac-WKSdX`) is **not** part of this repository. It is tracked independently and is out of scope here.
 
+> ⚠️ **Paper evolved — read `Submit_Manuscript/PAPER_STRENGTH_ASSESSMENT.md`.** Active analysis/
+> writing now happens in **Antigravity**. The Stage 2 figures (`Stage2_Figures/`) use the NEW
+> 5-anchor **RDH5/CD55** framing; the repo's `Manuscript_FINAL_Submission.md` still uses the OLD
+> TGFβ–Hippo framing. The body text must be rewritten to match the figures before submission.
+
+### Stage 2 figure status (as built in Antigravity, integrated here)
+| Asset | State |
+|---|---|
+| Figure 1 — study design / evidence hierarchy (`Figure1_workflow_v19_1.R`) | ✅ LOCKED |
+| Figure 2 — Z-statistic 5-anchor forest, 3 cohorts (`Figure2_forest_v10.R`) | ✅ LOCKED |
+| Figure 3 — colocalization hierarchy 3-panel (`Figure3_coloc_v3.R`) | ✅ LOCKED |
+| Figure 4 — biological schematic, monochrome (`Figure4_schematic_bw.{html,svg,pdf,png}`) | ✅ LOCKED |
+| Suppl S2 — exploratory docking (`Supplementary_Figure_S2_docking_v3.R`) | ✅ LOCKED |
+| Suppl S1 — STRING network (`Supplementary_S1_STRING_input_package.md`) | ⏳ input package only; image pending |
+
 ---
 
 ## 1. Current status at a glance
