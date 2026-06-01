@@ -1,0 +1,139 @@
+<div id="fig4-root">
+<style>
+  #fig4-root {
+    --ink: #1a1a1a;
+    --ink-soft: #444444;
+    --ink-faint: #777777;
+    --foot: #404040;
+    --rule: #cccccc;
+    --edge: #1a1a1a;
+    --edge-soft: #bbbbbb;
+    --arrow: #555555;
+    background: #ffffff;
+    color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 34px 40px 28px;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+  #fig4-root * { box-sizing: border-box; }
+  .fig-title { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 4px; color: var(--ink); }
+  .fig-sub { font-size: 12.5px; font-style: italic; color: var(--ink-faint); margin: 0 0 18px; }
+  .flow { display: flex; flex-direction: column; align-items: center; }
+  .v-arrow { width: 1.5px; height: 18px; background: var(--arrow); position: relative; }
+  .v-arrow::after { content: ""; position: absolute; bottom: -1px; left: 50%; transform: translateX(-50%);
+    border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 7px solid var(--arrow); }
+  /* Top box: lighter border, near-white fill, semibold */
+  .top-box { border: 1px solid var(--edge-soft); background: #fcfcfc; border-radius: 5px; padding: 12px 28px;
+    text-align: center; font-size: 13.5px; font-weight: 600; color: var(--ink); }
+  .anchor-box { border: 1.6px solid var(--edge); background: #f3f3f3; border-radius: 5px; padding: 13px 32px;
+    text-align: center; font-size: 15px; font-weight: 700; color: var(--ink); letter-spacing: 0.005em; }
+  .branch { width: 100%; max-width: 900px; height: 30px; position: relative; }
+  .branch .stem { position: absolute; top: 0; left: 50%; width: 1.5px; height: 15px; background: var(--arrow); transform: translateX(-50%); }
+  .branch .cross { position: absolute; top: 15px; height: 1.5px; background: var(--arrow); left: 16.66%; right: 16.66%; }
+  .branch .drop { position: absolute; top: 15px; width: 1.5px; height: 15px; background: var(--arrow); }
+  .branch .drop.d1 { left: 16.66%; }
+  .branch .drop.d2 { left: 50%; transform: translateX(-50%); }
+  .branch .drop.d3 { right: 16.66%; }
+  .branch .drop::after { content: ""; position: absolute; bottom: -1px; left: 50%; transform: translateX(-50%);
+    border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 7px solid var(--arrow); }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; width: 100%; max-width: 900px; }
+  .card { border-radius: 7px; border: 1.6px solid var(--edge); background: #ffffff; padding: 18px 16px 22px;
+    text-align: center; display: flex; flex-direction: column; align-items: center; min-height: 248px; }
+  .card .axis-title { font-size: 13px; font-weight: 600; margin-bottom: 14px; color: var(--ink-soft);
+    text-transform: uppercase; letter-spacing: 0.05em; }
+  .card .gene { font-size: 27px; font-weight: 800; line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 6px; color: var(--ink); }
+  .card .gene.small { font-size: 19px; line-height: 1.25; }
+  .card .tier { font-size: 11.5px; font-weight: 600; color: var(--ink-soft); margin: 6px 0 4px; }
+  .card .pp { font-size: 11px; color: var(--ink-faint); margin-bottom: 14px; font-variant-numeric: tabular-nums; }
+  .card .rule { width: 66%; height: 1px; background: var(--rule); margin: 0 0 13px; }
+  .card .kw { font-size: 11.5px; color: var(--ink-soft); line-height: 1.9; }
+  .merge { width: 100%; max-width: 900px; height: 30px; position: relative; }
+  .merge .up { position: absolute; top: 0; width: 1.5px; height: 15px; background: var(--arrow); }
+  .merge .up.u1 { left: 16.66%; }
+  .merge .up.u2 { left: 50%; transform: translateX(-50%); }
+  .merge .up.u3 { right: 16.66%; }
+  .merge .cross { position: absolute; top: 15px; height: 1.5px; background: var(--arrow); left: 16.66%; right: 16.66%; }
+  .merge .stem { position: absolute; top: 15px; left: 50%; width: 1.5px; height: 15px; background: var(--arrow); transform: translateX(-50%); }
+  .merge .stem::after { content: ""; position: absolute; bottom: -1px; left: 50%; transform: translateX(-50%);
+    border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 7px solid var(--arrow); }
+  .expl { border: 1px dashed var(--edge-soft); background: #f7f7f7; border-radius: 5px; padding: 14px 26px; text-align: center; max-width: 680px; }
+  .expl .h { font-size: 12.5px; font-weight: 600; color: var(--ink-soft); margin-bottom: 6px; }
+  .expl .l { font-size: 11px; color: var(--ink-faint); line-height: 1.7; }
+  .expl .l.warn { font-style: italic; color: var(--ink-soft); margin-top: 3px; }
+  .concl { border: 1.8px solid var(--edge); background: #f3f3f3; border-radius: 7px; padding: 18px 32px; text-align: center; max-width: 740px; }
+  .concl .h { font-size: 13.5px; font-weight: 700; color: var(--ink); margin-bottom: 8px; letter-spacing: 0.01em; }
+  .concl .map { font-size: 16px; font-weight: 800; color: var(--ink); margin-bottom: 10px; letter-spacing: -0.005em; }
+  .concl .l { font-size: 11.5px; color: var(--ink-soft); line-height: 1.7; }
+  .concl .l .uns { font-style: italic; font-weight: 600; color: var(--ink); }
+  /* Footnote: larger + darker */
+  .foot { font-size: 11px; color: var(--foot); line-height: 1.6; margin-top: 22px; font-style: italic; text-align: left; }
+</style>
+
+<div class="fig-title">Biological context of atropine-motivated myopia genetic anchors</div>
+<div class="fig-sub">Interpretive schematic translating the genetic evidence (Figures 2&ndash;3) into three biological axes.</div>
+
+<div class="flow">
+  <div class="top-box">Atropine-motivated genetic framework</div>
+  <div class="v-arrow"></div>
+  <div class="anchor-box">Prioritized human myopia genetic anchors</div>
+
+  <div class="branch">
+    <div class="stem"></div><div class="cross"></div>
+    <div class="drop d1"></div><div class="drop d2"></div><div class="drop d3"></div>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="axis-title">Visual-cycle / RPE</div>
+      <div class="gene">RDH5</div>
+      <div class="tier">Tier A &mdash; robust coloc</div>
+      <div class="pp">PP.H4 0.991 / 0.916 / 0.999</div>
+      <div class="rule"></div>
+      <div class="kw">Visual cycle<br>Retinoid metabolism<br>Retinal/RPE signaling</div>
+    </div>
+    <div class="card">
+      <div class="axis-title">Complement / immune</div>
+      <div class="gene">CD55</div>
+      <div class="tier">Tier A &mdash; prior-sensitive coloc</div>
+      <div class="pp">PP.H4 0.801 / 0.287 / 0.976</div>
+      <div class="rule"></div>
+      <div class="kw">Complement regulation<br>Decay-accelerating factor<br>Inflammation-associated myopia</div>
+    </div>
+    <div class="card">
+      <div class="axis-title">Scleral ECM remodeling</div>
+      <div class="gene small">TGFB1 &middot; CTNNB1<br>FBN1</div>
+      <div class="tier">Tier B &mdash; MR-supported</div>
+      <div class="pp">PP.H1 / PP.H3 dominant</div>
+      <div class="rule"></div>
+      <div class="kw">TGF&beta; / Wnt / fibrillin<br>ECM remodeling<br>Axial elongation</div>
+    </div>
+  </div>
+
+  <div class="merge">
+    <div class="up u1"></div><div class="up u2"></div><div class="up u3"></div>
+    <div class="cross"></div><div class="stem"></div>
+  </div>
+
+  <div class="expl">
+    <div class="h">Exploratory receptor / Hippo context</div>
+    <div class="l">Muscarinic, nicotinic, adrenergic, and dopaminergic classes</div>
+    <div class="l">Unmatched permutation P = 0.010 &middot; hypothesis-generating only</div>
+    <div class="l warn">Direct atropine target unresolved</div>
+  </div>
+  <div class="v-arrow"></div>
+
+  <div class="concl">
+    <div class="h">Human myopia anchor map</div>
+    <div class="map">RDH5 + CD55 + TGFB1 / CTNNB1 / FBN1</div>
+    <div class="l"><span class="uns">Atropine direct molecular target: unresolved</span></div>
+    <div class="l">Next validation: retinal/RPE and scleral functional assays</div>
+  </div>
+</div>
+
+<div class="foot">
+  Tier classification from colocalization analysis (Figure 3). Biological axes reflect established gene molecular function. The exploratory receptor/Hippo network and docking analyses (Supplementary Figure S1) were hypothesis-generating and did not resolve atropine&rsquo;s direct molecular target.
+</div>
+</div>
