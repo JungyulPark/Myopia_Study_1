@@ -40,19 +40,29 @@ Network + docking are **exploratory supplementary** (S1, S2), explicitly hypothe
 
 ## 3. Strengths (what makes this publishable)
 
-1. **One genuinely novel finding — RDH5.** First colocalization-supported myopia anchor at
-   the visual-cycle/RPE axis, robust across all three priors, and replicated at P=3.3e-33 in a
-   truly independent cohort. Not in Wang Y 2024 IOVS. This is a real, citable contribution.
-2. **CD55 independent convergence** with a prior IOVS paper — corroboration, not a clash, and
-   framed honestly (not "first discovered").
-3. **Methodological rigor that beats the comparator** (Wang Y 2024): 3-prior colocalization
-   sensitivity, true ancestry-independent replication (not UKB self-split), PheWAS audit,
-   MVMR for height, Tier A/B honesty.
-4. **Disciplined honesty.** Distinct-variant disclosure, "direct target unresolved," exploratory
-   layers demoted to supplementary, weakest anchor (TGFB1) not oversold. This is the single
-   biggest reason the paper will survive review.
-5. **Provenance integrity.** A fabricated "CREAM N=542,934" circular-analysis artifact was
-   found and replaced with genuine Tedja 2018 replication. The final paper is defensible.
+> **Correction (literature audit, 2026-06-01): the two headline anchors are NOT novel.**
+> A web/literature check shows: **RDH5** is a *previously identified* refractive-error
+> susceptibility gene (rs3138141/rs3138144; Tedja/CREAM 2018), and its **eQTL colocalization
+> with the myopia GWAS signal has already been published — in fetal RPE eQTL** (Bryan/Mvududu
+> et al., biorxiv 446799), i.e. in a *better* tissue than our blood eQTL. **CD55** is one of the
+> six MR drug targets already reported by **Wang Y 2024 IOVS**, with anti-myopia complement
+> biology already described. **BICC1** (Tier 2) is a known high-myopia candidate; several other
+> Tier 2 hits (SPACA3, GATAD2A, TMEM258) sit in LD clusters containing already-known myopia
+> genes (TMEM98, TSSK6, SREBF2), so their lead-gene assignment is fragile. **Net: there is no
+> clear genuinely-new myopia gene here.** The contribution is methodological/consolidative, not
+> discovery. The strengths below should be read in that light.
+
+1. **Rigorous triangulation framework** — network → expanded MR → 3-prior colocalization →
+   true ancestry-independent replication (Tedja 2018, N=160,420) → exploratory docking, in one
+   reproducible pipeline. The *method/quality* exceeds the comparator (Wang Y 2024).
+2. **Honest negative result** — atropine's clinical effect does NOT map onto a clean
+   transcriptomic-MR target; prioritized genes are general refractive-error loci (visual cycle,
+   complement, ECM), not atropine-specific receptors. This is a genuinely useful corrective to
+   the many uncritical atropine network-pharmacology papers.
+3. **Confirmation/consolidation value** — independent replication of CD55 (vs Wang Y) and of the
+   RDH5 locus, with added 3-prior coloc robustness, has modest but real corroborative worth.
+4. **Disciplined honesty / provenance integrity** — distinct-variant disclosure, demotion of
+   network+docking to supplementary, removal of the fabricated "CREAM N=542,934" artifact.
 
 ## 4. Weaknesses / reviewer attack surface (be honest)
 
@@ -81,22 +91,53 @@ Network + docking are **exploratory supplementary** (S1, S2), explicitly hypothe
 
 ---
 
-## 6. Publication-viability verdict
+## 6. Publication-viability verdict (revised after novelty audit)
 
-**Overall: a solid, honest, methodologically rigorous genetic-epidemiology paper — publishable,
-not a high-impact breakthrough.** Its value rests on RDH5 (real novelty) + rigor + honesty.
-It is capped by blood-eQTL MR, no functional validation, and an atropine link that is framing
-rather than mechanism.
+**Overall: an honest, rigorous, but largely CONFIRMATORY genetic-epidemiology paper — not a
+discovery.** The headline genes are already known and RDH5's eQTL coloc is already published
+(in RPE). Combined with blood-eQTL MR, no functional validation, and an atropine link that is
+framing rather than mechanism, the impact ceiling is modest.
 
 | Target | Fit | Realistic outcome |
 |---|---|---|
-| **IOVS** (primary) | Strong — same journal as Wang Y 2024; our rigor is higher | Major revision likely; acceptance after revision **~30–45%**. Reviewers will press tissue-specificity. |
-| **Experimental Eye Research (EER)** (backup) | Very good | **~60–75%** after minor/moderate revision |
-| **JEI / similar specialty journal** | Easy fit | High acceptance, lower reach — sensible floor if IOVS+EER decline |
+| **IOVS** (as "discovery") | **Weak** — IOVS already published CD55 (Wang Y 2024); RDH5 RPE-coloc already out. An incremental blood-eQTL confirmation risks reject-as-incremental. | low (~10–20%) unless reframed |
+| **IOVS / OVS (as methods + honest-negative)** | Possible if framed as a cautionary triangulation framework, not a gene claim | major revision; modest |
+| **Experimental Eye Research (EER)** | Good fit for a rigorous confirmation/method paper | **~55–70%** after revision |
+| **JEI / specialty journal** | Easy fit, honest floor | high acceptance, low reach |
 
-**Recommendation:** target IOVS first (the RDH5 novelty + Wang Y dialogue justify it); fall back
-to EER, then JEI. Do **not** weaken the honest disclosures to chase impact — they are the paper's
-armor.
+**Recommendation:** do **not** submit to IOVS as a discovery — it would likely be rejected as
+incremental against its own 2024 paper. Either (a) reframe honestly and target EER/JEI, or
+(b) invest in one genuine value-add (§9) before deciding venue.
+
+---
+
+## 9. Can it be made genuinely more valuable? (honest options)
+
+There is **no genuinely-new gene** in the current results, so "more valuable" must come from
+reframing or new analysis, not from overclaiming. Realistic paths, in ROI order:
+
+1. **Reframe around the honest negative (cheap, true, useful).** Headline message:
+   *"Atropine's clinical anti-myopia effect does not resolve to a transcriptomic-MR target;
+   pharmacology-prioritized loci are generic refractive-error genes (visual cycle / complement /
+   ECM)."* This is a real corrective to the flood of uncritical atropine network-pharmacology
+   papers and is fully supported by the data. Best low-effort lift; suits EER.
+2. **Axial-length-specific MR (medium, public data).** Re-run anchors against an axial-length
+   GWAS rather than refractive error. Axial length is the structural driver; a specific effect
+   there is more mechanistically informative than re-confirming refractive-error loci.
+3. **Druggability/repurposing map (medium).** Open Targets / DrugBank / ChEMBL: which anchors
+   have existing drugs (e.g. visual-cycle modulators → RDH5 axis; complement inhibitors → CD55)?
+   Position as a repurposing-candidate map — but explicitly acknowledge overlap with Wang Y 2024.
+4. **Tissue-specific coloc for a non-RDH5 locus (medium).** RPE-RDH5 is taken; a retina/sclera
+   coloc that *adds* something for CD55 or a Tier B gene could differentiate.
+5. **Genuine novelty only via new data (high, out of current scope).** A myopia gene with no
+   prior literature that survives coloc + replication + is NOT LD-confounded — the Tier 2 list
+   does not currently provide a clean one (most cluster with known genes). Would need careful
+   fine-mapping (coloc-SuSiE) and likely still come up empty, or new tissue/functional data.
+
+**Bottom line for the PI:** the worst outcome is an oversold IOVS submission that gets rejected.
+The honest-negative reframe (#1) is the cheapest way to make the paper *worth* submitting; #2/#3
+are the realistic ways to lift it without fabrication. If none of these is appealing, an honest
+EER/JEI submission of the confirmation paper is legitimate — just don't dress it as discovery.
 
 ---
 
