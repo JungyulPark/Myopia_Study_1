@@ -2,7 +2,8 @@
 
 **Purpose of this file:** single entry point for picking up this project across **git**, **Claude Code**, and **Antigravity**. Read this first; it points to every artifact and lists what remains before submission.
 
-- **Manuscript title:** "An atropine-motivated MR framework prioritizes RDH5 and CD55 as genetic anchors for human myopia"
+- **Manuscript title (current sources):** "Multi-Receptor Convergence on the TGFβ–Hippo-YAP Axis in Atropine's Anti-Myopia Mechanism: Integrative Evidence From Network Pharmacology, Mendelian Randomization, and Transcriptomic Cross-Validation"
+- ⚠️ **Title mismatch:** the Stage 2 figure manifest uses an alternate title ("An atropine-motivated MR framework prioritizes RDH5 and CD55 as genetic anchors for human myopia"). The figure package and the manuscript text are framed differently — reconcile before submission (see §6).
 - **Target journal:** IOVS (primary), Experimental Eye Research / EER (backup)
 - **GitHub repo:** https://github.com/JungyulPark/Myopia_Study_1
 - **Active branch:** `claude/busy-heisenberg-lP58T`
@@ -21,7 +22,8 @@
 | CP3 — Mendelian randomization + colocalization | done | `CP3/` (incl. revision C2/C3) |
 | CP4 — Molecular docking (4×4) | done | `CP4_docking/` |
 | CP5 — CMap signature + manuscript figures | done | `CP5_cmap/`, `CP5_figures/` |
-| Manuscript drafts (IOVS + EER) | done | `Submit_Manuscript/`, `manuscript/` |
+| Final manuscript (multiple journal versions) | done | `Submit_Manuscript/` — see §3.1 inventory |
+| Manuscript working drafts | done | `manuscript/` |
 | **Stage 2 final figure package** | **LOCKED** | **`Submit_Manuscript/Stage2_Figures/`** (this handoff) |
 | Supplementary S1 network image | **PENDING** | generate at string-db.org (see §5) |
 | Pre-submission text fixes | **PENDING** | see §6 |
@@ -65,6 +67,31 @@ Location: `Submit_Manuscript/Stage2_Figures/` — see its `README_MANIFEST.md` f
 
 > The original `MLIGHT_Submission_Package.zip` was intentionally **not** committed (matches
 > `*.zip` ignore rule and is redundant with the extracted files above).
+
+---
+
+## 3.1 Final manuscript inventory
+
+A complete final manuscript **exists** in several journal-specific versions:
+
+| File | Words | Role |
+|---|---|---|
+| `Submit_Manuscript/Manuscript_FINAL_Submission.md` | ~10,240 | **Most complete master** (full text, 79 headings, references) |
+| `Submit_Manuscript/IOVS_Manuscript_Final_Source.md` | ~7,811 | IOVS-formatted source (YAML front matter; title field currently empty) |
+| `Submit_Manuscript/ExpEyeRes/EER_Manuscript_Final.md` | ~4,293 | EER (Experimental Eye Research) version |
+| `Submit_Manuscript/MLIGHT_Manuscript_Full_Source.md` | ~4,795 | Condensed full source (incl. molecular docking framing) |
+| `manuscript/Manuscript_FINAL_Submission.md` | ~10,240 | **Byte-identical duplicate** of the master above |
+
+Cleanup applied in this pass: removed empty 0-byte `Submit_Manuscript/ExpEyeRes/Manuscript.md`.
+
+Redundancy to resolve (left in place — needs author decision): the master
+`Manuscript_FINAL_Submission.md` exists identically in both `manuscript/` and
+`Submit_Manuscript/`. Pick one canonical location to avoid drift.
+
+Source archives: both supplied zips (`355bfc0c-files_16.zip` and its inner
+`MLIGHT_Submission_Package.zip`) were verified — all 10 figure files are byte-identical
+and already integrated under `Submit_Manuscript/Stage2_Figures/`. No unique content remained
+in either archive; per `.gitignore` the `*.zip` files themselves are not committed.
 
 ---
 
@@ -120,6 +147,10 @@ list from the input package → Homo sapiens, confidence ≥ 0.700, hide-disconn
 3. **References [27][28][35][40]** — exact citations still needed.
 4. **Methods 2.2.5 CHRM4 location** — contradiction with 2.2.3 unresolved.
 5. **CHRNA7/CHRNB4 selection justification** — pending.
+6. **Title reconciliation** — figure-package manifest title vs manuscript-source title differ
+   (see header warning). Choose the final title and propagate to figures, manifest, and IOVS YAML.
+7. **IOVS YAML `title` is empty** in `IOVS_Manuscript_Final_Source.md` — fill before submission.
+8. **Deduplicate the master manuscript** — identical copy in `manuscript/` and `Submit_Manuscript/`.
 
 ---
 
