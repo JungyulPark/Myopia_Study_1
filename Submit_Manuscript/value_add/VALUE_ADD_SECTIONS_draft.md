@@ -117,5 +117,55 @@ and the paper is submitted on the honest core + druggability map without it.
 - *"How is this different from Wang 2024?"* → We disclose CD55 overlap; our adds
   are the delivery-route lens and the axial-length/structural extension, plus an
   explicit benchmark of pharmacology-prioritized hits against known GWAS.
-- *"Blood eQTL ≠ eye."* → Stated as a named limitation; RDH5's stronger fetal-RPE
-  coloc (bioRxiv 446799) is cited as prior, more-relevant evidence we recover.
+- *"Blood eQTL ≠ eye."* → Now directly answered by the eye-tissue coloc arm
+  (Section E); RDH5's stronger fetal-RPE coloc (bioRxiv 446799) is cited as prior,
+  more-relevant evidence we recover.
+
+---
+
+## E. Eye-tissue colocalization subsection (Results + Discussion)
+
+*Source: `eye_tissue_coloc_results.csv` (EyeGEx retina / fetal-RPE / neural-adjacent
+proxy). Pre-registered interpretation in `03_eye_tissue_coloc.R` header.*
+
+Because our primary colocalization used blood eQTL (eQTLGen), we re-tested each
+anchor in **disease-relevant ocular tissue**. This directly addresses the
+blood-vs-eye limitation rather than merely conceding it.
+
+| Anchor | Blood coloc (prior) | Eye-tissue coloc (here) | Interpretation |
+|---|---|---|---|
+| RDH5 | PP.H4 0.99 | ‹FILL PP.H4, tissue, nsnps› | ‹holds in retina/RPE → recovered known positive control (cite bioRxiv 446799)› |
+| CD55 | PP.H4 0.80 (prior-sensitive) | ‹FILL› | ‹holds / blood-specific› |
+| CTNNB1 | coloc fail (PP.H3) | ‹FILL› | ‹candidate only› |
+| FBN1 | coloc fail (PP.H1) | ‹FILL› | ‹candidate only› |
+
+**Rules honored:** recovering RDH5 in retina/RPE is a *positive-control* win and is
+cited against prior published eye-tissue coloc — **not** a discovery. An anchor
+that colocalizes in blood but **not** in eye tissue is reported as blood-specific
+(a limitation), never as a finding. Panels with too few overlapping SNPs are
+reported as "not testable in this tissue."
+
+---
+
+## F. Mechanism / pathway-axis subsection (Results + Discussion)
+
+*Source: `pathway_mr_per_gene.csv`, `pathway_axis_summary.csv`. Reporting rules in
+`04_pathway_mechanism.R` header.*
+
+We recast the anchors as a small number of **established biological axes** the
+pipeline recovers — visual cycle (RDH5), complement regulation (CD55), TGF-β/ECM
+scleral remodelling (FBN1; TGFB1 as context only, discordant direction), and
+Wnt/β-catenin (CTNNB1) — and asked, per axis, how many *member* genes show a
+consistent-direction cis-MR effect on refractive error.
+
+| Axis | Anchor | Members tested | Concordant w/ anchor | Note |
+|---|---|---|---|---|
+| Visual cycle | RDH5 | ‹FILL› | ‹FILL› | established retinoid biology recovered |
+| Complement | CD55 | ‹FILL› | ‹FILL› | overlaps Wang 2024 (disclosed) |
+| TGF-β / ECM | FBN1 | ‹FILL› | ‹FILL› | TGFB1 context only — discordant, no positive claim |
+| Wnt/β-catenin | CTNNB1 | ‹FILL› | ‹FILL› | coloc-failed anchor — hypothesis only |
+
+**Rules honored:** axes are framed as *established* biology recovered, not new
+mechanisms; the axis summary is **descriptive** (count of consistent members),
+with **no pooling of p-values** into an inflated meta-test; TGFB1 is context only.
+This gives mechanism-level narrative depth without a single new-gene claim.
