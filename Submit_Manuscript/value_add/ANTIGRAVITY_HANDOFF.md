@@ -87,6 +87,9 @@ Rscript Submit_Manuscript/value_add/04_pathway_mechanism.R      # -> pathway_*.c
 Rscript Submit_Manuscript/value_add/07_east_asian_replication.R # -> east_asian_replication.csv
 Rscript Submit_Manuscript/value_add/08_coloc_susie.R            # -> coloc_susie_results.csv
 Rscript Submit_Manuscript/value_add/09_axial_mediation.R        # -> axial_mediation_results.csv (after 02)
+# 10 — defocus/atropine mechanistic-cascade MR (answers "why does atropine/defocus work"
+#      as far as genetics honestly allows: benchmark candidate pathways vs causal genetics)
+Rscript Submit_Manuscript/value_add/10_defocus_cascade_MR.R     # -> defocus_cascade_map.csv
 ```
 
 ### Phase D — discovery engines (the genuine new-finding sweep; run in this order)
