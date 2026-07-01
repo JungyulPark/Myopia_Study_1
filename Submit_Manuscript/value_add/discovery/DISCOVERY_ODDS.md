@@ -46,6 +46,31 @@ A hit passing 1–2 only = **candidate**, reported as such. A known locus = reco
 positive control. Nothing = honest null. **We do not upgrade the venue on a candidate
 alone.**
 
+## ⚠️ POWER CAVEAT — the odds above assume a WELL-POWERED axial-length GWAS
+
+The probabilities assume a UK-Biobank-scale axial-length GWAS (~60–70k, ocular-biometry
+subset). The easily-public option, **CREAM axial length (Cheng et al. 2013, ~N 12,000,
+9 loci)**, is **much smaller** → a transcriptome-wide scan on it is **underpowered**, and
+the realistic odds roughly **halve**:
+
+| Outcome | well-powered (UKB ~67k) | small public CREAM (~12k) |
+|---|---|---|
+| candidate not-known coloc hit | ~30–45% | **~10–20%** |
+| survives fine-map + replication (real discovery) | ~15–25% | **~3–8%** |
+
+**Implication.** With only small CREAM AL, the expected value of the discovery scan is
+low, and shipping the honest confirmation paper (Option A) becomes the sounder call.
+The discovery bet is genuinely worth it **only if a well-powered AL GWAS is available**
+— ideally the PI's own UKB axial-length GWAS (fields 5201/5202), which is a separate
+GWAS-generation task but the only route to real power.
+
+**Data acquisition is a separate task** (noted by PI): the CREAM AL summary stats live
+on the GWAS Catalog FTP but the exact current accession/path needs verification, and
+the file is large. `fetch_format_AL_gwas.R` reshapes whatever file is obtained into the
+scan's schema. From this no-network environment the live accession cannot be verified;
+search GWAS Catalog for trait "axial length" (Cheng 2013, PMID 24144296) and any
+UK-Biobank axial-length study for a better-powered option.
+
 ## The realistic plan
 
 1. PI resolves the **axial-length GWAS path** (`AL_FILE`) — the single blocker.
