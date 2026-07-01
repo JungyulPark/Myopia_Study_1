@@ -137,6 +137,23 @@ FinnGen RDH5 logOR = +0.2016 (OR 1.22). Directionally concordant without
 transformation. (Tedja is continuous diopter-scale, hence its β sign differs by
 convention but is concordant on the myopia axis.)
 
+## GERA axial-length GWAS lead loci (GCST90301672, Jiang 2023) — association-level note
+
+From the study's genome-wide-significant loci (16 total; association export, NOT full
+summary stats). Relevant observations for the manuscript (all association-level,
+cross-phenotype context — NOT MR/coloc, NOT novelty):
+- **RDH5** (rs3138142, 12:55721801) is a genome-wide axial-length locus, P = 8×10⁻¹⁶.
+- **CD55** (rs1257728, 1:207346177) is a genome-wide axial-length locus, P = 7×10⁻¹⁰.
+- The other GERA loci are largely established myopia genes (GJD2, KCNQ5, LAMA2, ZMAT4,
+  RBFOX1, BMP3, LRRC4C…). Jiang 2023 reported only 5 of 16 as novel.
+
+**Use (honest):** supports that RDH5 (our positive control) and CD55 also act on the
+STRUCTURAL axis (axial length), strengthening the cross-phenotype consistency of the
+one robust anchor. Explicitly association-level; do NOT upgrade to a causal/coloc claim
+without the transcriptome-wide MR + coloc scan on the FULL GERA summary statistics.
+Also a useful honest point: a dedicated axial-length GWAS still recovers mostly known
+loci — consistent with our "novelty is hard here" thesis.
+
 ## Analyses still pending return
 - **01–04, 07–10, D1–D3** → per `ANTIGRAVITY_HANDOFF.md` Phases B–D.
 - **BLOCKER:** OPENGWAS_JWT expired (401) → live OpenGWAS extraction (07 East-Asian,
