@@ -89,6 +89,39 @@ mediators) — more precise than the earlier "candidate-only" wording.
 
 ---
 
+## FULL 113-GENE SCREEN (verified from outputs/Suppl_TableS_full_denominator_v2.csv)
+
+The complete pharmacology-prioritized panel (113 genes) was tested and tiered:
+- **Tier_A (colocalization-supported): 2 genes — RDH5 (PP.H4=0.991), CD55 (PP.H4=0.801).** Both known loci.
+- **Tier_B (MR-supported, distinct variants): 3 — CTNNB1 (H4=0.037/H3=0.767), FBN1 (H4=0.165/H1=0.702), TGFB1 (H4=0.018/H1=0.950).**
+- **Null: 108 genes.**
+- Bonferroni-passing: only the 5 anchors. No non-anchor gene has PP.H4 > 0.7.
+
+**Headline (now backed by the FULL screen, not just 5 anchors):** across 113
+pharmacology-prioritized genes, only two colocalize with myopia — both established
+refractive-error loci. Zero novel colocalizing genes. Strongest honest statement of
+the "no defensibly novel target" thesis.
+
+Anchor values (full table) confirm the ledger: RDH5 F=814.2 b=+0.00888 p=1.2e-6 H4=0.991;
+CD55 F=1987.9 b=−0.00284 p=3.6e-5 H4=0.801; CTNNB1 F=454.0 b=−0.00552 p=4.4e-5 H4=0.037;
+FBN1 F=543.1 b=+0.00747 p=3.3e-4 H4=0.165; TGFB1 F=27.2 b=−0.0271 p=0.003 H4=0.018.
+
+## ⚠️ DATA-INTEGRITY FLAGS from PI PROVENANCE/NOTES (fix before submission)
+
+1. **FinnGen case/control N — CONFLICT.** Drafts said "8,266 cases / 254,189 controls"
+   (NOT verified — likely my error). PROVENANCE says **R10, ~27,000 cases / ~300,000
+   controls**. → Do NOT assert a precise N until read from the FinnGen R10 H7_MYOPIA
+   header. Replication OR values (RDH5 1.22, etc.) are verified; only N was wrong.
+2. **Tedja 2018 accession WRONG in PROVENANCE:** it lists `GCST90301672`, but that is the
+   **GERA axial-length study (Jiang 2023)**. Tedja 2018 (refractive error, Nat Genet,
+   PMID 29808027) has a different accession. Correct it; never cite Tedja as GCST90301672.
+3. **TGFB1 instrument is a pQTL, not eQTLGen cis-eQTL** (rs1963413, pQTL p=1.83e-7, from
+   `06c_pQTL_TGFB1_clumped_full.csv`). Disclose this mixed-source detail (Methods +
+   TGFB1 exclusion rationale + limitations) — another reason TGFB1 is an outlier.
+4. **novelty_audit_results.csv not on disk** — novelty data may be in
+   `discovery/39_validated_hits_tier1.csv` / `38_expanded_mr_results_tier1_primary.csv`;
+   novelty conclusions already recorded (05 section) from the PI run.
+
 ## Tedja 2018 / CREAM replication (continuous refractive error) — returned 2026-07 (SAFE)
 
 Source: `pathy/Stage2_Assets/Tedja_5anchor_MR_for_Figure2.csv`. Continuous spherical-

@@ -30,7 +30,11 @@ analyses (MR-Egger, weighted median, Cochran's Q) for multi-instrument genes, an
 Bayesian colocalization under three priors. Candidate lead SNPs were cross-referenced
 against catalogued refractive-error/myopia loci to adjudicate novelty.
 
-**Results.** Instruments were strong (F = 27–1988). Only **RDH5** cleared every filter:
+**Results.** Of 113 pharmacology-prioritized genes, five reached Bonferroni-significant
+cis-MR association with myopia, but only **two colocalized** — RDH5 and CD55, both
+established refractive-error loci; the other 108 genes were null and no non-anchor gene
+exceeded PP.H4 = 0.7. Instruments were strong (F = 27–1988). Only **RDH5** cleared every
+filter:
 robust colocalization (PP.H4 = 0.991–0.999) and replication across UK Biobank,
 Tedja/CREAM, and FinnGen high myopia (OR = 1.22, *P* = 0.013). RDH5 is an established
 Tedja-2018 locus with prior retinal/RPE colocalization — a recovered positive control.
@@ -142,8 +146,10 @@ instrument); for multi-instrument loci, MR-Egger intercept, weighted-median, and
 Cochran's Q. Steiger filtering, reverse MR, and PhenoScanner v2 screening were applied.
 
 **Replication.** Continuous refractive error (CREAM ukb-b-19994/ukb-b-7500; Tedja 2018,
-N = 160,420) and FinnGen high myopia (H7_MYOPIA; 8,266 cases / 254,189 controls), sign-
-aligned to the myopia axis.
+N = 160,420) and FinnGen high myopia (H7_MYOPIA, release R10; case/control N per the
+R10 release ‹confirm exact N from summary-stats header›), sign-aligned to the myopia
+axis. Cross-build harmonization (FinnGen GRCh38 vs eQTLGen/UKB/Tedja GRCh37) was by
+rsID matching.
 
 **Colocalization (decisive filter).** `coloc.abf` on ±500 kb regional statistics, with
 a three-prior sensitivity analysis (p₁ = p₂ = 10⁻⁴; p₁₂ = 10⁻⁵, 10⁻⁶, 5 × 10⁻⁶). PP.H4
@@ -175,11 +181,24 @@ compound classes annotated (DrugBank). Hypothesis-generating context only.
 
 # 3. Results
 
-## 3.1 Instrument strength and primary MR
-All anchor instruments were strong (F-statistic: RDH5 814.2, CD55 1987.9, CTNNB1 454.0,
-FBN1 543.1, TGFB1 27.2; all > 10). cis-MR against UK Biobank myopia yielded significant
-associations for RDH5, CD55, CTNNB1, and FBN1; TGFB1 rested on a single cis-instrument.
-‹FILL per-anchor UKB IVW/Wald β, P from disk if reporting each estimate in-text.›
+## 3.1 Full-panel screen: only two of 113 genes colocalize, both known loci
+Across the full panel of 113 pharmacology-prioritized genes, five reached
+Bonferroni-significant cis-MR association with UK Biobank myopia (RDH5, CD55, CTNNB1,
+FBN1, TGFB1) and the remaining 108 were null. On tiering by colocalization, only **two
+genes were colocalization-supported (Tier A): RDH5 (PP.H4 = 0.991) and CD55
+(PP.H4 = 0.801)** — both established refractive-error loci. The other three
+Bonferroni-significant genes (CTNNB1, FBN1, TGFB1) were MR-supported but showed
+*distinct* causal variants for expression and myopia (Tier B). **No gene outside the
+established anchors exceeded PP.H4 = 0.7**; that is, the entire pharmacology-prioritized
+screen yielded no novel colocalizing myopia gene.
+
+Anchor instruments were strong (F-statistic: RDH5 814.2, CD55 1987.9, CTNNB1 454.0,
+FBN1 543.1; all ≫ 10). Their UK Biobank cis-MR estimates were: RDH5 β = +0.0089
+(*P* = 1.2 × 10⁻⁶), CD55 β = −0.00284 (*P* = 3.6 × 10⁻⁵), CTNNB1 β = −0.00552
+(*P* = 4.4 × 10⁻⁵), FBN1 β = +0.00747 (*P* = 3.3 × 10⁻⁴). **TGFB1** was instrumented not
+by an eQTLGen cis-eQTL but by a single protein-QTL variant (rs1963413, pQTL
+*P* = 1.8 × 10⁻⁷; F ≈ 27.2; β = −0.0271, *P* = 0.003), a mixed-instrument-source detail
+we flag explicitly and revisit below.
 
 ## 3.2 MR sensitivity
 For the two anchors with ≥ 3 instruments we ran the full sensitivity panel. **CD55**
@@ -266,9 +285,12 @@ FinnGen; it is one of the six complement targets already reported by Wang et al.
 (2024). We neither claim CD55 as novel nor over-state its causal support.
 
 ## 4.5 TGFB1
-TGFB1 was single-instrument, did not colocalize (PP.H4 = 0.018), and showed a
-replication direction discordant with discovery; we exclude it as a positive and make
-no directional or therapeutic claim.
+TGFB1 is the weakest anchor on every axis and, uniquely, was instrumented by a single
+**protein-QTL** variant (rs1963413) rather than an eQTLGen cis-eQTL — a
+mixed-instrument-source that limits comparability with the other anchors. It did not
+colocalize (PP.H4 = 0.018), and its replication direction was discordant with discovery.
+We therefore exclude it as a positive result and make no directional or therapeutic
+claim; earlier framing that had over-weighted this gene is not supported.
 
 ## 4.6 Atropine and optical defocus: what germline genetics can and cannot say
 Atropine motivated candidate prioritization but our design cannot adjudicate its
@@ -298,7 +320,9 @@ specific colocalization in retina/RPE is the appropriate next step. The discover
 outcome (ukb-b-6353) is self-reported, mitigated by measured continuous refractive-
 error replication (a conservative, non-differential source of misclassification).
 Several anchors rest on a single cis-instrument, precluding pleiotropy-sensitivity
-analysis and widening confidence intervals in FinnGen. The FinnGen endpoint captures
+analysis and widening confidence intervals in FinnGen; TGFB1 additionally relied on a
+protein-QTL rather than an eQTL instrument, limiting its comparability. The FinnGen
+endpoint captures
 high/pathological myopia rather than general refractive error, so its nulls partly
 reflect phenotype and power differences. All discovery and replication samples are
 European-ancestry; East-Asian replication — directly relevant given atropine's clinical
