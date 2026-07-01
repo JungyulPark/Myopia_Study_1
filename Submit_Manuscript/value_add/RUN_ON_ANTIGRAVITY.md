@@ -48,6 +48,28 @@ Rscript Submit_Manuscript/value_add/04_pathway_mechanism.R
 #   -> pathway_mr_per_gene.csv, pathway_axis_summary.csv
 ```
 
+## 1b. REQUIRED + HIGH-VALUE analyses (honest-paper rigor)
+
+```r
+# 05 — Novelty audit (public APIs; runs anywhere w/ internet). Fill lead SNPs from
+#      CP3/results/enhanced_table1_iv_details.csv first. Closes Gate G0.
+Rscript Submit_Manuscript/value_add/05_novelty_audit.R          # -> novelty_audit_results.csv
+
+# 06 — Consolidated MR robustness table. NOTE: enhanced_table1_iv_details.csv holds
+#      the OLD gene set (TGFB1/LATS2/HIF1A/COMT/ADRA2A/CHRM3/LOX) — supply the
+#      RDH5/CD55/CTNNB1/FBN1 IV details + harmonised dat for the Egger/Q columns.
+Rscript Submit_Manuscript/value_add/06_mr_robustness_table.R    # -> mr_robustness_consolidated.csv
+
+# 07 — East-Asian ancestry replication (set EAS_OUTCOME; prefer EAS eQTL instruments)
+Rscript Submit_Manuscript/value_add/07_east_asian_replication.R # -> east_asian_replication.csv
+
+# 08 — coloc-SuSiE upgrade (multiple causal variants; reuse D2 LD provider)
+Rscript Submit_Manuscript/value_add/08_coloc_susie.R            # -> coloc_susie_results.csv
+
+# 09 — Axial-length mediation (run AFTER Track 2; two-step MR / MVMR)
+Rscript Submit_Manuscript/value_add/09_axial_mediation.R        # -> axial_mediation_results.csv
+```
+
 ## 2. DISCOVERY engines (the genuine new-finding sweep — run in THIS order)
 
 ```r
