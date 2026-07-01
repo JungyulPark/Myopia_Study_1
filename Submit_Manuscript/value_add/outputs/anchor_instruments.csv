@@ -1,0 +1,6 @@
+gene,ensembl,rsid,chr,pos,effect_allele,other_allele,eaf,beta_eqtl,se_eqtl,F_stat,source_note
+RDH5,ENSG00000135437,rs56108400,12,56213297,T,G,0.21326,-0.550449,0.0137718,814.191942893664,lead cis-eQTL from eQTLGen; used as primary MR instrument
+CD55,ENSG00000196352,rs891376,1,207491489,C,T,0.697809,0.981652,0.00998571,1987.9277014274,lead cis-eQTL from eQTLGen; used as primary MR instrument
+TGFB1,ENSG00000105329,rs1963413,19,41352390,A,G,NA,NA,NA,NA,pQTL instrument (p=1.83e-7 in eqtl-a-ENSG00000105329); eQTL tophits cache absent — pQTL used per 06c_pQTL_TGFB1_clumped_full.csv
+CTNNB1,ENSG00000168036,rs1722846,3,41233889,C,T,0.552754,0.388782,0.0115143,454.030512609891,lead cis-eQTL from eQTLGen; 3 independent instruments used; F_stat from 41_independent_anchors.csv
+FBN1,ENSG00000166147,rs924816,15,48897416,A,G,0.2448,-0.316556,0.0135834,543.105398071007,lead cis-eQTL from eQTLGen; used as primary MR instrument

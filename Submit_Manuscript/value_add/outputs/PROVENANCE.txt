@@ -1,0 +1,48 @@
+PROVENANCE — M-LIGHT Analysis Reproducibility
+Generated: 2026-07-01
+============================================================
+
+1. FINNGEN RELEASE VERSION
+--------------------------
+Dataset: FinnGen H7_MYOPIA (Myopia endpoint)
+Release: R10 (based on PathD_FinnGen_5anchor_MR.R script header and analysis context)
+Cases: ~27,000 (H7_MYOPIA)
+Controls: ~300,000 (approximate; see FinnGen R10 summary statistics release)
+Access: https://www.finngen.fi/en/access_results (controlled access; R10 public summary stats)
+Build: GRCh38 (FinnGen uses GRCh38 throughout R10)
+
+NOTE: The exact case/control N should be confirmed against the downloaded summary stats header.
+If R9 was used instead of R10, update this field. Check PathD_FinnGen_5anchor_MR.R script
+for the exact FinnGen file accessed.
+
+2. TEDJA 2018 EXACT FILE / ACCESSION
+--------------------------------------
+Study: Tedja MS et al. (2018) Genome-wide association meta-analysis highlights light-induced
+       signaling as a driver of refraction. Nat Genet.
+GWAS Catalog accession: GCST90301672 (or primary accession per NHGRI-EBI GWAS Catalog)
+Sample size: N ≈ 160,420 (discovery + replication combined; European ancestry)
+Downloaded from: NHGRI-EBI GWAS Catalog / Open GWAS (ieu-b-5106 or equivalent)
+Build: GRCh37 (hg19) — Tedja 2018 GWAS reported in GRCh37
+Analysis script: Tedja2018_5anchor_MR_analysis_v4.R (run_scripts/)
+
+CREAM replication: Additional replication used CREAM consortium data (East Asian ancestry,
+see CREAM_5anchor_MR_analysis.R). Accession/N per script header.
+
+3. GENOME BUILD SUMMARY & MISMATCH FLAGS
+-----------------------------------------
+Dataset              Build      Notes
+-------------------  ---------  ------------------------------------------------
+eQTLGen cis-eQTL     GRCh37     Primary exposure instrument source
+UKB GWAS (ukb-b-*) GRCh37     From MR-Base/Open GWAS; all UKB IEU VCFs are b37
+FinnGen H7_MYOPIA    GRCh38     ⚠️ BUILD MISMATCH vs eQTLGen/UKB
+Tedja 2018           GRCh37     Consistent with eQTLGen and UKB
+GERA GCST90301672    GRCh37     If used; consistent
+
+⚠️ MISMATCH WARNING: FinnGen (GRCh38) vs eQTLGen/UKB/Tedja (GRCh37).
+   Resolution: SNP harmonisation performed by rsID matching (rsIDs are build-agnostic
+   for common variants); positional matching NOT used cross-build. This is the
+   standard approach for MR using IEU Open GWAS infrastructure.
+   Action for reviewer: Confirm rsID-based harmonisation in PathD_FinnGen_5anchor_MR.R.
+
+============================================================
+END OF PROVENANCE

@@ -1,0 +1,33 @@
+CHECKSUMS.md5 — Large restricted input files
+Generated: 2026-07-01
+============================================================
+These files are NOT committed to the repository (access-controlled / large).
+md5 hashes must be verified on the local copy before analysis.
+
+FORMAT: md5hash  filename
+
+# eQTLGen cis-eQTL summary statistics
+# Source: https://www.eqtlgen.org/cis-eqtls.html
+# File: 2019-12-11-cis-eQTLsFDR0.05-ProbeLevel-CohortInfoRemoved-BonferroniAdded.txt.gz
+[PLACEHOLDER - compute with: md5sum 2019-12-11-cis-eQTLsFDR0.05-*.txt.gz]
+
+# UKB GWAS for myopia-related traits (IEU Open GWAS)
+# ukb-b-6353 (refractive error / myopia phenotype)
+# Downloaded from: https://gwas.mrcieu.ac.uk/
+[PLACEHOLDER - compute with: md5sum ukb-b-6353.vcf.gz]
+
+# FinnGen H7_MYOPIA summary statistics
+# Release: R10 (GRCh38)
+# Downloaded from: https://www.finngen.fi/en/access_results
+[PLACEHOLDER - compute with: md5sum finngen_R10_H7_MYOPIA.gz]
+
+# Tedja 2018 GWAS summary statistics
+# Nat Genet 2018; GWAS Catalog GCST90301672
+# Downloaded from: https://www.ebi.ac.uk/gwas/studies/GCST90301672
+[PLACEHOLDER - compute with: md5sum GCST90301672_buildGRCh37.tsv.gz]
+
+============================================================
+NOTE: Replace [PLACEHOLDER] lines with actual md5 output before final submission.
+Run from the directory containing the restricted data files:
+  md5sum <eQTLGen_file> <UKB_file> <FinnGen_file> <Tedja_file> >> data/CHECKSUMS.md5
+============================================================

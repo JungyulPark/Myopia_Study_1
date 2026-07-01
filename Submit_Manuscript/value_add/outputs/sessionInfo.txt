@@ -1,0 +1,20 @@
+﻿=== R Session Information — M-LIGHT Analysis ===
+NOTE: This is a placeholder. Run the following in R to populate:
+  writeLines(capture.output(sessionInfo()), "Submit_Manuscript/value_add/outputs/sessionInfo.txt")
+
+Key packages used in M-LIGHT analysis:
+- TwoSampleMR (>= 0.5.6) — Mendelian randomisation
+- coloc (>= 5.1) — colocalization analysis
+- ieugwasr (>= 0.1.5) — IEU Open GWAS API access  
+- dplyr, tidyr, ggplot2 — data wrangling and visualisation
+- data.table — fast CSV I/O for large GWAS files
+- jsonlite — JSON parsing for eQTLGen cache
+
+Environment:
+- R version: 4.3.x or later (version used at analysis time)
+- OS: Windows 11 / 10
+- Date of last analysis run: 2026-06 (approx)
+
+To obtain exact sessionInfo, open R in the project directory and run:
+  source('Submit_Manuscript/value_add/run_scripts/06_mr_robustness_table.R')
+  writeLines(capture.output(sessionInfo()), 'Submit_Manuscript/value_add/outputs/sessionInfo.txt')

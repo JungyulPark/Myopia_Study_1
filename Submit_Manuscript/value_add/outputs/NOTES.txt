@@ -1,0 +1,33 @@
+NOTES — File mapping and missing files
+Generated: 2026-07-01
+============================================================
+
+FILES SUCCESSFULLY LOCATED AND COPIED:
+1. Suppl_TableS_full_denominator_v2.csv  — pathy/Stage1_QC/ → outputs/  [TOP PRIORITY ✓]
+2. mr_robustness_consolidated.csv        — Submit_Manuscript/value_add/ → outputs/  [✓]
+3. Suppl_TableS_coloc_sensitivity.csv    — pathy/Stage1_QC/ → outputs/  [✓]
+4. Tedja_5anchor_MR_for_Figure2.csv      — pathy/Stage2_Assets/ → outputs/  [✓]
+5. PathD_FinnGen_5anchor_MR.csv          — pathy/Stage2_Assets/ → outputs/  [✓]
+
+FILES NOT FOUND ON DISK:
+6. novelty_audit_results.csv             — NOT FOUND in any subdirectory.
+   This file was expected to be produced by 05_novelty_audit.R
+   (Submit_Manuscript/value_add/05_novelty_audit.R).
+   The script exists and is committed to run_scripts/.
+   To regenerate: source("Submit_Manuscript/value_add/run_scripts/05_novelty_audit.R")
+   Note: The novelty audit data may be embedded in other assets (e.g.,
+   Submit_Manuscript/value_add/discovery/39_validated_hits_tier1.csv or
+   38_expanded_mr_results_tier1_primary.csv).
+
+CHECKSUMS NOTE:
+Large restricted input files (eQTLGen, UKB VCF, FinnGen GWAS) are NOT committed
+to this repository. See data/CHECKSUMS.md5 for md5 hashes.
+The CHECKSUMS.md5 file contains placeholder entries — actual md5 values must be
+computed on the local restricted-access file copies.
+
+ANCHOR INSTRUMENTS NOTE:
+TGFB1 (ENSG00000105329) cis-eQTL tophits cache was not present in a3q1b_cache/.
+TGFB1 instrument used in analysis is rs1963413 (pQTL, p=1.83e-7) from
+CP6_assembly/data/06c_pQTL_TGFB1_clumped_full.csv.
+F-statistic for TGFB1 instrument: not computed (pQTL source, not eQTLGen).
+============================================================

@@ -1,0 +1,6 @@
+anchor,n_IV,F_stat,beta,pval,steiger_correct,coloc_PP.H4,egger_intercept,egger_p,wmedian_b,cochran_Q_p,note
+RDH5,2,814.191942893664,0.00888044621697919,1.19619463640431e-06,TRUE,0.990940287122169,,,,0.12537597127997,Egger N/A (di-instrument); weighted median / Q computed | robust coloc; known Tedja-2018 locus; fetal-RPE prior coloc (bioRxiv 446799) -> positive control
+CD55,5,1987.9277014274,-0.00283827912047289,3.56924482972106e-05,TRUE,0.80064301472467,-0.000184820972632037,0.740742907870179,-0.00283683374153087,0.279754104379619,multi-IV: Egger/median/Q computed | prior-sensitive coloc; = Wang-2024 target (not a differentiator)
+TGFB1,1,27.2,-0.0271,0.003,TRUE,0.0179,,,,,SINGLE instrument; LD-proxy r2=0.83; PP.H1=0.944 (distinct variant); replication DISCORDANT -> EXCLUDED as positive
+CTNNB1,3,454.030512609891,-0.00552195288443661,4.43182977280055e-05,TRUE,0.0365825968453849,0.00341001273247197,0.490098694091036,-0.00561760613644797,0.488448269107578,multi-IV: Egger/median/Q computed | PP.H3 dominant (distinct) -> candidate only
+FBN1,1,543.105398071007,0.00746610394369401,0.00033055461511991,TRUE,0.164651868417799,,,,,sensitivity N/A (single cis-instrument) — Wald ratio | PP.H1 dominant (distinct) -> candidate only
