@@ -89,6 +89,31 @@ mediators) — more precise than the earlier "candidate-only" wording.
 
 ---
 
+## FinnGen high-myopia replication (H7_MYOPIA) — returned 2026-07 (pre-computed, SAFE)
+
+Source: `pathy/Stage2_Assets/PathD_FinnGen_5anchor_MR.csv`. Independent cohort,
+clinically-defined HIGH-myopia case/control endpoint (OR scale) — a different, more
+severe phenotype than UKB general myopia / Tedja continuous refractive error.
+
+| Anchor | SNPs | OR (95% CI) | P | Method | Replication |
+|---|---|---|---|---|---|
+| **RDH5** | 2 | **1.22 (1.04–1.43)** | **0.013** | IVW | **✓ replicates** (3rd cohort, severe phenotype) |
+| CD55 | 5 | 0.98 (0.90–1.06) | 0.536 | IVW | ✗ null |
+| CTNNB1 | 3 | 0.96 (0.81–1.15) | 0.681 | IVW | ✗ null |
+| FBN1 | 1 | 0.93 (0.72–1.18) | 0.538 | Wald | ✗ null |
+| TGFB1 | 1 | 1.35 (0.42–4.34) | 0.615 | Wald | ✗ null (very wide CI) |
+
+**Interpretation (honest):** RDH5 is now the sole anchor with cross-cohort,
+cross-phenotype causal support (UKB + Tedja/CREAM + FinnGen high-myopia + robust
+coloc). CD55/CTNNB1/FBN1/TGFB1 do not replicate in FinnGen — concordant with their
+colocalization failures. **Caveat to state:** FinnGen captures high/pathological
+myopia with fewer cases → wider CIs (esp. single-instrument TGFB1/FBN1), so nulls
+reflect non-replication AND reduced power/phenotype shift; do not over-read the
+nulls as definitive absence of effect on general refractive error.
+**‹CHECK›** confirm RDH5 FinnGen OR>1 direction is sign-aligned with the UKB effect
+(the Tedja arm required β×−1 scale alignment — verify the same here before claiming
+directional concordance).
+
 ## Analyses still pending return
 - **01–04, 07–10, D1–D3** → per `ANTIGRAVITY_HANDOFF.md` Phases B–D.
 - **BLOCKER:** OPENGWAS_JWT expired (401) → live OpenGWAS extraction (07 East-Asian,
