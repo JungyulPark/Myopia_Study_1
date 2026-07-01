@@ -89,6 +89,27 @@ mediators) — more precise than the earlier "candidate-only" wording.
 
 ---
 
+## Tedja 2018 / CREAM replication (continuous refractive error) — returned 2026-07 (SAFE)
+
+Source: `pathy/Stage2_Assets/Tedja_5anchor_MR_for_Figure2.csv`. Continuous spherical-
+equivalent (diopters); large, well-powered. Direction sign-aligned to the myopia scale.
+
+| Anchor | β | P | Method | Replication |
+|---|---|---|---|---|
+| **RDH5** | −0.0935 | **3.3×10⁻³³** | Wald | ✓ concordant |
+| **CD55** | +0.0286 | 0.0079 | IVW | ✓ concordant |
+| **CTNNB1** | +0.0493 | 6.9×10⁻⁸ | Wald | ✓ concordant |
+| **FBN1** | −0.0440 | 5.8×10⁻⁴ | Wald | ✓ concordant |
+| **TGFB1** | −0.1590 | 0.0047 | Wald | ✗ **DISCORDANT** (UKB protective → Tedja/CREAM risk-increasing) |
+
+**KEY (drives the honest narrative):** In the well-powered continuous outcome,
+RDH5/CD55/CTNNB1/FBN1 **all replicate** (they are established loci — consistent with
+the 05 novelty audit). So **replication is NOT the discriminator**; **colocalization
+is** — only RDH5's gene-expression signal shares the causal variant with myopia. The
+other three replicate as known loci but their *gene-level eQTL* does not colocalize,
+so we cannot attribute the locus signal to those genes' expression. TGFB1 is discordant
+→ excluded as a positive.
+
 ## FinnGen high-myopia replication (H7_MYOPIA) — returned 2026-07 (pre-computed, SAFE)
 
 Source: `pathy/Stage2_Assets/PathD_FinnGen_5anchor_MR.csv`. Independent cohort,
@@ -110,9 +131,11 @@ colocalization failures. **Caveat to state:** FinnGen captures high/pathological
 myopia with fewer cases → wider CIs (esp. single-instrument TGFB1/FBN1), so nulls
 reflect non-replication AND reduced power/phenotype shift; do not over-read the
 nulls as definitive absence of effect on general refractive error.
-**‹CHECK›** confirm RDH5 FinnGen OR>1 direction is sign-aligned with the UKB effect
-(the Tedja arm required β×−1 scale alignment — verify the same here before claiming
-directional concordance).
+**Sign check — RESOLVED (no flip needed):** UKB and FinnGen are both binary
+myopia case/control, both positive → risk-increasing. UKB RDH5 β = +0.0089;
+FinnGen RDH5 logOR = +0.2016 (OR 1.22). Directionally concordant without
+transformation. (Tedja is continuous diopter-scale, hence its β sign differs by
+convention but is concordant on the myopia axis.)
 
 ## Analyses still pending return
 - **01–04, 07–10, D1–D3** → per `ANTIGRAVITY_HANDOFF.md` Phases B–D.

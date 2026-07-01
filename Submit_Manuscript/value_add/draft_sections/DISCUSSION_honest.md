@@ -36,24 +36,29 @@ new mechanistic claim.
 ### 4.3 CTNNB1 and the distinction between MR association and colocalization
 CTNNB1 is the clearest illustration of the study's methodological point. Its cis-MR
 estimate was significant and passed every sensitivity check (no pleiotropy, no
-heterogeneity, robust weighted-median), yet colocalization placed the causal variant
-for expression apart from that for myopia (PP.H4 = 0.037), and the signal did not
-replicate in FinnGen. Because CTNNB1 is itself a known refractive-error locus, the
-most parsimonious reading is linkage disequilibrium between the expression-associated
-variant and a distinct, neighbouring disease variant — not a causal effect of CTNNB1
-expression. FBN1 shows the same known-locus / colocalization-failure pattern
-(PP.H4 = 0.165). Reporting these as candidate signals only, rather than as validated
-targets, is the honest and reproducible course, and it cautions against equating
-drug-target MR hits with druggable causal genes absent colocalization.
+heterogeneity, robust weighted-median), and — as an established locus — it even
+replicated in the continuous refractive-error data (Tedja/CREAM, *P* = 6.9 × 10⁻⁸).
+Yet colocalization placed the causal variant for expression apart from that for myopia
+(PP.H4 = 0.037). In other words, neither MR robustness nor replication was sufficient:
+the locus is real and reproducible, but the *gene's expression* does not share the
+causal variant, so CTNNB1 cannot be assigned as the causal mediator. The most
+parsimonious reading is linkage disequilibrium between the expression-associated
+variant and a distinct, neighbouring disease variant. FBN1 shows the same
+known-locus / replicates-but-does-not-colocalize pattern (PP.H4 = 0.165). This is the
+central caution of the study: **in pharmacology-prioritized drug-target MR, neither a
+robust MR estimate nor independent replication substitutes for colocalization**, and
+signals that clear the former but fail the latter must remain candidate-only rather
+than being reported as druggable causal genes.
 
 ### 4.4 CD55: robust but prior-sensitive, and already reported
 CD55 presented a robust, pleiotropy-free MR association (weighted-median
-*P* = 7.5 × 10⁻⁶) but prior-sensitive colocalization (PP.H4 = 0.801 default,
-falling to 0.287 under one prior) and did not replicate in the FinnGen high-myopia
+*P* = 7.5 × 10⁻⁶) that replicated in continuous refractive error (Tedja/CREAM,
+*P* = 0.008), but its colocalization was prior-sensitive (PP.H4 = 0.801 default,
+falling to 0.287 under one prior) and it did not replicate in the FinnGen high-myopia
 endpoint. It is, moreover, one of the six complement targets already reported by Wang
 et al. (2024). We therefore neither claim CD55 as novel nor over-state its causal
-support; we present it as a robust association whose colocalization is prior-dependent
-and whose complement biology has been described elsewhere.
+support; we present it as a robust, replicating association whose colocalization is
+prior-dependent and whose complement biology has been described elsewhere.
 
 ### 4.5 TGFB1
 TGFB1 was instrumented by a single cis-variant, did not colocalize (PP.H4 = 0.018),
