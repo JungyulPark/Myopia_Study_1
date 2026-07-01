@@ -1,0 +1,18 @@
+AUDIT_SUMMARY — Published myopia MR targets under strict coloc+replication criteria
+Generated: 2026-07-02
+============================================================
+Of 12 published targets audited (Wang 2024 n=6; Multi-omics 2024 n=6):
+  Tier_A (coloc PP.H4>0.8 + MR significant + replication): 1 — CD55 only (PP.H4=0.80, CREAM p=1.5e-7, FinnGen p=0.54*)
+  Tier_B (MR significant, no coloc evidence): 4 — PRMT6, ZKSCAN4, NPAT, TSSK6
+  Null (MR non-significant, no coloc): 4 — CD34, LCAT, BTN3A1, SH3YL1, UBE
+  No blood eQTL instrument available: 2 — WNT3, GATS (CASTOR3)
+
+KEY FINDING: 10/12 published targets do NOT survive strict colocalization criteria
+(PP.H4>0.8). Only CD55 (our Tier_A screen anchor) passes full triangulation.
+TSSK6 was noted as testis-restricted by Wang 2024 — its blood eQTL instrument
+maps to the GATAD2A/TSSK6/NDUFA13 cluster (chr19); shared instrument, distinct locus.
+WNT3 has no cis-eQTL in blood (eQTLGen) at P<5e-6 — cannot be instrumented.
+
+*FinnGen CD55 OR=0.975 (p=0.54): directional consistent but underpowered for binary endpoint.
+CREAM replication strongly supports (beta=0.042, p=1.5e-7).
+============================================================
