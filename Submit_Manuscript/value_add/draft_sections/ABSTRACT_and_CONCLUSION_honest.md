@@ -41,13 +41,16 @@ and colocalized robustly (PP.H4 = 0.991–0.999); RDH5 is an established Tedja-2
 locus with a previously published retinal/RPE colocalization — a recovered positive
 control. **CD55** showed a robust, pleiotropy-free MR association (weighted-median
 P = 7.5 × 10⁻⁶; Egger-intercept P = 0.74; Q P = 0.28) but prior-sensitive
-colocalization, and is already a reported complement MR target. **CTNNB1** had a
-significant, homogeneous, pleiotropy-free MR signal (weighted-median P = 5.6 × 10⁻⁵)
-yet **failed colocalization** (PP.H4 = 0.037; distinct causal variant), as did
-**FBN1** (PP.H4 = 0.165) and **TGFB1** (PP.H4 = 0.018; single instrument; discordant
-replication) — patterns consistent with linkage-disequilibrium confounding rather
-than shared causal effects. No pharmacology-prioritized gene met criteria for a
-defensibly novel myopia-causal locus. ‹FILL when run: axial-length MR, eye-tissue
+colocalization, and is already a reported complement MR target. **CTNNB1** and
+**FBN1** are themselves established refractive-error loci, yet their gene-expression
+signals did not colocalize with myopia (PP.H4 = 0.037 and 0.165; distinct causal
+variants) despite, for CTNNB1, a significant, homogeneous, pleiotropy-free MR estimate
+(weighted-median P = 5.6 × 10⁻⁵) — so our data do not support these specific genes as
+the causal mediators at their loci. **TGFB1**, the only anchor not previously reported,
+also failed (PP.H4 = 0.018; single instrument; discordant replication direction) and
+was excluded as a positive. A cross-reference of all candidates against known
+refractive-error loci confirmed that **no pharmacology-prioritized gene constituted a
+defensibly novel myopia-causal locus**. ‹FILL when run: axial-length MR, eye-tissue
 coloc, East-Asian replication, druggability.›
 
 **Conclusions.** Applied honestly, a drug-target MR pipeline recovers known

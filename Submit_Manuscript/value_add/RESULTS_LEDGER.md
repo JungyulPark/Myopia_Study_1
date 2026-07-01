@@ -50,8 +50,59 @@ values returned by the run (RDH5 0.991, CD55 0.801, TGFB1 0.018, CTNNB1 0.037, F
 
 ---
 
-## Analyses pending return
-- **05** novelty audit → `novelty_audit_results.csv` (closes Gate G0)
-- **01–04, 07–10, D1–D3** → per `ANTIGRAVITY_HANDOFF.md` Phases B–D
-- Note any script that could not run for lack of a dataset (axial-length GWAS,
-  East-Asian GWAS, eye eQTL, LD reference) so manuscript scope adjusts accordingly.
+## Analysis 05 — Novelty audit (returned 2026-07, PI run) → GATE G0 CLOSED
+
+Source: `05_novelty_audit.R` → `novelty_audit_results.csv`. Lead SNPs cross-referenced
+vs GWAS Catalog + Tedja 2018 (±500 kb).
+
+| Gene | Tier | Known locus? | Status |
+|---|---|:---:|---|
+| RDH5 | anchor | **TRUE** | known locus → positive control |
+| CD55 | anchor | **TRUE** | known locus → positive control (= Wang-2024 target) |
+| CTNNB1 | anchor | **TRUE** | **known locus**, but coloc-fail (PP.H4 0.037) → gene not confirmed as mediator |
+| FBN1 | anchor | **TRUE** | **known locus**, but coloc-fail (PP.H4 0.165) → gene not confirmed as mediator |
+| TGFB1 | anchor | FALSE | not-known, BUT discordant direction + single IV + coloc-fail (0.018) → excluded as positive |
+| IKZF3 | tier2 unverif. | FALSE | 17q21 cluster → needs fine-map; no coloc support |
+| H2BC4 | tier2 unverif. | TRUE | HIST1/MHC region → needs fine-map |
+| MYBPC3 | tier2 unverif. | TRUE | known locus |
+| CEP250 | tier2 unverif. | TRUE | known locus |
+| CENPM | tier2 unverif. | TRUE | known locus |
+| API5 | tier2 unverif. | TRUE | known locus |
+| RABEPK | tier2 unverif. | FALSE | not-known, unverified → needs coloc+finemap+replication (no support) |
+
+CD55 ∈ Wang-2024's six complement targets (CD55, CD46, CFH, C2, C3, CFB); **no other
+anchor overlaps** that set.
+
+### GATE G0 — CLOSED: no defensibly-novel gene
+- 9 of 12 genes are **established loci** (not novel by definition).
+- The 3 **not-previously-reported** genes each fail defensible-causality criteria:
+  - **TGFB1** — discordant replication direction + single instrument + coloc-fail (0.018).
+  - **IKZF3** — 17q21 LD cluster, not fine-mapped, no colocalization.
+  - **RABEPK** — unverified, no coloc/fine-map/replication support.
+- ∴ **"No pharmacology-prioritized gene is a defensibly novel myopia-causal locus"** is
+  locked and evidence-backed. Only RDH5 clears both MR and colocalization (positive control).
+
+### Refinement carried into Abstract/Conclusion (2026-07)
+CTNNB1 and FBN1 are now stated as **known refractive-error loci whose gene-expression
+signal does not colocalize** (so our data do not confirm these *genes* as the causal
+mediators) — more precise than the earlier "candidate-only" wording.
+
+---
+
+## Analyses still pending return
+- **01–04, 07–10, D1–D3** → per `ANTIGRAVITY_HANDOFF.md` Phases B–D.
+- **BLOCKER:** OPENGWAS_JWT expired (401) → live OpenGWAS extraction (07 East-Asian,
+  08 coloc-SuSiE, 10 defocus cascade, D1–D3) is paused until the token is refreshed.
+- **Available offline:** FinnGen high-myopia anchor replication + coloc H4 are
+  pre-computed in `pathy/Stage2_Assets/` and `CP6_assembly/data/26_master_numbers_v4.csv`
+  — usable WITHOUT re-running, subject to the honesty vetting below.
+
+### ⚠️ Honesty vetting for pre-computed Stage2 files (do NOT ingest blindly)
+`26_master_numbers_v4.csv` and the Stage2_Assets are from the OLD (overclaiming)
+analysis frame. Before any number enters the honest manuscript:
+- ✅ SAFE to use: FinnGen high-myopia **replication of the anchors** (a genuine
+  independent cohort), and coloc PP.H4 values (already cross-checked, consistent).
+- ⛔ DO NOT resurrect: **TGFB1 "direct/indirect mediation proportions"** or any
+  TGFB1-as-causal-mediator / TGFβ-Hippo-YAP result — TGFB1 is EXCLUDED as a positive
+  (discordant). Mediation framing was part of the old overclaim.
+- Every pre-computed value must be re-tagged against RESULTS_LEDGER before use.
