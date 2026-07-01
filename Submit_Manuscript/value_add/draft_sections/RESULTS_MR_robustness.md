@@ -9,16 +9,16 @@
 
 ## 3.x Instrument strength and MR sensitivity
 
-All anchor instruments were strong (F-statistic ‹FILL RDH5›, ‹FILL CD55›, ‹FILL
-CTNNB1›, ‹FILL TGFB1›, ‹FILL FBN1›; all > 10). For the two anchors with three or
-more instruments we ran the full sensitivity panel. **CD55** (5 instruments) showed
-no evidence of horizontal pleiotropy (MR-Egger intercept *P* = 0.741) and no
-heterogeneity (Cochran's *Q* *P* = 0.280), and its causal estimate was robust to a
+All anchor instruments were strong (F-statistic: RDH5 814.2, CD55 1987.9, CTNNB1
+454.0, FBN1 543.1, TGFB1 27.2; all > 10). For the two anchors with three or more
+instruments we ran the full sensitivity panel. **CD55** (5 instruments) showed no
+evidence of horizontal pleiotropy (MR-Egger intercept = −0.000185, *P* = 0.741) and
+no heterogeneity (Cochran's *Q* *P* = 0.280), and its causal estimate was robust to a
 pleiotropy-resistant estimator (weighted median β = −0.00284, *P* = 7.5 × 10⁻⁶).
-**CTNNB1** (3 instruments) likewise showed no pleiotropy (Egger intercept *P* =
-0.490) and no heterogeneity (*Q* *P* = 0.488), with a significant weighted-median
-estimate (β = −0.00562, *P* = 5.6 × 10⁻⁵). **RDH5** (2 instruments) showed no
-heterogeneity (*Q* *P* = 0.125). **TGFB1** and **FBN1** were each instrumented by a
+**CTNNB1** (3 instruments) likewise showed no pleiotropy (Egger intercept = 0.00341,
+*P* = 0.490) and no heterogeneity (*Q* *P* = 0.488), with a significant
+weighted-median estimate (β = −0.00562, *P* = 5.6 × 10⁻⁵). **RDH5** (2 instruments)
+showed no heterogeneity (*Q* *P* = 0.125). **TGFB1** and **FBN1** were each instrumented by a
 single cis-variant, so pleiotropy- and heterogeneity-based sensitivity analyses are
 not applicable by construction.
 

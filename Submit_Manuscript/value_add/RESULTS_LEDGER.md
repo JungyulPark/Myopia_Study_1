@@ -14,13 +14,17 @@ Instruments from `CP6_assembly/data/a3q1b_cache/`; outcomes from local UKB VCF
 (ukb-b-6353); sensitivity via TwoSampleMR. Coloc PP.H4 columns are the prior
 disk-verified colocalization inputs (3-prior sensitivity).
 
-| Anchor | n_IV | Egger intercept P | Weighted-median β (P) | Cochran Q P | coloc PP.H4 (default/sens1/sens2) | Verdict |
-|---|---|---|---|---|---|---|
-| **RDH5** | 2 | N/A (2 IV) | — | 0.125 (no het.) | **0.991 / 0.916 / 0.999** | **Positive control** — robust coloc; known Tedja-2018 locus; fetal-RPE prior coloc (bioRxiv 446799). No heterogeneity. |
-| **CD55** | 5 | **0.741** (no pleiotropy) | **−0.00284 (7.5×10⁻⁶)** | **0.280** (no het.) | 0.801 / 0.287 / 0.976 | **Robust MR, coloc prior-sensitive.** Clean sensitivity panel. = Wang-2024 target → not a differentiator. |
-| **CTNNB1** | 3 | 0.490 (no pleiotropy) | **−0.00562 (5.6×10⁻⁵)** | 0.488 (no het.) | **PP.H3=0.767 (distinct variant)** | **Candidate only.** MR significant + clean sensitivity, BUT coloc shows a DISTINCT causal variant → likely LD confounding, NOT shared-variant causality. Sensitivity cannot rescue a coloc failure. |
-| **TGFB1** | 1 | N/A (single IV) | N/A | N/A | PP.H1=0.944 (distinct) | **Excluded as positive.** Single instrument, r²=0.83 proxy, distinct variant, replication direction DISCORDANT. No directional/therapeutic claim. |
-| **FBN1** | 1 | N/A (single IV) | N/A | N/A | PP.H1=0.702 (distinct) | **Candidate only.** Single instrument; distinct variant (non-colocalizing). |
+| Anchor | n_IV | F-stat | Egger intercept (P) | Weighted-median β (P) | Cochran Q P | coloc PP.H4 (default) | Verdict |
+|---|---|---|---|---|---|---|---|
+| **RDH5** | 2 | 814.19 | N/A (2 IV) | — | 0.125 (no het.) | **0.991** (0.916/0.999 sens.) | **Positive control** — robust coloc; known Tedja-2018 locus; fetal-RPE prior coloc (bioRxiv 446799). No heterogeneity. |
+| **CD55** | 5 | 1987.93 | −0.000185 (**0.741**) | **−0.002837 (7.5×10⁻⁶)** | **0.280** (no het.) | 0.801 (0.287/0.976 sens.) | **Robust MR, coloc prior-sensitive.** Clean sensitivity panel. = Wang-2024 target → not a differentiator. |
+| **CTNNB1** | 3 | 454.03 | 0.003410 (0.490) | **−0.005618 (5.6×10⁻⁵)** | 0.488 (no het.) | **0.037** (PP.H3=0.767 distinct) | **Candidate only.** MR significant + clean sensitivity, BUT coloc shows a DISTINCT causal variant → likely LD confounding, NOT shared-variant causality. Sensitivity cannot rescue a coloc failure. |
+| **TGFB1** | 1 | 27.20 | N/A (single IV) | N/A | N/A | **0.018** (PP.H1=0.944 distinct) | **Excluded as positive.** Single instrument, r²=0.83 proxy, distinct variant, replication direction DISCORDANT. No directional/therapeutic claim. |
+| **FBN1** | 1 | 543.11 | N/A (single IV) | N/A | N/A | **0.165** (PP.H1=0.702 distinct) | **Candidate only.** Single instrument; distinct variant (non-colocalizing). |
+
+**Coloc cross-check (2026-07 PI run vs prior disk-verified):** default-prior PP.H4
+values returned by the run (RDH5 0.991, CD55 0.801, TGFB1 0.018, CTNNB1 0.037, FBN1
+0.165) are **consistent** with the prior 3-prior colocalization inputs. Locked.
 
 ### Honest takeaways for the manuscript (from 06)
 1. **RDH5** is the one robustly-colocalizing anchor and a known locus → the framework's
