@@ -304,15 +304,25 @@ the one robust causal locus, RDH5, sits in the retinoid pathway independently
 implicated by the defocus literature — a convergence of *known* biology offered as
 hypothesis-generating context.
 
-## 4.7 Relationship to prior pharmacology-prioritized myopia MR (Wang 2024)
-Our contribution relative to Wang et al. (2024) is methodological, not a new target
-(we concede CD55 overlaps their complement set): explicit novelty adjudication against
-catalogued loci, multi-cohort replication including a high-myopia endpoint,
-prior-sensitivity reporting for colocalization, and transparent demotion of MR signals
-that fail the shared-causal-variant test. ‹FILL when run: axial-length MR (a structural
-mediator not previously tested here), eye-tissue colocalization, East-Asian
-replication, and a delivery-route-aware druggability map would each add a concrete
-point of differentiation.›
+## 4.7 Relationship to prior drug-target myopia MR (Wang 2024)
+We note substantial methodological overlap with Wang et al. (2024), who applied
+drug-target Mendelian randomization with blood-eQTL instruments, colocalization, and
+molecular docking to myopia and nominated six candidate targets — including **CD55** —
+with colocalization support. We do not claim CD55 as a novel finding; our Tier-A results
+(RDH5, an established Tedja-2018 locus, and CD55, a Wang-2024 target) are both prior
+biology, and we state this explicitly. Our study is therefore not a discovery report but
+a **reappraisal**, and its contribution is one of scope and rigour rather than of new
+targets: (i) a broader, atropine-motivated 113-gene panel screened in full rather than a
+pathway-restricted set; (ii) colocalization applied as a *decisive* filter, yielding the
+central cautionary result that MR-significant, pleiotropy-free, and even independently
+replicating signals (CTNNB1, FBN1) can still fail the shared-causal-variant test; (iii)
+multi-cohort replication that separates a general-refractive-error signal from a
+high-myopia endpoint (FinnGen); and (iv) explicit novelty adjudication showing that the
+surviving signals are known loci. Framed this way, the study complements rather than
+duplicates Wang 2024, tempering the target-discovery enthusiasm of drug-target MR in
+myopia with a colocalization- and replication-anchored standard. ‹Optional
+differentiator, if run: an axial-length (structural-phenotype) MR — not examined by
+Wang 2024 — would add a genuinely distinct dimension.›
 
 ## 4.8 Limitations
 Instruments derive from blood eQTLs (eQTLGen); blood is not eye tissue, and tissue-
