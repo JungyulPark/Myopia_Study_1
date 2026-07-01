@@ -1,5 +1,5 @@
 ---
-title: "Pharmacology-prioritized myopia loci are established refractive-error genes, not atropine-specific targets: a replication- and colocalization-filtered Mendelian randomization reappraisal"
+title: "Do published Mendelian-randomization drug targets for myopia replicate? A colocalization- and multi-cohort-anchored audit of nominated targets and a pharmacology-prioritized screen"
 author: "Park Jungyul, MD, PhD — Department of Ophthalmology, Seoul St. Mary's Hospital, College of Medicine, The Catholic University of Korea, Seoul, Republic of Korea"
 date: "2026"
 ---
@@ -15,26 +15,33 @@ date: "2026"
 
 # Abstract
 
-**Purpose.** Atropine is the most widely used pharmacological treatment for myopia
-progression, yet its molecular mechanism remains debated. Rather than assert new drug
-targets, we asked whether a pharmacology-prioritized, replication- and
-colocalization-filtered Mendelian randomization (MR) pipeline identifies *novel*
-myopia-causal genes or instead *recovers established* refractive-error biology, and
-whether MR association implies shared-variant causality.
+**Purpose.** Drug-target and eQTL Mendelian-randomization (MR) studies have nominated
+numerous "causal" genes for myopia, but such nominations are rarely re-tested for a
+shared causal variant (colocalization) or replicated across cohorts. We audited the
+targets reported by prior myopia MR/eQTL studies under a uniform, strict standard —
+colocalization plus multi-cohort replication — and, in parallel, screened a
+pharmacology-prioritized 113-gene panel by the same criteria, asking how many nominated
+or prioritized genes withstand this scrutiny and whether MR association implies
+shared-variant causality.
 
-**Methods.** Two-sample cis-eQTL MR (eQTLGen, N = 31,684) tested pharmacology-
-prioritized candidate genes against UK Biobank myopia (ukb-b-6353; N = 460,536; 37,362
-cases), with replication in Tedja et al. (2018) and CREAM continuous refractive error
-and in the FinnGen high-myopia endpoint (H7_MYOPIA), Steiger filtering, MR sensitivity
-analyses (MR-Egger, weighted median, Cochran's Q) for multi-instrument genes, and
-Bayesian colocalization under three priors. Candidate lead SNPs were cross-referenced
-against catalogued refractive-error/myopia loci to adjudicate novelty.
+**Methods.** Using two-sample cis-eQTL MR (eQTLGen, N = 31,684) against UK Biobank
+myopia (ukb-b-6353; N = 460,536), a single uniform pipeline was applied to (i) genes
+nominated by prior myopia MR/eQTL studies and (ii) a pharmacology-prioritized 113-gene
+panel. Each gene was assessed by Steiger-filtered MR, MR sensitivity analyses (MR-Egger,
+weighted median, Cochran's Q) where instruments allowed, Bayesian colocalization under
+three priors, replication in CREAM and Tedja et al. (2018) continuous refractive error
+and the FinnGen high-myopia endpoint (H7_MYOPIA), and known-locus novelty
+adjudication, then tiered as colocalization-supported (Tier A), MR-supported/distinct-
+variant (Tier B), or null.
 
-**Results.** Of 113 pharmacology-prioritized genes, five reached Bonferroni-significant
-cis-MR association with myopia, but only **two colocalized** — RDH5 and CD55, both
-established refractive-error loci; the other 108 genes were null and no non-anchor gene
-exceeded PP.H4 = 0.7. Instruments were strong (F = 27–1988). Only **RDH5** cleared every
-filter:
+**Results.** Of the previously published myopia MR/eQTL targets re-tested, ‹FILL N/total›
+survived the strict colocalization-plus-replication standard; the remainder failed
+colocalization, replication, or could not be instrumented in blood eQTL ‹FILL brief›. In
+the parallel pharmacology-prioritized panel, of 113 genes five reached
+Bonferroni-significant cis-MR association with myopia but only **two colocalized** —
+RDH5 and CD55, both established refractive-error loci; the other 108 were null and no
+non-anchor gene exceeded PP.H4 = 0.7. Instruments were strong (F = 27–1988). Only
+**RDH5** cleared every filter:
 robust colocalization (PP.H4 = 0.991–0.999) and replication across UK Biobank,
 Tedja/CREAM, and FinnGen high myopia (OR = 1.22, *P* = 0.013). RDH5 is an established
 Tedja-2018 locus with prior retinal/RPE colocalization — a recovered positive control.
@@ -95,16 +102,20 @@ causal variant?** A significant, even pleiotropy-free, MR estimate can arise fro
 linkage disequilibrium between the expression-associated variant and a distinct,
 neighbouring disease variant; colocalization is required to distinguish the two.^‹ref›
 
-Here we address both questions directly. Rather than assert new atropine-specific
-targets, we apply a deliberately conservative, tiered drug-target MR framework to a
-pharmacology-prioritized candidate set and subject every signal to independent-cohort
-replication, Steiger directionality, formal MR sensitivity analyses, and Bayesian
-colocalization, cross-referencing each candidate against catalogued refractive-error
-loci to adjudicate novelty explicitly. We use RDH5 — an established myopia locus with
-prior tissue-level colocalization — as a positive control, and report transparently
-where MR signals fail the shared-causal-variant test. Atropine serves throughout as
-clinical motivation, not as an analytic endpoint: we make no claim to explain its
-efficacy or dose-response from germline genetic data.
+Here we address these questions directly, with an explicit emphasis on
+**verification**. First, we audit the targets already nominated by published myopia
+MR/eQTL studies, re-testing each under a single strict standard — colocalization plus
+multi-cohort replication — to ask how many withstand scrutiny. Second, we apply the same
+conservative, tiered pipeline to a pharmacology-prioritized 113-gene panel, subjecting
+every signal to independent-cohort replication, Steiger directionality, MR sensitivity
+analyses, and three-prior Bayesian colocalization, and cross-referencing each candidate
+against catalogued refractive-error loci to adjudicate novelty. Throughout we use RDH5 —
+an established myopia locus with prior tissue-level colocalization — as a positive
+control, and report transparently where MR signals fail the shared-causal-variant test.
+Atropine serves as clinical motivation, not an analytic endpoint: we make no claim to
+explain its efficacy or dose-response from germline genetic data. The intended
+contribution is not a new target but a reproducibility-minded standard for interpreting
+drug-target MR in myopia.
 
 ---
 
@@ -181,7 +192,20 @@ compound classes annotated (DrugBank). Hypothesis-generating context only.
 
 # 3. Results
 
-## 3.1 Full-panel screen: only two of 113 genes colocalize, both known loci
+## 3.0 Audit of previously published myopia MR/eQTL targets
+We re-tested the genes nominated by prior myopia MR/eQTL studies — the six drug-target
+MR nominations of Wang et al. (2024; CD34, CD55, WNT3, LCAT, BTN3A1, TSSK6) and the six
+multi-omics SMR nominations of ‹ref multi-omics 2024› (PRMT6, SH3YL1, ZKSCAN4, GATS,
+NPAT, UBE) — under our uniform strict standard. ‹FILL from
+outputs/published_targets_audit.csv: of the N re-tested, X were colocalization-supported
+(Tier A), Y MR-supported with distinct variants (Tier B), Z null, and W could not be
+instrumented in blood eQTL. Name which survived (expected: CD55 Tier A) and which did
+not.› The audit shows that a minority of previously nominated targets meet a
+colocalization-plus-replication bar, indicating that many published myopia MR
+"targets" are association-level signals not yet demonstrated to share a causal variant
+with disease.
+
+## 3.1 Pharmacology-prioritized panel: only two of 113 genes colocalize, both known loci
 Across the full panel of 113 pharmacology-prioritized genes, five reached
 Bonferroni-significant cis-MR association with UK Biobank myopia (RDH5, CD55, CTNNB1,
 FBN1, TGFB1) and the remaining 108 were null. On tiering by colocalization, only **two
