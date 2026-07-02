@@ -1,0 +1,48 @@
+AUDIT_SUMMARY v2 — Published myopia MR targets: complete + fair audit
+Generated: 2026-07-02 17:25:22.011616
+==========================================================================
+
+Targets audited: 12 (Wang 2024 n=6; Multi-omics 2024 n=6)
+
+--- COLOCALIZATION EVALUABILITY ---
+  Coloc actually computed (local .rds available): 1/12
+  Coloc NOT evaluable (no local GWAS window data for new gene): 11/12
+  NOTE: 'not_evaluable' ≠ 'coloc failure'. These genes were not in our
+  original 113-gene screen and lack the full locus summary-stat windows
+  required for coloc.abf. A fair audit would need to extract these windows
+  from eQTLGen + UKB VCF — feasible but not done here.
+
+--- REPRODUCTION VERDICTS ---
+                                                         Var1 Freq
+1                                                     MR_null    3
+2                                            MR_only_no_coloc    4
+3                                               no_instrument    2
+4                                               not_evaluable    1
+5 not_reproduced_blood (tissue caveat — original used retina)    1
+6                              reproduced (coloc+replication)    1
+
+--- KEY DISTINCTIONS (critical for honest reporting) ---
+  'reproduced': coloc PP.H4>0.8 AND replication p<0.05 confirmed
+  'MR_only_no_coloc': MR significant but coloc not evaluable (not 'coloc failed')
+  'not_reproduced_coloc_computed_low': coloc ACTUALLY run and PP.H4≤0.8
+  'not_reproduced_blood': instrument exists, MR non-sig; tissue mismatch likely
+  'no_instrument': no cis-eQTL in blood eQTLGen at P<5e-6 (threshold-dependent)
+
+--- TISSUE/METHOD CAVEATS ---
+  Wang 2024 targets: blood+retina eQTL used in original; our test is blood-only.
+  Non-reproduction for WNT3/LCAT/BTN3A1/CD34 may reflect tissue specificity.
+  Multi-omics 2024: SMR+mQTL method; our eQTL coloc.abf is complementary,
+  not identical. Differences are method-level, not definitive refutation.
+
+--- STRONGEST FINDING ---
+  CD55: only target with coloc computed + passed (PP.H4=0.80) + CREAM repl p=1.5e-7.
+  TSSK6: MR sig (p=3.6e-6) but instrument in GATAD2A cluster — gene-specificity unclear.
+  WNT3, GATS: no blood eQTL instrument — cannot be tested in our pipeline.
+
+==========================================================================
+BOTTOM LINE: Of 12 published targets, only 1 (CD55) fully reproduced under
+our strict blood-eQTL coloc+replication pipeline. However, for 9/11 testable
+targets, colocalization was NOT COMPUTED (requires full locus data), so the
+correct statement is: 'most targets lack independent blood-eQTL coloc+replication
+support' — not 'most targets fail colocalization'.
+==========================================================================
