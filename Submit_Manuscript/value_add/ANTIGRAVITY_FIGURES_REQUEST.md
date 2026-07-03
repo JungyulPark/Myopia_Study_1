@@ -34,6 +34,13 @@ PP.H4 = 0.7 y). Color: Tier_A (RDH5, CD55) highlighted, Tier_B (CTNNB1/FBN1/TGFB
 the 108 Null in grey. Label the 5 named genes. **This figure is the paper's honest
 signature — it shows the whole screen and that only two known loci colocalize.**
 
+## Figure 5 — ⭐ AUDIT figure (published-target reproducibility)
+From `outputs/published_targets_audit.csv`: horizontal bar / lollipop of PP.H4 per
+published target (12 genes), colored by verdict (reproduced = CD55; distinct-variant;
+moderate-no-replication = TSSK6/SH3YL1; not-evaluable = PRMT6/GATS/UBE grey). Draw the
+PP.H4 = 0.8 line. Annotate source (Wang 2024 vs Multi-omics 2024). Caption must state
+the blood-eQTL scope + tissue caveat. This is the paper's audit centerpiece.
+
 ## Supplementary figures (exploratory — keep, relabel as Sxx)
 - S1 network (CP1/figures/Fig2_PPI_Network) — exploratory only.
 - S2 docking (CP5_figures/Figure4_Docking_Bar) — MUST relabel/caption as
