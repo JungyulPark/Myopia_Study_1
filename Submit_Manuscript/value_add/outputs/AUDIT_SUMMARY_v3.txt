@@ -1,0 +1,41 @@
+AUDIT_SUMMARY v3 — coloc.abf computed from LOCAL data for all 12 targets
+Generated: 2026-07-03 14:20:53.492311
+======================================================================== 
+Targets: 12 (Wang 2024 n=6; Multi-omics 2024 n=6)
+
+Method: local eQTLGen cis-eQTL file + local UKB ukb-b-6353.vcf.gz
+        coloc.abf(p1=1e-4, p2=1e-4, p12=1e-5), ±500kb cis window
+
+--- COLOC RESULTS (de novo computation) ---
+  CD55       PP.H4=0.8081 PP.H1=0.1040  n_shared=1999   status=ok                                        verdict=reproduced (coloc+replication)
+  CD34       PP.H4=0.0004 PP.H1=0.7872  n_shared=2550   status=ok                                        verdict=not_reproduced_coloc_low
+  WNT3       PP.H4=0.1194 PP.H1=0.8612  n_shared=1403   status=ok                                        verdict=not_reproduced_coloc_low
+  LCAT       PP.H4=0.0005 PP.H1=0.9572  n_shared=1650   status=ok                                        verdict=not_reproduced_coloc_low
+  BTN3A1     PP.H4=0.0025 PP.H1=0.9684  n_shared=2508   status=ok                                        verdict=not_reproduced_coloc_low
+  TSSK6      PP.H4=0.7821 PP.H1=0.0452  n_shared=2181   status=ok                                        verdict=not_reproduced_coloc_low
+  PRMT6      PP.H4=  NA   PP.H1=  NA    n_shared=0      status=not_evaluable_low_blood_expression (n_cis_snps=0)  verdict=not_evaluable_blood (not_evaluable_low_blood_expression (n_cis_snps=0))
+  SH3YL1     PP.H4=0.7480 PP.H1=0.1670  n_shared=2081   status=ok                                        verdict=not_reproduced_coloc_low
+  ZKSCAN4    PP.H4=0.0208 PP.H1=0.9155  n_shared=2030   status=ok                                        verdict=not_reproduced_coloc_low
+  GATS       PP.H4=  NA   PP.H1=  NA    n_shared=0      status=not_evaluable_low_blood_expression (n_cis_snps=0)  verdict=not_evaluable_blood (not_evaluable_low_blood_expression (n_cis_snps=0))
+  NPAT       PP.H4=0.0004 PP.H1=0.2033  n_shared=1462   status=ok                                        verdict=not_reproduced_coloc_low
+  UBE        PP.H4=  NA   PP.H1=  NA    n_shared=0      status=not_evaluable_low_blood_expression (n_cis_snps=0)  verdict=not_evaluable_blood (not_evaluable_low_blood_expression (n_cis_snps=0))
+
+--- VERDICT COUNTS ---
+                                                                 verdict n
+ not_evaluable_blood (not_evaluable_low_blood_expression (n_cis_snps=0)) 3
+                                                not_reproduced_coloc_low 8
+                                          reproduced (coloc+replication) 1
+
+--- KEY FINDINGS ---
+  Fully reproduced (PP.H4>0.8 + replication p<0.05):  1/12
+  Coloc-supported only (PP.H4>0.8, repl incomplete):  0/12
+  Coloc computed, PP.H4<=0.8 (not reproduced):        8/12
+  Not evaluable in blood eQTLGen (too few cis SNPs):  3/12
+  No blood eQTL instrument at P<5e-6:                 0/12
+
+--- CAVEATS ---
+TISSUE: Wang 2024 used blood+retina eQTL. This pipeline is blood-only.
+  Non-reproduction for retina-derived targets may reflect tissue specificity.
+METHOD: Multi-omics 2024 used SMR+mQTL; our coloc.abf is complementary.
+THRESHOLD: 'no_instrument' = no cis-eQTL at P<5e-6 in blood eQTLGen only.
+======================================================================== 
