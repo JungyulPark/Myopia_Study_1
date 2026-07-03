@@ -34,10 +34,11 @@ and the FinnGen high-myopia endpoint (H7_MYOPIA), and known-locus novelty
 adjudication, then tiered as colocalization-supported (Tier A), MR-supported/distinct-
 variant (Tier B), or null.
 
-**Results.** Of the previously published myopia MR/eQTL targets re-tested, ‹FILL N/total›
-survived the strict colocalization-plus-replication standard; the remainder failed
-colocalization, replication, or could not be instrumented in blood eQTL ‹FILL brief›. In
-the parallel pharmacology-prioritized panel, of 113 genes five reached
+**Results.** Of 12 previously published myopia MR/eQTL targets re-tested under a uniform
+blood-eQTL standard, colocalization was evaluable for nine, and **only one (CD55)
+reproduced** (PP.H4 = 0.81 with independent replication); six showed distinct causal
+variants and three could not be instrumented in blood. In the parallel
+pharmacology-prioritized panel, of 113 genes five reached
 Bonferroni-significant cis-MR association with myopia but only **two colocalized** —
 RDH5 and CD55, both established refractive-error loci; the other 108 were null and no
 non-anchor gene exceeded PP.H4 = 0.7. Instruments were strong (F = 27–1988). Only
@@ -196,14 +197,19 @@ compound classes annotated (DrugBank). Hypothesis-generating context only.
 We re-tested the genes nominated by prior myopia MR/eQTL studies — the six drug-target
 MR nominations of Wang et al. (2024; CD34, CD55, WNT3, LCAT, BTN3A1, TSSK6) and the six
 multi-omics SMR nominations of ‹ref multi-omics 2024› (PRMT6, SH3YL1, ZKSCAN4, GATS,
-NPAT, UBE) — under our uniform strict standard. ‹FILL from
-outputs/published_targets_audit.csv: of the N re-tested, X were colocalization-supported
-(Tier A), Y MR-supported with distinct variants (Tier B), Z null, and W could not be
-instrumented in blood eQTL. Name which survived (expected: CD55 Tier A) and which did
-not.› The audit shows that a minority of previously nominated targets meet a
-colocalization-plus-replication bar, indicating that many published myopia MR
-"targets" are association-level signals not yet demonstrated to share a causal variant
-with disease.
+NPAT, UBE) — under our uniform standard, with colocalization computed locally
+(eQTLGen + UK Biobank). Colocalization was evaluable for 9 of the 12 targets; the other
+three (PRMT6, GATS, UBE) had no cis-eQTL in blood and could not be instrumented. Among
+the nine evaluable targets, **only CD55 was colocalization-supported (PP.H4 = 0.808)
+with independent replication** (CREAM *P* = 1.5 × 10⁻⁷); **six showed distinct causal
+variants** (posterior favouring separate signals for expression and myopia: CD34, WNT3,
+LCAT, BTN3A1, ZKSCAN4, NPAT; PP.H1-dominant), and two (TSSK6, SH3YL1) gave moderate but
+sub-threshold colocalization (PP.H4 = 0.78 and 0.75) without replication. Thus a
+minority of previously nominated targets met a colocalization-plus-replication bar under
+a uniform blood-eQTL standard, indicating that many published myopia MR "targets" are
+association-level signals not yet shown to share a causal variant with disease. This
+interpretation is bounded by tissue (the original studies additionally used retinal
+eQTL) and method (the multi-omics nominations derived from SMR/mQTL) — see Discussion.
 
 ## 3.1 Pharmacology-prioritized panel: only two of 113 genes colocalize, both known loci
 Across the full panel of 113 pharmacology-prioritized genes, five reached

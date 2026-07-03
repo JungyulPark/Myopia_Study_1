@@ -89,6 +89,43 @@ mediators) — more precise than the earlier "candidate-only" wording.
 
 ---
 
+## AUDIT of published myopia MR targets — v3 VERIFIED (outputs/published_targets_audit.csv)
+
+coloc.abf computed LOCALLY (eQTLGen + ukb-b-6353.vcf.gz, no OpenGWAS). 12 targets
+(Wang 2024 n=6; multi-omics 2024 n=6). Verified PP.H4:
+
+| Gene | Src | PP.H4 | PP.H1 | Verdict |
+|---|---|---|---|---|
+| CD55 | Wang | **0.808** | 0.104 | **reproduced** (coloc>0.8 + CREAM p=1.5e-7) |
+| TSSK6 | Wang | 0.782 | 0.045 | moderate coloc, NO replication; testis-restricted, GATAD2A cluster → caveat |
+| SH3YL1 | Multi | 0.748 | 0.167 | moderate coloc, no replication |
+| WNT3 | Wang | 0.119 | **0.861** | distinct variant (fail) |
+| ZKSCAN4 | Multi | 0.021 | **0.916** | distinct variant (fail) |
+| BTN3A1 | Wang | 0.002 | **0.968** | distinct variant (fail) |
+| LCAT | Wang | 0.0004 | **0.957** | distinct variant (fail) |
+| NPAT | Multi | 0.0003 | 0.203 | fail (ambiguous/low) |
+| CD34 | Wang | 0.0003 | **0.787** | distinct variant (fail) |
+| PRMT6 | Multi | NA | NA | not evaluable — 0 blood cis-eQTL |
+| GATS | Multi | NA | NA | not evaluable — 0 blood cis-eQTL |
+| UBE | Multi | NA | NA | not evaluable — 0 blood cis-eQTL |
+
+**Headline (verified, accurate):** of 12 published targets, coloc was evaluable for 9;
+**only CD55 reproduced** (PP.H4>0.8 + replication); **6 of 9 evaluable targets showed
+distinct causal variants** (PP.H1-dominant → LD confounding, not shared causality); 3
+could not be instrumented in blood eQTL. TSSK6/SH3YL1 gave moderate PP.H4 (0.75–0.78)
+without replication (inconclusive).
+
+**MANDATORY caveats for the manuscript (do not omit):**
+- TISSUE: Wang used blood + retina eQTL; our audit is blood-only. Blood failure ≠
+  proof of non-causality — retina-specific effects possible. Scope claims to "uniform
+  blood-eQTL standard". (Retina-eQTL re-test would remove this caveat — optional.)
+- METHOD: multi-omics targets were SMR+mQTL (methylation)-derived; our eQTL coloc is a
+  complementary, not identical, test.
+- CD55 (only survivor) is not novel (= Wang target). Contribution is the NEGATIVE result.
+- TSSK6 blood instrument sits in GATAD2A cluster — coloc may reflect a neighbour.
+- Minor: PRMT6 had an MR estimate in v2 but 0 cis-eQTL in the v3 coloc window — reconcile
+  instrument source before final (single-SNP MR vs coloc-window threshold difference).
+
 ## FULL 113-GENE SCREEN (verified from outputs/Suppl_TableS_full_denominator_v2.csv)
 
 The complete pharmacology-prioritized panel (113 genes) was tested and tiered:
