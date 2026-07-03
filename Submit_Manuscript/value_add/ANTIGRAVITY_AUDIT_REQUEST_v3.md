@@ -1,4 +1,22 @@
-# ANTIGRAVITY REQUEST v3 — actually COMPUTE colocalization for the 11 missing targets
+# ANTIGRAVITY REQUEST v3 — COMPUTE coloc for 11 targets — ⚠️ USE LOCAL FILES, NOT OpenGWAS
+
+## ‼️ FIX FIRST: do NOT use OpenGWAS. The token is expired and it is NOT needed.
+The v3 attempt failed because it fetched the regional GWAS data via the OpenGWAS API.
+**The original colocalization never used OpenGWAS.** It used
+`CP3/scripts/09_coloc_full_local.R`, which reads TWO LOCAL FILES:
+```
+eqtl_file <- ".../2019-12-11-cis-eQTLsFDR-ProbeLevel-...txt.gz"   # eQTLGen cis (LOCAL)
+vcf_file  <- ".../ukb-b-6353.vcf.gz"                              # UKB myopia GWAS (LOCAL)
+coloc.abf(dataset1, dataset2)
+```
+**Rewrite `audit_v3_coloc.R` to copy `09_coloc_full_local.R` exactly** — for each of the
+11 genes, pull the ±500 kb cis window from the LOCAL eQTLGen file (eQTL side) and from
+the LOCAL `ukb-b-6353.vcf.gz` (GWAS side), then `coloc.abf`. No `extract_outcome_data`,
+no `ieugwasr`, no JWT. If those two local files exist (they produced the whole 113-gene
+screen), v3 runs with zero API calls.
+
+---
+
 
 **Why v3:** v2 correctly stopped claiming "coloc failed", but it only *read pre-saved*
 coloc for CD55 and marked the other 11 "not_evaluable — no GWAS window data". That is
