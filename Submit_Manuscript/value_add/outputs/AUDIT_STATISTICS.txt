@@ -1,0 +1,65 @@
+AUDIT STATISTICS — computed by 07_audit_statistics.R
+R 4.3.3 | data.table 1.14.10
+==============================================================================
+
+1. REPRODUCTION PROPORTION (protocol sec.9)
+------------------------------------------------------------------------------
+Nominated targets audited        : 12
+Colocalization evaluable         : 9
+Reproduced (PP.H4>0.8 + replic.) : 8.3% (1/12, 95% CI 0.2-38.5%)   [denominator = all nominated]
+Reproduced                       : 11.1% (1/9, 95% CI 0.3-48.2%)   [denominator = evaluable only]
+Distinct causal variant (H1>0.5) : 55.6% (5/9, 95% CI 21.2-86.3%)   [of evaluable]
+
+Reproduced gene(s): CD55
+
+2. PP.H4 CONTINUUM AND THRESHOLD SENSITIVITY
+------------------------------------------------------------------------------
+gene          PP.H4    PP.H1  verdict
+CD55          0.808    0.104  reproduced (coloc+replication)
+TSSK6         0.782    0.045  not_reproduced_coloc_low
+SH3YL1        0.748    0.167  not_reproduced_coloc_low
+WNT3          0.119    0.861  not_reproduced_coloc_low
+ZKSCAN4       0.021    0.916  not_reproduced_coloc_low
+BTN3A1        0.002    0.968  not_reproduced_coloc_low
+LCAT          0.000    0.957  not_reproduced_coloc_low
+NPAT          0.000    0.203  not_reproduced_coloc_low
+CD34          0.000    0.787  not_reproduced_coloc_low
+
+Genes passing PP.H4 at each threshold (of 9 evaluable):
+  PP.H4 > 0.50 : 3  (CD55, TSSK6, SH3YL1)
+  PP.H4 > 0.60 : 3  (CD55, TSSK6, SH3YL1)
+  PP.H4 > 0.70 : 3  (CD55, TSSK6, SH3YL1)
+  PP.H4 > 0.75 : 2  (CD55, TSSK6)
+  PP.H4 > 0.80 : 1  (CD55)
+  PP.H4 > 0.90 : 0  
+
+NOTE: the count moves from 3 to 1 between thresholds 0.70 and 0.80
+(TSSK6 0.782, SH3YL1 0.748 sit just below 0.8). The headline is therefore
+sensitive to a convention, and must be reported with the continuum.
+
+3. AUTOMATED DEFECT CHECKS
+------------------------------------------------------------------------------
+[DEFECT] PRMT6: 3 instrument(s), F=2465, MR P=0.00019, yet coloc_status='not_evaluable_low_blood_expression (n_cis_snps=0)'.
+         Instruments cannot exist inside an empty cis window -> re-run required.
+[CHECK ] UBE (ENSG00000198954): verify symbol against the source publication.
+[DEFECT] 'UBE' is not a valid HGNC symbol. Source paper nominates UBE2I
+         (ENSG00000103275); this row is INVALID until re-run.
+[DEFECT] source_paper says 'Wang 2024'; correct citation is Qin et al.
+         IOVS 2024;65(10):13 (PMID 39110588) — Wang is the last author.
+
+Total blocking defects: 3
+
+4. FULL DENOMINATOR SCREEN — MULTIPLE TESTING
+------------------------------------------------------------------------------
+Genes with a testable MR result : 113
+Bonferroni alpha recorded in file: 4.274e-04  (implies 117 tests)
+[CHECK ] alpha assumes 117 tests but 113 genes carry a testable result.
+
+Bonferroni-significant : 4  (RDH5, CD55, CTNNB1, FBN1)
+BH-FDR < 0.05          : 5  (RDH5, CD55, CTNNB1, FBN1, RPS15A)
+
+Colocalization-supported (PP.H4>0.8), any P: 2  (RDH5, CD55)
+FDR-significant AND coloc-supported        : 2  (RDH5, CD55)
+
+NOTE: relaxing Bonferroni to FDR does not add a colocalizing gene, so the
+negative conclusion is not an artefact of an over-strict correction.
