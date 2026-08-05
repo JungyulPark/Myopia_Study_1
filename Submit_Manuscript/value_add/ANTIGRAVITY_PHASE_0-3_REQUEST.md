@@ -81,6 +81,23 @@ rather than guessed.
 Note for interpretation: the newly added studies are 2026 publications, so several are
 very recent; report them with the same evaluability annotation as the rest.
 
+## PHASE 0e — Re-adjudicate "known locus" against the 2026 multi-ancestry GWAS ⚠ NEW
+
+The novelty audit currently calls a gene "known" using GWAS Catalog + **Tedja 2018**. The
+literature search surfaced **PMID 42009823 (*Nat Genet* 2026)**: a multi-ancestry
+refractive-error GWAS in ~1.76 M people (European 1,495,159; East Asian 121,172; African
+144,737) reporting **932 associated variants (241 previously unknown)** and **23
+prioritized genes**.
+
+That supersedes Tedja 2018 as the novelty reference, and it can change our calls in both
+directions — most importantly **CD55**, currently flagged
+`not_in_GWAS_Catalog_myopia_500kb`. Re-run `05_novelty_audit.R` with the 2026 variant list
+added (±500 kb) and report which known/novel flags change. If any anchor's status flips,
+say so explicitly — the manuscript's novelty claims depend on it.
+
+Also add its 23 prioritized genes to the positive-control candidate pool if they are
+established loci.
+
 ## Additional reporting requirement (Phase 3, applies to every gene)
 
 Report **all three priors** (p₁₂ = 1e-5, 1e-6, 5e-6) and the full PP.H0–PP.H4 vector for

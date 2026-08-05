@@ -22,3 +22,4 @@ BTBD9,41492036,J Comput Aided Mol Des 2026,,2026,tissue transcriptome (GSE136701
 S100A3,41492036,J Comput Aided Mol Des 2026,,2026,tissue transcriptome (GSE136701),DEG + machine learning + two-sample MR,circadian key gene,no,from_source_abstract
 LGALS9,41492036,J Comput Aided Mol Des 2026,,2026,tissue transcriptome (GSE136701),DEG + machine learning + two-sample MR,circadian key gene,no,from_source_abstract
 TSPAN10,42530915,Invest Ophthalmol Vis Sci 2026,,2026,in silico transcriptomic annotation,MTAG cross-trait + coloc + fine-mapping,shared locus (myopia-exotropia),no,from_source_abstract
+RDH5,31123710,Orozco et al. Commun Biol 2019;2:186 (fetal RPE e/sQTL),10.1038/s42003-019-0430-6,2019,fetal retinal pigment epithelium,e/sQTL + eCAVIAR colocalization with myopia GWAS,candidate causal gene,partly (RDH5 is an existing anchor),from_source_fulltext

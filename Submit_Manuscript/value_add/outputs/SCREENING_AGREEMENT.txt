@@ -1,0 +1,25 @@
+SCREENING AGREEMENT — automated filter vs reader adjudication
+Records: 125 (round-1 search set)
+======================================================================
+
+Confusion matrix (rows = automated, cols = adjudicated)
+                     excl       incl
+  auto-exclude         92          3
+  auto-include         25          5
+
+Observed agreement  : 0.776
+Expected by chance  : 0.727
+Cohen's kappa       : 0.180 (95% CI -0.087-0.448)
+Strength (Landis-Koch): slight
+
+Sensitivity of the automated filter : 62.5% (5/8 eligible retained)
+False-positive burden               : 25 records read but excluded
+
+[WARNING] 3 eligible study/studies were NOT flagged by the filter:
+  PMID 39538342 — DNA methylation biomarkers and myopia: a multi-omics study integrating
+  PMID 41492036 — Identification of circadian rhythm-associated genes and therapeutic ta
+  PMID 41669769 — Genetic and network evidence that coffee-derived 7-methylxanthine miti
+  These were recovered only because every candidate was read manually.
+
+CAVEAT: not a two-independent-reader kappa. See the header of this script
+and LITERATURE_SEARCH_PROTOCOL.md sec.10 — the human second reader is outstanding.

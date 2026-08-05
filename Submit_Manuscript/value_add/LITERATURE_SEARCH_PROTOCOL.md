@@ -78,17 +78,23 @@ reading its title and abstract.
 
 | Stage | n |
 |---|---|
-| Records identified (main string) | 125 |
-| Records identified (supplementary mQTL/methylation/multi-omics string) | 9 |
-| Duplicates removed | 1 |
-| Title/abstract screened | 133 |
+| Records identified — main string (§3) | 125 |
+| Records identified — supplementary A (mQTL/methylation/multi-omics) | 9 |
+| Records identified — supplementary B (therapeutic target/causal gene/SMR analysis) | 135 |
+| Duplicates removed | 16 |
+| **Unique records identified** | **253** |
+| Metadata unretrievable (PMID 36508524) | 1 |
+| Title/abstract screened | 252 |
 | Excluded: no myopia/refractive outcome | 21 |
-| Excluded: no gene-level cis-eQTL/SMR/coloc nomination | 95 |
+| Excluded: no gene-level cis-eQTL/SMR/coloc nomination | 209 |
 | Excluded: pQTL/proteome-wide nomination (method mismatch, appendix) | 3 |
-| Excluded: animal-only or functional/cell-model | 5 |
-| Unresolved (abstract unavailable, needs full text) | 1 |
-| **Studies included** | **8** |
-| **Unique genes extracted** | **23** (12 previously audited + 11 new) |
+| Excluded: animal-only, functional/cell-model, or review | 10 |
+| **Studies included** | **9** |
+| **Gene rows extracted** | **24** (12 previously audited + 11 new + 1 tissue-matched corroboration) |
+
+Every one of the 252 records was adjudicated by reading its title, and every plausible
+candidate by reading its abstract — **not** by trusting the automated filter, whose
+measured sensitivity was only 62.5% (see §6a).
 
 Included studies and the genes each nominates are in
 `outputs/published_targets_master.csv`. The two studies audited in v3 are confirmed as
@@ -97,13 +103,33 @@ Included studies and the genes each nominates are in
 **UBE2I**). Newly identified: CPNE1; BDH1; PDGFRA, LRRTM2, PCOLCE; EPHB4; UTS2, BTBD9,
 S100A3, LGALS9; TSPAN10.
 
+### 6a. Why every record was read manually
+
+`09_screening_agreement.R` compares the automated keyword filter against the adjudicated
+decision on the 125 round-1 records: Cohen's κ = **0.180** (95% CI −0.087 to 0.448,
+"slight"), observed agreement 0.776. The filter **retained only 5 of 8 eligible studies
+(sensitivity 62.5%)** and the three it missed include **PMID 39538342 (Dong et al.)** —
+one of the two papers this study is auditing.
+
+An automated screen alone would therefore have dropped a core source. Every record in
+both rounds was consequently adjudicated by reading, and the filter is reported as a
+triage aid only, never as a screening decision.
+
 **Excluded as pQTL/proteome-wide** (listed, not silently dropped): PMID 41718003
 (proteome-wide MR, 164 plasma proteins), PMID 39408566 (plasma/brain PWAS), and the
 pQTL arm of PMID 41519384 — whose blood-eQTL arm *is* included.
 
-**Unresolved:** PMID 40040800 (*Natl Sci Rev* 2024, multi-omics variant in choroidal
-vasculature in high myopia) — PubMed carries no abstract; full text required before it
-can be included or excluded.
+**Resolved (was unresolved):** PMID 40040800 (*Natl Sci Rev* 2024) — full text retrieved
+from PMC11879437. It nominates **NFE2L3** p.K617T by whole-exome case–control burden
+testing plus knock-in mice, not by cis-eQTL MR/SMR/colocalization → **excluded** under
+eligibility criterion 3.
+
+**Tissue-matched study added in round 2:** PMID 31123710 (Orozco et al., *Commun Biol*
+2019) colocalizes fetal-RPE e/sQTLs with myopia GWAS. **RDH5** is confirmed by name in the
+full text; the remaining myopia colocalization events (3 galactose-, 7 glucose-condition)
+have their gene symbols stripped from the retrievable text and are recorded as
+**not recoverable — requires publisher Supplementary Data**, not guessed. This is the only
+*eye-tissue* eQTL study in the set and directly bears on the blood-only caveat.
 
 ## 7. Uniform re-test (identical for every extracted gene)
 
@@ -146,5 +172,7 @@ so the conclusion cannot be chosen after seeing the result.
 |---|---|---|
 | 2026-08-05 | Added `mQTL`, `methylation`, `multi-omics`, `multiomics` to the search string as a supplementary query | The §3 string missed studies indexed under methylation/multi-omics wording. The supplementary query returned 9 records, 8 of them not in the main 125. This is a real sensitivity gap and the combined string should be used in any re-run. |
 | 2026-08-05 | `SMR[Title/Abstract]` treated as ambiguous and adjudicated manually | **SMR** denotes both *summary-data-based Mendelian randomization* and *standardized mortality ratio*. It pulled in unrelated papers from 1983, 1996, 1998 and 1999. Either pair it with a myopia-genetics term or replace it with the spelled-out phrase. |
-| 2026-08-05 | Single reader (no second screener, no κ) | §5 specifies two independent readers. This execution had one. The screening decisions are reproducible from `screen1.csv` plus the recorded abstracts, but the protocol's inter-rater step is **outstanding** and must be completed before the systematic claim is made in print. |
-| 2026-08-05 | Databases: PubMed/MEDLINE only | Embase, Web of Science and Scopus were not searched — they are not reachable from the analysis environment. Coverage is therefore narrower than §2 specifies and must be stated as a limitation or completed elsewhere. |
+| 2026-08-05 | Single reader; κ computed against the automated filter instead of a second reader | §5 specifies two independent human readers. κ = 0.180 is reported in §6a, but it measures filter-vs-adjudication agreement, **not** inter-reader agreement, and must never be presented as the latter. Mitigation applied: all 252 records were read rather than filtered. The human second reader remains **OUTSTANDING** and is required before this is described in print as a systematic review; until then it should be called a *systematic search*. |
+| 2026-08-05 | Databases: PubMed/MEDLINE only | Embase, Web of Science and Scopus are unreachable from the analysis environment (organisation egress policy). **OUTSTANDING.** Mitigation applied: three complementary PubMed strings were run instead of one (§6), which recovered 128 records the original string missed. Coverage is still narrower than §2 specifies and must be stated as a limitation. |
+| 2026-08-05 | Citation chasing performed as targeted supplementary searches rather than reference-list walking | PubMed's related-article link returns word-similarity neighbours (>600 records), not citations, and no citation database is reachable. Two additional search strings were used instead. Formal backward/forward citation chasing is **OUTSTANDING**. |
+| 2026-08-05 | Known-locus reference set flagged for update | The novelty audit uses GWAS Catalog + Tedja 2018. The search surfaced a 2026 multi-ancestry refractive-error GWAS (PMID 42009823, *Nat Genet*; n ≈ 1.76 M; 932 variants, 241 new; 23 prioritized genes) that supersedes Tedja 2018 as the reference for "known locus". Novelty calls — including CD55's `not_in_GWAS_Catalog_myopia_500kb` flag — should be re-adjudicated against it. |
