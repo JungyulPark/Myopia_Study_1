@@ -38,7 +38,7 @@ pipelines can generate attractive target lists — but they raise two questions 
 frequently under-examined. First, **how many prioritized genes are genuinely new,
 rather than established refractive-error loci recovered under a new label?** A recent
 complement-focused MR study, for example, reported CD55 among six myopia-associated
-complement targets ‹ref Wang 2024›. Second, and more fundamentally, **does an MR
+complement targets ‹ref Qin et al. 2024›. Second, and more fundamentally, **does an MR
 association imply a shared causal variant?** A significant, even pleiotropy-free, MR
 estimate at a locus can still arise from linkage disequilibrium between the
 expression-associated variant and a distinct, neighbouring disease-causing variant;
@@ -63,7 +63,7 @@ from LD-confounded associations in pharmacology-prioritized myopia genetics.
 ## Do-not-regress self-check
 - [x] Atropine framed as motivation only; no atropine-specific causal/mechanistic claim.
 - [x] No "discovery"/"novel target"/"converge"/"TGFβ-Hippo-YAP mechanism" language.
-- [x] CD55 = Wang-2024 prior conceded; novelty question posed openly.
+- [x] CD55 = Qin-2024 prior conceded; novelty question posed openly.
 - [x] MR-vs-colocalization distinction set up as a central aim.
 - [x] RDH5 introduced as positive control, not discovery.
 - [x] No fabricated results; citation slots marked ‹ref›.

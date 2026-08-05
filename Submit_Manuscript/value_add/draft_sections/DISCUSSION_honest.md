@@ -55,7 +55,7 @@ CD55 presented a robust, pleiotropy-free MR association (weighted-median
 *P* = 7.5 × 10⁻⁶) that replicated in continuous refractive error (Tedja/CREAM,
 *P* = 0.008), but its colocalization was prior-sensitive (PP.H4 = 0.801 default,
 falling to 0.287 under one prior) and it did not replicate in the FinnGen high-myopia
-endpoint. It is, moreover, one of the six complement targets already reported by Wang
+endpoint. It is, moreover, one of the six targets already reported by Qin
 et al. (2024). We therefore neither claim CD55 as novel nor over-state its causal
 support; we present it as a robust, replicating association whose colocalization is
 prior-dependent and whose complement biology has been described elsewhere.
@@ -81,13 +81,13 @@ of *known* biology, offered as hypothesis-generating context. ‹FILL when run: 
 defocus-cascade MR (analysis 10) or axial-length MR add colocalizing support for a
 specific pathway node, integrate here with the same germline-vs-acute caveat.›
 
-### 4.7 Relationship to prior pharmacology-prioritized myopia MR (Wang 2024)
-Our contribution relative to Wang et al. (2024) is not a new target — we concede CD55
+### 4.7 Relationship to prior pharmacology-prioritized myopia MR (Qin et al. 2024)
+Our contribution relative to Qin et al. (2024) is not a new target — we concede CD55
 overlaps their complement set — but methodological: explicit novelty adjudication
 against catalogued loci, multi-cohort replication including a high-myopia endpoint,
 prior-sensitivity reporting for colocalization, and transparent demotion of MR signals
 that fail the shared-causal-variant test. ‹FILL when run: axial-length MR (a structural
-mediator Wang did not test), eye-tissue colocalization, East-Asian replication, and a
+mediator Qin et al. did not test), eye-tissue colocalization, East-Asian replication, and a
 delivery-route-aware druggability map — each a concrete, honest point of
 differentiation if the results land.›
 
@@ -108,7 +108,7 @@ directly relevant given atropine's clinical context — is pending ‹FILL when 
 
 ## Do-not-regress self-check
 - [x] No discovery / novel-target / "converge" / TGFβ-Hippo-YAP / docking-mechanism claims.
-- [x] RDH5/CD55 positive controls; CD55 = Wang-2024 prior conceded.
+- [x] RDH5/CD55 positive controls; CD55 = Qin-2024 prior conceded.
 - [x] CTNNB1/FBN1 known loci + coloc-fail; TGFB1 excluded (discordant).
 - [x] Atropine motivation-only; CHRM3 null; no dose-response mechanism claim.
 - [x] Blood-eQTL, self-report, single-instrument, FinnGen-phenotype, ancestry limitations stated.

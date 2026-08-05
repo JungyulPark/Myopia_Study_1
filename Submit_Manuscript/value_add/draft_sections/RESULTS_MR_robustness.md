@@ -39,7 +39,7 @@ disequilibrium with a neighbouring causal variant rather than by a shared effect
 and we make no directional or therapeutic claim for them. **CD55** occupies an
 intermediate position — a robust, pleiotropy-free MR association whose
 colocalization is prior-sensitive (PP.H4 = 0.801 / 0.287 / 0.976) — and we note it
-is one of the six complement targets reported by Wang et al. (2024), so it is not a
+is one of the six complement targets reported by Qin et al. (2024), so it is not a
 point of novelty relative to that work.
 
 **Interpretation.** The one anchor that clears both MR and colocalization, RDH5, is

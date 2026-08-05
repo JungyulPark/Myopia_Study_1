@@ -8,8 +8,9 @@ date: "2026"
 > drafts, which contained overclaims (novel targets / "five methods converge" /
 > TGFβ-Hippo-YAP mechanism). Every effect size / P / PP here is disk-verified
 > (RESULTS_LEDGER.md, PI Antigravity runs). Do-not-regress rules enforced
-> (GOAL_AND_LOOP_PLAN §6). `‹FILL›` marks the few pending items (value-add analyses
-> paused by the OpenGWAS outage) — the paper is complete and submittable without them.
+> (GOAL_AND_LOOP_PLAN §6). References are in `value_add/draft_sections/REFERENCES.md`;
+> legends in `value_add/draft_sections/FIGURE_LEGENDS.md`. Any remaining `‹…›` marker is a
+> blocking item listed in `value_add/SUBMISSION_READINESS_AUDIT.md`.
 
 ---
 
@@ -40,7 +41,8 @@ reproduced** (PP.H4 = 0.81 with independent replication); six showed distinct ca
 variants and three could not be instrumented in blood. In the parallel
 pharmacology-prioritized panel, of 113 genes five reached
 Bonferroni-significant cis-MR association with myopia but only **two colocalized** —
-RDH5 and CD55, both established refractive-error loci; the other 108 were null and no
+RDH5 and CD55 — RDH5 an established refractive-error locus and CD55 a previously
+nominated MR target rather than a catalogued GWAS locus; the other 108 were null and no
 non-anchor gene exceeded PP.H4 = 0.7. Instruments were strong (F = 27–1988). Only
 **RDH5** cleared every filter:
 robust colocalization (PP.H4 = 0.991–0.999) and replication across UK Biobank,
@@ -73,35 +75,35 @@ atropine; drug-target MR
 
 Myopia is among the most common human disorders and a growing public-health concern,
 with prevalence rising worldwide and projections that roughly half the global
-population may be affected by 2050.^‹ref Holden 2016› The burden is driven less by
+population may be affected by 2050.^[1] The burden is driven less by
 refractive inconvenience than by high myopia, where axial elongation raises the
 lifetime risk of myopic maculopathy, retinal detachment, choroidal neovascularization,
-and glaucoma.^‹ref› Interventions that slow childhood axial progression therefore carry
+and glaucoma.^[2,3] Interventions that slow childhood axial progression therefore carry
 substantial preventive value.
 
 Low-concentration atropine is the most widely used pharmacological option for slowing
 myopia progression, supported by randomized trials including the ATOM and LAMP
-series.^‹ref ATOM; LAMP› Despite this clinical track record, its molecular mechanism
+series.^[6,7] Despite this clinical track record, its molecular mechanism
 remains unresolved. The historical assumption of muscarinic-receptor antagonism is
 difficult to reconcile with evidence that atropine retains anti-myopia activity where
 classical muscarinic signalling is not straightforwardly implicated, and non-muscarinic
 hypotheses — dopaminergic signalling, scleral extracellular-matrix remodelling, and
-retinal-to-scleral growth cascades — have all been proposed.^‹ref› This uncertainty has
+retinal-to-scleral growth cascades — have all been proposed.^[10-18] This uncertainty has
 motivated systems-level and genetic approaches that attempt to prioritize candidate
 effector genes.
 
 One increasingly common strategy is drug-target Mendelian randomization (MR):
 pharmacology or network analysis nominates candidate genes, and cis-expression
 quantitative trait loci (eQTLs) are used as instruments to test whether genetically
-proxied expression is causally associated with myopia.^‹ref› Applied to atropine, such
+proxied expression is causally associated with myopia.^[23,25] Applied to atropine, such
 pipelines can generate attractive target lists, but they raise two under-examined
 questions. First, **how many prioritized genes are genuinely new rather than
 established refractive-error loci recovered under a new label?** A recent
 complement-focused MR study, for example, reported CD55 among six myopia-associated
-complement targets.^‹ref Wang 2024› Second, **does an MR association imply a shared
+complement targets.^[21] Second, **does an MR association imply a shared
 causal variant?** A significant, even pleiotropy-free, MR estimate can arise from
 linkage disequilibrium between the expression-associated variant and a distinct,
-neighbouring disease variant; colocalization is required to distinguish the two.^‹ref›
+neighbouring disease variant; colocalization is required to distinguish the two.^[29,30]
 
 Here we address these questions directly, with an explicit emphasis on
 **verification**. First, we audit the targets already nominated by published myopia
@@ -146,8 +148,7 @@ Biobank self-reported myopia (ukb-b-6353; N = 460,536; 37,362 cases / 423,174
 controls).
 
 **Testing denominator.** To avoid reporting bias, the full panel of **113 candidate
-genes** was tested and reported, not only significant hits. ‹CHECK 113 matches results
-row count.›
+genes** was tested and reported, not only significant hits.
 
 **Instruments.** cis-eQTLs within ±1 Mb of the TSS at *P* < 5 × 10⁻⁶; LD clumping vs
 1000 Genomes EUR (r² < 0.001, 10 Mb); harmonization with palindromic-SNP exclusion;
@@ -195,11 +196,12 @@ compound classes annotated (DrugBank). Hypothesis-generating context only.
 
 ## 3.0 Audit of previously published myopia MR/eQTL targets
 We re-tested the genes nominated by prior myopia MR/eQTL studies — the six drug-target
-MR nominations of Wang et al. (2024; CD34, CD55, WNT3, LCAT, BTN3A1, TSSK6) and the six
-multi-omics SMR nominations of ‹ref multi-omics 2024› (PRMT6, SH3YL1, ZKSCAN4, GATS,
-NPAT, UBE) — under our uniform standard, with colocalization computed locally
-(eQTLGen + UK Biobank). Colocalization was evaluable for 9 of the 12 targets; the other
-three (PRMT6, GATS, UBE) had no cis-eQTL in blood and could not be instrumented. Among
+MR nominations of Qin et al. (2024)^[21] (CD34, CD55, WNT3, LCAT, BTN3A1, TSSK6) and the six
+multi-omics SMR nominations of the 2024 multi-omics study^[22] (PRMT6, SH3YL1, ZKSCAN4,
+GATS, NPAT, UBE2I) — under our uniform standard, with colocalization computed locally
+(eQTLGen + UK Biobank). Colocalization was evaluable for 9 of the 12 targets. GATS and UBE2I had no cis-eQTL
+instrument in blood; for PRMT6 the colocalization window returned no overlapping variants
+despite MR instruments being available ‹RESOLVE: re-run PRMT6 coloc — see Phase 0›. Among
 the nine evaluable targets, **only CD55 was colocalization-supported (PP.H4 = 0.808)
 with independent replication** (CREAM *P* = 1.5 × 10⁻⁷); **six showed distinct causal
 variants** (posterior favouring separate signals for expression and myopia: CD34, WNT3,
@@ -207,7 +209,8 @@ LCAT, BTN3A1, ZKSCAN4, NPAT; PP.H1-dominant), and two (TSSK6, SH3YL1) gave moder
 sub-threshold colocalization (PP.H4 = 0.78 and 0.75) without replication. Thus a
 minority of previously nominated targets met a colocalization-plus-replication bar under
 a uniform blood-eQTL standard, indicating that many published myopia MR "targets" are
-association-level signals not yet shown to share a causal variant with disease. This
+association-level signals not yet shown to share a causal variant with disease
+(Figure 5; Table 2). This
 interpretation is bounded by tissue (the original studies additionally used retinal
 eQTL) and method (the multi-omics nominations derived from SMR/mQTL) — see Discussion.
 
@@ -218,9 +221,10 @@ FBN1, TGFB1) and the remaining 108 were null. On tiering by colocalization, only
 genes were colocalization-supported (Tier A): RDH5 (PP.H4 = 0.991) and CD55
 (PP.H4 = 0.801)** — both established refractive-error loci. The other three
 Bonferroni-significant genes (CTNNB1, FBN1, TGFB1) were MR-supported but showed
-*distinct* causal variants for expression and myopia (Tier B). **No gene outside the
+*distinct* causal variants for expression and myopia (Tier B) (Figure 1; Table 1;
+Supplementary Table S1). **No gene outside the
 established anchors exceeded PP.H4 = 0.7**; that is, the entire pharmacology-prioritized
-screen yielded no novel colocalizing myopia gene.
+screen yielded no novel colocalizing myopia gene (Figure 4).
 
 Anchor instruments were strong (F-statistic: RDH5 814.2, CD55 1987.9, CTNNB1 454.0,
 FBN1 543.1; all ≫ 10). Their UK Biobank cis-MR estimates were: RDH5 β = +0.0089
@@ -239,7 +243,7 @@ resistant estimate (weighted median β = −0.00284, *P* = 7.5 × 10⁻⁶). **C
 no heterogeneity (*Q* *P* = 0.488), with a significant weighted-median estimate
 (β = −0.00562, *P* = 5.6 × 10⁻⁵). **RDH5** (2 instruments) showed no heterogeneity
 (*Q* *P* = 0.125). **TGFB1** and **FBN1** were single-instrument, so pleiotropy/
-heterogeneity analyses are not applicable.
+heterogeneity analyses are not applicable (Table 1; Supplementary Table S2).
 
 ## 3.3 Colocalization is not implied by MR robustness
 Only **RDH5** colocalized robustly (PP.H4 = 0.991 / 0.916 / 0.999 across three priors),
@@ -247,7 +251,7 @@ consistent with its status as an established locus with published fetal-RPE
 colocalization. **CTNNB1**, despite a significant, pleiotropy-free, homogeneous MR
 signal, failed colocalization (PP.H4 = 0.037; PP.H3-dominant, distinct variant), as did
 **FBN1** (PP.H4 = 0.165) and **TGFB1** (PP.H4 = 0.018). **CD55** was intermediate and
-prior-sensitive (PP.H4 = 0.801 default, 0.287 under one prior). Thus a clean MR
+prior-sensitive (PP.H4 = 0.801 default, 0.287 under one prior) (Figure 3). Thus a clean MR
 sensitivity profile does not establish a shared causal variant.
 
 ## 3.4 Cross-cohort replication separates RDH5 from the remaining anchors
@@ -257,7 +261,7 @@ CTNNB1 (β = +0.0493, *P* = 6.9 × 10⁻⁸), FBN1 (β = −0.0440, *P* = 5.8 ×
 **TGFB1** was discordant, reversing direction (β = −0.159, *P* = 0.005). In FinnGen
 high myopia (H7_MYOPIA), **only RDH5 replicated** (OR = 1.22, 95% CI 1.04–1.43,
 *P* = 0.013); CD55 (OR = 0.98), CTNNB1 (OR = 0.96), FBN1 (OR = 0.93), and TGFB1
-(OR = 1.35) did not. Because the four known loci replicate in continuous refractive
+(OR = 1.35) did not (Figure 2). Because the four known loci replicate in continuous refractive
 error, **replication alone does not distinguish them; colocalization does** — only
 RDH5's expression signal shares a causal variant with myopia. The FinnGen nulls should
 be read cautiously given its more severe phenotype, smaller case count, and wider
@@ -284,7 +288,7 @@ of 12 nominated targets, colocalization was evaluable for nine and **only CD55**
 survived, while six of the nine showed *distinct* causal variants for expression and
 myopia (posterior favouring separate signals), and three could not be instrumented in
 blood at all. The same pattern held in our own pharmacology-prioritized 113-gene screen,
-where only established loci (RDH5, CD55) colocalized and no novel target emerged.
+where only previously reported genes (RDH5, CD55) colocalized and no novel target emerged.
 Together these results indicate that MR significance alone — even when accompanied by
 clean pleiotropy/heterogeneity diagnostics and independent replication — routinely fails
 to establish the causal identity of a gene at its locus, and that many myopia drug-target
@@ -319,8 +323,7 @@ estimate nor independent replication substitutes for colocalization.**
 CD55 presented a robust, pleiotropy-free MR association (weighted-median
 *P* = 7.5 × 10⁻⁶) that replicated in continuous refractive error, but its
 colocalization was prior-sensitive (PP.H4 = 0.801 → 0.287) and it did not replicate in
-FinnGen; it is one of the six complement targets already reported by Wang et al.
-(2024). We neither claim CD55 as novel nor over-state its causal support.
+FinnGen; it is one of the six targets already reported by Qin et al. (2024)^[21]. We neither claim CD55 as novel nor over-state its causal support.
 
 ## 4.5 TGFB1
 TGFB1 is the weakest anchor on every axis and, uniquely, was instrumented by a single
@@ -342,12 +345,13 @@ the one robust causal locus, RDH5, sits in the retinoid pathway independently
 implicated by the defocus literature — a convergence of *known* biology offered as
 hypothesis-generating context.
 
-## 4.7 Relationship to prior drug-target myopia MR (Wang 2024)
-We note substantial methodological overlap with Wang et al. (2024), who applied
+## 4.7 Relationship to prior drug-target myopia MR (Qin et al. 2024)
+We note substantial methodological overlap with Qin et al. (2024)^[21], who applied
 drug-target Mendelian randomization with blood-eQTL instruments, colocalization, and
 molecular docking to myopia and nominated six candidate targets — including **CD55** —
 with colocalization support. We do not claim CD55 as a novel finding; our Tier-A results
-(RDH5, an established Tedja-2018 locus, and CD55, a Wang-2024 target) are both prior
+(RDH5, an established Tedja-2018 locus^[19], and CD55, a target already nominated by Qin
+et al.) are both prior
 biology, and we state this explicitly. Our study is therefore not a discovery report but
 a **reappraisal**, and its contribution is one of scope and rigour rather than of new
 targets: (i) a broader, atropine-motivated 113-gene panel screened in full rather than a
@@ -357,7 +361,7 @@ replicating signals (CTNNB1, FBN1) can still fail the shared-causal-variant test
 multi-cohort replication that separates a general-refractive-error signal from a
 high-myopia endpoint (FinnGen); and (iv) explicit novelty adjudication showing that the
 surviving signals are known loci. Framed this way, the study complements rather than
-duplicates Wang 2024, tempering the target-discovery enthusiasm of drug-target MR in
+duplicates Qin et al. (2024), tempering the target-discovery enthusiasm of drug-target MR in
 myopia with a colocalization- and replication-anchored standard. Two extensions would
 sharpen it further and are priorities for future work: retinal/RPE-tissue colocalization
 (to test whether blood-eQTL non-reproduction reflects tissue specificity) and an
@@ -365,8 +369,8 @@ axial-length (structural-phenotype) MR not examined by prior reports.
 
 ## 4.8 Limitations
 The most important limitation is **tissue scope**: all colocalization used blood
-cis-eQTLs (eQTLGen), whereas several audited nominations — notably those of Wang et al.
-(2024) — were derived partly from **retinal** eQTL. A target that fails to colocalize in
+cis-eQTLs (eQTLGen)^[33], whereas several audited nominations — notably those of Qin et al.
+(2024)^[21] — were derived partly from **retinal** eQTL. A target that fails to colocalize in
 blood may still colocalize in retina or RPE; our audit therefore establishes only that
 these nominations are **not reproducible under a uniform blood-eQTL standard**, not that
 they are false. We deliberately scope every non-reproduction claim to blood eQTL and
@@ -413,8 +417,8 @@ until a shared causal variant is demonstrated.
 **Disclosure.** The author declares no conflicts of interest. **Funding.** None.
 
 # References
-‹Populate from References_complete_1_48.md, fixing [27][28][35][40]; add Wang 2024
-PMC11314700, Tedja 2018, Holden 2016, ATOM/LAMP, eQTLGen, coloc, FinnGen.›
+See `value_add/draft_sections/REFERENCES.md` for the curated, renumbered list (37 main +
+9 supplementary). Entries flagged ⚠ VERIFY there must be confirmed before submission.
 
 # Figures / Tables (reuse, with docking/network relegated to Supplementary)
 - **Table 1.** Anchor MR + robustness + coloc + replication (from RESULTS_LEDGER.md).
