@@ -1,0 +1,24 @@
+gene,source_pmid,source_study,source_doi,source_year,original_tissue,original_method,claim_strength,already_audited,id_resolution
+CD34,39110588,Qin et al. IOVS 2024;65(10):13,10.1167/iovs.65.10.13,2024,blood+retina,cis-eQTL MR + coloc.abf,drug target,yes,from_source_abstract
+CD55,39110588,Qin et al. IOVS 2024;65(10):13,10.1167/iovs.65.10.13,2024,blood+retina,cis-eQTL MR + coloc.abf,drug target,yes,from_source_abstract
+WNT3,39110588,Qin et al. IOVS 2024;65(10):13,10.1167/iovs.65.10.13,2024,blood+retina,cis-eQTL MR + coloc.abf,drug target,yes,from_source_abstract
+LCAT,39110588,Qin et al. IOVS 2024;65(10):13,10.1167/iovs.65.10.13,2024,blood+retina,cis-eQTL MR + coloc.abf,drug target,yes,from_source_abstract
+BTN3A1,39110588,Qin et al. IOVS 2024;65(10):13,10.1167/iovs.65.10.13,2024,blood+retina,cis-eQTL MR + coloc.abf,drug target,yes,from_source_abstract
+TSSK6,39110588,Qin et al. IOVS 2024;65(10):13,10.1167/iovs.65.10.13,2024,blood+retina(testis-restricted),cis-eQTL MR + coloc.abf,drug target,yes,from_source_abstract
+PRMT6,39538342,Dong et al. Clin Epigenetics 2024;16(1):157,10.1186/s13148-024-01772-1,2024,blood,SMR (GWAS+mQTL+eQTL) + HEIDI,methylation biomarker,yes,from_source_abstract
+SH3YL1,39538342,Dong et al. Clin Epigenetics 2024;16(1):157,10.1186/s13148-024-01772-1,2024,blood,SMR (GWAS+mQTL+eQTL) + HEIDI,methylation biomarker,yes,from_source_abstract
+ZKSCAN4,39538342,Dong et al. Clin Epigenetics 2024;16(1):157,10.1186/s13148-024-01772-1,2024,blood,SMR (GWAS+mQTL+eQTL) + HEIDI,methylation biomarker,yes,from_source_abstract
+GATS,39538342,Dong et al. Clin Epigenetics 2024;16(1):157,10.1186/s13148-024-01772-1,2024,blood,SMR (GWAS+mQTL+eQTL) + HEIDI,methylation biomarker,yes,from_source_abstract
+NPAT,39538342,Dong et al. Clin Epigenetics 2024;16(1):157,10.1186/s13148-024-01772-1,2024,blood,SMR (GWAS+mQTL+eQTL) + HEIDI,methylation biomarker,yes,from_source_abstract
+UBE2I,39538342,Dong et al. Clin Epigenetics 2024;16(1):157,10.1186/s13148-024-01772-1,2024,blood,SMR (GWAS+mQTL+eQTL) + HEIDI,methylation biomarker,yes,from_source_abstract_CORRECTED_from_UBE
+CPNE1,41888893,J Transl Med 2026,,2026,sclera/blood,GWAS meta + SMR + Bayesian coloc + MR + functional validation,therapeutic target,no,from_source_abstract
+BDH1,41533846,Transl Vis Sci Technol 2026,,2026,blood,SMR (mQTL+eQTL+pQTL) + coloc; UKB discovery/FinnGen validation,causal gene,no,from_source_abstract
+PDGFRA,41519384,Asia Pac J Ophthalmol 2026,,2026,blood (2 eQTL datasets) + plasma pQTL,MR + coloc + PPI + docking,key regulator,no,from_source_abstract
+LRRTM2,41519384,Asia Pac J Ophthalmol 2026,,2026,blood (2 eQTL datasets) + plasma pQTL,MR + coloc + PPI + docking,key regulator,no,from_source_abstract
+PCOLCE,41519384,Asia Pac J Ophthalmol 2026,,2026,blood (2 eQTL datasets) + plasma pQTL,MR + coloc + PPI + docking,key regulator,no,from_source_abstract
+EPHB4,41669769,Indian J Ophthalmol 2026,,2026,blood,gene-level MR (genetically predicted expression) + network + docking,prioritized hub target,no,from_source_abstract
+UTS2,41492036,J Comput Aided Mol Des 2026,,2026,tissue transcriptome (GSE136701),DEG + machine learning + two-sample MR,circadian key gene,no,from_source_abstract
+BTBD9,41492036,J Comput Aided Mol Des 2026,,2026,tissue transcriptome (GSE136701),DEG + machine learning + two-sample MR,circadian key gene,no,from_source_abstract
+S100A3,41492036,J Comput Aided Mol Des 2026,,2026,tissue transcriptome (GSE136701),DEG + machine learning + two-sample MR,circadian key gene,no,from_source_abstract
+LGALS9,41492036,J Comput Aided Mol Des 2026,,2026,tissue transcriptome (GSE136701),DEG + machine learning + two-sample MR,circadian key gene,no,from_source_abstract
+TSPAN10,42530915,Invest Ophthalmol Vis Sci 2026,,2026,in silico transcriptomic annotation,MTAG cross-trait + coloc + fine-mapping,shared locus (myopia-exotropia),no,from_source_abstract

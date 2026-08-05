@@ -1,0 +1,126 @@
+pmid,year,journal,verdict,reason,pqtl,title
+41928268,2026,J Transl Med,EXCLUDE,no MR/eQTL/coloc method,False,Comprehensive multi-method analysis of blood heavy metals and nutrient intake in myopia and high myopia.
+42064014,2026,Ophthalmol Sci,EXCLUDE,"review/meta-analysis, no extractable targets",False,Genome-Wide Meta-Analysis for High Myopia Provides Insights into Disease Mechanisms and Reveals a Causal Link to Primary Open-Angle Glaucoma.
+42245065,2026,medRxiv,EXCLUDE,"review/meta-analysis, no extractable targets",False,Genome-wide discovery reveals 30 loci for choroidal thickness and uncovers potential causal links with angle-closure glaucoma.
+40458666,2025,Ophthalmol Sci,EXCLUDE,"review/meta-analysis, no extractable targets",False,Corneal Biomechanics as a Causal Factor in Myopia and Astigmatism: Evidence from Mendelian Randomization.
+41105908,2025,Neurology,EXCLUDE,"review/meta-analysis, no extractable targets",False,Retinal Microvascular Correlates of Cerebral Small Vessel Disease in Older Age.
+41238566,2025,Nat Commun,EXCLUDE,"review/meta-analysis, no extractable targets",False,GWAS for primary angle-closure glaucoma identifies loci related to ocular biometry and morphology.
+40128813,2025,Hum Genomics,EXCLUDE,"review/meta-analysis, no extractable targets",False,Genetic risk factors associated with ocular perfusion pressure in primary open-angle glaucoma.
+39538342,2024,Clin Epigenetics,EXCLUDE,"review/meta-analysis, no extractable targets",False,"DNA methylation biomarkers and myopia: a multi-omics study integrating GWAS, mQTL and eQTL data."
+40206264,2024,Ophthalmol Sci,EXCLUDE,"review/meta-analysis, no extractable targets",False,"Causal Links between Gut Microbiota, Blood Metabolites, Immune Cells, Inflammatory Proteins, and Myopia: A Mendelian Randomization Study."
+38342383,2024,Prev Med,EXCLUDE,"review/meta-analysis, no extractable targets",False,Association of sleep traits with myopia in children and adolescents: A meta-analysis and Mendelian randomization study.
+38423204,2024,Exp Eye Res,EXCLUDE,"review/meta-analysis, no extractable targets",False,Causal associations of refractive error and early age-related macular degeneration: A Mendelian randomization study.
+38931287,2024,Nutrients,EXCLUDE,"review/meta-analysis, no extractable targets",False,No Evidence of an Association between Genetic Factors Affecting Response to Vitamin A Supplementation and Myopia: A Mendelian Randomization Study and Meta-Analysis.
+37131961,2023,Ophthalmol Sci,EXCLUDE,"review/meta-analysis, no extractable targets",False,Genome-wide Association Studies of Retinal Vessel Tortuosity Identify Numerous Novel Loci Revealing Genes and Pathways Associated With Ocular and Cardiometabolic Diseases.
+35031440,2022,Ophthalmology,EXCLUDE,"review/meta-analysis, no extractable targets",False,Genome-Wide Association Study Identifies Two Common Loci Associated with Pigment Dispersion Syndrome/Pigmentary Glaucoma and Implicates Myopia in its Development.
+33909035,2021,Invest Ophthalmol Vis Sci,EXCLUDE,"review/meta-analysis, no extractable targets",False,IMI Risk Factors for Myopia.
+31097437,2019,Br J Ophthalmol,EXCLUDE,"review/meta-analysis, no extractable targets",False,Association between birth weight and refractive error in adulthood: a Mendelian randomisation study.
+28586461,2017,Int J Epidemiol,EXCLUDE,"review/meta-analysis, no extractable targets",False,Genetically low vitamin D concentrations and myopic refractive error: a Mendelian randomization study.
+28750800,2017,Methods Enzymol,EXCLUDE,no MR/eQTL/coloc method,False,Lipidomics: A Corrective Lens for Enzyme Myopia.
+26497973,2015,Genet Epidemiol,EXCLUDE,"review/meta-analysis, no extractable targets",False,Assessing the Genetic Predisposition of Education on Myopia: A Mendelian Randomization Study.
+20603114,2010,Exp Eye Res,EXCLUDE,no MR/eQTL/coloc method,False,Stromal interleukin-1 expression in the cornea after haze-associated injury.
+20806048,2010,Mol Vis,EXCLUDE,no MR/eQTL/coloc method,False,Spatial and temporal dissociation of AQP4 and Kir4.1 expression during induction of refractive errors.
+40327989,2025,Int Immunopharmacol,EXCLUDE_pQTL,pQTL/proteome nomination - method mismatch (see protocol 4),True,The interplay between systemic inflammation and myopia: A bidirectional Mendelian randomization and experimental validation study.
+41888893,2026,J Transl Med,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,CPNE1: A novel therapeutic target for myopia progression - from genetic GWAS discovery to functional validation in vitro and vivo.
+41718003,2026,J Glob Health,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,True,Proteome-wide Mendelian randomisation identifies causal links between blood proteins and myopia.
+42530915,2026,Invest Ophthalmol Vis Sci,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,A Shared Genetic Basis Underlying Myopia-Exotropia Comorbidity.
+41533846,2026,Transl Vis Sci Technol,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,True,Mitochondria-Related Gene BDH1 Implicated in Myopia Risk via Methylation-Regulated Expression: An Integrative Summary-Data Mendelian Randomization Study.
+42288617,2026,Eye (Lond),INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Identifying potential therapeutic targets for high myopia via a case-control study and Mendelian randomisation analyses of the human blood metabolome.
+42274500,2026,Biology (Basel),INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Circadian Transcriptomic Dynamics Identify Transferable Retina-Choroid Expression Patterns in Myopia Development via Multistage Machine Learning.
+41519384,2026,Asia Pac J Ophthalmol (Phila),INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,True,Multi-omics integration uncovers key molecular mechanisms and therapeutic targets in myopia and pathological myopia.
+41651438,2026,Exp Eye Res,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Interactions of choroid and sclera in the myopia model of the chicken.
+42437114,2026,Ophthalmol Sci,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Shared Genetic Architecture and Multidimensional Modifiable Correlates between Myopia and Retinal-Optic Nerve Diseases.
+40175653,2025,Cell Biol Toxicol,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Sodium fluoride promotes myopia progression via the activation of the ferroptosis pathway by PIEZO1 and pharmacological targeting PIEZO1 represents an innovative approach for myopia treatment.
+39876870,2025,Front Med (Lausanne),INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Meta-analysis of retinal transcriptome profiling studies in animal models of myopia.
+39879988,2025,Am J Hum Genet,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Gene and phenome-based analysis of the shared genetic architecture of eye diseases.
+40101038,2025,Medicine (Baltimore),INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Hyperopia may exert a protective effect against senile cataracts: Evidence from a Mendelian randomization study.
+40792044,2025,Food Sci Nutr,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Association Between Omega-3 Polyunsaturated Fatty Acids and Myopia: Results From the Two-Sample and Multi-Tissue Genomic Mendelian Randomization Study and KNHANES.
+39408566,2024,Int J Mol Sci,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,True,Pinpointing Novel Plasma and Brain Proteins for Common Ocular Diseases: A Comprehensive Cross-Omics Integration Analysis.
+39110588,2024,Invest Ophthalmol Vis Sci,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Identification of Potential Drug Targets for Myopia Through Mendelian Randomization.
+39559310,2024,Int J Ophthalmol,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Causal association of obesity-related anthropometric traits with myopia and the mediating role of educational attainment: a Mendelian randomization study.
+37449273,2023,Front Neurosci,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Epitranscriptomic investigation of myopia-associated RNA editing in the retina.
+36192457,2022,Graefes Arch Clin Exp Ophthalmol,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Studies on the interactions of retinal dopamine with choroidal thickness in the chicken.
+36277849,2022,Cell Genom,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Single-cell multiome of the human retina and deep learning nominate causal variants in complex eye diseases.
+35724635,2022,Ophthalmic Res,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,7-Methylxanthine Influences the Behavior of ADORA2A-DRD2 Heterodimers in Human Retinal Pigment Epithelial Cells.
+33108260,2020,Epigenetics,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Comprehensive analysis of transcriptome-wide mA methylome in the anterior capsule of the lens of high myopia patients.
+29803830,2018,Am J Pathol,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Cause and Effect Relationship between Changes in Scleral Matrix Metallopeptidase-2 Expression and Myopia Development in Mice.
+26310158,2015,Prog Mol Biol Transl Sci,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Scleral Mechanisms Underlying Ocular Growth and Myopia.
+20350541,2010,Exp Eye Res,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Transforming growth factor-beta in the chicken fundal layers: an immunohistochemical study.
+16205572,2005,Retina,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Expression of connective tissue growth factor and its potential role in choroidal neovascularization.
+9838257,1999,Ophthalmologica,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Mortality in blind subjects. A population-based study on social security files from Baden-W&#xfc;rttemberg.
+9642583,1998,J Cataract Refract Surg,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Noncontact holmium:YAG laser thermal keratoplasty for hyperopia.
+8733845,1996,J Cataract Refract Surg,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Corneal topographic changes after noncontact holmium:YAG laser thermal keratoplasty to correct hyperopia.
+6859212,1983,Am J Optom Physiol Opt,INCLUDE_candidate,gene-level cis-eQTL/SMR/coloc/TWAS nomination,False,Optical prophylaxis for environmental myopia: an epidemiological assessment of short-term effects.
+41524010,2026,Int J Ophthalmol,MAYBE,MR present but gene-level nomination unclear,False,"Lifestyle behaviors, serum metabolites and high myopia: Mendelian randomization and mediation analysis."
+41691856,2026,Ecotoxicol Environ Saf,MAYBE,MR present but gene-level nomination unclear,False,Mechanistic insights into PM-induced myopia in mice: Role of NRF2/HIF-1&#x3b1; signaling and therapeutic potential of sulforaphane.
+42288932,2026,Int J Retina Vitreous,MAYBE,MR present but gene-level nomination unclear,False,Understanding the effect of educational attainment on the risk of retinal detachment: a Mendelian randomization mediation analysis.
+42430965,2026,J Prev Alzheimers Dis,MAYBE,MR present but gene-level nomination unclear,False,Can we identify people with Alzheimer's disease from examination of the eye? A bidirectional Mendelian randomization (MR) study.
+41492036,2026,J Comput Aided Mol Des,MAYBE,MR present but gene-level nomination unclear,False,Identification of circadian rhythm-associated genes and therapeutic targets in myopia with dynamics simulation: a multiomics study using machine learning algorithms and Mendelian randomization.
+42296206,2026,J Vis Exp,MAYBE,MR present but gene-level nomination unclear,False,Causal Effects of Dietary Macronutrients and Micronutrients on Myopia and Other Major Ocular Disorders: A Mendelian Randomization Study.
+41947537,2026,J Child Psychol Psychiatry,MAYBE,MR present but gene-level nomination unclear,False,Convergent genetic pathways linking neuropsychiatric and ocular disorders in children.
+41669769,2026,Indian J Ophthalmol,MAYBE,MR present but gene-level nomination unclear,False,Genetic and network evidence that coffee-derived 7-methylxanthine mitigates myopia via the EPHB4 axis.
+41524007,2026,Int J Ophthalmol,MAYBE,MR present but gene-level nomination unclear,False,Association between asthma and myopia: the NHANES database and Mendelian randomization analysis.
+41767324,2026,Int J Ophthalmol,MAYBE,MR present but gene-level nomination unclear,False,Causal relationships between 41 inflammatory cytokines and myopia: a Mendelian randomization study.
+40687727,2025,Front Med (Lausanne),MAYBE,MR present but gene-level nomination unclear,False,Natural active ingredients targeted inflammatory cytokines and major blinding eye diseases: a two-sample Mendelian randomization and molecular docking analysis.
+40382519,2025,Discov Oncol,MAYBE,MR present but gene-level nomination unclear,False,Mendelian randomization analysis reveals potential association between allergic rhinitis and nasopharyngeal carcinoma.
+40547000,2025,Ophthalmol Sci,MAYBE,MR present but gene-level nomination unclear,False,Exploring Effects of Age at the Onset of Myopia on Multiple Diseases Using Electronic Health Records.
+41676410,2025,Arch Med Sci,MAYBE,MR present but gene-level nomination unclear,False,Visual impairment and frailty: insights from genetic correlation and Mendelian randomization.
+40251264,2025,Sci Rep,MAYBE,MR present but gene-level nomination unclear,False,The causal effect of multiple lifestyles and myopia: a Mendelian randomization study.
+41071029,2025,Invest Ophthalmol Vis Sci,MAYBE,MR present but gene-level nomination unclear,False,IMI-Myopia Genetics Report.
+40530922,2025,Invest Ophthalmol Vis Sci,MAYBE,MR present but gene-level nomination unclear,False,Associations Between Myopia and Brain Volumes: An Observational and Genetic Analysis.
+40810964,2025,Ophthalmic Epidemiol,MAYBE,MR present but gene-level nomination unclear,False,Genetic Associations of Myopia and Axial Length with Diabetic Retinopathy.
+40746870,2025,Adv Ophthalmol Pract Res,MAYBE,MR present but gene-level nomination unclear,False,Causal associations between smoking and ocular diseases: a Mendelian randomization study.
+40636509,2025,Ophthalmol Sci,MAYBE,MR present but gene-level nomination unclear,False,The Association between Myopia and Anxiety: A Bidirectional 2-Sample Mendelian Randomization Study.
+40360801,2025,Eye (Lond),MAYBE,MR present but gene-level nomination unclear,False,"Causal relationships between depression, anxiety, and myopia: a two-sample Mendelian randomization study."
+40554439,2025,Br J Hosp Med (Lond),MAYBE,MR present but gene-level nomination unclear,False,Bidirectional Causal Relationship Between Myopia and Neurodegenerative Diseases: Two-Sample Mendelian Randomization Analyses.
+40234597,2025,Sci Rep,MAYBE,MR present but gene-level nomination unclear,False,The causal impact of gut microbiota and metabolites on myopia and pathological myopia: a mediation Mendelian randomization study.
+40436931,2025,Sci Rep,MAYBE,MR present but gene-level nomination unclear,False,"Causal relationship between glycemic traits and inflammatory eye diseases and their complications, and myopia: a Mendelian randomization analysis."
+41171040,2025,Invest Ophthalmol Vis Sci,MAYBE,MR present but gene-level nomination unclear,False,Mendelian Randomization Studies of Myopia: Choosing the Right Summary Statistics.
+40850694,2025,BMJ Open Ophthalmol,MAYBE,MR present but gene-level nomination unclear,False,Causal association between different types of ametropia and risk of diabetic retinopathy: a two-sample Mendelian randomization study.
+40880763,2025,Front Med (Lausanne),MAYBE,MR present but gene-level nomination unclear,False,Potential protective role ofin myopia prevention: evidence from full-length 16S rRNA sequencing and bidirectional Mendelian randomization analysis.
+40087504,2025,Sci Rep,MAYBE,MR present but gene-level nomination unclear,False,Self-reported myopia and age-related cataract: a two-sample Mendelian randomization study.
+40304340,2025,Comb Chem High Throughput Screen,MAYBE,MR present but gene-level nomination unclear,False,Deciphering the Microbiome-Gut-Eye Axis: A Mendelian Randomization Analysis of the Causal Influence of Gut Microbiota on Myopia.
+40082667,2025,Sci Rep,MAYBE,MR present but gene-level nomination unclear,False,Causal effect of the 25-Hydroxyvitamin D concentration on ocular diseases: A Mendelian randomization study.
+40760090,2025,Sci Rep,MAYBE,MR present but gene-level nomination unclear,False,Exploring the causal relationship between 16 eye diseases and stroke and their subtypes from a genome-wide perspective.
+40845690,2025,Comput Biol Chem,MAYBE,MR present but gene-level nomination unclear,False,Exploring potential therapeutic targets for myopia: Causal analysis and biological annotation with gut microbiota.
+40281772,2025,Bioengineering (Basel),MAYBE,MR present but gene-level nomination unclear,False,Causal Links Between Corneal Biomechanics and Myopia: Evidence from Bidirectional Mendelian Randomization in the UK Biobank.
+40881434,2025,Int J Ophthalmol,MAYBE,MR present but gene-level nomination unclear,False,Causal relationship between multiple types of food intake and myopia: a Mendelian randomization study.
+40121349,2025,Eye (Lond),MAYBE,MR present but gene-level nomination unclear,False,Causal effects of allergic diseases on the risk of myopia: a two-sample Mendelian randomization study.
+40322931,2025,Ophthalmic Epidemiol,MAYBE,MR present but gene-level nomination unclear,False,Association Between Body Mass Index and Myopia: Results from NHANES and Mendelian Randomization.
+39094556,2024,Eur J Ophthalmol,MAYBE,MR present but gene-level nomination unclear,False,Mendelian randomization supports causal effects of inflammatory biomarkers on myopic refractive errors.
+38253641,2024,Sci Rep,MAYBE,MR present but gene-level nomination unclear,False,"A Mendelian randomization study on the causal relationship between smoking, alcohol consumption, and the development of myopia and astigmatism."
+38443833,2024,BMC Ophthalmol,MAYBE,MR present but gene-level nomination unclear,False,"Potential causal associations between leisure sedentary behaviors, physical activity, sleep traits, and myopia: a Mendelian randomization study."
+38966704,2024,Front Public Health,MAYBE,MR present but gene-level nomination unclear,False,"Causal relationships between height, screen time, physical activity, sleep and myopia: univariable and multivariable Mendelian randomization."
+39284400,2024,Photodiagnosis Photodyn Ther,MAYBE,MR present but gene-level nomination unclear,False,The lack of causal link between myopia and intraocular pressure: Insights from cross-sectional analysis and Mendelian randomization study.
+39444820,2024,Front Med (Lausanne),MAYBE,MR present but gene-level nomination unclear,False,Vitamin D levels and risk of ocular disorders: insights from bidirectional and multivariable Mendelian randomization analysis.
+39078629,2024,JAMA Netw Open,MAYBE,MR present but gene-level nomination unclear,False,"Visual Impairment, Eye Conditions, and Diagnoses of Neurodegeneration and Dementia."
+39244001,2024,Am J Ophthalmol,MAYBE,MR present but gene-level nomination unclear,False,Omega-3 Polyunsaturated Fatty Acids as a Protective Factor for Myopia.
+39898361,2024,Adv Ophthalmol Pract Res,MAYBE,MR present but gene-level nomination unclear,False,Association between myopia and diabetic retinopathy: A two-sample mendelian randomization study.
+39045316,2024,Front Genet,MAYBE,MR present but gene-level nomination unclear,False,Genetic correlation and causal relationship between sleep and myopia: a mendelian randomization study.
+39239046,2024,Ann Med Surg (Lond),MAYBE,MR present but gene-level nomination unclear,False,Causal relationships between inflammatory cytokines and myopia: an analysis of genetic and observational studies.
+39424917,2024,Eye (Lond),MAYBE,MR present but gene-level nomination unclear,False,Comment on: 'Risk of inappropriate causal inference in Mendelian randomization studies on myopia'.
+38582968,2024,HGG Adv,MAYBE,MR present but gene-level nomination unclear,False,MRBEE: A bias-corrected multivariable Mendelian randomization method.
+40124309,2024,Ophthalmol Sci,MAYBE,MR present but gene-level nomination unclear,False,Association between Plasma Metabolite Levels and Myopia: A 2-Sample Mendelian Randomization Study.
+39091988,2024,Front Pediatr,MAYBE,MR present but gene-level nomination unclear,False,Mendelian randomization analysis reveals a causal relationship between preterm birth and myopia risk.
+38446204,2024,Graefes Arch Clin Exp Ophthalmol,MAYBE,MR present but gene-level nomination unclear,False,Bi-Gaussian analysis reveals distinct education-related alterations in spherical equivalent and axial length-results from the Gutenberg Health Study.
+38937558,2024,Eye (Lond),MAYBE,MR present but gene-level nomination unclear,False,Risk of inappropriate causal inference in Mendelian randomization studies on myopia.
+38428888,2024,Medicine (Baltimore),MAYBE,MR present but gene-level nomination unclear,False,The causal effect of obesity on concomitant exotropia: A lifecourse Mendelian randomization study.
+37919796,2023,J Physiol Anthropol,MAYBE,MR present but gene-level nomination unclear,False,Signatures of adaptation in myopia-related genes on the sunlight exposure hypothesis.
+38010695,2023,Invest Ophthalmol Vis Sci,MAYBE,MR present but gene-level nomination unclear,False,Time Spent Outdoors Partly Accounts for the Effect of Education on Myopia.
+36867130,2023,Invest Ophthalmol Vis Sci,MAYBE,MR present but gene-level nomination unclear,False,Causal Relationships Between Glycemic Traits and Myopia.
+37459064,2023,Invest Ophthalmol Vis Sci,MAYBE,MR present but gene-level nomination unclear,False,Association of Behavioral and Clinical Risk Factors With Cataract: A Two-Sample Mendelian Randomization Study.
+37814298,2023,BMC Med Genomics,MAYBE,MR present but gene-level nomination unclear,False,Mendelian randomization study confirms causal relationship between myopia and vitreous disorders.
+37978069,2023,Calcif Tissue Int,MAYBE,MR present but gene-level nomination unclear,False,Intervertebral Disk Degeneration and Bone Mineral Density: A Bidirectional Mendelian Randomization Study.
+36241375,2023,Br J Ophthalmol,MAYBE,MR present but gene-level nomination unclear,False,Association of hyperopia with incident clinically significant depression: epidemiological and genetic evidence in the middle-aged and older population.
+35570945,2022,Front Public Health,MAYBE,MR present but gene-level nomination unclear,False,Prevalence and Risk Factors of Myopia in Young Adults: Review of Findings From the Raine Study.
+35900730,2022,JAMA Ophthalmol,MAYBE,MR present but gene-level nomination unclear,False,Association Between Myopic Refractive Error and Primary Open-Angle Glaucoma: A 2-Sample Mendelian Randomization Study.
+36187130,2022,Front Endocrinol (Lausanne),MAYBE,MR present but gene-level nomination unclear,False,Osteoporosis and sarcopenia-related traits: A bi-directional Mendelian randomization study.
+36493903,2022,Ophthalmology,MAYBE,MR present but gene-level nomination unclear,False,Mendelian Randomization Implicates Bidirectional Association between Myopia and Primary Open-Angle Glaucoma or Intraocular Pressure.
+34709397,2021,Transl Vis Sci Technol,MAYBE,MR present but gene-level nomination unclear,False,Hyperopia Is Not Causally Associated With a Major Deficit in Educational Attainment.
+33591358,2021,Invest Ophthalmol Vis Sci,MAYBE,MR present but gene-level nomination unclear,False,Association Between Medication-Taking and Refractive Error in a Large General Population-Based Cohort.
+34592243,2021,Ophthalmology,MAYBE,MR present but gene-level nomination unclear,False,High-Density Lipoprotein 3 Cholesterol and Primary Open-Angle Glaucoma: Metabolomics and Mendelian Randomization Analyses.
+32352494,2020,JAMA Ophthalmol,MAYBE,MR present but gene-level nomination unclear,False,Association of Myopia and Intraocular Pressure With Retinal Detachment in European Descent Participants of the UK Biobank Cohort: A Mendelian Randomization Study.
+30905725,2019,Am J Ophthalmol,MAYBE,MR present but gene-level nomination unclear,False,Refractive Error Has Minimal Influence on the Risk of Age-Related Macular Degeneration: A Mendelian Randomization Study.
+31236981,2019,Ophthalmic Physiol Opt,MAYBE,MR present but gene-level nomination unclear,False,"Growth in foetal life, infancy, and early childhood and the association with ocular biometry."
+29875094,2018,BMJ,MAYBE,MR present but gene-level nomination unclear,False,Education and myopia: assessing the direction of causality by mendelian randomisation.
+29973342,2018,BMJ,MAYBE,MR present but gene-level nomination unclear,False,Education and myopia: assessing the direction of causality by mendelian randomisation.

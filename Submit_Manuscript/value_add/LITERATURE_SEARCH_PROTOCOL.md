@@ -4,7 +4,8 @@
 > current draft is *"why only 12 targets from two papers?"* A pre-specified, reproducible
 > search converts an ad-hoc sample into a systematic assessment. Reported per PRISMA 2020.
 >
-> Status: **DRAFT — not yet executed.** Fill the counts and the date at execution.
+> Status: **EXECUTED 2026-08-05** (PubMed/MEDLINE only, single reader). Counts in §6;
+> departures from this protocol recorded in §10 — two of them are outstanding.
 
 ---
 
@@ -18,7 +19,8 @@ uniform standard?**
 ## 2. Databases and date
 
 - PubMed/MEDLINE, Embase, Web of Science, Scopus.
-- Search executed on: `‹DATE›`. Coverage: inception → execution date.
+- Search executed on: **2026-08-05**. Coverage: inception → execution date.
+- **Actually searched: PubMed/MEDLINE only** — see §10.
 - No language restriction; no date restriction.
 
 ## 3. Search string (PubMed syntax; adapt per database)
@@ -68,22 +70,40 @@ Supplemented by backward/forward citation chasing of all included records.
   *(This rule exists because the first pass mis-resolved "UBE" — the source gene is
   **UBE2I** — and mis-attributed Qin et al. 2024 as "Wang et al.")*
 
-## 6. PRISMA flow (fill at execution)
+## 6. PRISMA flow (executed 2026-08-05)
+
+Executed via the PubMed E-utilities MCP interface. Records were screened by the
+automated eligibility filter in `screen1.csv`, then every candidate was adjudicated by
+reading its title and abstract.
 
 | Stage | n |
 |---|---|
-| Records identified | ‹ › |
-| Duplicates removed | ‹ › |
-| Title/abstract screened | ‹ › |
-| Full texts assessed | ‹ › |
-| Studies included | ‹ › |
-| Excluded: pQTL-based | ‹ › |
-| Excluded: other reasons | ‹ › |
-| **Unique genes extracted** | ‹ › |
+| Records identified (main string) | 125 |
+| Records identified (supplementary mQTL/methylation/multi-omics string) | 9 |
+| Duplicates removed | 1 |
+| Title/abstract screened | 133 |
+| Excluded: no myopia/refractive outcome | 21 |
+| Excluded: no gene-level cis-eQTL/SMR/coloc nomination | 95 |
+| Excluded: pQTL/proteome-wide nomination (method mismatch, appendix) | 3 |
+| Excluded: animal-only or functional/cell-model | 5 |
+| Unresolved (abstract unavailable, needs full text) | 1 |
+| **Studies included** | **8** |
+| **Unique genes extracted** | **23** (12 previously audited + 11 new) |
 
-Known to be included at protocol time (already audited): Qin et al. *IOVS* 2024;65(10):13
-(CD34, CD55, WNT3, LCAT, BTN3A1, TSSK6); multi-omics *Clin Epigenetics* 2024
-(PRMT6, SH3YL1, ZKSCAN4, GATS, NPAT, UBE2I).
+Included studies and the genes each nominates are in
+`outputs/published_targets_master.csv`. The two studies audited in v3 are confirmed as
+**Qin et al. IOVS 2024;65(10):13** (CD34, CD55, WNT3, LCAT, BTN3A1, TSSK6) and
+**Dong et al. Clin Epigenetics 2024;16(1):157** (PRMT6, SH3YL1, ZKSCAN4, GATS, NPAT,
+**UBE2I**). Newly identified: CPNE1; BDH1; PDGFRA, LRRTM2, PCOLCE; EPHB4; UTS2, BTBD9,
+S100A3, LGALS9; TSPAN10.
+
+**Excluded as pQTL/proteome-wide** (listed, not silently dropped): PMID 41718003
+(proteome-wide MR, 164 plasma proteins), PMID 39408566 (plasma/brain PWAS), and the
+pQTL arm of PMID 41519384 — whose blood-eQTL arm *is* included.
+
+**Unresolved:** PMID 40040800 (*Natl Sci Rev* 2024, multi-omics variant in choroidal
+vasculature in high myopia) — PubMed carries no abstract; full text required before it
+can be included or excluded.
 
 ## 7. Uniform re-test (identical for every extracted gene)
 
@@ -122,8 +142,9 @@ so the conclusion cannot be chosen after seeing the result.
 
 ## 10. Deviations
 
-Any departure from this protocol after execution is recorded here with its reason.
-
 | Date | Deviation | Reason |
 |---|---|---|
-| | | |
+| 2026-08-05 | Added `mQTL`, `methylation`, `multi-omics`, `multiomics` to the search string as a supplementary query | The §3 string missed studies indexed under methylation/multi-omics wording. The supplementary query returned 9 records, 8 of them not in the main 125. This is a real sensitivity gap and the combined string should be used in any re-run. |
+| 2026-08-05 | `SMR[Title/Abstract]` treated as ambiguous and adjudicated manually | **SMR** denotes both *summary-data-based Mendelian randomization* and *standardized mortality ratio*. It pulled in unrelated papers from 1983, 1996, 1998 and 1999. Either pair it with a myopia-genetics term or replace it with the spelled-out phrase. |
+| 2026-08-05 | Single reader (no second screener, no κ) | §5 specifies two independent readers. This execution had one. The screening decisions are reproducible from `screen1.csv` plus the recorded abstracts, but the protocol's inter-rater step is **outstanding** and must be completed before the systematic claim is made in print. |
+| 2026-08-05 | Databases: PubMed/MEDLINE only | Embase, Web of Science and Scopus were not searched — they are not reachable from the analysis environment. Coverage is therefore narrower than §2 specifies and must be stated as a limitation or completed elsewhere. |
