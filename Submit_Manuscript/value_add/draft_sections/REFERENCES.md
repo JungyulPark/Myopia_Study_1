@@ -49,7 +49,7 @@
 
 21. **Qin Y, Lei C, Lin T, Han X, Wang D. Identification of potential drug targets for myopia through Mendelian randomization. Invest Ophthalmol Vis Sci 2024;65(10):13. doi:10.1167/iovs.65.10.13. PMID 39110588.** ✓
     *(⚠ This is the paper previously mis-cited throughout the manuscript as "Wang et al. 2024" — Wang is the last author. Nominates CD34, CD55, WNT3, LCAT, BTN3A1, TSSK6.)*
-22. **DNA methylation biomarkers and myopia: a multi-omics study integrating GWAS, mQTL and eQTL data. Clin Epigenetics 2024;16. doi:10.1186/s13148-024-01772-1. PMCID PMC11562087.** ✓ *(author list to be completed at submission; nominates PRMT6, SH3YL1, ZKSCAN4, GATS, NPAT, **UBE2I**)*
+22. **Dong XX, Chen DL, Chen HM, Li DL, Hu DN, Lanca C, Grzybowski A, Pan CW. DNA methylation biomarkers and myopia: a multi-omics study integrating GWAS, mQTL and eQTL data. Clin Epigenetics 2024;16(1):157. doi:10.1186/s13148-024-01772-1. PMID 39538342; PMCID PMC11562087.** ✓ *(author list, volume, issue and page verified against the PubMed record 2026-08-05; nominates PRMT6, SH3YL1, ZKSCAN4, GATS, NPAT, **UBE2I** — the six genes are named in the abstract)*
 
 ### Mendelian randomization and colocalization methodology
 

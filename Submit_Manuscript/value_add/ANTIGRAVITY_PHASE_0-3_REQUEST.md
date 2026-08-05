@@ -55,24 +55,31 @@ either way — do not tune the panel to get a nicer number.
 
 ---
 
-## PHASE 2 — Expand the audit systematically
+## PHASE 2 — DONE (search executed 2026-08-05); you only need to re-test the gene list
 
-Follow `Submit_Manuscript/value_add/LITERATURE_SEARCH_PROTOCOL.md` (pre-registered).
+The systematic search has already been run and screened; **no literature work is needed
+from you.** Results: 8 included studies, **23 unique genes** (up from 12). PRISMA counts
+are in `LITERATURE_SEARCH_PROTOCOL.md` §6; the extraction table with source PMID/DOI,
+tissue and method per gene is `outputs/published_targets_master.csv`.
 
-1. Run the §3 search string in PubMed (and, if available, Embase / Web of Science / Scopus).
-2. Screen per §4 eligibility. **Exclude pQTL/proteome-wide nominations** with the stated
-   method-mismatch justification — list them in an appendix rather than dropping silently.
-3. Extract every nominated gene into `outputs/published_targets_master.csv` with the §5
-   columns; resolve every gene ID **against the source paper**.
-4. Fill the PRISMA counts in §6 of the protocol and record the execution date.
-5. Re-test every extracted gene with the same local pipeline → append to
-   `outputs/published_targets_audit.csv` (or a v4 file), including the **evaluability
-   annotation** (n cis-SNPs in window, instrument strength) so "no colocalization" is
-   separable from "no power".
+**Run the same local pipeline on the 11 new genes** (identical settings to Phase 0/3 —
+MR + 3-prior coloc + replication + evaluability annotation), and append to the audit:
 
-Expected scale: ~15–25 genes plus the positive controls — comfortably within local capacity.
+| Gene | Source | PMID |
+|---|---|---|
+| CPNE1 | J Transl Med 2026 (GWAS meta + SMR + coloc + functional) | 41888893 |
+| BDH1 | Transl Vis Sci Technol 2026 (SMR mQTL/eQTL/pQTL + coloc) | 41533846 |
+| PDGFRA, LRRTM2, PCOLCE | Asia Pac J Ophthalmol 2026 (blood eQTL + pQTL, MR + coloc) | 41519384 |
+| EPHB4 | Indian J Ophthalmol 2026 (gene-level MR) | 41669769 |
+| UTS2, BTBD9, S100A3, LGALS9 | J Comput Aided Mol Des 2026 (DEG + ML + MR) | 41492036 |
+| TSPAN10 | Invest Ophthalmol Vis Sci 2026 (MTAG + coloc + fine-map) | 42530915 |
 
----
+Resolve each Ensembl ID **against the source publication**, exactly as in Phase 0b.
+Genes whose symbol cannot be resolved are reported `symbol_ambiguous_not_auditable`
+rather than guessed.
+
+Note for interpretation: the newly added studies are 2026 publications, so several are
+very recent; report them with the same evaluability annotation as the rest.
 
 ## Additional reporting requirement (Phase 3, applies to every gene)
 
