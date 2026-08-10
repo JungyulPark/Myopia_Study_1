@@ -1,0 +1,44 @@
+PUBLISHABILITY ANALYSIS
+==========================================================================
+
+1. TISSUE OF ORIGIN OF PUBLISHED NOMINATIONS (n = 24 gene rows, 9 studies)
+--------------------------------------------------------------------------
+  blood                                       8 genes
+  blood+retina                                5 genes
+  tissue transcriptome (GSE136701)            4 genes
+  blood (2 eQTL datasets) + plasma pQTL       3 genes
+  blood+retina(testis-restricted)             1 genes
+  sclera/blood                                1 genes
+  in silico transcriptomic annotation         1 genes
+  fetal retinal pigment epithelium            1 genes
+
+  Involving blood            : 18/24 gene rows (75%)
+  Involving any eye tissue   : 8/24 gene rows (33%)
+  Blood ONLY (no eye tissue) : 11/24 gene rows (46%)
+  Eye tissue ONLY            : 1/24 gene rows
+
+  Studies using ANY eye tissue: 3 of 9
+
+
+2. PRECISION OF THE REPRODUCTION PROPORTION vs AUDIT SIZE
+--------------------------------------------------------------------------
+Clopper-Pearson exact 95% CI, assuming the observed rate holds.
+
+     n | at 1/12 rate (8.3%)    | at 3/12 rate (25%)    
+------------------------------------------------------------
+    12 |   0.2- 38.5% (w=38.3) |   5.5- 57.2% (w=51.7)
+    23 |   1.1- 28.0% (w=27.0) |  10.2- 48.4% (w=38.2)
+    30 |   0.8- 22.1% (w=21.3) |  12.3- 45.9% (w=33.6)
+    40 |   1.6- 20.4% (w=18.8) |  12.7- 41.2% (w=28.5)
+    60 |   2.8- 18.4% (w=15.6) |  14.7- 37.9% (w=23.1)
+    80 |   3.6- 17.2% (w=13.6) |  16.0- 35.9% (w=19.9)
+   100 |   3.5- 15.2% (w=11.6) |  16.9- 34.7% (w=17.8)
+
+Current audit set after the literature expansion: n = 24 gene rows.
+If the reproduction count stayed at 1, the CI would be 0.1-21.1%
+(vs 0.2-38.5% at n=12) — narrower, but the upper bound is still high enough
+that 'few reproduce' is supportable while an exact rate is not.
+
+INTERPRETATION: the expansion materially improves precision but does not
+license a point estimate. The defensible claim is directional — most
+nominations do not reproduce under a uniform standard — not a percentage.
