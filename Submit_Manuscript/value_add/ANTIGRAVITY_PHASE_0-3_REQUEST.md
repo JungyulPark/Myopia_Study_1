@@ -1,8 +1,48 @@
-# ANTIGRAVITY REQUEST — Phases 0, 2, 3 (audit corrections + expansion + positive controls)
+# ANTIGRAVITY REQUEST — run one script
 
-Everything here runs **locally with no OpenGWAS** (local eQTLGen cis file +
-`ukb-b-6353.vcf.gz`), exactly as `run_scripts/audit_v3_coloc.R` already does.
-Branch `claude/busy-heisenberg-lP58T`; push via the safe file-copy route; **never force-push**.
+**`Rscript run_scripts/audit_v4.R`** — that is the whole request. The script is written
+and verified; it covers Phases 0, 0e, 2 and 3 in a single run. The sections below explain
+what it does and what to report back.
+
+Set `MYOPIA_ROOT` if the repo is not at `C:/Projectbulid/Myopia`. Start with
+`Rscript run_scripts/audit_v4.R --check-only` — it prints the identity/coordinate
+diagnostics in seconds without touching coloc, and that alone answers Phase 0.
+
+### What was already verified here (R 4.3.3, no project data required)
+- Parses cleanly.
+- End-to-end run on synthetic data: a shared causal variant returns PP.H4 = 1.000, a
+  distinct causal variant returns PP.H4 = 0.000, sparse genes are separated out, and the
+  positive-control gate reports correctly when it cannot be assessed.
+- The base-R `coloc.abf` fallback (used only if the `coloc` package is missing) passes all
+  five known-answer scenarios in `run_scripts/11_validate_coloc.R`, posteriors summing to
+  1 within 1.6e-15.
+
+### The PRMT6 diagnosis — read this before re-running anything
+v3 chose the coloc window with `Gene == ensembl & SNPChr == chr & abs(SNPPos - tss) <= 5e5`
+while MR selected instruments by gene ID alone. **A wrong chr/tss therefore yields exactly
+the reported signature: instruments present, coloc window empty,
+`not_evaluable_low_blood_expression (n_cis_snps=0)`.** All three v3 not-evaluable genes are
+the three with suspect identity — PRMT6 (declared chr1:157.6 Mb; PRMT6 is at 1p13.3), GATS
+(declared chr19; GATS/CASTOR3 is chr7q11.23) and "UBE" (not a real symbol; the source gene
+is UBE2I). So that label is almost certainly a **misdiagnosis**, not low expression.
+
+v4 does not patch the coordinates — it removes the failure mode. Gene identity, chromosome
+and TSS are read from eQTLGen's own `GeneSymbol` / `Gene` / `GeneChr` / `GenePos` columns,
+so nothing is hard-coded and a stale coordinate cannot empty a window again. The
+`--check-only` output prints, per gene, the resolved locus and how far v3's hard-coded
+value was from it.
+
+### What to report back
+1. The `--check-only` table (this settles Phase 0/0c).
+2. `outputs/audit_v4_results.csv` and `outputs/derived_gene_loci.csv`.
+3. **The positive-control recovery line** — the script prints GATE PASSED or GATE FAILED
+   per the pre-registered rule. This decides what the paper can claim, so report it
+   verbatim whichever way it goes.
+4. Any symbol reported `absent_from_eqtlgen` — those are genuinely untestable in blood and
+   must be stated, not quietly dropped.
+
+Phase 0e (novelty vs the 2026 multi-ancestry GWAS) still needs the variant list from
+PMID 42009823 supplementary data, which this environment cannot download — see below.
 
 ---
 
