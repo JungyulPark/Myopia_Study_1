@@ -145,6 +145,39 @@ cat(sprintf("symbols requested: %d (%s)\n\n", nrow(want),
 cat("Reading eQTLGen cis file...\n")
 eqtl <- fread(EQTL_FILE, select = c("Pvalue","SNP","SNPChr","SNPPos","Zscore",
                                     "Gene","GeneSymbol","GeneChr","GenePos","NrSamples"))
+
+# ---------------------------------------------------------------------------
+# Enlarge the positive-control panel from the Tedja 2018 locus file.
+# The hand-picked panel of 7 left only 5 testable genes, giving a recovery
+# interval of 1-72% — too wide to establish sensitivity in either direction.
+# Here every Tedja lead locus is mapped to its nearest eQTLGen gene, so the
+# panel is data-derived rather than remembered, and large enough to be usable.
+# Disable with MYOPIA_NO_TEDJA_PANEL=1.
+# ---------------------------------------------------------------------------
+gene_index <- unique(eqtl[, .(GeneSymbol, GeneChr, GenePos)])
+if (!nzchar(Sys.getenv("MYOPIA_NO_TEDJA_PANEL")) && !is.na(TEDJA_FILE)) {
+  td <- fread(TEDJA_FILE)
+  cc <- names(td)[tolower(names(td)) %in% c("chr","chromosome","chr_id")][1]
+  pc <- names(td)[tolower(names(td)) %in% c("pos","position","bp","chr_pos")][1]
+  if (!is.na(cc) && !is.na(pc)) {
+    hits <- character(0)
+    for (i in seq_len(nrow(td))) {
+      near <- gene_index[GeneChr == td[[cc]][i] &
+                         abs(as.numeric(GenePos) - as.numeric(td[[pc]][i])) <= 250000]
+      if (nrow(near)) {
+        near[, d := abs(as.numeric(GenePos) - as.numeric(td[[pc]][i]))]
+        hits <- c(hits, near[which.min(d)]$GeneSymbol)
+      }
+    }
+    hits <- setdiff(unique(hits), want$gene)
+    if (length(hits)) {
+      want <- rbind(want, data.table(gene = hits, phase = "positive_control"))
+      cat(sprintf("  Tedja-derived positive controls added: %d (panel now %d)\n",
+                  length(hits), sum(want$phase == "positive_control")))
+    }
+  } else cat("  Tedja file has no recognisable chr/pos columns — panel not enlarged.\n")
+}
+
 eqtl <- eqtl[GeneSymbol %in% want$gene]
 cat(sprintf("  %d cis-SNP rows covering %d of %d requested symbols\n",
             nrow(eqtl), uniqueN(eqtl$GeneSymbol), nrow(want)))

@@ -4,60 +4,62 @@ Status as of 2026-08-05, branch `claude/busy-heisenberg-lP58T`.
 
 ---
 
-## Verdict
+## Verdict — the gate has now been run, and it FAILED
 
-**The manuscript cannot be submitted today.** One result is missing, and it is the result
-that decides what kind of paper this is. Everything else is done.
+`audit_v4.R` was executed on the analysis machine on 2026-08-05. The pre-registered
+positive-control gate **failed**: blood-eQTL colocalization recovered **1 of 5** testable
+established myopia loci (20%, 95% CI 1–72%), and two more established loci — including
+**GJD2**, the most firmly established myopia gene of all — have **no blood cis-eQTL at
+all** and could not be tested.
 
-**It is not blocked by the absence of a second human screener.** That was over-stated in an
-earlier assessment and is corrected here: a single-reader search is acceptable for a
-re-analysis that uses the search only to assemble its sample, provided the protocol and the
-screening log are published — both are (`LITERATURE_SEARCH_PROTOCOL.md`,
-`outputs/literature_screening_log.csv`). The only consequence is wording: call it a
-**systematic search**, never a *systematic review*, and state the single-reader limitation.
+Per the rule fixed before the data were seen, the audit's negative findings are therefore
+**uninformative about causality, not evidence of non-reproduction.** The paper is the
+methods-caution branch, not the strong audit branch.
 
----
+**This is still a publishable paper, and arguably a more useful one**, because it now
+carries a coherent and uncomfortable message:
 
-## The one blocking gate: the positive-control panel (Phase 3)
+- **75%** of published myopia gene nominations derive wholly or partly from **blood**, and
+  only 3 of 9 studies used any eye tissue.
+- Blood expression data **cannot recover known myopia biology** — 1 of 5, with the flagship
+  locus untestable.
+- Therefore the field is nominating myopia drug targets from a tissue that demonstrably
+  fails to detect myopia loci, and those nominations **cannot be adjudicated by the method
+  that produced them**.
 
-The paper's central claim is that published nominations fail a uniform colocalization
-standard. That claim is only interpretable if the pipeline can detect colocalization when
-it is genuinely present. Until the positive-control panel is run, **we do not know whether
-we have a finding or an artefact of an insensitive assay.**
+That is a finding about the field's method, not a claim that specific genes are false — and
+it is defensible with what is already on disk.
 
-The interpretation rule was fixed in advance (`LITERATURE_SEARCH_PROTOCOL.md` §8) so the
-conclusion cannot be chosen after seeing the data:
+### The three v3 "not evaluable" verdicts were errors, and are now corrected
 
-| Positive-control outcome | What the paper becomes | Realistic venue |
-|---|---|---|
-| **Recovers a substantial fraction** of established loci at PP.H4 > 0.8 | **Audit paper.** "Most genetically nominated myopia targets show no shared causal variant", plus the blood-provenance finding. The strong version. | IOVS, TVST, Genet Epidemiol |
-| **Fails to recover** them | **Methods-caution paper.** "Blood-eQTL colocalization is underpowered for myopia; MR robustness ≠ colocalization." Negative findings must be reported as **uninformative, not as non-reproduction.** | Ophthalmic Genet, BMC Med Genomics |
+The diagnosis was confirmed exactly. All three genes are densely covered in blood; v3's
+`not_evaluable_low_blood_expression (n_cis_snps=0)` was a gene-coordinate/identity bug:
 
-Either way this is **not a discovery paper** — gate G0 is closed and evidence-backed: no
-pharmacology-prioritized gene is a defensibly novel myopia-causal locus.
+| Gene | v3 said | Actually | cis-SNPs | Result |
+|---|---|---|---|---|
+| PRMT6 | chr1:157.56 Mb, not evaluable | chr1:107.60 Mb (**off by 50.0 Mb**) | 6,885 | PP.H4 = 0.257, PP.H1 = 0.676 |
+| GATS | chr19:15.26 Mb, not evaluable | chr7:99.83 Mb (**wrong chromosome, off by 84.6 Mb**) | 4,035 | PP.H4 = 0.005, PP.H1 = 0.991 |
+| UBE2I | "UBE", row invalid | chr16:1.37 Mb, ENSG00000103275 | 9,754 | PP.H4 = 0.009, PP.H1 = 0.960 |
 
----
+The manuscript's claim that three targets "could not be instrumented in blood" was false and
+has been removed. **All 12 nominations are evaluable**; one reproduces (CD55) and **eight**
+show distinct causal variants.
 
-## Everything that must still be run (all require the PI's machine)
+v4 also reproduces every value v3 got right — CD55 0.808, RDH5 0.991, TSSK6 0.782,
+SH3YL1 0.748 — so the two pipelines agree wherever v3's gene identity was correct.
 
-The analysis environment here has no access to eQTLGen (3.6 GB) or `ukb-b-6353.vcf.gz`;
-both hosts are blocked by the organisation's egress policy, and the files are not in the
-repository. This is an access limitation, not a missing script.
+## What still has to happen before submission
 
-Run `value_add/ANTIGRAVITY_PHASE_0-3_REQUEST.md`. In priority order:
-
-1. **Phase 3 — positive controls.** The gate above. If nothing else is done, do this.
-2. **Phase 0 — three defects.** PRMT6's instruments-versus-empty-coloc-window contradiction;
-   the invalid `UBE` row (source gene is **UBE2I**, ENSG00000103275); Ensembl ID
-   verification. A table containing a known-invalid row cannot be submitted.
-3. **Phase 0e — novelty reference update.** *Nat Genet* 2026 (PMID 42009823, ~1.76 M
-   participants, 932 variants) supersedes Tedja 2018. **CD55's novelty flag may flip.**
-4. **Phase 2 — re-test the 11 new genes** listed in `outputs/published_targets_master.csv`.
-
-When those return, the remaining writing is mechanical: fill the two `‹PENDING›` markers in
-the abstract, add Figure 6 (positive controls), and update Tables 1–2.
-
----
+1. **Enlarge the positive-control panel — this is now the binding item.** At n = 5 the
+   recovery interval is 1–72%, which is too wide to establish low sensitivity *or* rule it
+   out; the central claim rests on it. `audit_v4.R` now derives the panel automatically from
+   the local Tedja 2018 locus file by mapping each lead locus to its nearest eQTLGen gene, so
+   this costs one more run. Target n ≥ 25 (interval ≈ 7–41%).
+2. **Re-test the 11 new genes** from the literature search (Phase 2).
+3. **Phase 0e third arm** — novelty against the 2026 *Nat Genet* GWAS still needs that
+   paper's supplementary variant list.
+4. Fill the two remaining `‹PENDING›` markers, add the positive-control figure, update
+   Tables 1–2.
 
 ## What is finished and locked
 

@@ -38,10 +38,10 @@ findings would be reported as uninformative rather than as non-reproduction.
 provenance is itself informative: **75% of nominations derive wholly or partly from blood,
 only 33% involve any eye tissue, and just 3 of 9 studies used eye tissue at all** — so a
 blood-eQTL re-test is method-matched to most of this literature. Of the 12 nominations
-re-tested to date, colocalization was evaluable for nine and **only one (CD55) reproduced**
-(PP.H4 = 0.81 with independent replication); six showed distinct causal variants
-(PP.H1-dominant). The reproduction proportion is 1/12 (8.3%, 95% exact CI 0.2–38.5%), an
-interval wide enough that only the direction, not the rate, is supportable.
+re-tested to date, colocalization was evaluable for **all twelve** and **only one (CD55)
+reproduced** (PP.H4 = 0.81 with independent replication); **eight showed distinct causal
+variants** (PP.H1-dominant). The reproduction proportion is 1/12 (8.3%, 95% exact CI
+0.2–38.5%), an interval wide enough that only the direction, not the rate, is supportable.
 Colocalization was also threshold-sensitive: three of nine evaluable targets exceeded
 PP.H4 = 0.70 but only one exceeded 0.80. In the parallel 113-gene panel, four genes reached
 Bonferroni-significant cis-MR association but only **two colocalized** — RDH5 and CD55;
@@ -51,17 +51,24 @@ correction. Only **RDH5** cleared every filter (PP.H4 = 0.991–0.999; replicati
 Biobank, Tedja/CREAM and FinnGen high myopia, OR = 1.22, *P* = 0.013) and is an established
 locus with independent fetal-RPE colocalization — a recovered positive control.
 **CTNNB1** and **FBN1** replicated in continuous refractive error yet failed colocalization
-(PP.H4 = 0.037, 0.165), so those genes cannot be assigned as causal mediators. Positive-
-control recovery was ‹PENDING Phase 3›, and the remaining 12 nominations are
-‹PENDING Phase 2 re-test›.
+(PP.H4 = 0.037, 0.165), so those genes cannot be assigned as causal mediators. **The pre-specified positive-control panel
+failed**: blood-eQTL colocalization recovered only **1 of 5 evaluable established myopia
+loci** (20%, 95% CI 1–72%), and two further established loci — including **GJD2**, the most
+firmly established myopia gene — have **no blood cis-eQTL at all** and could not be tested.
+Under the interpretation rule fixed before the data were seen, the audit's negative results
+are therefore reported as **uninformative about causality**, not as non-reproduction. The
+remaining 12 nominations are ‹PENDING Phase 2 re-test›.
 
-**Conclusions.** Under a uniform, method-matched standard, the large majority of published
-genetically nominated myopia targets do not show evidence of a shared causal variant with
-myopia, while the pipeline recovers established biology (RDH5). Neither MR significance nor
-independent replication substitutes for colocalization. The finding that this literature
-nominates ocular targets predominantly from blood, with eye tissue used in a minority of
-studies, identifies a structural weakness in how myopia drug targets are currently being
-generated.
+**Conclusions.** Blood-eQTL colocalization recovered only one of five testable established
+myopia loci and could not test the most established locus at all, so it is **not a sensitive
+instrument for adjudicating myopia gene nominations**. We therefore do not claim that the
+published targets are false; we report that they **cannot be adjudicated by the approach
+that generated most of them**. That combination — three-quarters of nominations derived
+from blood, and a demonstrated inability of blood expression data to recover known myopia
+biology — is the substantive finding, and it argues that myopia target nomination should
+move to eye-tissue expression data. Independently of tissue, the analysis also shows that
+neither MR significance nor cohort replication substitutes for colocalization: CTNNB1 and
+FBN1 replicate yet place the causal variant elsewhere.
 
 **Keywords:** myopia; refractive error; Mendelian randomization; colocalization;
 reproducibility; drug-target nomination
@@ -196,9 +203,13 @@ We re-tested the genes nominated by prior myopia MR/eQTL studies — the six dru
 MR nominations of Qin et al. (2024)^[21] (CD34, CD55, WNT3, LCAT, BTN3A1, TSSK6) and the six
 multi-omics SMR nominations of the 2024 multi-omics study^[22] (PRMT6, SH3YL1, ZKSCAN4,
 GATS, NPAT, UBE2I) — under our uniform standard, with colocalization computed locally
-(eQTLGen + UK Biobank). Colocalization was evaluable for 9 of the 12 targets. GATS and UBE2I had no cis-eQTL
-instrument in blood; for PRMT6 the colocalization window returned no overlapping variants
-despite MR instruments being available ‹RESOLVE: re-run PRMT6 coloc — see Phase 0›. Among
+(eQTLGen + UK Biobank). Colocalization was evaluable for all 12 targets. An earlier version of this analysis
+reported PRMT6, GATS and UBE2I as un-instrumentable in blood; that verdict was an error of
+gene-coordinate assignment, not a property of the data. On re-analysis with identity and
+position resolved directly from eQTLGen, all three carry dense cis-eQTL coverage
+(4,035–9,754 cis-SNPs) and are fully evaluable: PRMT6 PP.H4 = 0.257 (PP.H1 = 0.676),
+GATS PP.H4 = 0.005 (PP.H1 = 0.991), UBE2I PP.H4 = 0.009 (PP.H1 = 0.960) — all three
+indicating distinct causal variants rather than absent data. Among
 the nine evaluable targets, **only CD55 was colocalization-supported (PP.H4 = 0.808)
 with independent replication** (CREAM *P* = 1.5 × 10⁻⁷); **six showed distinct causal
 variants** (posterior favouring separate signals for expression and myopia: CD34, WNT3,

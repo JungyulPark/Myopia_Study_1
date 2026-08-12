@@ -1,0 +1,8 @@
+gene,phase,derived_chr,derived_tss_Mb,n_cis,PP.H1,PP.H4,n_shared,status,v3_verdict
+CD55,audited_v3,1,207.51,6019,,0.8080,,ok,PP.H4=0.808 (agrees)
+RDH5,positive_control,12,56.12,5102,,0.9909,,ok,PP.H4=0.991 (agrees)
+PRMT6,audited_v3,1,107.60,6885,0.6755,0.2570,2268,ok,v3=NOT_EVALUABLE (n_cis=0)
+GATS,audited_v3,7,99.83,4035,0.9910,0.0049,1443,ok,v3=NOT_EVALUABLE (n_cis=0)
+UBE2I,audited_v3,16,1.37,9754,0.9596,0.0092,3966,ok,v3=NOT_EVALUABLE (row invalid)
+TSSK6,audited_v3,19,19.63,6497,,0.7819,2395,ok,PP.H4=0.782 (agrees)
+SH3YL1,audited_v3,2,0.24,5485,,0.7480,2078,ok,PP.H4=0.748 (agrees)
