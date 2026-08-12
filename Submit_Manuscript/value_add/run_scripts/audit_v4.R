@@ -52,8 +52,14 @@ find_root <- function() {
 ROOT      <- find_root()
 EQTL_FILE <- file.path(ROOT, EQTL_REL)
 VCF_FILE  <- file.path(ROOT, VCF_REL)
-OUTDIR    <- file.path(ROOT, "Submit_Manuscript/value_add/outputs")
+# Outputs go next to THIS script (i.e. inside the git repo) so results are
+# committable, even when the data ROOT is a different tree. Override with MYOPIA_OUT.
+SCRIPT_DIR <- tryCatch(dirname(normalizePath(sub("--file=", "",
+                 grep("--file=", commandArgs(), value = TRUE)[1]))),
+               error = function(e) ".")
+OUTDIR <- Sys.getenv("MYOPIA_OUT", file.path(SCRIPT_DIR, "..", "outputs"))
 dir.create(OUTDIR, showWarnings = FALSE, recursive = TRUE)
+OUTDIR <- normalizePath(OUTDIR)
 
 # Optional inputs — used when present, reported as skipped when not.
 RETINA_FILE  <- file.path(ROOT, "CP3/data/EyeGEx_retina_eQTL.txt.gz")
@@ -63,7 +69,7 @@ GWASCAT_FILE <- Filter(file.exists, file.path(ROOT,
 TEDJA_FILE   <- Filter(file.exists, file.path(ROOT,
                   c("data/known_myopia_loci_tedja2018.tsv",
                     "Myopia/data/known_myopia_loci_tedja2018.tsv")))[1]
-cat(sprintf("ROOT resolved to: %s\n", ROOT))
+cat(sprintf("ROOT resolved to: %s\nOUTDIR          : %s\n", ROOT, OUTDIR))
 
 eqtl_N <- 31684L; ukb_N <- 460536L; ukb_s <- 0.064
 MIN_SNPS <- 30L; WINDOW <- 500000L
