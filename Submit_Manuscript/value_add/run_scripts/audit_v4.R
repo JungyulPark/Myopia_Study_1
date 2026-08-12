@@ -34,12 +34,36 @@ suppressPackageStartupMessages(library(data.table))
 ARGS       <- commandArgs(trailingOnly = TRUE)
 CHECK_ONLY <- "--check-only" %in% ARGS
 
-ROOT      <- Sys.getenv("MYOPIA_ROOT", "C:/Projectbulid/Myopia")
-EQTL_FILE <- file.path(ROOT, "CP3/data/2019-12-11-cis-eQTLsFDR-ProbeLevel-CohortInfoRemoved-BonferroniAdded.txt.gz")
-VCF_FILE  <- file.path(ROOT, "CP3/data/ukb-b-6353.vcf.gz")
+# The codebase carries TWO conflicting roots — "C:/Projectbulid" (used by
+# CP3/scripts/09_coloc_full_local.R, the engine v3 says it mirrors) and
+# "C:/Projectbulid/Myopia" (used by audit_v3). Rather than guess, locate the data.
+EQTL_REL <- "CP3/data/2019-12-11-cis-eQTLsFDR-ProbeLevel-CohortInfoRemoved-BonferroniAdded.txt.gz"
+VCF_REL  <- "CP3/data/ukb-b-6353.vcf.gz"
+
+find_root <- function() {
+  cand <- c(Sys.getenv("MYOPIA_ROOT", ""), "C:/Projectbulid", "C:/Projectbulid/Myopia",
+            "c:/Projectbulid", "c:/Projectbulid/Myopia", ".", "..", "../..")
+  cand <- cand[nzchar(cand)]
+  for (r in cand) if (file.exists(file.path(r, EQTL_REL)) && file.exists(file.path(r, VCF_REL))) return(r)
+  stop("Could not locate the data under any candidate root.\n",
+       "Tried: ", paste(cand, collapse = ", "), "\n",
+       "Set MYOPIA_ROOT to the folder that contains ", EQTL_REL)
+}
+ROOT      <- find_root()
+EQTL_FILE <- file.path(ROOT, EQTL_REL)
+VCF_FILE  <- file.path(ROOT, VCF_REL)
 OUTDIR    <- file.path(ROOT, "Submit_Manuscript/value_add/outputs")
-IDMAP     <- file.path(OUTDIR, "gene_id_map.csv")
 dir.create(OUTDIR, showWarnings = FALSE, recursive = TRUE)
+
+# Optional inputs — used when present, reported as skipped when not.
+RETINA_FILE  <- file.path(ROOT, "CP3/data/EyeGEx_retina_eQTL.txt.gz")
+GWASCAT_FILE <- Filter(file.exists, file.path(ROOT,
+                  c("raw_data/GWAS_Catalog/gwas_catalog_myopia.tsv",
+                    "Myopia/raw_data/GWAS_Catalog/gwas_catalog_myopia.tsv")))[1]
+TEDJA_FILE   <- Filter(file.exists, file.path(ROOT,
+                  c("data/known_myopia_loci_tedja2018.tsv",
+                    "Myopia/data/known_myopia_loci_tedja2018.tsv")))[1]
+cat(sprintf("ROOT resolved to: %s\n", ROOT))
 
 eqtl_N <- 31684L; ukb_N <- 460536L; ukb_s <- 0.064
 MIN_SNPS <- 30L; WINDOW <- 500000L
@@ -255,3 +279,106 @@ if (nrow(pc) == 0) {
         ">>> GATE FAILED — per the pre-registered rule the audit's negative findings\n    MUST be reported as UNINFORMATIVE, not as non-reproduction.\n")
 }
 cat(sprintf("\nWritten: audit_v4_results.csv  (%d rows)\n", nrow(res)))
+
+
+# ============================================================================
+# STEP D — EYE-TISSUE COLOCALIZATION (EyeGEx retina), when the file is present
+#
+# This is the single biggest caveat on the whole audit: our re-test is blood.
+# EyeGEx_retina_eQTL.txt.gz is referenced by 03_eye_tissue_coloc.R and lives on
+# this machine, so the check can actually be run. A gene that fails in blood but
+# colocalizes in retina is NOT a failed nomination — it is tissue-specific, and
+# must be reported that way.
+# ============================================================================
+if (!file.exists(RETINA_FILE)) {
+  cat("\n[STEP D] EyeGEx retina eQTL not found — eye-tissue check SKIPPED.\n")
+  cat("         Blood-only scope must then be stated as a limitation.\n")
+} else {
+  cat("\n[STEP D] Eye-tissue colocalization (EyeGEx retina)\n")
+  ret <- fread(RETINA_FILE)
+  nm  <- tolower(names(ret))
+  pick <- function(...) { for (k in c(...)) { i <- which(nm == k); if (length(i)) return(names(ret)[i[1]]) }; NA_character_ }
+  c_snp <- pick("snp","rsid","variant_id","rs_id_dbsnp151_gr" )
+  c_gen <- pick("gene","gene_id","ensembl","genesymbol","gene_name")
+  c_b   <- pick("beta","slope","effect","b")
+  c_se  <- pick("se","slope_se","standard_error","stderr")
+  if (anyNA(c(c_snp, c_gen, c_b, c_se))) {
+    cat(sprintf("  Column autodetect failed (snp=%s gene=%s beta=%s se=%s).\n",
+                c_snp, c_gen, c_b, c_se))
+    cat("  Columns present:", paste(names(ret), collapse = ", "), "\n")
+    cat("  Set the four column names by hand and re-run STEP D.\n")
+  } else {
+    setnames(ret, c(c_snp, c_gen, c_b, c_se), c("SNP","GENEKEY","beta_r","se_r"))
+    ret <- ret[!is.na(beta_r) & !is.na(se_r) & se_r > 0]
+    rows <- list()
+    for (i in seq_len(nrow(loci))) {
+      r <- loci[i]; if (is.na(r$n_cis)) next
+      sub <- ret[GENEKEY == r$gene | GENEKEY == r$ensembl]
+      if (nrow(sub) < MIN_SNPS) {
+        rows[[r$gene]] <- data.table(gene = r$gene, retina_n = nrow(sub),
+                                     retina_PP.H4 = NA_real_,
+                                     retina_status = "not_evaluable_in_retina"); next
+      }
+      vs <- vcf[CHR == r$chr]
+      mg <- merge(sub, vs, by.x = "SNP", by.y = "rsid")[!duplicated(SNP)]
+      if (nrow(mg) < MIN_SNPS) {
+        rows[[r$gene]] <- data.table(gene = r$gene, retina_n = nrow(mg),
+                                     retina_PP.H4 = NA_real_,
+                                     retina_status = "no_overlap_with_ukb"); next
+      }
+      maf <- pmin(mg$eaf, 1 - mg$eaf)
+      s <- run_coloc(list(beta = mg$beta_r, varbeta = mg$se_r^2, snp = mg$SNP,
+                          type = "quant", N = 406L, MAF = maf),
+                     list(beta = mg$beta, varbeta = mg$se^2, snp = mg$SNP,
+                          type = "cc", N = ukb_N, s = ukb_s, MAF = maf), 1e-5)$summary
+      rows[[r$gene]] <- data.table(gene = r$gene, retina_n = nrow(mg),
+                                   retina_PP.H4 = s[["PP.H4.abf"]], retina_status = "ok")
+      cat(sprintf("  %-9s retina PP.H4 = %.3f (n=%d)\n", r$gene, s[["PP.H4.abf"]], nrow(mg)))
+    }
+    if (length(rows)) {
+      rt <- rbindlist(rows)
+      res <- merge(res, rt, by = "gene", all.x = TRUE)
+      res[, tissue_discordant := !is.na(PP.H4) & !is.na(retina_PP.H4) &
+                                 PP.H4 < 0.5 & retina_PP.H4 > 0.8]
+      nd <- sum(res$tissue_discordant, na.rm = TRUE)
+      cat(sprintf("\n  Genes failing in blood but colocalizing in retina: %d\n", nd))
+      if (nd) cat("  >>> These are TISSUE-SPECIFIC, not failed nominations. Report as such:",
+                  paste(res[tissue_discordant == TRUE]$gene, collapse = ", "), "\n")
+      fwrite(res, file.path(OUTDIR, "audit_v4_results.csv"))
+    }
+  }
+}
+
+# ============================================================================
+# STEP E — NOVELTY (Phase 0e, the part that needs no Nat Genet supplement)
+#
+# 05_novelty_audit.R hard-coded `tedja_known := FALSE`, so the Tedja 2018 arm was
+# never actually evaluated even though the file is on this machine. Both arms are
+# run here. The 2026 Nat Genet variant list is a THIRD arm, still outstanding.
+# ============================================================================
+cat("\n[STEP E] Known-locus adjudication\n")
+near <- function(chr, pos, tab, cc, pc, win = 500000L) {
+  if (is.null(tab)) return(NA)
+  any(tab[[cc]] == chr & abs(as.numeric(tab[[pc]]) - pos) <= win)
+}
+gc_tab <- if (!is.na(GWASCAT_FILE)) fread(GWASCAT_FILE) else NULL
+td_tab <- if (!is.na(TEDJA_FILE))   fread(TEDJA_FILE)   else NULL
+cat(sprintf("  GWAS Catalog : %s\n", ifelse(is.null(gc_tab), "NOT FOUND", GWASCAT_FILE)))
+cat(sprintf("  Tedja 2018   : %s%s\n", ifelse(is.null(td_tab), "NOT FOUND", TEDJA_FILE),
+            ifelse(is.null(td_tab), "", "   <== never evaluated before; v3 stubbed it to FALSE")))
+
+find_col <- function(tab, opts) { if (is.null(tab)) return(NA_character_)
+  i <- which(tolower(names(tab)) %in% opts); if (length(i)) names(tab)[i[1]] else NA_character_ }
+gc_c <- find_col(gc_tab, c("chr_id","chromosome","chr")); gc_p <- find_col(gc_tab, c("chr_pos","position","pos","bp"))
+td_c <- find_col(td_tab, c("chr","chromosome","chr_id"));  td_p <- find_col(td_tab, c("pos","position","bp","chr_pos"))
+
+nov <- loci[!is.na(n_cis), .(gene, chr = gene_chr, pos = gene_pos)]
+nov[, in_gwas_catalog := if (!is.na(gc_c) && !is.na(gc_p))
+      mapply(function(c, p) near(c, p, gc_tab, gc_c, gc_p), chr, pos) else NA]
+nov[, in_tedja2018 := if (!is.na(td_c) && !is.na(td_p))
+      mapply(function(c, p) near(c, p, td_tab, td_c, td_p), chr, pos) else NA]
+nov[, known_locus := (in_gwas_catalog %in% TRUE) | (in_tedja2018 %in% TRUE)]
+nov[, natgenet2026_checked := FALSE]   # third arm — needs PMID 42009823 supplement
+print(nov)
+fwrite(nov, file.path(OUTDIR, "novelty_v4.csv"))
+cat("\nWritten: novelty_v4.csv  (natgenet2026_checked = FALSE for every row — that arm is still outstanding)\n")
