@@ -48,7 +48,11 @@ find_root <- function() {
 ROOT <- find_root()
 
 # --- locate a measured-refraction outcome ----------------------------------
-cands <- c(file.path(ROOT, "data/41588_2018_127_MOESM14_ESM.gz"),
+# Pre-extracted windows (from 14_extract_outcome_windows.R) come first: they are
+# small enough to commit, so the analysis is reproducible without the full file.
+pre <- list.files(OUTDIR, pattern = "^outcome_windows_.*\\.csv\\.gz$", full.names = TRUE)
+cands <- c(pre,
+           file.path(ROOT, "data/41588_2018_127_MOESM14_ESM.gz"),
            file.path(ROOT, "41588_2018_127_MOESM14_ESM.gz"),
            file.path(Sys.getenv("USERPROFILE"), "Downloads/41588_2018_127_MOESM14_ESM.gz"),
            file.path(ROOT, "CP3/data/ukb-b-19994.vcf.gz"),
@@ -104,8 +108,8 @@ out <- fread(OUTCOME)
 nm  <- tolower(names(out))
 pick <- function(...) { for (k in c(...)) { i <- which(nm == k); if (length(i)) return(names(out)[i[1]]) }; NA_character_ }
 c_snp <- pick("snp","rsid","rs","markername","variant_id","rs_number")
-c_b   <- pick("beta","effect","b","beta_ref","estimate")
-c_se  <- pick("se","standard_error","stderr","sebeta")
+c_b   <- pick("beta_o","beta","effect","b","beta_ref","estimate")
+c_se  <- pick("se_o","se","standard_error","stderr","sebeta")
 if (anyNA(c(c_snp, c_b, c_se))) {
   cat("Could not autodetect outcome columns.\n  found:", paste(names(out), collapse = ", "), "\n")
   cat("  Set c_snp/c_b/c_se by hand and re-run — do not guess.\n"); quit(save = "no", status = 1)
@@ -118,7 +122,8 @@ cat(sprintf("  outcome SNPs: %d (cols %s / %s / %s)\n", nrow(out), c_snp, c_b, c
 # lead SNPs. A supplementary "significant loci" table has a few hundred rows and
 # would silently yield insufficient_overlap for every gene, which looks like a
 # result but is an input problem. Refuse it explicitly.
-if (nrow(out) < 1e5) {
+IS_PREEXTRACTED <- grepl("outcome_windows_", OUTCOME)
+if (!IS_PREEXTRACTED && nrow(out) < 1e5) {
   cat("\nSTOP: this outcome file has only", nrow(out), "SNPs.\n")
   cat("Colocalization needs genome-wide summary statistics (millions of SNPs);\n")
   cat("a lead-SNP or significant-loci supplementary table cannot be used for it,\n")
