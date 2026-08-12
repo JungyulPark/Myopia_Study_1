@@ -68,28 +68,60 @@ c_chr <- pick("chr","chromosome","chrom","chr_name","#chrom")
 c_pos <- pick("pos","position","bp","base_pair_location","chr_position","pos_b37")
 c_b   <- pick("beta","effect","b","estimate","beta_ref","effect_size")
 c_se  <- pick("se","standard_error","stderr","sebeta","standarderror")
+# METAL output carries Zscore + sample size + allele frequency instead of beta/se
+c_z   <- pick("zscore","z","z_score","z-score")
+c_n   <- pick("totalsamplesize","n","samplesize","n_total","weight")
+c_f   <- pick("freq1","eaf","effect_allele_frequency","af","freq","maf")
 
-cat(sprintf("  rows: %s | columns detected: snp=%s chr=%s pos=%s beta=%s se=%s\n",
-            format(nrow(d), big.mark = ","), c_snp, c_chr, c_pos, c_b, c_se))
+cat(sprintf("  rows: %s | snp=%s chr=%s pos=%s beta=%s se=%s | z=%s n=%s freq=%s\n",
+            format(nrow(d), big.mark = ","), c_snp, c_chr, c_pos, c_b, c_se, c_z, c_n, c_f))
+
+# --- derive beta/se from Z when they are absent -----------------------------
+# Standard approximation for a continuous trait (Zhu et al. 2016, used by SMR):
+#   b  = z / sqrt(2p(1-p)(n + z^2)),  se = 1 / sqrt(2p(1-p)(n + z^2))
+# Only the b/se RATIO enters the Wakefield ABF, so the scale convention does not
+# affect colocalization; the same transform is applied to every SNP.
+DERIVED <- FALSE
+if ((is.na(c_b) || is.na(c_se)) && !anyNA(c(c_z, c_n, c_f))) {
+  setnames(d, c(c_z, c_n, c_f), c("Z", "Nobs", "FRQ"))
+  d[, FRQ := suppressWarnings(as.numeric(FRQ))]
+  d[, Z   := suppressWarnings(as.numeric(Z))]
+  d[, Nobs:= suppressWarnings(as.numeric(Nobs))]
+  d <- d[!is.na(Z) & !is.na(Nobs) & !is.na(FRQ) & FRQ > 0 & FRQ < 1]
+  d[, den := sqrt(2 * FRQ * (1 - FRQ) * (Nobs + Z^2))]
+  d <- d[den > 0]
+  d[, `:=`(beta_o = Z / den, se_o = 1 / den)]
+  c_b <- "beta_o"; c_se <- "se_o"; DERIVED <- TRUE
+  cat("  No beta/se columns — derived them from Zscore, sample size and allele\n")
+  cat("  frequency (Zhu et al. 2016). Only the beta/se ratio enters the ABF, so\n")
+  cat("  colocalization is unaffected by the scale convention.\n")
+}
+
 if (is.na(c_b) || is.na(c_se)) {
-  cat("\nCannot proceed: no beta/se columns found. Present:\n  ",
-      paste(names(d), collapse = ", "), "\n")
-  cat("Colocalization needs per-SNP effect sizes and standard errors. If this file\n")
-  cat("carries only P-values or Z-scores, say so and the script can be adapted —\n")
-  cat("do not rename columns by hand and hope.\n")
-  quit(save = "no", status = 1)
+  cat("\nCannot proceed: no beta/se, and no Zscore+N+frequency to derive them from.\n")
+  cat("  Present: ", paste(names(d), collapse = ", "), "\n"); quit(save = "no", status = 1)
 }
-if (is.na(c_chr) || is.na(c_pos)) {
-  cat("\nNo chr/pos columns. Windows can only be cut on coordinates.\n")
-  cat("Supply a file with chromosome and position, or add them by rsID lookup first.\n")
-  quit(save = "no", status = 1)
-}
-if (nrow(d) < 1e5)
-  cat("\nWARNING: only ", nrow(d), " rows. This looks like a lead-SNP table, not\n",
-      "genome-wide summary statistics. Colocalization needs the latter.\n", sep = "")
+if (!DERIVED) setnames(d, c(c_b, c_se), c("beta_o", "se_o"))
+if (!is.na(c_snp)) setnames(d, c_snp, "SNP") else d[, SNP := NA_character_]
 
-setnames(d, c(c_chr, c_pos, c_b, c_se), c("CHR","POS","beta_o","se_o"))
-if (!is.na(c_snp)) setnames(d, c_snp, "SNP") else d[, SNP := paste0(CHR, ":", POS)]
+# --- coordinates: prefer rsID matching, which is build-independent ----------
+BY_RSID <- FALSE
+if (is.na(c_chr) || is.na(c_pos)) {
+  if (is.na(c_snp)) {
+    cat("\nNo chr/pos and no rsID — cannot place SNPs in windows.\n"); quit(save="no", status=1)
+  }
+  cat("  No chr/pos columns; taking coordinates from eQTLGen by rsID instead.\n")
+  cat("  This is build-independent, so a GRCh37/38 mismatch cannot arise.\n")
+  map <- unique(fread(file.path(ROOT, EQTL_REL),
+                      select = c("SNP","SNPChr","SNPPos")))
+  setnames(map, c("SNP","CHR","POS"))
+  d <- merge(d, map[!duplicated(SNP)], by = "SNP")
+  BY_RSID <- TRUE
+  cat(sprintf("  rsID matched to eQTLGen: %s of the file's SNPs\n",
+              format(nrow(d), big.mark = ",")))
+} else {
+  setnames(d, c(c_chr, c_pos), c("CHR","POS"))
+}
 d[, CHR := suppressWarnings(as.integer(gsub("^chr", "", as.character(CHR), ignore.case = TRUE)))]
 d[, POS := suppressWarnings(as.numeric(POS))]
 d <- d[!is.na(CHR) & !is.na(POS) & !is.na(beta_o) & !is.na(se_o) & se_o > 0]
@@ -111,7 +143,7 @@ keep <- keep[!is.na(gene)]
 # coordinate error, so check rather than hope.
 cover <- uniqueN(keep$gene) / nrow(gi)
 dens  <- if (nrow(keep)) nrow(keep) / uniqueN(keep$gene) else 0
-if (nrow(d) > 1e6 && (cover < 0.5 || dens < 200)) {
+if (!BY_RSID && nrow(d) > 1e6 && (cover < 0.5 || dens < 200)) {
   cat("\n*** LIKELY GENOME-BUILD MISMATCH ***\n")
   cat(sprintf("  The file has %s SNPs genome-wide, yet only %.0f%% of windows got any\n",
               format(nrow(d), big.mark = ","), 100 * cover))
@@ -122,6 +154,8 @@ if (nrow(d) > 1e6 && (cover < 0.5 || dens < 200)) {
   cat("  to GRCh37 (or match on rsID instead of position) before using this output.\n")
   cat("  Writing the file anyway so the counts can be inspected — DO NOT treat these\n")
   cat("  as results until the build is confirmed.\n\n")
+} else if (BY_RSID) {
+  cat(sprintf("\n  Matched by rsID — build mismatch impossible. %.0f%% of windows covered, mean %.0f SNPs.\n", 100*cover, dens))
 } else if (nrow(d) > 1e6) {
   cat(sprintf("\n  Build check OK: %.0f%% of windows covered, mean %.0f SNPs per window.\n",
               100 * cover, dens))

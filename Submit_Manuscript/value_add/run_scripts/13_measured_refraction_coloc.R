@@ -96,6 +96,23 @@ GENES <- unique(c(prev[status == "ok"]$gene,
                   "LATS1","LATS2","YAP1","WWTR1","TEAD1","STK3","STK4","SAV1","NF2","CCN2"))
 phase_of <- setNames(prev$phase, prev$gene)
 
+# The measured-refraction file may be far sparser than the UKB VCF. Comparing a
+# 60-SNP window against a 2,000-SNP window is not like-for-like: sparse coverage
+# lowers the chance of ever seeing the shared causal variant and so depresses H4
+# on its own. The self-report arm is therefore RE-RUN here on exactly the same
+# SNPs, and that matched arm — not the original audit_v4 numbers — is what the
+# measured arm is compared against.
+VCF_FILE <- file.path(ROOT, "CP3/data/ukb-b-6353.vcf.gz")
+HAVE_VCF <- file.exists(VCF_FILE)
+if (HAVE_VCF) {
+  cat("Reading UKB VCF for the SNP-matched self-report arm...\n")
+  v <- fread(VCF_FILE, skip = "#CHROM", select = c(1L,2L,3L,10L))
+  setnames(v, c("CHR","POS","ID","UKB"))
+  sp <- tstrsplit(v$UKB, ":")
+  v[, `:=`(beta_u = as.numeric(sp[[1]]), se_u = as.numeric(sp[[2]]), SNP = ID)]
+  v <- v[!is.na(beta_u) & !is.na(se_u) & se_u > 0][!duplicated(SNP)]
+} else cat("UKB VCF absent — the SNP-matched self-report arm will be skipped.\n")
+
 cat("Reading eQTLGen...\n")
 eqtl <- fread(file.path(ROOT, EQTL_REL),
               select = c("Pvalue","SNP","SNPChr","SNPPos","Zscore","Gene",
@@ -147,10 +164,22 @@ for (g in unique(eqtl$GeneSymbol)) {
   }
   pp <- coloc_abf_base(list(beta = mg$beta_e, varbeta = mg$se_e^2),
                        list(beta = mg$beta_o, varbeta = mg$se_o^2))
-  res[[g]] <- data.table(gene = g, phase = if (is.null(phase_of[[g]])) "hippo_yap" else phase_of[[g]],
-                         n_shared = nrow(mg), status = "ok",
-                         PP.H0 = pp[["PP.H0"]], PP.H1 = pp[["PP.H1"]],
-                         PP.H2 = pp[["PP.H2"]], PP.H3 = pp[["PP.H3"]], PP.H4 = pp[["PP.H4"]])
+  row <- data.table(gene = g, phase = if (is.null(phase_of[[g]])) "hippo_yap" else phase_of[[g]],
+                    n_shared = nrow(mg), status = "ok",
+                    PP.H0 = pp[["PP.H0"]], PP.H1 = pp[["PP.H1"]],
+                    PP.H2 = pp[["PP.H2"]], PP.H3 = pp[["PP.H3"]], PP.H4 = pp[["PP.H4"]])
+  # same gene, same SNPs, self-reported outcome
+  if (HAVE_VCF) {
+    mu <- merge(mg[, .(SNP, beta_e, se_e)], v[, .(SNP, beta_u, se_u)], by = "SNP")
+    if (nrow(mu) >= 30L) {
+      pu <- coloc_abf_base(list(beta = mu$beta_e, varbeta = mu$se_e^2),
+                           list(beta = mu$beta_u, varbeta = mu$se_u^2))
+      row[, `:=`(m_n = nrow(mu), m_PP.H1 = pu[["PP.H1"]],
+                 m_PP.H3 = pu[["PP.H3"]], m_PP.H4 = pu[["PP.H4"]],
+                 m_PP.H0 = pu[["PP.H0"]], m_PP.H2 = pu[["PP.H2"]])]
+    }
+  }
+  res[[g]] <- row
 }
 r <- rbindlist(res, fill = TRUE)
 fwrite(r, file.path(OUTDIR, "measured_refraction_coloc.csv"))
@@ -177,14 +206,39 @@ for (ph in c("audited_v3", "phase2_new", "positive_control", "hippo_yap")) {
       sum(b$top=="H1"), nrow(b), sum(b$top=="H3"), nrow(b), sum(b$PP.H4>0.8))
 }
 
-nomA <- prev[phase %in% c("audited_v3","phase2_new") & status=="ok"]
-nomB <- ok[phase %in% c("audited_v3","phase2_new")]
 say("%s\nVERDICT ON THE CONFOUND\n", strrep("-", 70))
-say("Nominations, H1 dominance: %.0f%% self-reported -> %.0f%% measured\n",
-    100*mean(nomA$top=="H1"), 100*mean(nomB$top=="H1"))
-say(if (mean(nomB$top=="H1") > 0.5)
-  "H1 dominance PERSISTS on a measured phenotype: the loci carry no refractive-error\nsignal, and self-report is not the explanation.\n" else
-  "H1 dominance RESOLVES on a measured phenotype: the earlier result was driven by\nphenotype quality, and the nominations must not be described as unsupported.\n")
+if ("m_PP.H1" %in% names(ok) && any(!is.na(ok$m_PP.H1))) {
+  cmp <- ok[!is.na(m_PP.H1) & phase %in% c("audited_v3","phase2_new")]
+  cmp[, top_meas  := c("H0","H1","H2","H3","H4")[max.col(as.matrix(.SD))],
+      .SDcols = c("PP.H0","PP.H1","PP.H2","PP.H3","PP.H4")]
+  cmp[, top_self  := c("H0","H1","H2","H3","H4")[max.col(as.matrix(.SD))],
+      .SDcols = c("m_PP.H0","m_PP.H1","m_PP.H2","m_PP.H3","m_PP.H4")]
+  say("Like-for-like: both outcomes on the SAME SNPs (median %d per gene, n = %d genes)\n\n",
+      as.integer(median(cmp$m_n)), nrow(cmp))
+  say("  self-reported (SNP-matched) : H1 %2d/%2d (%3.0f%%)  H3 %2d  H4>0.8 %2d\n",
+      sum(cmp$top_self=="H1"), nrow(cmp), 100*mean(cmp$top_self=="H1"),
+      sum(cmp$top_self=="H3"), sum(cmp$m_PP.H4>0.8))
+  say("  measured refraction         : H1 %2d/%2d (%3.0f%%)  H3 %2d  H4>0.8 %2d\n\n",
+      sum(cmp$top_meas=="H1"), nrow(cmp), 100*mean(cmp$top_meas=="H1"),
+      sum(cmp$top_meas=="H3"), sum(cmp$PP.H4>0.8))
+  h1_self <- mean(cmp$top_self == "H1"); h1_meas <- mean(cmp$top_meas == "H1")
+  d_h1 <- h1_meas - h1_self
+  say("H1 dominance, self-reported -> measured: %.0f%% -> %.0f%% (%+.0f pp)\n\n",
+      100*h1_self, 100*h1_meas, 100*d_h1)
+  # The verdict must follow the DIRECTION of change, not the level alone: H1 can sit
+  # near 50% while having risen, which is the opposite of the confound resolving.
+  say(if (nrow(cmp) < 8)
+        sprintf("TOO FEW GENES (n = %d) to call this either way. Report the counts, not a verdict.\n", nrow(cmp))
+      else if (d_h1 <= -0.20 && h1_meas < 0.5)
+        "H1 dominance FALLS substantially on a measured phenotype, on identical SNPs.\nThe earlier result was driven at least partly by phenotype quality, so the\nnominations must NOT be described as unsupported.\n"
+      else if (h1_meas >= 0.5 || d_h1 >= 0)
+        "H1 dominance PERSISTS (or rises) on a measured phenotype, on identical SNPs.\nSelf-report is not the explanation: these loci carry no refractive-error signal\nin either outcome.\n"
+      else
+        "H1 dominance falls only modestly and stays substantial. Neither reading is\nclearly supported — report both numbers and draw no verdict.\n")
+  say("\nNOTE: the measured outcome is a meta-analysis Z-score file converted to beta/se;\nboth arms use identical SNPs, so density cannot drive the difference.\n")
+} else {
+  say("SNP-matched self-report arm unavailable (no UKB VCF), so the measured result\ncannot be compared like-for-like. Density differences alone could explain any\ndifference from the audit_v4 numbers — do not compare them directly.\n")
+}
 
 hy <- ok[phase == "hippo_yap"]
 if (nrow(hy)) {
