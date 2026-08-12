@@ -1,0 +1,48 @@
+POSTERIOR PROFILE: nominations vs established myopia loci
+========================================================================
+
+established myopia loci (n = 26, median 2661 shared SNPs)
+   H0 dominant :  0 (  0%)   <- uninformative: no power
+   H1 dominant :  1 (  4%)   <- eQTL yes, NO myopia signal
+   H2 dominant :  2 (  8%)
+   H3 dominant : 20 ( 77%)   <- both signals, DIFFERENT variants
+   H4 dominant :  3 ( 12%)   <- shared causal variant
+   PP.H4 > 0.8   :  3 ( 12%)
+
+published nominations (n = 22, median 2253 shared SNPs)
+   H0 dominant :  1 (  5%)   <- uninformative: no power
+   H1 dominant : 16 ( 73%)   <- eQTL yes, NO myopia signal
+   H2 dominant :  0 (  0%)
+   H3 dominant :  2 (  9%)   <- both signals, DIFFERENT variants
+   H4 dominant :  3 ( 14%)   <- shared causal variant
+   PP.H4 > 0.8   :  1 (  5%)
+
+------------------------------------------------------------------------
+The two groups fail for OPPOSITE reasons:
+  established loci  -> H3 in 77%: the myopia signal is present and the assay
+                       resolves it as a distinct variant from blood expression.
+  nominations       -> H1 in 73%: blood expression signal is present but the
+                       myopia GWAS shows essentially nothing in the window.
+
+H3 dominance, established vs nominated : 77% vs 9%, Fisher P = 2.14e-06
+PP.H4 distribution                     : median 0.0000 vs 0.0020, Wilcoxon P = 0.010
+H0 dominance (genuine lack of power)   : 0/26 vs 1/22
+
+WHAT THIS DOES AND DOES NOT SUPPORT
+------------------------------------------------------------------------
+Supported:
+ - The pipeline is NOT blind to myopia signal. At established loci it detects it
+   in 88% of cases; H0 dominance is 0 of 26. Low PP.H4 is therefore not an
+   artefact of missing power, which is what the pooled gate figure suggested.
+ - Even where myopia signal is certain, blood expression shares the causal variant
+   in only 12% of loci. Failing colocalization in blood is therefore weak
+   evidence against a gene, and should not be reported as refutation.
+ - The nominated loci behave differently from established loci (Fisher P above).
+
+NOT supported, and must not be claimed:
+ - That the nominations are false. H1 dominance means no myopia association in
+   THIS outcome (ukb-b-6353, self-reported myopia). The source studies used other,
+   sometimes better-powered outcomes, and self-report is a lossy phenotype. Outcome
+   choice and nomination quality are confounded here and cannot be separated.
+ - Any sensitivity figure as a property of the assay alone: positive controls map a
+   GWAS lead SNP to its NEAREST gene, which is often not the causal gene.

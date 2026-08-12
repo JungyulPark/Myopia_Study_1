@@ -51,12 +51,19 @@ correction. Only **RDH5** cleared every filter (PP.H4 = 0.991–0.999; replicati
 Biobank, Tedja/CREAM and FinnGen high myopia, OR = 1.22, *P* = 0.013) and is an established
 locus with independent fetal-RPE colocalization — a recovered positive control.
 **CTNNB1** and **FBN1** replicated in continuous refractive error yet failed colocalization
-(PP.H4 = 0.037, 0.165), so those genes cannot be assigned as causal mediators. **The pre-specified positive-control panel
-failed**: blood-eQTL colocalization recovered only **1 of 5 evaluable established myopia
-loci** (20%, 95% CI 1–72%), and two further established loci — including **GJD2**, the most
-firmly established myopia gene — have **no blood cis-eQTL at all** and could not be tested.
-Under the interpretation rule fixed before the data were seen, the audit's negative results
-are therefore reported as **uninformative about causality**, not as non-reproduction. The
+(PP.H4 = 0.037, 0.165), so those genes cannot be assigned as causal mediators. The pre-specified positive-control panel,
+enlarged to 26 evaluable established myopia loci derived from genome-wide-significant
+signals in the outcome GWAS itself, **recovered only 3 (12%, 95% CI 2–30%)**, so under the
+interpretation rule fixed before the data were seen the audit's negative results are
+reported as **uninformative about causality** rather than as non-reproduction. The full
+posterior profile shows why, and distinguishes two effects that the PP.H4 count conflates:
+at established loci the dominant hypothesis is **distinct causal variants** (H3, 20/26 =
+77%) with **no locus lacking power** (H0, 0/26), whereas at the nominated genes it is
+**expression signal with no myopia association in the window** (H1, 16/22 = 73%; Fisher
+*P* = 2.1 × 10⁻⁶). Blood colocalization is therefore a stringent filter rather than an
+insensitive one — even where myopia association is certain it shares a causal variant only
+12% of the time — while the nominated loci are qualitatively unlike established loci in this
+outcome. The
 remaining 11 nominations from the systematic search were then re-tested under the same
 standard: **10 were evaluable and every one returned PP.H4 < 0.006** (maximum 0.0055;
 LRRTM2 has no blood cis-eQTL). Across all **22 evaluable nominations**, only CD55 exceeds
@@ -65,10 +72,11 @@ below 0.01**, with a median PP.H4 of 0.0013.
 
 **Conclusions.** Blood-eQTL colocalization recovered only one of five testable established
 myopia loci and could not test the most established locus at all, so it is **not a sensitive
-instrument for adjudicating myopia gene nominations**. The near-uniform floor of the
-nomination results — 73% below PP.H4 = 0.01 — is what an insensitive assay produces
-regardless of whether the underlying nominations are correct, and cannot be read as evidence
-against them. We therefore do not claim that the
+instrument for adjudicating myopia gene nominations**. Failing blood colocalization is weak evidence against any
+gene and must not be read as refutation. Separately, the nominated loci show expression
+signal without myopia association in this outcome; because that outcome is self-reported
+myopia, phenotype quality and nomination quality are confounded and cannot be separated
+here. We therefore do not claim that the
 published targets are false; we report that they **cannot be adjudicated by the approach
 that generated most of them**. That combination — three-quarters of nominations derived
 from blood, and a demonstrated inability of blood expression data to recover known myopia
