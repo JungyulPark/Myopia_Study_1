@@ -104,6 +104,29 @@ keep <- rbindlist(lapply(seq_len(nrow(gi)), function(i) {
 }), fill = TRUE)
 keep <- keep[!is.na(gene)]
 
+# ---- genome-build sanity check --------------------------------------------
+# eQTLGen windows are GRCh37/hg19. If the outcome file is GRCh38 the cut lands in
+# the wrong place and returns almost nothing — quietly, and looking like a real
+# negative. This project has already been damaged once by exactly this class of
+# coordinate error, so check rather than hope.
+cover <- uniqueN(keep$gene) / nrow(gi)
+dens  <- if (nrow(keep)) nrow(keep) / uniqueN(keep$gene) else 0
+if (nrow(d) > 1e6 && (cover < 0.5 || dens < 200)) {
+  cat("\n*** LIKELY GENOME-BUILD MISMATCH ***\n")
+  cat(sprintf("  The file has %s SNPs genome-wide, yet only %.0f%% of windows got any\n",
+              format(nrow(d), big.mark = ","), 100 * cover))
+  cat(sprintf("  SNPs and the average window holds just %.0f.\n", dens))
+  cat("  A dense genome-wide file should fill nearly every window with thousands.\n")
+  cat("  The usual cause is that this file is GRCh38 while eQTLGen is GRCh37/hg19.\n")
+  cat("  Check the source documentation for its build. If it is GRCh38, lift it over\n")
+  cat("  to GRCh37 (or match on rsID instead of position) before using this output.\n")
+  cat("  Writing the file anyway so the counts can be inspected — DO NOT treat these\n")
+  cat("  as results until the build is confirmed.\n\n")
+} else if (nrow(d) > 1e6) {
+  cat(sprintf("\n  Build check OK: %.0f%% of windows covered, mean %.0f SNPs per window.\n",
+              100 * cover, dens))
+}
+
 per <- keep[, .N, by = gene][order(N)]
 cat(sprintf("\nExtracted %s SNP-window rows across %d genes\n",
             format(nrow(keep), big.mark = ","), uniqueN(keep$gene)))
