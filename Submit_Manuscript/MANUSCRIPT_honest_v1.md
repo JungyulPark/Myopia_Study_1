@@ -57,11 +57,18 @@ loci** (20%, 95% CI 1–72%), and two further established loci — including **G
 firmly established myopia gene — have **no blood cis-eQTL at all** and could not be tested.
 Under the interpretation rule fixed before the data were seen, the audit's negative results
 are therefore reported as **uninformative about causality**, not as non-reproduction. The
-remaining 12 nominations are ‹PENDING Phase 2 re-test›.
+remaining 11 nominations from the systematic search were then re-tested under the same
+standard: **10 were evaluable and every one returned PP.H4 < 0.006** (maximum 0.0055;
+LRRTM2 has no blood cis-eQTL). Across all **22 evaluable nominations**, only CD55 exceeds
+PP.H4 = 0.8 (1/22, 4.5%, 95% CI 0.1–22.8%), three exceed 0.5, and **16 of 22 (73%) fall
+below 0.01**, with a median PP.H4 of 0.0013.
 
 **Conclusions.** Blood-eQTL colocalization recovered only one of five testable established
 myopia loci and could not test the most established locus at all, so it is **not a sensitive
-instrument for adjudicating myopia gene nominations**. We therefore do not claim that the
+instrument for adjudicating myopia gene nominations**. The near-uniform floor of the
+nomination results — 73% below PP.H4 = 0.01 — is what an insensitive assay produces
+regardless of whether the underlying nominations are correct, and cannot be read as evidence
+against them. We therefore do not claim that the
 published targets are false; we report that they **cannot be adjudicated by the approach
 that generated most of them**. That combination — three-quarters of nominations derived
 from blood, and a demonstrated inability of blood expression data to recover known myopia

@@ -48,13 +48,41 @@ show distinct causal variants.
 v4 also reproduces every value v3 got right — CD55 0.808, RDH5 0.991, TSSK6 0.782,
 SH3YL1 0.748 — so the two pipelines agree wherever v3's gene identity was correct.
 
+### Correction — two files I claimed were present are not
+
+I previously reported that `EyeGEx_retina_eQTL.txt.gz` and
+`known_myopia_loci_tedja2018.tsv` were on the analysis machine, and treated the eye-tissue
+check as unblocked on that basis. **Both are absent.** I had inferred their existence from
+paths inside `03_eye_tissue_coloc.R` and `AXIAL_DISCOVERY_local.R`, which are annotated
+`# <- set to resolved path` and `# <- RESOLVE` — markers that the path was still *to be*
+resolved, not evidence of a file. Eye-tissue colocalization is therefore **still not done**,
+and the blood-only scope remains a stated limitation.
+
+### The full nomination set is now audited: 22 evaluable genes
+
+The 11 newly identified nominations were re-tested. Ten were evaluable and **every one
+returned PP.H4 < 0.006** (max 0.0055; LRRTM2 has no blood cis-eQTL). Across all 22:
+
+| | |
+|---|---|
+| PP.H4 > 0.8 | **1** (CD55) — 4.5%, 95% CI 0.1–22.8% |
+| PP.H4 > 0.5 | 3 (CD55, TSSK6, SH3YL1) |
+| PP.H4 < 0.01 | **16 of 22 (73%)** |
+| median PP.H4 | 0.0013 |
+
+A near-uniform floor across 22 independently nominated genes, in an assay that recovers
+1 of 5 known loci, is the signature of an insensitive test — not of 22 wrong nominations.
+
 ## What still has to happen before submission
 
-1. **Enlarge the positive-control panel — this is now the binding item.** At n = 5 the
-   recovery interval is 1–72%, which is too wide to establish low sensitivity *or* rule it
-   out; the central claim rests on it. `audit_v4.R` now derives the panel automatically from
-   the local Tedja 2018 locus file by mapping each lead locus to its nearest eQTLGen gene, so
-   this costs one more run. Target n ≥ 25 (interval ≈ 7–41%).
+1. **Enlarge the positive-control panel — the binding item.** At n = 5 the recovery interval
+   is 1–72%, too wide to establish low sensitivity *or* rule it out, and the central claim
+   rests on it. Since neither the Tedja nor the GWAS-Catalog file exists locally,
+   `audit_v4.R` now falls back to deriving controls from **the outcome GWAS itself** —
+   genome-wide-significant loci in `ukb-b-6353`, mapped to their nearest eQTLGen gene. This
+   needs no external data and is the strictest sensitivity check available: if blood-eQTL
+   colocalization cannot recover loci that are undisputed in the very GWAS being tested
+   against, it cannot adjudicate anything. Target n ≥ 25 (interval ≈ 7–41%).
 2. **Re-test the 11 new genes** from the literature search (Phase 2).
 3. **Phase 0e third arm** — novelty against the 2026 *Nat Genet* GWAS still needs that
    paper's supplementary variant list.

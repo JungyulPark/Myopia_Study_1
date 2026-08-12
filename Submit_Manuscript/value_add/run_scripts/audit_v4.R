@@ -147,35 +147,78 @@ eqtl <- fread(EQTL_FILE, select = c("Pvalue","SNP","SNPChr","SNPPos","Zscore",
                                     "Gene","GeneSymbol","GeneChr","GenePos","NrSamples"))
 
 # ---------------------------------------------------------------------------
-# Enlarge the positive-control panel from the Tedja 2018 locus file.
+# Positive-control panel.
 # The hand-picked panel of 7 left only 5 testable genes, giving a recovery
-# interval of 1-72% — too wide to establish sensitivity in either direction.
-# Here every Tedja lead locus is mapped to its nearest eQTLGen gene, so the
-# panel is data-derived rather than remembered, and large enough to be usable.
-# Disable with MYOPIA_NO_TEDJA_PANEL=1.
+# interval of 1-72% — too wide to establish sensitivity either way. Enlarge it
+# from whatever reference is actually present, in this order:
+#   (1) Tedja 2018 locus file, (2) local GWAS Catalog myopia file,
+#   (3) the UKB outcome GWAS itself — genome-wide-significant loci in the very
+#       file we test against. (3) needs NO external data and is the strictest
+#       sensitivity check available: if blood-eQTL coloc cannot recover loci that
+#       are undisputed in the same GWAS, it cannot adjudicate anything.
+# Disable with MYOPIA_NO_AUTO_PANEL=1.
 # ---------------------------------------------------------------------------
 gene_index <- unique(eqtl[, .(GeneSymbol, GeneChr, GenePos)])
-if (!nzchar(Sys.getenv("MYOPIA_NO_TEDJA_PANEL")) && !is.na(TEDJA_FILE)) {
-  td <- fread(TEDJA_FILE)
-  cc <- names(td)[tolower(names(td)) %in% c("chr","chromosome","chr_id")][1]
-  pc <- names(td)[tolower(names(td)) %in% c("pos","position","bp","chr_pos")][1]
-  if (!is.na(cc) && !is.na(pc)) {
-    hits <- character(0)
-    for (i in seq_len(nrow(td))) {
-      near <- gene_index[GeneChr == td[[cc]][i] &
-                         abs(as.numeric(GenePos) - as.numeric(td[[pc]][i])) <= 250000]
-      if (nrow(near)) {
-        near[, d := abs(as.numeric(GenePos) - as.numeric(td[[pc]][i]))]
-        hits <- c(hits, near[which.min(d)]$GeneSymbol)
+
+nearest_genes <- function(chr_v, pos_v, win = 250000L) {
+  out <- character(0)
+  for (i in seq_along(chr_v)) {
+    near <- gene_index[GeneChr == chr_v[i] & abs(as.numeric(GenePos) - pos_v[i]) <= win]
+    if (nrow(near)) {
+      near[, d := abs(as.numeric(GenePos) - pos_v[i])]
+      out <- c(out, near[which.min(d)]$GeneSymbol)
+    }
+  }
+  unique(out)
+}
+
+panel_source <- "hand-picked only"
+if (!nzchar(Sys.getenv("MYOPIA_NO_AUTO_PANEL"))) {
+  ref <- NULL
+  for (f in c(TEDJA_FILE, GWASCAT_FILE)) {
+    if (!is.na(f) && file.exists(f)) {
+      tb <- fread(f)
+      cc <- names(tb)[tolower(names(tb)) %in% c("chr","chromosome","chr_id")][1]
+      pc <- names(tb)[tolower(names(tb)) %in% c("pos","position","bp","chr_pos")][1]
+      if (!is.na(cc) && !is.na(pc)) {
+        ref <- list(chr = as.integer(tb[[cc]]), pos = as.numeric(tb[[pc]]), src = basename(f))
+        break
       }
     }
-    hits <- setdiff(unique(hits), want$gene)
-    if (length(hits)) {
-      want <- rbind(want, data.table(gene = hits, phase = "positive_control"))
-      cat(sprintf("  Tedja-derived positive controls added: %d (panel now %d)\n",
-                  length(hits), sum(want$phase == "positive_control")))
+  }
+  if (!is.null(ref)) {
+    hits <- setdiff(nearest_genes(ref$chr, ref$pos), want$gene)
+    panel_source <- ref$src
+  } else {
+    # (3) derive from the outcome GWAS itself
+    cat("  No Tedja/GWAS-Catalog file present — deriving positive controls from the
+")
+    cat("  outcome GWAS (genome-wide-significant loci in ukb-b-6353).
+")
+    v0 <- fread(VCF_FILE, skip = "#CHROM", select = c(1L, 2L, 3L, 10L))
+    setnames(v0, c("CHR","POS","ID","UKB"))
+    s0 <- tstrsplit(v0$UKB, ":")
+    v0[, `:=`(b = as.numeric(s0[[1]]), s = as.numeric(s0[[2]]))]
+    v0 <- v0[!is.na(b) & !is.na(s) & s > 0]
+    v0[, P := 2 * pnorm(-abs(b / s))]
+    sig <- v0[P < 5e-8][order(P)]
+    lead <- sig[0]
+    for (i in seq_len(nrow(sig))) {                       # distance clumping, 1 Mb
+      if (!nrow(lead) || !any(lead$CHR == sig$CHR[i] & abs(lead$POS - sig$POS[i]) < 1e6))
+        lead <- rbind(lead, sig[i])
+      if (nrow(lead) >= 60L) break
     }
-  } else cat("  Tedja file has no recognisable chr/pos columns — panel not enlarged.\n")
+    cat(sprintf("  genome-wide-significant lead loci: %d
+", nrow(lead)))
+    hits <- setdiff(nearest_genes(lead$CHR, as.numeric(lead$POS)), want$gene)
+    panel_source <- "ukb-b-6353 genome-wide-significant loci"
+    rm(v0, s0, sig, lead)
+  }
+  if (length(hits)) {
+    want <- rbind(want, data.table(gene = hits, phase = "positive_control"))
+    cat(sprintf("  positive controls added from %s: %d (panel now %d)\n",
+                panel_source, length(hits), sum(want$phase == "positive_control")))
+  } else cat(sprintf("  no additional positive controls found (source: %s)\n", panel_source))
 }
 
 eqtl <- eqtl[GeneSymbol %in% want$gene]
