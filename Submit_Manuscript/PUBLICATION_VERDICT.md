@@ -40,6 +40,26 @@ Two separable findings replace the earlier one:
    signal with essentially no myopia association in the window (H1, 73%), a qualitatively
    different profile from the established set.
 
+### Raw-output verification (re-checked against the committed CSVs)
+
+| Check | Result |
+|---|---|
+| Row counts | 52 rows; evaluable 12 audited + 10 new + 26 controls; 4 `absent_from_eqtlgen` (CASTOR3, LRRTM2, GJD2, RBFOX1) |
+| Are the 3 recovered controls independent? | Yes — chr12, chr8, chr7, three different chromosomes |
+| Do control gene names look like real assignments? | Mostly. 3 of 26 are clone/lncRNA/orf identifiers, and **one of them (RP11-333A23.4, PP.H4 = 0.96) is among the three "recoveries"** — so only **2 of 26** recoveries are biologically interpretable (RDH5, AEBP1) |
+| Is the H3 comparison independent of gene identity? | Yes. H3/H4 dominance only reflects whether a myopia signal exists in the window, not which gene is causal — so it is unaffected by nearest-gene error |
+| PDGFRA H0 | Correct, not a bug: lead eQTL *P* = 1.1 × 10⁻³, a genuinely weak instrument |
+
+The headline comparison is therefore the one that survives every caveat:
+
+> **Myopia signal detected in the window: 23 of 26 established loci (88%) vs 5 of 22
+> nominations (23%).**
+
+This uses only "is there a myopia association here", so nearest-gene misassignment, lncRNA
+names and the choice of PP.H4 threshold cannot touch it. The 12% *recovery* figure, by
+contrast, is fragile on all three counts and should be reported as a lower bound with the
+gene-assignment caveat attached.
+
 ### What finding 2 does NOT license
 
 It does **not** establish that the nominations are false. H1 dominance means no myopia
