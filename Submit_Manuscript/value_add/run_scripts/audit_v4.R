@@ -160,13 +160,16 @@ eqtl <- fread(EQTL_FILE, select = c("Pvalue","SNP","SNPChr","SNPPos","Zscore",
 # ---------------------------------------------------------------------------
 gene_index <- unique(eqtl[, .(GeneSymbol, GeneChr, GenePos)])
 
+PC_DIST <- data.table(gene = character(0), lead_dist = numeric(0))
 nearest_genes <- function(chr_v, pos_v, win = 250000L) {
   out <- character(0)
   for (i in seq_along(chr_v)) {
     near <- gene_index[GeneChr == chr_v[i] & abs(as.numeric(GenePos) - pos_v[i]) <= win]
     if (nrow(near)) {
       near[, d := abs(as.numeric(GenePos) - pos_v[i])]
-      out <- c(out, near[which.min(d)]$GeneSymbol)
+      k <- which.min(near$d)
+      out <- c(out, near$GeneSymbol[k])
+      PC_DIST <<- rbind(PC_DIST, data.table(gene = near$GeneSymbol[k], lead_dist = near$d[k]))
     }
   }
   unique(out)
@@ -355,6 +358,28 @@ if (nrow(pc) == 0) {
   ci <- binom.test(k, n)$conf.int
   cat(sprintf("Recovered at PP.H4 > 0.8: %d/%d (%.0f%%, 95%% CI %.0f-%.0f%%)\n",
               k, n, 100*k/n, 100*ci[1], 100*ci[2]))
+
+  # Auto-derived controls map a GWAS lead SNP to its NEAREST gene, and the nearest
+  # gene is often not the causal one. Recovery is therefore a LOWER bound on
+  # sensitivity. Stratifying by lead-SNP-to-TSS distance isolates the controls whose
+  # gene assignment is most defensible, where recovery estimates sensitivity better.
+  if (nrow(PC_DIST)) {
+    pcd <- merge(pc, unique(PC_DIST), by = "gene")
+    if (nrow(pcd)) {
+      cat("\nRecovery stratified by lead-SNP-to-TSS distance (assignment confidence):\n")
+      for (cut in c(25000, 50000, 100000, 250000)) {
+        s <- pcd[lead_dist <= cut]
+        if (nrow(s) >= 3) {
+          kk <- sum(s$PP.H4 > 0.8); cc <- binom.test(kk, nrow(s))$conf.int
+          cat(sprintf("  within %3.0f kb: %d/%d (%.0f%%, 95%% CI %.0f-%.0f%%)\n",
+                      cut/1000, kk, nrow(s), 100*kk/nrow(s), 100*cc[1], 100*cc[2]))
+        } else cat(sprintf("  within %3.0f kb: n=%d (too few to report)\n", cut/1000, nrow(s)))
+      }
+      cat("  The closest-assignment stratum is the better sensitivity estimate;\n")
+      cat("  the all-controls figure above is a lower bound.\n")
+      fwrite(pcd, file.path(OUTDIR, "positive_control_detail.csv"))
+    }
+  }
   cat(if (k / n >= 0.5)
         ">>> GATE PASSED — negative findings may be reported as non-reproduction.\n"
       else
