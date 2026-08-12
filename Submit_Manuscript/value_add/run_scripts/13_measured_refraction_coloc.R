@@ -114,6 +114,21 @@ setnames(out, c(c_snp, c_b, c_se), c("SNP","beta_o","se_o"))
 out <- out[!is.na(beta_o) & !is.na(se_o) & se_o > 0][!duplicated(SNP)]
 cat(sprintf("  outcome SNPs: %d (cols %s / %s / %s)\n", nrow(out), c_snp, c_b, c_se))
 
+# Colocalization needs DENSE per-SNP data across each 1 Mb window, not a table of
+# lead SNPs. A supplementary "significant loci" table has a few hundred rows and
+# would silently yield insufficient_overlap for every gene, which looks like a
+# result but is an input problem. Refuse it explicitly.
+if (nrow(out) < 1e5) {
+  cat("\nSTOP: this outcome file has only", nrow(out), "SNPs.\n")
+  cat("Colocalization needs genome-wide summary statistics (millions of SNPs);\n")
+  cat("a lead-SNP or significant-loci supplementary table cannot be used for it,\n")
+  cat("and forcing it through would return 'insufficient_overlap' for every gene.\n")
+  cat("It IS still usable for two-sample MR of specific instruments — that is what\n")
+  cat("Tedja2018_5anchor_MR_analysis_v4.R does with it.\n")
+  cat("For this analysis obtain full summary statistics instead.\n")
+  quit(save = "no", status = 0)
+}
+
 # --- per-gene coloc ---------------------------------------------------------
 res <- list()
 for (g in unique(eqtl$GeneSymbol)) {
