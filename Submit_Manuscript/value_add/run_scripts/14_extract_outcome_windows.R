@@ -60,7 +60,12 @@ gi[, `:=`(lo = as.numeric(pos) - 5e5, hi = as.numeric(pos) + 5e5)]
 
 # ---- read the summary statistics and autodetect its columns ---------------
 cat(sprintf("Reading %s ...\n", INFILE))
-d  <- fread(INFILE)
+d <- tryCatch(fread(INFILE), error = function(e) NULL)
+if (is.null(d) || ncol(d) == 1 || grepl("\\s{2,}", names(d)[1])) {
+  lines <- readLines(INFILE)
+  lines[1] <- gsub("\\s+", "\t", lines[1])
+  d <- fread(text = lines)
+}
 nm <- tolower(names(d))
 pick <- function(...) { for (k in c(...)) { i <- which(nm == k); if (length(i)) return(names(d)[i[1]]) }; NA_character_ }
 c_snp <- pick("snp","rsid","rs","markername","variant_id","rs_number","rsids")
