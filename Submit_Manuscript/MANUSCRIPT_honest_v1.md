@@ -403,11 +403,18 @@ expression QTLs; our eQTL colocalization is a complementary, not identical, test
 non-reproduction there reflects method as well as signal. Three targets (PRMT6, GATS,
 UBE) and several pharmacology-panel genes are simply not expressed with a cis-eQTL in
 blood and are unassessable here rather than negative. The discovery
-outcome (ukb-b-6353) is self-reported, mitigated by measured continuous refractive-
-error replication (a conservative, non-differential source of misclassification).
-Several anchors rest on a single cis-instrument, precluding pleiotropy-sensitivity
-analysis and widening confidence intervals in FinnGen; TGFB1 additionally relied on a
-protein-QTL rather than an eQTL instrument, limiting its comparability. The FinnGen
+outcome (ukb-b-6353) is self-reported. This is the study's principal unresolved
+limitation. The nominated loci show expression signal with no myopia association in
+this outcome (H1-dominant, 16 of 22), but self-report is a lossy phenotype, so
+phenotype quality and nomination quality cannot be separated with these data. We
+attempted to resolve it against measured refractive error and could not: the
+available Tedja 2018 file is a stage-3 replication set in which every SNP is
+pre-selected for association (genomic inflation λ = 30.7, 100% of SNPs P < 0.05),
+and colocalization requires the surrounding null variants to identify a causal
+signal. We therefore report the H1 result as outcome-specific and draw no
+conclusion about whether the nominations are correct. Repeating the analysis
+against genome-wide measured-refraction statistics (e.g. UK Biobank spherical
+power) is the single most informative next step.
 endpoint captures
 high/pathological myopia rather than general refractive error, so its nulls partly
 reflect phenotype and power differences. All discovery and replication samples are

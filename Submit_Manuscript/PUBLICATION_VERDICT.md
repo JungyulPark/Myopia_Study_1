@@ -73,21 +73,47 @@ Similarly, the 12% recovery figure is not a property of the assay alone: the pos
 controls map each GWAS lead SNP to its **nearest** eQTLGen gene, which is often not the
 causal gene, so it is a lower bound.
 
+## Measured-refraction resolution — ATTEMPTED AND ABANDONED (2026-08-05)
+
+The confound behind the H1 result was pursued and could not be closed with available data.
+Recorded here so it is not silently retried.
+
+- The analysis environment reaches no GWAS host. Nature/Springer, OpenGWAS, EBI, Zenodo,
+  figshare, NCBI, Dropbox, Google Drive and Google Docs were each tested directly and all
+  return a policy denial; GitHub is reachable but scoped to this repository, so no external
+  file can be fetched here by any route.
+- A transfer path was therefore built and proven end to end: `14_extract_outcome_windows.R`
+  subsets any summary-statistics file to the 58 one-megabase windows the analysis actually
+  reads (~0.4 MB, committable), and `13_measured_refraction_coloc.R` consumes it and
+  re-runs the self-report arm on identical SNPs so the comparison is like-for-like.
+- The only measured-refraction file on the analysis machine is
+  `Tedja2018_Stage3_sumstats.txt`. It extracted cleanly — METAL format, beta/se derived
+  from Z, sample size and frequency; coordinates matched by rsID, so build mismatch was
+  impossible; 147,273 SNPs matched, 55 windows, median 274 SNPs each — **and is
+  nonetheless unusable**: median P = 0.000, P < 0.05 in 100% of SNPs, λ = 30.7. A stage-3
+  file contains only variants already carried forward for showing association.
+  Colocalization identifies a causal variant by contrast against surrounding nulls; with no
+  nulls the contrast is gone and PP.H3/PP.H4 are arbitrary while still looking confident.
+- A preliminary reading taken from that file before the check — 45% of nomination windows
+  carrying genome-wide significant signal versus 92% of controls — is **retracted**. Those
+  proportions are an artefact of SNP selection.
+- Pursuit stopped here at the PI's decision. The scripts remain and will run unchanged the
+  moment genome-wide measured-refraction statistics are available; `14` now refuses any
+  selection-enriched file (λ > 5 or over half the SNPs nominally significant).
+
+**Consequence for the paper: none fatal.** The confound is now stated as the principal
+limitation rather than resolved. The H1 result is reported as outcome-specific, with no
+claim about whether the nominations are correct.
+
 ## What still has to happen before submission
 
-1. **Eye-tissue colocalization.** Now the most valuable remaining analysis, not the least.
-   If established myopia loci colocalize in retina where they fail in blood, that converts
-   finding 1 from a caution into a demonstrated tissue effect and tells the field what to do
-   instead. Needs an eye eQTL dataset — `EyeGEx_retina_eQTL.txt.gz` is **not** on the
-   machine (see correction below) and must be obtained.
-2. **Disambiguate outcome from nomination quality.** The H1 result is confounded by the use
-   of self-reported UK Biobank myopia. Re-running the nominations against a measured
-   refractive-error outcome (CREAM/Tedja summary statistics, already used elsewhere in this
-   project) would separate "no signal in a lossy phenotype" from "no signal".
-3. **Phase 0e third arm** — novelty against the 2026 *Nat Genet* GWAS still needs that
-   paper's supplementary variant list.
-4. Fill the remaining `‹PENDING›` marker, add the positive-control and posterior-profile
+1. **Eye-tissue colocalization** — still the analysis that would most raise the paper's
+   tier, and still needs an eye eQTL dataset that is not on the machine.
+2. **Phase 0e third arm** — novelty against the 2026 *Nat Genet* GWAS needs that paper's
+   supplementary variant list.
+3. Fill the remaining `‹PENDING›` marker, add the positive-control and posterior-profile
    figures, update Tables 1–2.
+4. Optional, if data ever becomes available: the measured-refraction re-run above.
 
 ## What is finished and locked
 
