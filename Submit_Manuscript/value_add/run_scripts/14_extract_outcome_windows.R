@@ -131,6 +131,34 @@ d[, CHR := suppressWarnings(as.integer(gsub("^chr", "", as.character(CHR), ignor
 d[, POS := suppressWarnings(as.numeric(POS))]
 d <- d[!is.na(CHR) & !is.na(POS) & !is.na(beta_o) & !is.na(se_o) & se_o > 0]
 
+# ---- selection-enrichment check (must precede everything else) -------------
+# Colocalization needs the FULL local association profile, null SNPs included: it
+# identifies the causal variant by contrast against the neighbours. A replication
+# or "stage 3" file contains only SNPs already shown to be associated, so every
+# SNP looks significant, the contrast vanishes, and PP.H3/PP.H4 become arbitrary.
+# Such a file produces confident-looking numbers that mean nothing, so refuse it.
+zz  <- d$beta_o / d$se_o
+pp_ <- 2 * pnorm(-abs(zz))
+lam <- median(zz^2, na.rm = TRUE) / qchisq(0.5, 1)
+frac05 <- mean(pp_ < 0.05, na.rm = TRUE)
+cat(sprintf("\n  Association profile: median P = %.3f, P<0.05 in %.0f%% of SNPs, lambda = %.1f\n",
+            median(pp_, na.rm = TRUE), 100 * frac05, lam))
+if (lam > 5 || frac05 > 0.5) {
+  cat("\n*** THIS FILE CANNOT BE USED FOR COLOCALIZATION ***\n")
+  cat("  A genome-wide file has median P near 0.5, about 5% of SNPs under 0.05, and\n")
+  cat("  lambda near 1. Here essentially every SNP is associated, which means the file\n")
+  cat("  holds only variants pre-selected for association — a replication or stage-3\n")
+  cat("  set, not genome-wide summary statistics.\n\n")
+  cat("  Colocalization identifies the causal variant by contrast with the null SNPs\n")
+  cat("  around it. With no nulls there is no contrast, and PP.H3/PP.H4 become\n")
+  cat("  arbitrary while still looking like confident numbers. Counting 'windows with\n")
+  cat("  a significant SNP' is equally invalid, since selection guarantees them.\n\n")
+  cat("  Use instead: ukb-b-19994 (measured spherical power) from OpenGWAS, or the\n")
+  cat("  stage-1 genome-wide meta-analysis rather than the stage-3 replication file.\n")
+  cat("  Nothing written.\n")
+  quit(save = "no", status = 0)
+}
+
 # ---- cut the windows -------------------------------------------------------
 setkey(d, CHR, POS)
 keep <- rbindlist(lapply(seq_len(nrow(gi)), function(i) {
